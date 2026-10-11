@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --text-main: #2D312E;
+  --text-muted: #6B726E;
+  --primary: #3A5A40;
+  --primary-hover: #2F4A34;
+  --primary-light: #EBF0EC;
+  --accent: #C27D53;
+  --accent-light: #F9EFE9;
+  --border-color: #E6E1D8;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Custom smooth transitions and zen styling */
+.zen-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  transition: all 0.25s ease;
+}
+
+.zen-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(58, 90, 64, 0.08);
+}
