@@ -73,7 +73,7 @@ export default function Navbar() {
             className="px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-sm hover:shadow transition-all flex items-center gap-2"
           >
             <Sparkles className="w-4 h-4" />
-            <span>Làm bài Test</span>
+            <span>Đo Mức Độ Nghiện</span>
           </Link>
         </div>
 
@@ -81,9 +81,9 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-2">
           <Link
             href="/trac-nghiem"
-            className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-[#3A5A40]"
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-[#3A5A40]"
           >
-            Test
+            Đo Nghiện
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

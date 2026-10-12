@@ -55,13 +55,13 @@ export default function TracNghiemPage() {
           {/* Header */}
           <div className="text-center space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-3.5 py-1 rounded-full inline-block">
-              Trắc Nghiệm Nhận Diện (10 Câu)
+              Trắc Nghiệm Nhập Trại • 10 Câu Hỏi
             </span>
             <h1 className="text-2xl md:text-4xl font-bold font-serif text-[#2D312E]">
-              Mức Độ Kiệt Quệ Dopamine & Sự Chú Ý
+              Đo Mức Độ Nghiện Của Bạn
             </h1>
-            <p className="text-xs md:text-sm text-[#6B726E]">
-              Hãy trả lời thành thật với cảm xúc và thói quen thực tế của bạn trong 2 tuần gần nhất.
+            <p className="text-xs md:text-sm text-[#6B726E] max-w-xl mx-auto leading-relaxed">
+              Không phán xét, không giáo điều. Hãy trả lời thành thật để gọi tên những hành vi bạn không thực sự muốn và xem bộ não của bạn đang ở ngưỡng nào.
             </p>
           </div>
 

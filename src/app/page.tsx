@@ -34,7 +34,7 @@ export default function HomePage() {
               href="/trac-nghiem"
               className="w-full sm:w-auto px-8 py-4 rounded-2xl text-base font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2"
             >
-              <span>Kiểm tra mức độ kiệt quệ Dopamine</span>
+              <span>Đo mức độ nghiện của bạn (3 phút)</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
@@ -61,13 +61,13 @@ export default function HomePage() {
           <div className="rounded-3xl p-8 md:p-12 border border-[#E6E1D8] bg-white shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="max-w-xl space-y-4">
               <span className="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-md bg-[#F9EFE9] text-[#C27D53] inline-block">
-                Công cụ phễu nhận diện bản thân
+                Trắc nghiệm nhập trại (3 phút)
               </span>
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">
-                Bạn có đang bị bộ não "đòi nợ" Dopamine mỗi đêm?
+                Đo mức độ nghiện của bạn: Bộ não đang đòi nợ đến ngưỡng nào?
               </h2>
               <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
-                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 10 câu hỏi sẽ giúp bạn nhận diện chính xác mức độ xói mòn dopamine và điểm mặt trigger chính của bạn.
+                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 10 câu hỏi sẽ giúp bạn gọi tên chính xác mức độ nghiện hành vi và điểm mặt trigger chính của bạn.
               </p>
               <div className="flex flex-wrap gap-4 text-xs font-semibold text-[#2D312E] pt-2">
                 <span>📊 Trả điểm & phân cấp ngay</span>
@@ -80,7 +80,7 @@ export default function HomePage() {
                 href="/trac-nghiem"
                 className="w-full md:w-auto px-8 py-4 rounded-2xl text-base font-bold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-md hover:scale-105 transition-all text-center"
               >
-                Bắt đầu bài kiểm tra (3 phút)
+                Bắt đầu đo mức độ nghiện
               </Link>
               <span className="text-[11px] text-[#6B726E]">Nhận kết quả phân tích tức thì</span>
             </div>
