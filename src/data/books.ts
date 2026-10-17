@@ -122,4 +122,22 @@ export const books: Book[] = [
     quote: "Bạn không thể dập tắt cơn thèm khát bằng cách làm ngơ nó; bạn phải thấu hiểu phần thưởng mà tâm trí bạn đang khao khát.",
     affiliateUrl: "https://tiki.vn/search?q=suc+manh+cua+thoi+quen",
   },
+  {
+    id: "dopamine-detox",
+    title: "Cai Nghiện Dopamine (Dopamine Detox)",
+    originalTitle: "Dopamine Detox: A Short Guide to Remove Distractions and Get Your Brain to Do Hard Things",
+    author: "Thibaut Meurisse",
+    category: "Neurobiology",
+    categoryLabel: "Sinh học & Tập trung",
+    badge: "Thực hành 48 giờ",
+    coverColor: "from-amber-800 to-stone-900",
+    oneLiner: "Tấm bản đồ thực chiến giúp bạn cắt giảm các kích thích siêu ngưỡng (Overstimulation), tăng lực cản ma sát và đưa não bộ trở về trạng thái tập trung sâu.",
+    coreLessons: [
+      "Dopamine không phải là khoái cảm mà là phân tử của sự mong đợi phần thưởng (anticipation) kéo bạn vào vòng xoáy bất tận.",
+      "Kích thích thái quá khiến những việc khó (đọc sách, làm việc sâu) trở nên nhạt nhẽo và không thể chịu đựng nổi.",
+      "3 Cấp độ Detox: 48h chuyên sâu, 24h cuối tuần hoặc thanh lọc một phần kết hợp chiến thuật ma sát (Friction).",
+    ],
+    quote: "Khi bạn dám loại bỏ những niềm vui rẻ tiền và chấp nhận sự buồn chán tạm thời, những công việc khó khăn bỗng nhiên trở nên dễ dàng và thú vị một cách kỳ lạ.",
+    affiliateUrl: "https://tiki.vn/search?q=dopamine+detox+thibaut+meurisse",
+  },
 ];
