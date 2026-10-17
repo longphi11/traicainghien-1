@@ -11,11 +11,12 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Trang Chủ" },
-    { href: "/gioi-thieu", label: "Giới Thiệu" },
+    { href: "/he-thong-cai-nghien", label: "Hệ Thống Cai Nghiện" },
     { href: "/trac-nghiem", label: "Trắc Nghiệm" },
     { href: "/bai-viet", label: "Bài Viết" },
     { href: "/sach", label: "Sách" },
     { href: "/cong-cu", label: "Công Cụ" },
+    { href: "/gioi-thieu", label: "Giới Thiệu" },
   ];
 
   const isActive = (path: string) => {

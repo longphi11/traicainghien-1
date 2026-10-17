@@ -29,11 +29,12 @@ export default function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-[#3A5A40] mb-4">Các Mục Chính</h4>
             <ul className="space-y-2.5 text-sm text-[#6B726E]">
               <li><Link href="/" className="hover:text-[#3A5A40] transition-colors">Trang Chủ</Link></li>
-              <li><Link href="/gioi-thieu" className="hover:text-[#3A5A40] transition-colors">Giới Thiệu & Sứ Mệnh</Link></li>
-              <li><Link href="/trac-nghiem" className="hover:text-[#3A5A40] transition-colors">Bài Test 10 Câu (Dopamine)</Link></li>
+              <li><Link href="/he-thong-cai-nghien" className="text-[#3A5A40] font-bold hover:underline">Hệ Thống Cai Nghiện</Link></li>
+              <li><Link href="/trac-nghiem" className="hover:text-[#3A5A40] transition-colors">Đo Mức Độ Nghiện (20 câu)</Link></li>
               <li><Link href="/bai-viet" className="hover:text-[#3A5A40] transition-colors">Kho Bài Viết Tâm Lý</Link></li>
               <li><Link href="/sach" className="hover:text-[#3A5A40] transition-colors">Tủ Sách Chắt Lọc</Link></li>
               <li><Link href="/cong-cu" className="hover:text-[#3A5A40] transition-colors">Công Cụ Thực Hành</Link></li>
+              <li><Link href="/gioi-thieu" className="hover:text-[#3A5A40] transition-colors">Giới Thiệu & Sứ Mệnh</Link></li>
             </ul>
           </div>
 

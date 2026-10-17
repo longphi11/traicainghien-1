@@ -55,23 +55,154 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. THẺ BÀI TEST NHẬN DIỆN (LEAD MAGNET) */}
+      {/* 2. HỆ THỐNG CAI NGHIỆN (PRODUCT SUITE TƯƠNG TỰ DANNY TRAN) */}
+      <section className="px-6 max-w-6xl mx-auto" id="he-thong">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-3.5 py-1.5 rounded-full inline-block">
+            Giải Pháp Thực Chiến
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#2D312E]">
+            Hệ Thống Cai Nghiện & Chuyển Hóa
+          </h2>
+          <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
+            Bạn không thể dùng ý chí trần trụi để chiến đấu với các thuật toán gây nghiện. Đây là các hệ thống được thiết kế riêng cho từng nỗi đau của thời đại số.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Card 1: 30D Reset */}
+          <div className="rounded-3xl p-8 bg-white border border-[#3A5A40] shadow-md ring-2 ring-[#3A5A40]/10 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1 transition-all">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EBF0EC] text-[#3A5A40]">
+                  Cốt lõi 30 ngày
+                </span>
+                <span className="text-xs font-bold text-[#C27D53] bg-[#F9EFE9] px-2 py-0.5 rounded-md">
+                  ★ Phổ biến nhất
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold font-serif text-[#2D312E]">
+                30D Reset
+              </h3>
+              <p className="text-xs font-semibold text-[#3A5A40]">
+                Tái thiết lập nhịp sinh học & thoát bẫy dopamine rẻ tiền
+              </p>
+              <p className="text-xs text-[#6B726E] leading-relaxed">
+                28 ý tưởng và bài tập vi mô Kaizen 1% mỗi ngày giúp bạn hạ nhiệt kích thích siêu ngưỡng, cai lướt đêm và tìm lại cảm giác hạnh phúc trong đời thực.
+              </p>
+              <ul className="space-y-2 text-xs text-[#2D312E] pt-2 border-t border-[#E6E1D8]">
+                <li className="flex items-center gap-2">✓ Bẻ gãy bẫy ăn bù kích thích (Rebound)</li>
+                <li className="flex items-center gap-2">✓ Chiếm lĩnh 60 phút buổi sáng không màn hình</li>
+                <li className="flex items-center gap-2">✓ Tự thực hành (DIY) hoặc Có bạn đồng hành</li>
+              </ul>
+            </div>
+            <div className="pt-6 mt-6 border-t border-[#E6E1D8]">
+              <Link
+                href="/he-thong-cai-nghien#30d-reset"
+                className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#3A5A40] hover:bg-[#2F4A34] text-white flex items-center justify-center gap-1.5 transition-all shadow-sm"
+              >
+                <span>Tìm hiểu về 30D Reset</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 2: The Pure Mind */}
+          <div className="rounded-3xl p-8 bg-white border border-[#E6E1D8] shadow-sm hover:border-[#3A5A40]/40 flex flex-col justify-between group hover:-translate-y-1 transition-all">
+            <div className="space-y-4">
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#FDF2F2] text-[#9E2A2B] inline-block">
+                Hồi phục sinh lực
+              </span>
+              <h3 className="text-2xl font-bold font-serif text-[#2D312E]">
+                The Pure Mind
+              </h3>
+              <p className="text-xs font-semibold text-[#9E2A2B]">
+                Hệ thống hồi phục toàn diện khỏi Pỏn & Khoái cảm ảo
+              </p>
+              <p className="text-xs text-[#6B726E] leading-relaxed">
+                Xóa tan nỗi xấu hổ và mặc cảm tội lỗi. Giải mã cơ chế Coolidge Effect và trang bị nút bấm SOS 3 phút cắt đứt xung động nguy hiểm nhất.
+              </p>
+              <ul className="space-y-2 text-xs text-[#2D312E] pt-2 border-t border-[#E6E1D8]">
+                <li className="flex items-center gap-2">✓ Giao thức cấp cứu SOS khi cơn thèm ập đến</li>
+                <li className="flex items-center gap-2">✓ Khôi phục độ nhạy cảm xúc & bản lĩnh nam giới</li>
+                <li className="flex items-center gap-2">✓ Hoàn toàn bảo mật và không phán xét</li>
+              </ul>
+            </div>
+            <div className="pt-6 mt-6 border-t border-[#E6E1D8]">
+              <Link
+                href="/he-thong-cai-nghien#pure-mind"
+                className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#2D312E] hover:bg-black text-white flex items-center justify-center gap-1.5 transition-all"
+              >
+                <span>Tìm hiểu về Pure Mind</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 3: Deep Flow ADHD */}
+          <div className="rounded-3xl p-8 bg-white border border-[#E6E1D8] shadow-sm hover:border-[#3A5A40]/40 flex flex-col justify-between group hover:-translate-y-1 transition-all">
+            <div className="space-y-4">
+              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EFF6FF] text-[#1D4ED8] inline-block">
+                Trị não phân tâm
+              </span>
+              <h3 className="text-2xl font-bold font-serif text-[#2D312E]">
+                Deep Flow System
+              </h3>
+              <p className="text-xs font-semibold text-[#1D4ED8]">
+                Thiết kế hệ thống năng suất cho não bộ dễ xao nhãng
+              </p>
+              <p className="text-xs text-[#6B726E] leading-relaxed">
+                Dành cho người không thể ngồi yên 15 phút hay có triệu chứng ADHD. Cung cấp bộ công cụ Time-boxing và Hộp chứa xao nhãng trực quan.
+              </p>
+              <ul className="space-y-2 text-xs text-[#2D312E] pt-2 border-t border-[#E6E1D8]">
+                <li className="flex items-center gap-2">✓ Đập tan tình trạng nhảy tab & quá tải nhận thức</li>
+                <li className="flex items-center gap-2">✓ Đạt trạng thái dòng chảy (Flow) trong 25 phút</li>
+                <li className="flex items-center gap-2">✓ Mẫu Template Notion & Sổ tay cá nhân hóa</li>
+              </ul>
+            </div>
+            <div className="pt-6 mt-6 border-t border-[#E6E1D8]">
+              <Link
+                href="/he-thong-cai-nghien#deep-flow"
+                className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#2D312E] hover:bg-black text-white flex items-center justify-center gap-1.5 transition-all"
+              >
+                <span>Tìm hiểu về Deep Flow</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="text-center pt-8">
+          <Link
+            href="/he-thong-cai-nghien"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#3A5A40] hover:underline"
+          >
+            <span>Xem đầy đủ thông số các lộ trình cai nghiện</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* 3. THẺ BÀI TEST NHẬN DIỆN (LEAD MAGNET) */}
       <section className="px-6">
         <div className="max-w-5xl mx-auto">
           <div className="rounded-3xl p-8 md:p-12 border border-[#E6E1D8] bg-white shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="max-w-xl space-y-4">
               <span className="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-md bg-[#F9EFE9] text-[#C27D53] inline-block">
-                Trắc nghiệm nhập trại (3 phút)
+                Trắc nghiệm nhập trại • 20 Câu Hỏi
               </span>
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">
-                Đo mức độ nghiện của bạn: Bộ não đang đòi nợ đến ngưỡng nào?
+                Đo mức độ nghiện của bạn: Bạn thuộc Hệ Nghiện nào?
               </h2>
               <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
-                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 10 câu hỏi sẽ giúp bạn gọi tên chính xác mức độ nghiện hành vi và điểm mặt trigger chính của bạn.
+                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 20 câu hỏi 4 chặng sẽ bóc tách chính xác 4 Hệ Nghiện thời hiện đại và Khoản Thuế Vô Hình bạn đang âm thầm gánh chịu.
               </p>
               <div className="flex flex-wrap gap-4 text-xs font-semibold text-[#2D312E] pt-2">
-                <span>📊 Trả điểm & phân cấp ngay</span>
-                <span>💡 Kèm 1 hành động Kaizen vi mô</span>
+                <span>🌙 Phân loại 4 Hệ Nghiện</span>
+                <span>⚖️ Bóc trần Khoản Thuế Vô Hình</span>
+                <span>💡 Kèm đơn thuốc Kaizen 1%</span>
               </div>
             </div>
 
@@ -88,47 +219,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. BỐN TRỤ CỘT TRI THỨC */}
-      <section className="px-6 max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40]">Hành Trình Chuyển Hóa</span>
-          <h2 className="text-3xl font-bold font-serif text-[#2D312E]">Bốn Trụ Cột Tri Thức & Hành Động</h2>
-          <p className="text-sm text-[#6B726E]">
-            Chúng tôi không hô hào khẩu hiệu sáo rỗng. Mọi phương pháp đều dựa trên khoa học hành vi và tinh thần Á Đông bền bỉ.
-          </p>
-        </div>
+      {/* 4. VỀ CHÚNG TÔI (STORYTELLING THÀNH THẬT THEO PHONG CÁCH DANNY TRAN) */}
+      <section className="px-6 max-w-5xl mx-auto">
+        <div className="rounded-3xl p-8 md:p-12 bg-[#FAF7F2] border border-[#E6E1D8] space-y-8">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-[#3A5A40] text-white flex items-center justify-center font-bold text-xl">
+              🌿
+            </div>
+            <div>
+              <span className="text-xs uppercase tracking-wider font-bold text-[#3A5A40] block">Người Đồng Hành</span>
+              <h3 className="text-2xl font-bold font-serif text-[#2D312E]">Về Trại Cai Nghiện</h3>
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E1D8] space-y-3">
-            <span className="text-2xl">🧠</span>
-            <h3 className="font-bold text-base font-serif text-[#2D312E]">1. Hiểu cơ chế hành vi</h3>
-            <p className="text-xs text-[#6B726E] leading-relaxed">
-              Giải mã bập bênh dopamine của Dr. Anna Lembke. Hiểu cơ chế sinh học để xóa bỏ hoàn toàn mặc cảm tội lỗi hay tự trách mình lười.
+          <div className="space-y-4 text-sm md:text-base text-[#2D312E] leading-relaxed">
+            <p>
+              Chào bạn, tụi mình là những người sáng lập <strong>Trại Cai Nghiện</strong>. Tụi mình không phải giáo sư tâm thần học, cũng chẳng phải chuyên gia self-help luôn miệng rao giảng về "kỷ luật thép 5 giờ sáng".
+            </p>
+            <p>
+              Tụi mình là những <strong>người bình thường</strong> đã từng trải qua trọn vẹn những đêm tối bế tắc nhất: Nằm dán mắt vào màn hình điện thoại tới 3 giờ sáng, mắt cay xè nhưng ngón tay vẫn quẹt, sáng hôm sau nhìn vào gương thấy đôi mắt thâm quầng và tự sỉ vả mình thậm tệ.
+            </p>
+            <p className="p-4 rounded-2xl bg-white border border-[#E6E1D8] text-[#3A5A40] font-medium text-sm">
+              "Điểm khác biệt duy nhất là tụi mình đã dám nhìn thẳng vào cơ chế sinh học của bộ não, thử nghiệm qua hàng chục cuốn sách kinh điển của thế giới (Anna Lembke, James Clear, Neil Postman) kết hợp triết lý Kaizen, Wabi Sabi của người Nhật để tìm ra lối thoát thực tế."
+            </p>
+            <p className="text-xs md:text-sm text-[#6B726E]">
+              Đến với Trại Cai Nghiện, bạn được quyền là một con người bình thường có những lúc yếu đuối và trượt chân. Bạn không cần hoàn hảo, chỉ cần mỗi ngày bạn nhích lên 1% cùng tụi mình.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E1D8] space-y-3">
-            <span className="text-2xl">⚖️</span>
-            <h3 className="font-bold text-base font-serif text-[#2D312E]">2. Nhận diện cái giá</h3>
-            <p className="text-xs text-[#6B726E] leading-relaxed">
-              Nhìn thẳng vào những tổn thất âm thầm: sự cáu gắt với người thân, chai sạn cảm xúc và việc tự nguyện làm nô lệ cho các thuật toán.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E1D8] space-y-3">
-            <span className="text-2xl">🛠️</span>
-            <h3 className="font-bold text-base font-serif text-[#2D312E]">3. Thay đổi không dùng ý chí</h3>
-            <p className="text-xs text-[#6B726E] leading-relaxed">
-              Thay thế Routine xấu bằng thói quen vi mô Kaizen 1%, thiết kế môi trường sống Atomic Habits và lòng bao dung Wabi Sabi khi vấp ngã.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-[#E6E1D8] space-y-3">
-            <span className="text-2xl">🌅</span>
-            <h3 className="font-bold text-base font-serif text-[#2D312E]">4. Sống chủ động</h3>
-            <p className="text-xs text-[#6B726E] leading-relaxed">
-              Thắp sáng Ikigai (lý do thức dậy mỗi sáng), chiếm lĩnh 60 phút đầu ngày không màn hình và tìm lại dòng chảy sáng tạo sâu sắc.
-            </p>
+          <div className="pt-4 border-t border-[#E6E1D8] flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-6 text-xs text-[#6B726E]">
+              <span>✓ Cho trước — Tin tưởng — Đồng hành</span>
+              <span>✓ Hoàn toàn phi phán xét</span>
+            </div>
+            <Link
+              href="/gioi-thieu"
+              className="text-xs font-bold text-[#3A5A40] hover:underline flex items-center gap-1"
+            >
+              <span>Đọc toàn bộ tâm sự sáng lập</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
       </section>
