@@ -239,8 +239,8 @@ export default function HomePage() {
             <p>
               Tụi mình là những <strong>người bình thường</strong> đã từng trải qua trọn vẹn những đêm tối bế tắc nhất: Nằm dán mắt vào màn hình điện thoại tới 3 giờ sáng, mắt cay xè nhưng ngón tay vẫn quẹt, sáng hôm sau nhìn vào gương thấy đôi mắt thâm quầng và tự sỉ vả mình thậm tệ.
             </p>
-            <p className="p-4 rounded-2xl bg-white border border-[#E6E1D8] text-[#3A5A40] font-medium text-sm">
-              "Điểm khác biệt duy nhất là tụi mình đã dám nhìn thẳng vào cơ chế sinh học của bộ não, thử nghiệm qua hàng chục cuốn sách kinh điển của thế giới (Anna Lembke, James Clear, Neil Postman) kết hợp triết lý Kaizen, Wabi Sabi của người Nhật để tìm ra lối thoát thực tế."
+            <p className="p-4 rounded-2xl bg-white border border-[#E6E1D8] text-[#3A5A40] font-medium text-sm leading-relaxed">
+              "Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó tụi mình giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản fresh tươi mới mà bạn đã từng có. Tụi mình không bán gì cả, tụi mình chỉ ở đây để giúp bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn. Sự thay đổi của bạn chính là động lực lớn nhất của tụi mình."
             </p>
             <p className="text-xs md:text-sm text-[#6B726E]">
               Đến với Trại Cai Nghiện, bạn được quyền là một con người bình thường có những lúc yếu đuối và trượt chân. Bạn không cần hoàn hảo, chỉ cần mỗi ngày bạn nhích lên 1% cùng tụi mình.

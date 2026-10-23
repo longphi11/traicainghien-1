@@ -23,8 +23,8 @@
 * **Tên thương hiệu:** **Trại Cai Nghiện**
 * **Slogan / Tagline:**  
   > **Giành lại sự chú ý. Làm chủ thói quen. Sống có chủ đích.**
-* **Tuyên ngôn Sứ mệnh (Brand Manifesto):**  
-  > *"Một nơi để hiểu vì sao chúng ta lặp lại những hành vi mình không thực sự muốn, học cách thay đổi chúng bằng những phương pháp thực tế và từng bước lấy lại quyền chủ động đối với cuộc sống."*
+* **Tuyên ngôn Sứ mệnh & Trái Tim Của Trại (Brand Manifesto):**  
+  > *"Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó chúng tôi giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản 'fresh' tươi mới mà bạn đã từng có. Chúng tôi không bán gì cả, chúng tôi chỉ giúp đỡ để bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn. Sự thay đổi của bạn là động lực duy nhất của chúng tôi."*
 * **Ba Giá Trị Trục Cột (Core Value Tags):**
   * `Hiểu hành vi`
   * `Thực hành thay đổi`
@@ -48,6 +48,10 @@
    * **Dám gọi tên bản thân:** Bạn chỉ có thể sẵn sàng đối diện với "con người nghiện" của mình khi bạn dũng cảm gạt bỏ mọi sự ngụy biện (*"tôi chỉ lướt tí thôi", "ai chả xem", "tôi thích bỏ lúc nào chả được"*) để **chấp nhận rằng mình đang thật sự có vấn đề và mình là một người nghiện**. Thừa nhận sự thật không phải là chịu thua, mà là bước đi đầu tiên của sự tự do.
    * **Động lực nội tại:** Bạn chỉ có thể thay đổi khi **chính bạn thật sự nhận ra mình cần thay đổi**. Không một ai có thể ép buộc hay cai nghiện hộ bạn nếu bên trong bạn chưa muốn bước ra ánh sáng.
    * **Nỗi đau vì những người yêu thương:** Điểm bùng phát thức tỉnh lớn nhất là khi bạn nhận ra: **Cuộc sống của mình và những người yêu thương mình xung quanh đang bị "con người nghiện" của mình làm tổn thương, ngó lơ và cản trở**. Sự hiện diện nửa vời bên gia đình, những cơn cáu gắt vô cớ, sự chai sạn cảm xúc... Khi tình yêu thương và trách nhiệm với người thân lớn hơn sự thỏa mãn ích kỷ của dopamine rẻ tiền, đó là lúc bạn thực sự bắt đầu hồi sinh.
+6. **Tinh Thần Phụng Sự & Khơi Dậy "Phiên Bản Fresh" Đã Từng Có (Pure Altruism & The Fresh Self):**
+   * **Bản chất của Trại:** Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó chúng tôi giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản tràn đầy sức sống và tươi mới (*fresh*) mà bạn đã từng sở hữu trước khi bị các bẫy kích thích số giam cầm.
+   * **Chúng tôi không bán gì cả:** Không tiếp cận độc giả bằng tâm thế con buôn chèo kéo khóa học. Chúng tôi chỉ muốn giúp đỡ để bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn.
+   * **Động lực tối thượng:** Sự chuyển hóa, sự bình an và nụ cười trở lại của bạn chính là động lực duy nhất của bố con mình.
 
 ### 2.3. 🎯 Chân Dung Đối Tượng Mục Tiêu (Target Audience Personas)
 
