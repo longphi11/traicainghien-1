@@ -15,7 +15,7 @@ export default function CongCuPage() {
           Đồ Nghề Thực Chiến
         </span>
         <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E]">
-          Công Cụ Giành Lại Sự Chú Ý
+          Đồ Nghề Cho Phiên Bản Tốt Nhất
         </h1>
         <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
           Đừng chỉ dựa vào ý chí trần trụi. Hãy trang bị cho mình những rào cản và công cụ thông minh để khiến thói quen xấu trở nên khó khăn, và thói quen tốt trở nên dễ dàng.

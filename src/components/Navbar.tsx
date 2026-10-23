@@ -39,7 +39,7 @@ export default function Navbar() {
               Trại Cai Nghiện
             </span>
             <span className="text-[10px] block tracking-wide uppercase font-semibold text-[#6B726E]">
-              Giành lại sự chú ý
+              Phiên bản tốt nhất của bạn
             </span>
           </div>
         </Link>

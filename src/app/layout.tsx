@@ -19,9 +19,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Trại Cai Nghiện — Giành lại sự chú ý. Làm chủ thói quen. Sống có chủ đích.",
-  description: "Một nơi để hiểu vì sao chúng ta lặp lại những hành vi mình không thực sự muốn, học cách thay đổi chúng bằng những phương pháp thực tế và từng bước lấy lại quyền chủ động đối với cuộc sống.",
-  keywords: ["cai nghiện dopamine", "thói quen nguyên tử", "làm chủ sự chú ý", "ikigai", "kaizen", "cai nghiện điện thoại"],
+  title: "Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn",
+  description: "Trại Cai Nghiện giúp bạn tìm lại con người với nhiều động lực, ước mơ — trở về phiên bản tốt nhất của chính mình và của những người yêu thương bạn.",
+  keywords: ["trại cai nghiện", "cai nghiện dopamine", "trở về phiên bản tốt nhất", "thói quen nguyên tử", "làm chủ thói quen", "ikigai", "kaizen"],
 };
 
 export default function RootLayout({

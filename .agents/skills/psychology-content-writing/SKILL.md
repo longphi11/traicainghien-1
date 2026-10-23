@@ -6,8 +6,8 @@ description: Hướng dẫn tư duy, lập luận và phong cách viết nội d
 # ✍️ KỸ NĂNG VIẾT NỘI DUNG TÂM LÝ HỌC & KỂ CHUYỆN THỰC CHIẾN: TRẠI CAI NGHIỆN
 
 > **Thương hiệu:** **Trại Cai Nghiện**  
-> **Tagline:** **Giành lại sự chú ý. Làm chủ thói quen. Sống có chủ đích.**  
-> **Tuyên ngôn:** *"Một nơi để hiểu vì sao chúng ta lặp lại những hành vi mình không thực sự muốn, học cách thay đổi chúng bằng những phương pháp thực tế và từng bước lấy lại quyền chủ động đối với cuộc sống."*  
+> **Tagline:** **Trở về phiên bản tốt nhất của bạn.**  
+> **Tuyên ngôn:** *"Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó chúng tôi giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản fresh tươi mới mà bạn đã từng có. Chúng tôi không bán gì cả, chúng tôi chỉ giúp đỡ để bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn. Sự thay đổi của bạn là động lực duy nhất của chúng tôi."*  
 > **Ba trục giá trị cốt lõi:** `Hiểu hành vi` • `Thực hành thay đổi` • `Sống có chủ đích`
 
 Kỹ năng này hướng dẫn AI Mây làm chủ phương pháp tư duy, lập luận và đặc biệt là **Văn phong kể chuyện thực chiến đỉnh cao (Street-Smart Academic Storytelling)** nhằm tạo ra những bài viết chạm đáy cảm xúc, giải phóng người đọc khỏi bẫy dopamine và thói quen xấu.
