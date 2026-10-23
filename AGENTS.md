@@ -41,6 +41,9 @@
 1. **Không phán xét (Non-judgmental Space):** Nghiện không phải là suy đồi đạo đức hay ý chí yếu kém, mà bản chất là **cơ chế đối phó sai lầm (maladaptive coping mechanism)** trước nỗi đau, stress, sự cô đơn hoặc tổn thương tâm lý chưa được chữa lành.
 2. **Khoa học hành vi & Y văn quốc tế:** Dựa trên Liệu pháp Nhận thức Hành vi (CBT), Liệu pháp Chấp nhận & Cam kết (ACT), Tái lập Dopamine (Dopamine Reset) và Thói quen Nguyên tử (Atomic Habits).
 3. **Giảm dần & Thay thế (Tapering & Healthy Substitution):** Không áp dụng "Cold-turkey" (cắt đột ngột dễ gây sốc và tái nghiện dữ dội), mà hỗ trợ người dùng giảm dần liều lượng và thay thế bằng nguồn dopamine tự nhiên, lành mạnh.
+4. **Giải phóng khỏi mặc cảm tội lỗi — Thức tỉnh khỏi Ma trận Bẫy Tiện Nghi (The Engineered Matrix & The Comfort Crisis):**
+   * Bạn không hề vô kỷ luật, bạn không hề yếu đuối! Bộ não sinh học thời đồ đá của chúng ta đang bị ném vào một **hệ thống siêu công nghiệp được thiết kế tinh vi để khiến con người PHẢI NGHIỆN**: Thuật toán mạng xã hội (TikTok, Facebook Reels) tối ưu hóa giật dây thần kinh mỗi 3 giây; sàn thương mại điện tử (Shopee, TikTok Shop) triệt tiêu ma sát thanh toán bằng 1 chạm và kích thích FOMO; đồ ăn siêu chế biến (KFC, Pizza, gà rán, trà sữa) được cân đo chuẩn xác điểm cực khoái vị giác (*Bliss Point*) giữa đường - muối - béo để vô hiệu hóa cảm giác no tự nhiên; truyền thông và các thần tượng mạng liên tục nhồi nhét lối sống hưởng thụ YOLO, phô trương brand nhằm thúc đẩy tiêu thụ điên cuồng.
+   * Dựa trên nền tảng cuốn sách ***Bẫy Tiện Nghi (The Comfort Crisis)*** của Michael Easter: Sự tiện nghi thừa mứa đã tước đoạt mất cơ hội rèn luyện khả năng chịu đựng khó chịu tự nhiên. Muốn thoát nghiện, không phải là tự sỉ vả bản thân, mà là thức tỉnh nhận diện ma trận tiện nghi và học cách **tự nguyện đón nhận sự khó chịu lành mạnh (Lean into discomfort)** để giành lại tự do.
 
 ### 2.3. 🎯 Chân Dung Đối Tượng Mục Tiêu (Target Audience Personas)
 
@@ -213,9 +216,16 @@ flowchart TD
 3. **Neil Postman (*Amusing Ourselves to Death*):**
    * **Cơ chế triết học & văn hóa:** Lời cảnh báo tiên tri theo hướng Aldous Huxley (*Brave New World*) thay vì George Orwell (*1984*) — con người không bị áp bức bằng sự tước đoạt thông tin, mà tự nguyện làm nô lệ khi bị nhấn chìm trong biển giải trí tầm thường, biến mọi thứ sâu sắc thành trò tiêu khiển vô vị.
    * **Ứng dụng viết bài:** Nâng tầm bài viết lên chiều sâu văn hóa và hiện sinh; khơi gợi câu hỏi thức tỉnh: *"Liệu ta đang sống một cuộc đời trọn vẹn, hay đang để mình bị giải trí cho đến chết?"*.
-4. **Michael Easter (*The Comfort Crisis*):**
-   * **Cơ chế tiến hóa & rèn luyện:** Cuộc khủng hoảng của sự tiện nghi. Bộ não thời đồ đá được lập trình để tiết kiệm năng lượng nhưng lại sống trong thế giới hiện đại quá dư thừa và êm ấm, dẫn đến chứng "sợ buồn chán" (boredom phobia) và tinh thần mỏng manh (fragile).
-   * **Ứng dụng viết bài:** Bình thường hóa sự buồn chán; khuyến khích đón nhận sự khó chịu tự nguyện (*Misogi / Leaning into discomfort*), xem khó chịu là tín hiệu của sự phục hồi và tái sinh bản lĩnh.
+4. **Michael Easter (*The Comfort Crisis - Bẫy Tiện Nghi*):**
+   * **Cơ chế tiến hóa & Ma trận kích thích:** Cuộc khủng hoảng của sự tiện nghi. Bộ não thời đồ đá được lập trình để tìm kiếm calo dễ kiếm và nghỉ ngơi để sinh tồn, nhưng lại bị ném vào thế giới hiện đại siêu tiện nghi với những cỗ máy công nghiệp được tối ưu hóa để khiến con người **PHẢI NGHIỆN**:
+     * *Mạng xã hội (TikTok, Facebook):* Thuật toán cá nhân hóa giật dây dopamine mỗi 3 giây.
+     * *Thương mại điện tử (Shopee, Lazada):* Triệt tiêu hoàn toàn ma sát mua sắm, flash sale, voucher đếm ngược tạo cơn sốt FOMO.
+     * *Đồ ăn siêu chế biến (KFC, Pizza, gà rán, trà sữa):* Điểm cực khoái vị giác (*Bliss Point*) được tính toán hóa sinh giữa đường + muối + béo bão hòa, làm tê liệt thụ thể báo no.
+     * *Truyền thông & Idol mạng:* Thổi phồng lối sống YOLO, đua đòi hàng hiệu và phong cách sống hào nhoáng khiến người thường rơi vào tự ti và tiêu thụ điên cuồng để tìm kiếm giá trị ảo.
+   * **Hệ quả tâm lý:** Sự tiện nghi thừa mứa sinh ra chứng "sợ buồn chán" (*Boredom Phobia*) và làm teo biến sức chịu đựng (*Fragility*). Chỉ cần 10 giây rảnh rỗi hoặc một thoáng buồn tẻ là tay đã vô thức vớ lấy điện thoại hay đặt đồ ăn nhanh.
+   * **Ứng dụng viết bài (Content Core):**
+     * **Xóa tan mặc cảm tự trách:** Khẳng định người đọc không hề vô kỷ luật hay yếu đuối — họ chỉ đang là nạn nhân của một cỗ máy công nghiệp trị giá hàng nghìn tỷ đô.
+     * **Triết lý Misogi & Khó chịu tự nguyện:** Bình thường hóa sự buồn chán; khuyến khích đón nhận sự khó chịu tự nguyện (*Leaning into discomfort*), xem cảm giác bứt rứt tạm thời là tín hiệu thần kinh đang được hồi sinh và tái cấu trúc bản lĩnh.
 
 ### 6.2. Bản Đồ Cảm Xúc, Lẽ Sống & Thiết Kế Cuộc Đời (Emotional Depth & Life Architecture)
 Để giải quyết tận gốc rễ nguyên nhân khiến người dùng rơi vào bẫy nghiện trốn tránh (Escapism):

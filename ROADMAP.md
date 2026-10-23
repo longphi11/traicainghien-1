@@ -62,7 +62,7 @@ flowchart TD
 * **Danh mục Task Tháng 1:**
   - [x] T1.1: Đổi toàn bộ tên gói sản phẩm theo bản sắc Trại Cai Nghiện trên website.
   - [ ] T1.2: Cài đặt script lưu kết quả trắc nghiệm ẩn danh (đếm tỷ lệ chọn từng nhóm câu hỏi).
-  - [ ] T1.3: Soạn và đăng 5 bài viết mới (chuyên đề: Khoa học Dopamine, Thói quen pỏn, Não phân tâm, Wabi Sabi tha thứ khi trượt chân).
+  - [ ] T1.3: Soạn và đăng 5 bài viết mới (chuyên đề: Bẫy Tiện Nghi - Ma trận khiến ta phải nghiện, Khoa học Dopamine, Thói quen pỏn, Não phân tâm, Wabi Sabi tha thứ khi trượt chân).
   - [ ] T1.4: Lên khung 10 kịch bản video faceless phong cách podcast tĩnh lặng.
   - [ ] T1.5: Khởi tạo kênh TikTok & YouTube Shorts "Trại Cai Nghiện".
   - [ ] T1.6: Dựng và đăng đều đặn 1 video/ngày từ ngày 15/11 đến 30/11.
