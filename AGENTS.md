@@ -56,7 +56,18 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
 **⚡ Lưu ý quan trọng cho Mây khi viết nội dung:**
 * Một bài viết tốt có thể chạm đến nhiều nhóm cùng lúc — đừng cố gắng nhắm vào duy nhất 1 nhóm.
 * Nhóm **3** thường là đối tượng có tiềm năng lan truyền cao nhất vì họ đang đau nhưng chưa biết mình cần gì — khi bài viết "mở mắt" họ, họ sẽ chia sẻ ngay.
-* Nhóm **4** là đối tượng trung thành và sẵn sàng chi trả nhất cho **Pro Track** và **VIP Bootcamp**.
+* Nhóm **4** là đối tượng trung thành và sẵn sàng chi trả nhất cho các giải pháp chuyên sâu (Core Offers).
+
+### 2.4. 🎨 Quy Chuẩn Mỹ Cảm & Phong Cách Hình Ảnh (Visual & Aesthetic Identity)
+* **Phong cách chủ đạo:** **Zen Minimalist (Tĩnh lặng & Mộc mạc Á Đông)**. Cảm giác như bước vào một ngôi nhà gỗ giữa rừng, tách biệt hoàn toàn khỏi sự kích thích ồn ào của thế giới bên ngoài.
+* **Bảng màu nhận diện chính thức:**
+  * `Xanh Rêu Rừng (#3A5A40)`: Màu chủ đạo đại diện cho sự hồi sinh, kiên nhẫn, điềm tĩnh và sinh mệnh tự nhiên.
+  * `Be Ấm / Giấy Mộc (#FAF7F2, #E6E1D8)`: Màu nền dịu mắt, ấm cúng như một trang sách cổ điển, chống mỏi mắt cho người đọc đêm.
+  * `Đất Nung Mờ (#C27D53)`: Điểm nhấn nhẹ nhàng cho các nút bấm, nhãn tag và các hành động quan trọng (CTA).
+  * `Xám Than Trầm (#2D312E)`: Chữ viết mềm mại, không dùng màu đen gắt (#000000) nhằm giảm tải căng thẳng thần kinh thị giác.
+* **Quy chuẩn Video Ngắn Faceless (TikTok / YouTube Shorts / Reels):**
+  * **Hình ảnh (B-roll):** Không lộ mặt. Sử dụng thước phim quay chậm, góc tĩnh: Cảnh pha phin cà phê buổi sáng, bàn làm việc gỗ tối giản, mưa rơi ngoài cửa sổ, ngón tay lật chậm từng trang sách, đi bộ một mình dưới hàng cây.
+  * **Âm thanh & Giọng đọc:** Nhạc nền Lo-fi ambient nhẹ nhàng, âm thanh ASMR thiên nhiên (tiếng mưa, tiếng gõ phím cơ, tiếng gió), giọng đọc AI trầm ấm, chậm rãi như đang tâm sự đêm khuya.
 
 ---
 
@@ -94,11 +105,22 @@ graph TD
 
 Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướng đi:
 > **"Người thường chia sẻ kinh nghiệm thực tế cho người thường"**
+> *(Street-Smart Academic Storytelling)*
 
 * **Giọng điệu:** Không phải giáo sư giảng bài. Không phải chuyên gia phán xét. Mà là người bạn đồng hành thành thật — đã đọc sách, đã trải qua, đang thử nghiệm cùng độc giả.
 * **Đối tượng hướng đến:** Người phổ thông đang loay hoay với thói quen xấu, không cần biết thuật ngữ khoa học, chỉ cần cảm thấy được thấu hiểu và có một lối thoát khả thi.
 * **Chuẩn mực nội dung:** Lấy kiến thức từ 14 cuốn sách kinh điển + 5 triết lý Nhật Bản làm nền tảng, nhưng **"dân dã hóa" hoàn toàn** — dùng ngôn ngữ đời thường, ví dụ đời thực, câu chuyện cụ thể, con số thật.
-* **Điều Mây cần nhớ:** Khi viết cùng bố, không bao giờ dùng giọng chuyên gia. Luôn viết như đang kể chuyện, ngồi cà phê, tâm sự với bạn bè.
+* **Điều Mây cần nhớ:** Khi viết cùng bố, không bao giờ dùng giọng chuyên gia. Luôn viết như đang kể chuyện, ngồi quán cà phê, tâm sự với bạn bè.
+
+### 4.0d. ⚖️ Bốn Quy Tắc Vàng Trong Ngòi Bút Của Mây (Tone of Voice Rules)
+1. **Quy tắc 4 KHÔNG:**
+   * **KHÔNG** phán xét hay đổ lỗi đạo đức (*"Do bạn lười biếng, ý chí kém"* $\rightarrow$ Sai!). Luôn giải thích bằng sinh học thần kinh: cơ chế bập bênh Dopamine bị kích thích quá ngưỡng.
+   * **KHÔNG** dùng ngôn từ self-help đao to búa lớn (*"kỷ luật thép"*, *"chiến binh thức dậy 5h sáng"*, *"chuyển hóa đỉnh cao"*).
+   * **KHÔNG** kết án những lần trượt chân. Triết lý Wabi Sabi: chấp nhận vết rạn, tha thứ hoàn toàn để bắt đầu lại.
+   * **KHÔNG** nói lý thuyết suông. Luôn có chi tiết đời thực: chiếc điện thoại để đầu giường, tab ẩn danh, gói bim bim, quẹt short video đến 2h sáng mắt cay xè.
+2. **Chân thực đến trần trụi (Radical Honesty):** Dám bóc tách những khoảnh khắc xấu hổ nhất của người nghiện để tạo sự đồng cảm sâu sắc.
+3. **Kaizen 1%:** Không đòi hỏi bước nhảy vĩ đại. Chỉ cần mỗi ngày nhích lên 1% (để điện thoại xa giường 2m, hít thở 3 nhịp trước khi mở app).
+4. **Wabi Sabi:** Bình thản trước sự không hoàn hảo. Vết sẹo là nơi ánh sáng đi vào.
 
 **⚠️ Ranh giới an toàn nội dung (Safety Boundary):**
 * Trại Cai Nghiện **không** chẩn đoán y tế, **không** thay thế liệu pháp tâm lý lâm sàng.
@@ -107,33 +129,12 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 
 ---
 
-### 4.0b. 💰 Chiến Lược Phát Triển Thương Mại: Community First — Affiliate Second
+### 4.0b. 💰 Chiến Lược Phát Triển 1 Năm: Đi Chậm, Đánh Chắc & Tự Động Hóa Bền Vững
 
-Lộ trình kiếm tiền của bố được thiết kế theo nguyên tắc **"Cho trước — Tin tưởng — Mua sau"**:
+Hệ thống được xây dựng trên một kế hoạch 1 năm (12 tháng) với mục tiêu tối thượng: **Tạo cỗ máy tự động (Automation & Faceless) mang về dòng tiền thụ động 15 - 20 triệu VNĐ/tháng**.
 
-**Giai đoạn Community (Hiện tại → Đạt ngưỡng):**
-* 100% nội dung miễn phí, không có quảng cáo, không gắn link bán hàng.
-* Mục tiêu duy nhất: xây dựng niềm tin, tạo sợi dây kết nối cảm xúc với cộng đồng.
-* **Ngưỡng kích hoạt Affiliate:** Facebook/Thread đạt 1.000 follow có tương tác thực *hoặc* website đạt 5.000 lượt đọc/tháng.
-
-**Giai đoạn Affiliate (Sau khi đạt ngưỡng):**
-Chèn link tự nhiên theo 3 tầng sản phẩm phù hợp với nội dung:
-
-| Tầng | Loại Sản Phẩm | Ví Dụ Cụ Thể |
-| :--- | :--- | :--- |
-| **Nhẹ** | Sách (đọc nhiều, mua thử) | Dopamine Nation, Atomic Habits, Ikigai (link Tiki/Fahasa) |
-| **Trung** | Sổ tay, app, công cụ thực hành | Sổ nhật ký streak, app thiền định, bút ghi chép |
-| **Nặng** | Khóa học, nền tảng sức khỏe tâm thần | Headspace, BetterHelp... |
-
-**Nguyên tắc tỷ lệ vàng 80/20:**
-* 80% bài viết: thuần nội dung giá trị, không quảng cáo.
-* 20% bài viết: có nhắc đến sách/công cụ hỗ trợ kèm affiliate link.
-* Affiliate chỉ được gắn vào sản phẩm bố đã đọc/dùng thật sự và thấy có ích.
-
-**Lộ trình dài hạn:**
-```
-Free Content → Build Trust → Affiliate (sách, công cụ) → Pro Track Subscription → VIP Bootcamp
-```
+* **Nguyên tắc xuyên suốt:** Dành 3 đến 6 tháng đầu cho R&D và Micro-testing (thử nghiệm sản phẩm vi mô giá rẻ) để thị trường "bỏ phiếu bằng tiền thật", tìm ra sản phẩm người dùng khao khát nhất (Winner Product) trước khi hoàn thiện phễu tự động.
+* Chi tiết lộ trình xem tại file trung tâm: [ROADMAP.md](file:///c:/Users/MrFine/Documents/Traicainghien/ROADMAP.md).
 
 ---
 
@@ -150,66 +151,53 @@ Toàn bộ hệ thống bài viết, video, podcast và bài trắc nghiệm c�
 
 ---
 
-### 4.1. Giai đoạn 1 (Khởi động MVP - Trọng tâm trước mắt của Bố và Con)
-* **Xây dựng Website Ban Đầu gồm 6 cấu phần chính thức:**
-  1. **Trang Chủ (Home):** Mặt tiền định vị thương hiệu, tuyên ngôn sứ mệnh, chạm đáy nỗi đau và nút kêu gọi làm bài trắc nghiệm (CTA chính).
-  2. **Giới Thiệu (About):** Mục đích ra đời của Trại Cai Nghiện — câu chuyện tâm sự thực tế từ bố (người thường chia sẻ cho người thường), tuyên bố không phán xét và ranh giới an toàn y tế.
-  3. **Trắc Nghiệm 10 Câu (Self-Assessment):** Công cụ phễu nhận diện mức độ kiệt quệ Dopamine & Suy giảm tập trung (trả điểm, phân loại cấp độ, chỉ ra trigger và đề xuất 1 hành động Kaizen vi mô).
-  4. **Bài Viết (Psychology Hub):** Phân chia rõ ràng theo 3 nhãn trục cột: `#HieuHanhVi`, `#ThucHanhThayDoi`, `#SongCoChuDich`.
-  5. **Tủ Sách (Books):** Đúc kết, tóm tắt và review chân thành về các cuốn sách kinh điển (chuẩn bị sẵn link mua sách chính hãng / affiliate).
-  6. **Công Cụ (Tools):** Giới thiệu các công cụ hỗ trợ thực hành: sổ tay theo dõi streak, bút ghi chép, các ứng dụng khóa màn hình/tập trung uy tín.
-  *(Lưu ý: Mục Cộng Đồng tạm thời chưa đưa lên thanh điều hướng ở giai đoạn này, tập trung làm sâu nội dung và công cụ trên web trước).*
-* **Nhiệm vụ của Mây:**
-  * Soạn thảo nội dung cho mục Giới thiệu, bài trắc nghiệm 10 câu và các bài viết đầu tiên.
-  * Lập trình toàn bộ giao diện và logic website mượt mà bằng Next.js, chuẩn SEO và thân thiện với thiết bị di động.
-
-### 4.2. Giai đoạn 2 (Tháng 4 - 6): Hoàn thiện Nền tảng & Kích hoạt Doanh thu
-* Ra mắt hệ thống tài khoản thành viên.
-* Triển khai **Pro Track**: Lộ trình cai nghiện cá nhân hóa do AI Mây dẫn dắt 24/7.
-* Tích hợp cổng thanh toán tự động (gói đăng ký hàng tháng).
-* Mở khóa thử nghiệm **VIP Bootcamp 21 Ngày Tái Sinh** (nhóm nhỏ có cam kết).
-
-### 4.3. Giai đoạn 3 (Tháng 7 - 12): Mở rộng Hệ sinh thái Sức khỏe Tinh thần
-* Mở rộng mạng lưới hợp tác với các chuyên gia tâm lý học lâm sàng, bác sĩ tâm thần học.
-* Phát triển ứng dụng di động (Mobile App).
-* Tổ chức các workshop chữa lành và không gian cộng đồng ngoại tuyến (Offline Circle).
+### 4.1. Lộ Trình 4 Quý Thực Chiến (Tổng Hợp Từ ROADMAP.md)
+* **Quý 1 (Tháng 1 - 3): Xây Móng & Thăm Dò Nỗi Đau:** 100% miễn phí, xuất bản 10 bài viết web + 45 video faceless, thu thập 1.000 lượt trắc nghiệm để đo lường nỗi đau thực tế. Doanh thu: 0đ.
+* **Quý 2 (Tháng 4 - 6): Phòng Thử Nghiệm Sản Phẩm Vi Mô:** Tung 3 sản phẩm vi mô giá rẻ (49k - 149k) để tìm Winner Product. Thu thập 50-100 khách hàng thử nghiệm. Doanh thu kỳ vọng: 3 - 6 triệu/tháng.
+* **Quý 3 (Tháng 7 - 9): Đóng Gói Chủ Lực & Bật Phễu Tự Động:** Hoàn thiện gói Core Offer (390k - 490k), thiết lập Email Sequence 5 ngày + Thanh toán quét mã QR tự động giao file trong 30s. Doanh thu: 8 - 12 triệu/tháng.
+* **Quý 4 (Tháng 10 - 12): Tự Động Hóa Toàn Phần & Cán Đích:** Thêm Combo/Order Bump, SEO tự nhiên cắn đề xuất $\rightarrow$ Cán mốc **15 - 20 triệu VNĐ/tháng thụ động**.
 
 ---
 
-## 5. 💰 MÔ HÌNH KINH DOANH 4 TẦNG (BUSINESS MODEL ARCHITECTURE)
+## 5. 📦 HỆ THỐNG GÓI SẢN PHẨM ĐẬM BẢN SẮC "TRẠI CAI NGHIỆN"
 
-Mô hình kinh doanh của dự án được triển khai bài bản theo đúng 4 tầng chuyển hóa tự nhiên (dựa trên nguyên tắc: **Cho giá trị $\rightarrow$ Gắn kết $\rightarrow$ Hỗ trợ công cụ $\rightarrow$ Đồng hành chuyên sâu**):
+Sản phẩm của Trại Cai Nghiện không gọi là "Khóa học" hay "Gói bán hàng", mà là **"Giao Thức", "Cẩm Nang", "Túi Cứu Thương" hoặc "Bộ Tộc Đồng Hành"**:
 
 ```mermaid
 flowchart TD
-    T1["📖 Tầng 1: Nội Dung Miễn Phí<br>(Sách, kiến thức về hành vi, sự chú ý, thói quen & chuyện thực tế)"]
-    --> T2["👥 Tầng 2: Cộng Đồng Thực Hành<br>(Thảo luận, thử nghiệm phương pháp, chia sẻ tiến bộ & khó khăn)"]
-    --> T3["📓 Tầng 3: Sản Phẩm Affiliate Phù Hợp<br>(Sách, sổ ghi chép, công cụ quản lý thời gian, app tập trung)"]
-    --> T4["🤝 Tầng 4: Sản Phẩm Do Dự Án Phát Triển Sau Này<br>(Bộ bài tập, chương trình thực hành, CLB đọc sách, nhóm đồng hành)"]
+    Tier1["<b>TẦNG 1: TÚI CỨU THƯƠNG TÂM TRÍ</b><br>(Cấp cứu cắt cơn trong 3 phút | 49k - 99k)"]
+    --> Tier2["<b>TẦNG 2: 28 NGÀY TÁI SINH TÂM TRÍ</b><br>(Giao thức cốt lõi bẻ gãy bập bênh Dopamine | 390k - 490k)"]
+    
+    Tier2 --> Tier3A["<b>TẦNG 3A: TÂM TĨNH KHÍ THUẦN</b><br>(Chuyên đề dứt điểm Pỏn & Cám dỗ ảo | 490k)"]
+    Tier2 --> Tier3B["<b>TẦNG 3B: DÒNG CHẢY TĨNH LẶNG</b><br>(Chuyên đề trị xao nhãng & Não phân tâm | 390k)"]
+    
+    Tier3A & Tier3B --> Tier4["<b>TẦNG 4: BỘ TỘC TỈNH THỨC</b><br>(Vòng tròn đồng hành kín có cam kết)"]
 ```
 
-### 5.1. Chi Tiết Thực Thi 4 Tầng:
+### 5.1. Chi Tiết 4 Tầng Sản Phẩm:
 
-1. **📖 Tầng 1: Nội dung miễn phí (Thu hút & Xây dựng niềm tin)**
-   * **Nội dung:** Chia sẻ các cuốn sách kinh điển, kiến thức về hành vi, sự chú ý, thói quen và những câu chuyện thực tế đời thường (văn phong người thường chia sẻ cho người thường).
-   * **Mục tiêu:** Giúp người đọc nhận diện vấn đề, xóa bỏ mặc cảm tội lỗi, thắp sáng Ikigai. Hoàn toàn không quảng cáo, không bán hàng.
+1. **🧰 Tầng 1: TÚI CỨU THƯƠNG TÂM TRÍ *(Mental First-Aid Kit)***
+   * **Bản chất:** Sản phẩm cấp cứu khẩn cấp khi xung động/cơn thèm ập đến.
+   * **Định dạng:** 3 File audio dẫn dắt 3 phút (Urge Surfing) + Checklist nhận diện Trigger bỏ túi + Thẻ Dopamine Menu vi mô 5 phút.
+   * **Mức giá:** **49.000đ – 99.000đ** (Giai đoạn test vi mô) / **149.000đ** (Bản chuẩn).
 
-2. **👥 Tầng 2: Cộng đồng thực hành (Môi trường nuôi dưỡng & Gắn kết)**
-   * **Không gian:** Group cộng đồng (Facebook / Zalo / Discord / Web Forum), nơi quy tụ những người cùng chí hướng.
-   * **Hoạt động:** Thảo luận, cùng nhau thử nghiệm các phương pháp cai nghiện vi mô (Kaizen 1%, 60 phút buổi sáng không điện thoại), chia sẻ tiến bộ và cả những lần vấp ngã mà không sợ bị phán xét (*The Culture Code & Wabi Sabi*).
+2. **🌱 Tầng 2: 28 NGÀY TÁI SINH TÂM TRÍ *(The 28-Day Rebirth Protocol)***
+   * **Bản chất:** Lộ trình chuyển hóa cốt lõi, bẻ gãy bập bênh dopamine rẻ tiền của mạng xã hội, game, lướt đêm.
+   * **Định dạng:** Lộ trình 4 tuần Kaizen 1% + Workbook tự soi chiếu Wabi Sabi (tha thứ khi trượt chân) + Hướng dẫn làm chủ 60 phút sáng Ikigai.
+   * **Mức giá:** **390.000đ – 490.000đ** (Sản phẩm chủ lực).
 
-3. **📓 Tầng 3: Sản phẩm Affiliate phù hợp (Nguồn thu tự nhiên đầu tiên)**
-   * **Điều kiện:** Kích hoạt khi cộng đồng đã có độ tin tưởng và tương tác thực chất.
-   * **Sản phẩm gợi ý:** Những công cụ hỗ trợ người đọc thực hành tốt hơn: Sách giấy gốc (Tiki, Fahasa), sổ tay theo dõi thói quen, bút ghi chép, công cụ quản lý thời gian, các ứng dụng khóa màn hình/tập trung.
-   * **Nguyên tắc:** Tỷ lệ vàng 80/20 (80% bài chia sẻ giá trị, 20% bài có gắn link công cụ). Chỉ giới thiệu sản phẩm bổ ích thực sự.
+3. **🛡️ Tầng 3A: TÂM TĨNH KHÍ THUẦN *(Chuyên Đề Thầm Kín)***
+   * **Bản chất:** Dứt điểm nghiện phim khiêu dâm, thủ dâm xung động và kích thích thị giác ảo.
+   * **Định dạng:** Giải mã hiệu ứng Coolidge + Thiết lập chiếc khiên môi trường số + Chuyển hóa năng lượng sinh học sang sự nghiệp & thể chất.
+   * **Mức giá:** **490.000đ – 590.000đ**.
 
-4. **🤝 Tầng 4: Sản phẩm do bố & dự án phát triển sau này (Giá trị cốt lõi & Doanh thu bền vững)**
-   * **Khi nào ra mắt:** Khi cộng đồng đã lớn mạnh và có nhu cầu được kèm cặp, đi sâu hơn vào lộ trình dứt điểm thói quen xấu.
-   * **Các dạng sản phẩm:**
-     * **Bộ bài tập thực hành (Workbooks/Ebooks):** Các bài tập CBT, bảng theo dõi Trigger, Dopamine Menu cá nhân hóa.
-     * **Chương trình thực hành (Bootcamp 21 ngày):** Lộ trình thử thách có cam kết, có bài tập mỗi ngày.
-     * **Câu lạc bộ đọc sách:** Không gian cùng đọc, cùng mổ xẻ và áp dụng các cuốn sách tâm lý học hành vi.
-     * **Nhóm đồng hành (Accountability Groups):** Ghép cặp bạn đồng hành, nhóm nhỏ hỗ trợ chuyên sâu cùng AI Mây và chuyên gia.
+4. **🌊 Tầng 3B: DÒNG CHẢY TĨNH LẶNG *(Chuyên Đề Năng Suất Cho Não Phân Tâm)***
+   * **Bản chất:** Hệ thống làm việc sâu cho người có xu hướng ADHD, hay nhảy tab, quá tải nhận thức.
+   * **Định dạng:** Khung Time-boxing trực quan + Hộp chứa xao nhãng (Distraction Inbox) + Template Notion Zen Minimalist.
+   * **Mức giá:** **390.000đ – 490.000đ**.
+
+5. **👥 Tầng 4: BỘ TỘC TỈNH THỨC *(The Mindful Circle - Triển khai khi cộng đồng lớn)***
+   * **Bản chất:** Không gian đồng hành kín có cam kết (The Culture Code), ghép cặp Accountability Partner điểm danh streak mỗi sáng.
 
 ---
 
