@@ -71,22 +71,22 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Card 1: 30D Reset */}
+          {/* Card 1: 28 Ngày Tái Sinh */}
           <div className="rounded-3xl p-8 bg-white border border-[#3A5A40] shadow-md ring-2 ring-[#3A5A40]/10 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1 transition-all">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EBF0EC] text-[#3A5A40]">
-                  Cốt lõi 30 ngày
+                  Giao thức cốt lõi
                 </span>
                 <span className="text-xs font-bold text-[#C27D53] bg-[#F9EFE9] px-2 py-0.5 rounded-md">
                   ★ Phổ biến nhất
                 </span>
               </div>
               <h3 className="text-2xl font-bold font-serif text-[#2D312E]">
-                30D Reset
+                28 Ngày Tái Sinh
               </h3>
               <p className="text-xs font-semibold text-[#3A5A40]">
-                Tái thiết lập nhịp sinh học & thoát bẫy dopamine rẻ tiền
+                Tái thiết lập hệ thần kinh & thoát bẫy dopamine rẻ tiền
               </p>
               <p className="text-xs text-[#6B726E] leading-relaxed">
                 28 ý tưởng và bài tập vi mô Kaizen 1% mỗi ngày giúp bạn hạ nhiệt kích thích siêu ngưỡng, cai lướt đêm và tìm lại cảm giác hạnh phúc trong đời thực.
@@ -99,23 +99,23 @@ export default function HomePage() {
             </div>
             <div className="pt-6 mt-6 border-t border-[#E6E1D8]">
               <Link
-                href="/he-thong-cai-nghien#30d-reset"
+                href="/he-thong-cai-nghien#28-ngay-tai-sinh"
                 className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#3A5A40] hover:bg-[#2F4A34] text-white flex items-center justify-center gap-1.5 transition-all shadow-sm"
               >
-                <span>Tìm hiểu về 30D Reset</span>
+                <span>Tìm hiểu về 28 Ngày Tái Sinh</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
 
-          {/* Card 2: The Pure Mind */}
+          {/* Card 2: Tâm Tĩnh Khí Thuần */}
           <div className="rounded-3xl p-8 bg-white border border-[#E6E1D8] shadow-sm hover:border-[#3A5A40]/40 flex flex-col justify-between group hover:-translate-y-1 transition-all">
             <div className="space-y-4">
               <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#FDF2F2] text-[#9E2A2B] inline-block">
                 Hồi phục sinh lực
               </span>
               <h3 className="text-2xl font-bold font-serif text-[#2D312E]">
-                The Pure Mind
+                Tâm Tĩnh Khí Thuần
               </h3>
               <p className="text-xs font-semibold text-[#9E2A2B]">
                 Hệ thống hồi phục toàn diện khỏi Pỏn & Khoái cảm ảo
@@ -131,23 +131,23 @@ export default function HomePage() {
             </div>
             <div className="pt-6 mt-6 border-t border-[#E6E1D8]">
               <Link
-                href="/he-thong-cai-nghien#pure-mind"
+                href="/he-thong-cai-nghien#tam-tinh-khi-thuan"
                 className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#2D312E] hover:bg-black text-white flex items-center justify-center gap-1.5 transition-all"
               >
-                <span>Tìm hiểu về Pure Mind</span>
+                <span>Tìm hiểu về Tâm Tĩnh Khí Thuần</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
 
-          {/* Card 3: Deep Flow ADHD */}
+          {/* Card 3: Dòng Chảy Tĩnh Lặng */}
           <div className="rounded-3xl p-8 bg-white border border-[#E6E1D8] shadow-sm hover:border-[#3A5A40]/40 flex flex-col justify-between group hover:-translate-y-1 transition-all">
             <div className="space-y-4">
               <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EFF6FF] text-[#1D4ED8] inline-block">
                 Trị não phân tâm
               </span>
               <h3 className="text-2xl font-bold font-serif text-[#2D312E]">
-                Deep Flow System
+                Dòng Chảy Tĩnh Lặng
               </h3>
               <p className="text-xs font-semibold text-[#1D4ED8]">
                 Thiết kế hệ thống năng suất cho não bộ dễ xao nhãng
@@ -163,10 +163,10 @@ export default function HomePage() {
             </div>
             <div className="pt-6 mt-6 border-t border-[#E6E1D8]">
               <Link
-                href="/he-thong-cai-nghien#deep-flow"
+                href="/he-thong-cai-nghien#dong-chay-tinh-lang"
                 className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-[#2D312E] hover:bg-black text-white flex items-center justify-center gap-1.5 transition-all"
               >
-                <span>Tìm hiểu về Deep Flow</span>
+                <span>Tìm hiểu về Dòng Chảy Tĩnh Lặng</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
