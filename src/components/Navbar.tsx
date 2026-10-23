@@ -30,22 +30,22 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-[#3A5A40] text-white flex items-center justify-center font-bold text-lg shadow-sm transition-transform group-hover:scale-105">
+        <Link href="/" className="flex items-center gap-3 group shrink-0">
+          <div className="w-11 h-11 rounded-xl bg-[#3A5A40] text-white flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105 shrink-0">
             🌿
           </div>
-          <div>
-            <span className="text-xl font-bold tracking-tight block font-serif text-[#2D312E]">
+          <div className="flex flex-col justify-center">
+            <span className="text-2xl font-bold block font-serif text-[#2D312E] leading-tight tracking-tight">
               Trại Cai Nghiện
             </span>
-            <span className="text-[10px] block tracking-wide uppercase font-semibold text-[#6B726E]">
-              Phiên bản tốt nhất của bạn
+            <span className="text-[11px] block text-[#6B726E] font-medium tracking-tight mt-0.5 whitespace-nowrap">
+              Trở về phiên bản tốt nhất của bạn
             </span>
           </div>
         </Link>
 
         {/* Desktop 6 Menu Items */}
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium">
           {navLinks.map((link) => {
             const active = isActive(link.href);
             return (
