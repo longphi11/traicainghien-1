@@ -228,10 +228,82 @@ export const assessmentQuestions: Question[] = [
     ],
   },
 
-  // CHẶNG 4: KHOẢN THUẾ VÔ HÌNH TRONG ĐỜI THỰC (16-20)
+  // CHẶNG 4: MA TRẬN TIỆN NGHI & CÁM DỖ SỐ (16-20)
   {
     id: 16,
     stageId: 4,
+    stageName: "Ma Trận Tiện Nghi & Cám Dỗ Số",
+    stageIcon: "📱",
+    question: "Khi đi cafe, ăn uống hoặc tụ tập cùng bạn bè/người thân, thói quen dùng điện thoại của bạn như thế nào?",
+    scenario: "Hội chứng 'Phubbing' (cắm mặt vào màn hình phớt lờ người bên cạnh)...",
+    options: [
+      { text: "Tôi để điện thoại trong túi hoặc úp màn hình xuống bàn, tập trung 100% vào cuộc trò chuyện.", score: 0 },
+      { text: "Chỉ thỉnh thoảng liếc nhìn khi có tin nhắn hoặc cuộc gọi đến rồi cất máy ngay.", score: 1 },
+      { text: "Khá thường xuyên vừa nói chuyện vừa cầm máy lướt mạng xã hội lúc câu chuyện chùng xuống.", score: 2 },
+      { text: "Hầu như luôn cầm máy trên tay: ai nói gì cũng ậm ừ, mắt dán chặt vào màn hình dù đang ngồi cạnh bạn bè.", score: 3 },
+    ],
+  },
+  {
+    id: 17,
+    stageId: 4,
+    stageName: "Ma Trận Tiện Nghi & Cám Dỗ Số",
+    stageIcon: "📱",
+    question: "Thói quen tiêu thụ đồ ăn nhanh (KFC, Pizza, gà rán, trà sữa, bim bim) và cảm giác no tự nhiên của bạn?",
+    scenario: "Bẫy điểm cực khoái vị giác (Bliss Point) đánh gục cảm giác no...",
+    options: [
+      { text: "Tôi ăn uống thanh đạm, tự nấu nướng hoặc chọn món lành mạnh, hiếm khi đụng đến đồ siêu chế biến.", score: 0 },
+      { text: "Thỉnh thoảng ăn cùng bạn bè vào dịp cuối tuần nhưng ăn vừa đủ và biết dừng lại.", score: 1 },
+      { text: "Thường xuyên gọi đồ ăn nhanh hoặc đồ ngọt khi xem phim, ăn xong thấy nặng bụng nhưng miệng vẫn thèm ăn tiếp.", score: 2 },
+      { text: "Nghiện cảm giác ăn ngập ngụa đồ ăn nhanh/đồ ngọt: vừa ăn vừa xem video đến khi bụng căng cứng, ăn xong thấy ghê tởm bản thân.", score: 3 },
+    ],
+  },
+  {
+    id: 18,
+    stageId: 4,
+    stageName: "Ma Trận Tiện Nghi & Cám Dỗ Số",
+    stageIcon: "📱",
+    question: "Bạn có hay bị cuốn vào các xu hướng mua sắm, áp lực dùng đồ hiệu hoặc lối sống 'YOLO' trên mạng không?",
+    scenario: "Cơn sốt FOMO và áp lực tiêu thụ do truyền thông & idol mạng tạo ra...",
+    options: [
+      { text: "Tôi hiểu rõ giá trị bản thân, sống tối giản và không bị ảnh hưởng bởi những thứ hào nhoáng trên mạng.", score: 0 },
+      { text: "Đôi khi thấy thích thú nhưng biết rõ hoàn cảnh tài chính của mình và không đua đòi.", score: 1 },
+      { text: "Thường xuyên cảm thấy tự ti khi thấy người khác khoe đồ hiệu, du lịch sang chảnh trên TikTok/Facebook.", score: 2 },
+      { text: "Bị cuốn vào vòng xoáy tiêu xài: liên tục mua sắm theo trend để chứng tỏ bản thân, dù tài khoản đang cạn kiệt.", score: 3 },
+    ],
+  },
+  {
+    id: 19,
+    stageId: 4,
+    stageName: "Ma Trận Tiện Nghi & Cám Dỗ Số",
+    stageIcon: "📱",
+    question: "Mức độ 'bồn chồn' của bạn trước các thông báo, tin nhắn hoặc email công việc?",
+    scenario: "Hội chứng 'Luôn luôn trực tuyến' (Hyper-Connectivity Trap)...",
+    options: [
+      { text: "Tôi tắt thông báo không cần thiết, chủ động chọn giờ check tin nhắn và email cố định trong ngày.", score: 0 },
+      { text: "Xem thông báo khi rảnh rỗi, không cảm thấy bị áp lực phải trả lời ngay lập tức.", score: 1 },
+      { text: "Có thông báo là lập tức mở máy xem, khó chịu nếu thấy chấm đỏ thông báo chưa đọc.", score: 2 },
+      { text: "Bị giật dây hoàn toàn: chuông reo hay màn hình sáng là tim đập nhanh, bốc máy xem ngay trong 10 giây bất kể đang làm gì.", score: 3 },
+    ],
+  },
+  {
+    id: 20,
+    stageId: 4,
+    stageName: "Ma Trận Tiện Nghi & Cám Dỗ Số",
+    stageIcon: "📱",
+    question: "Lần gần nhất bạn có thể ngồi yên 15 phút ngắm mưa, nhìn mây trời hay uống trà mà KHÔNG chạm vào bất kỳ thiết bị điện tử nào?",
+    scenario: "Sự tiện nghi tước đoạt khả năng chịu đựng buồn chán (The Comfort Crisis)...",
+    options: [
+      { text: "Tôi thường xuyên dành ra những khoảng lặng không màn hình để lắng nghe tâm trí mình.", score: 0 },
+      { text: "Vài ngày trước, tôi có thể đi dạo hoặc ngồi uống cà phê thư thả một mình.", score: 1 },
+      { text: "Khá lâu rồi, chỉ cần ngồi một mình 3-5 phút là tay đã vô thức mò vào túi tìm điện thoại.", score: 2 },
+      { text: "Không thể nhớ nổi! Một khoảng lặng 5 phút không có màn hình hay tai nghe đối với tôi như một cực hình tra tấn.", score: 3 },
+    ],
+  },
+
+  // CHẶNG 5: KHOẢN THUẾ VÔ HÌNH TRONG ĐỜI THỰC (21-25)
+  {
+    id: 21,
+    stageId: 5,
     stageName: "Khoản Thuế Vô Hình Đời Thực",
     stageIcon: "⚖️",
     question: "Bạn có nhận thấy dạo này mình hay cáu bẳn, mất kiên nhẫn vô cớ với người thân xung quanh?",
@@ -244,8 +316,8 @@ export const assessmentQuestions: Question[] = [
     ],
   },
   {
-    id: 17,
-    stageId: 4,
+    id: 22,
+    stageId: 5,
     stageName: "Khoản Thuế Vô Hình Đời Thực",
     stageIcon: "⚖️",
     question: "Khả năng cảm nhận niềm vui của bạn trước những điều bình dị đời thường?",
@@ -258,8 +330,8 @@ export const assessmentQuestions: Question[] = [
     ],
   },
   {
-    id: 18,
-    stageId: 4,
+    id: 23,
+    stageId: 5,
     stageName: "Khoản Thuế Vô Hình Đời Thực",
     stageIcon: "⚖️",
     question: "Cả ngày Chủ nhật nằm nhà ôm điện thoại 'xả hơi', đến tối Chủ nhật bạn thấy thế nào?",
@@ -272,8 +344,8 @@ export const assessmentQuestions: Question[] = [
     ],
   },
   {
-    id: 19,
-    stageId: 4,
+    id: 24,
+    stageId: 5,
     stageName: "Khoản Thuế Vô Hình Đời Thực",
     stageIcon: "⚖️",
     question: "Những dự định lớn của bạn (học kỹ năng mới, đọc sách, tập gym, khởi nghiệp) đang ra sao?",
@@ -286,8 +358,8 @@ export const assessmentQuestions: Question[] = [
     ],
   },
   {
-    id: 20,
-    stageId: 4,
+    id: 25,
+    stageId: 5,
     stageName: "Khoản Thuế Vô Hình Đời Thực",
     stageIcon: "⚖️",
     question: "Bạn đã bao nhiêu lần tự hứa 'từ mai sẽ ngủ sớm, sẽ bớt bấm máy' nhưng rồi lại thất bại?",
@@ -327,19 +399,21 @@ export interface DetailedResult {
     stage2: number;
     stage3: number;
     stage4: number;
+    stage5: number;
   };
 }
 
 export function calculateDetailedResult(answers: number[]): DetailedResult {
   const total = answers.reduce((acc, curr) => acc + (curr >= 0 ? curr : 0), 0);
-  const maxScore = 60;
+  const maxScore = 75;
   const percentage = Math.round((total / maxScore) * 100);
 
-  // Tính điểm 4 chặng (mỗi chặng 5 câu, max 15 điểm)
+  // Tính điểm 5 chặng (mỗi chặng 5 câu, max 15 điểm)
   const s1 = answers.slice(0, 5).reduce((a, b) => a + (b >= 0 ? b : 0), 0);
   const s2 = answers.slice(5, 10).reduce((a, b) => a + (b >= 0 ? b : 0), 0);
   const s3 = answers.slice(10, 15).reduce((a, b) => a + (b >= 0 ? b : 0), 0);
   const s4 = answers.slice(15, 20).reduce((a, b) => a + (b >= 0 ? b : 0), 0);
+  const s5 = answers.slice(20, 25).reduce((a, b) => a + (b >= 0 ? b : 0), 0);
 
   // Tìm Hệ Nghiện nổi trội nhất
   let archetype = {
@@ -349,7 +423,7 @@ export function calculateDetailedResult(answers: number[]): DetailedResult {
     icon: "🌙",
   };
 
-  const maxStageScore = Math.max(s1, s2, s3, s4);
+  const maxStageScore = Math.max(s1, s2, s3, s4, s5);
   if (maxStageScore === s2) {
     archetype = {
       name: "Kẻ Đa Nhiệm Phân Mảnh",
@@ -366,6 +440,13 @@ export function calculateDetailedResult(answers: number[]): DetailedResult {
     };
   } else if (maxStageScore === s4) {
     archetype = {
+      name: "Con Tin Trong Ma Trận Tiện Nghi",
+      tagline: "The Comfort Matrix Captive",
+      description: "Bạn đang sống trong một bể bơi tiện nghi siêu ngưỡng: chuông thông báo giật dây liên tục, đồ ăn nhanh giao tận giường, mua sắm 1 chạm. Khả năng chịu đựng sự buồn chán tự nhiên của bạn đang bị teo biến.",
+      icon: "📱",
+    };
+  } else if (maxStageScore === s5) {
+    archetype = {
       name: "Bóng Ma Thông Báo & Thuế Ngầm",
       tagline: "The Phantom FOMO & Life Tax Payer",
       description: "Cuộc sống của bạn vẫn đang chạy, nhưng bạn đang âm thầm trả một khoản 'thuế vô hình' cực đắt: sự cáu gắt với người thân, sự chai sạn cảm xúc và việc dậm chân tại chỗ nhiều năm.",
@@ -373,7 +454,7 @@ export function calculateDetailedResult(answers: number[]): DetailedResult {
     };
   }
 
-  if (total <= 16) {
+  if (total <= 20) {
     return {
       level: "balance",
       title: "Cân Bằng Sinh Học & Làm Chủ Sự Chú Ý",
@@ -394,9 +475,9 @@ export function calculateDetailedResult(answers: number[]): DetailedResult {
         description: "Duy trì phong độ hiện tại bằng việc tiếp tục giữ 60 phút đầu ngày hoàn toàn thuộc về bạn và những người thân yêu.",
         wabiSabiQuote: "Sự bình yên không phải là không có cám dỗ, mà là khi cám dỗ đi qua, tâm bạn vẫn phẳng lặng như mặt nước.",
       },
-      stageScores: { stage1: s1, stage2: s2, stage3: s3, stage4: s4 },
+      stageScores: { stage1: s1, stage2: s2, stage3: s3, stage4: s4, stage5: s5 },
     };
-  } else if (total <= 38) {
+  } else if (total <= 48) {
     return {
       level: "mild",
       title: "Chớm Quá Tải & Đang Trả Khoản Thuế Vô Hình",
@@ -417,7 +498,7 @@ export function calculateDetailedResult(answers: number[]): DetailedResult {
         description: "Tối nay cắm sạc điện thoại ở bàn làm việc cách giường đúng 2 mét. Muốn lướt phải ngồi dậy. Đồng thời áp dụng Hara Hachi Bu: dừng lướt khi vừa chớm thấy đủ, chừa 20% khoảng lặng cho não thở.",
         wabiSabiQuote: "Đừng dùng búa tạ để đập vỡ thói quen; hãy dùng giọt nước Kaizen 1% để xói mòn nó êm ả mỗi ngày.",
       },
-      stageScores: { stage1: s1, stage2: s2, stage3: s3, stage4: s4 },
+      stageScores: { stage1: s1, stage2: s2, stage3: s3, stage4: s4, stage5: s5 },
     };
   } else {
     return {
@@ -441,7 +522,7 @@ export function calculateDetailedResult(answers: number[]): DetailedResult {
         description: "Tuyệt đối không 'cắt đột ngột thô bạo' (Cold-turkey). Hãy tha thứ cho những lần trượt chân vừa qua. Hôm nay chỉ cần làm một việc: Giảm 15 phút lướt đêm và tập đứng nhìn xung quanh 60 giây khi vào thang máy.",
         wabiSabiQuote: "Vết rạn nứt là nơi ánh sáng đi vào. Người Nhật dùng vàng ròng để hàn lại gốm vỡ, và bạn cũng có thể vá lại sự chú ý của mình từng chút một.",
       },
-      stageScores: { stage1: s1, stage2: s2, stage3: s3, stage4: s4 },
+      stageScores: { stage1: s1, stage2: s2, stage3: s3, stage4: s4, stage5: s5 },
     };
   }
 }

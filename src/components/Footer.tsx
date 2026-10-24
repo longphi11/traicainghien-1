@@ -30,7 +30,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm text-[#6B726E]">
               <li><Link href="/" className="hover:text-[#3A5A40] transition-colors">Trang Chủ</Link></li>
               <li><Link href="/he-thong-cai-nghien" className="text-[#3A5A40] font-bold hover:underline">Hệ Thống Cai Nghiện</Link></li>
-              <li><Link href="/trac-nghiem" className="hover:text-[#3A5A40] transition-colors">Đo Mức Độ Nghiện (20 câu)</Link></li>
+              <li><Link href="/trac-nghiem" className="hover:text-[#3A5A40] transition-colors">Đo Mức Độ Nghiện (25 câu)</Link></li>
               <li><Link href="/bai-viet" className="hover:text-[#3A5A40] transition-colors">Kho Bài Viết Tâm Lý</Link></li>
               <li><Link href="/cong-cu" className="hover:text-[#3A5A40] transition-colors">Công Cụ Thực Hành</Link></li>
               <li><Link href="/gioi-thieu" className="hover:text-[#3A5A40] transition-colors">Giới Thiệu & Sứ Mệnh</Link></li>

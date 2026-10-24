@@ -107,7 +107,7 @@ export default async function ArticleDetailPage({
           Bạn muốn biết mức độ kiệt quệ dopamine của mình?
         </h3>
         <p className="text-xs md:text-sm text-[#6B726E] max-w-md mx-auto">
-          Làm bài trắc nghiệm 10 câu hỏi để nhận diện mức độ phụ thuộc và nhận ngay 1 bài tập Kaizen vi mô cho ngày hôm nay.
+          Làm bài trắc nghiệm 25 câu hỏi để nhận diện mức độ phụ thuộc và nhận ngay 1 bài tập Kaizen vi mô cho ngày hôm nay.
         </p>
         <div>
           <Link

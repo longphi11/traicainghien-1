@@ -21,7 +21,7 @@ import {
 
 export default function TracNghiemPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<number[]>(Array(20).fill(-1));
+  const [selectedAnswers, setSelectedAnswers] = useState<number[]>(Array(25).fill(-1));
   const [isCompleted, setIsCompleted] = useState(false);
   const [result, setResult] = useState<DetailedResult | null>(null);
   const [copied, setCopied] = useState(false);
@@ -52,7 +52,7 @@ export default function TracNghiemPage() {
   };
 
   const handleRestart = () => {
-    setSelectedAnswers(Array(20).fill(-1));
+    setSelectedAnswers(Array(25).fill(-1));
     setCurrentQuestionIndex(0);
     setIsCompleted(false);
     setResult(null);
@@ -76,13 +76,13 @@ export default function TracNghiemPage() {
           {/* Header */}
           <div className="text-center space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-3.5 py-1 rounded-full inline-block">
-              Trắc Nghiệm Nhập Trại • 20 Câu Hỏi
+              Trắc Nghiệm Nhập Trại • 25 Câu Hỏi
             </span>
             <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E]">
               Đo Mức Độ Nghiện Của Bạn
             </h1>
             <p className="text-xs md:text-sm text-[#6B726E] max-w-xl mx-auto leading-relaxed">
-              Không phán xét, không giáo điều. 20 câu hỏi bóc tách 4 tầng hành vi đời thực để gọi tên những điều bạn đang vô thức lặp lại mỗi ngày.
+              Không phán xét, không giáo điều. 25 câu hỏi bóc tách 5 tầng hành vi đời thực để gọi tên những điều bạn đang vô thức lặp lại mỗi ngày.
             </p>
           </div>
 
@@ -91,10 +91,10 @@ export default function TracNghiemPage() {
             <div className="flex items-center justify-between text-xs">
               <span className="font-bold text-[#3A5A40] flex items-center gap-1.5">
                 <span>{currentQ.stageIcon}</span>
-                <span>Chặng {currentQ.stageId}/4: {currentQ.stageName}</span>
+                <span>Chặng {currentQ.stageId}/5: {currentQ.stageName}</span>
               </span>
               <span className="font-semibold text-[#6B726E]">
-                Câu {currentQuestionIndex + 1} / 20 ({progressPercent}%)
+                Câu {currentQuestionIndex + 1} / 25 ({progressPercent}%)
               </span>
             </div>
 
@@ -228,23 +228,27 @@ export default function TracNghiemPage() {
               "{result?.archetype.description}"
             </p>
 
-            {/* 4 Chặng Điểm Số */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-center text-xs">
-              <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
+            {/* 5 Chặng Điểm Số */}
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 pt-2 text-center text-xs">
+              <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
                 <span className="text-gray-500 block text-[11px]">🌙 Đêm muộn</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage1}/15</strong>
               </div>
-              <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
+              <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
                 <span className="text-gray-500 block text-[11px]">🧠 Chú ý</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage2}/15</strong>
               </div>
-              <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
+              <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
                 <span className="text-gray-500 block text-[11px]">🛡️ Đối phó</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage3}/15</strong>
               </div>
-              <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
-                <span className="text-gray-500 block text-[11px]">⚖️ Thuế ngầm</span>
+              <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
+                <span className="text-gray-500 block text-[11px]">📱 Tiện nghi</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage4}/15</strong>
+              </div>
+              <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
+                <span className="text-gray-500 block text-[11px]">⚖️ Thuế ngầm</span>
+                <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage5}/15</strong>
               </div>
             </div>
           </div>

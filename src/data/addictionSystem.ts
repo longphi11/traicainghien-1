@@ -83,7 +83,7 @@ export const addictionSystemProducts: AddictionSystemProduct[] = [
     highlights: [
       "Ghép cặp Accountability Partner (Bạn đồng hành chịu trách nhiệm) giám sát chéo mỗi ngày",
       "Zoom vòng tròn chia sẻ cuối tuần (Offline/Online Circle): Nói thật triệt để mà không sợ bị phán xét",
-      "Kế hoạch can thiệp cá nhân hóa 1-on-1 dựa trên kết quả bài Trắc nghiệm 20 câu",
+      "Kế hoạch can thiệp cá nhân hóa 1-on-1 dựa trên kết quả bài Trắc nghiệm 25 câu",
       "Hợp đồng cam kết tài chính (Commitment Contract) tạo đòn bẩy tâm lý không thể thoái thác",
     ],
     duration: "21 Ngày đồng hành chuyên sâu",

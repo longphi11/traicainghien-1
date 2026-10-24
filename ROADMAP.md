@@ -54,7 +54,7 @@ flowchart TD
 
 #### 📅 THÁNG 1 (24/10/2026 – 30/11/2026)
 * **Target cụ thể tháng 1:**
-  * Hoàn thiện 100% cấu trúc website, bài trắc nghiệm 20 câu và tủ sách.
+  * Hoàn thiện 100% cấu trúc website, bài trắc nghiệm 25 câu (5 chặng bóc tách hành vi).
   * Xuất bản đủ **10 bài viết chuyên sâu** chuẩn SEO.
   * Kênh TikTok / Shorts xuất bản **15 video faceless** đầu tiên.
   * Thu thập **150 – 200 lượt** làm trắc nghiệm đầu tiên.

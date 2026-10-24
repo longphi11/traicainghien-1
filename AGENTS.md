@@ -90,7 +90,7 @@ graph TD
     B --> C[Bước 3: Đồng Hành & Dứt Điểm]
     
     subgraph Step1 [Nhận Thức & Thấu Hiểu]
-        A --> A1[Trắc nghiệm 10 câu hỏi nhận diện]
+        A --> A1[Trắc nghiệm 25 câu hỏi nhận diện]
         A --> A2[AI Mây lắng nghe, bóc tách Trigger gốc rễ]
     end
     

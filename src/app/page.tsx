@@ -324,16 +324,16 @@ export default function HomePage() {
           <div className="rounded-3xl p-8 md:p-12 border border-[#E6E1D8] bg-white shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="max-w-xl space-y-4">
               <span className="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-md bg-[#F9EFE9] text-[#C27D53] inline-block">
-                Trắc nghiệm nhập trại • 20 Câu Hỏi
+                Trắc nghiệm nhập trại • 25 Câu Hỏi
               </span>
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">
                 Đo mức độ nghiện của bạn: Bạn thuộc Hệ Nghiện nào?
               </h2>
               <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
-                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 20 câu hỏi 4 chặng sẽ bóc tách chính xác 4 Hệ Nghiện thời hiện đại và Khoản Thuế Vô Hình bạn đang âm thầm gánh chịu.
+                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 25 câu hỏi 5 chặng sẽ bóc tách chính xác 5 Hệ Nghiện thời hiện đại và Khoản Thuế Vô Hình bạn đang âm thầm gánh chịu.
               </p>
               <div className="flex flex-wrap gap-4 text-xs font-semibold text-[#2D312E] pt-2">
-                <span>🌙 Phân loại 4 Hệ Nghiện</span>
+                <span>🌙 Phân loại 5 Hệ Nghiện</span>
                 <span>⚖️ Bóc trần Khoản Thuế Vô Hình</span>
                 <span>💡 Kèm đơn thuốc Kaizen 1%</span>
               </div>
