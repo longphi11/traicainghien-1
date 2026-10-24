@@ -54,6 +54,86 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 1.5. KHỐI ĐÁNH THẲNG VÀO INSIGHT NGƯỜI ĐỌC (THỨC TỈNH & ĐỒNG CẢM) */}
+      <section className="px-6 max-w-5xl mx-auto">
+        <div className="rounded-3xl p-8 md:p-12 bg-white border border-[#E6E1D8] shadow-sm space-y-10">
+          
+          {/* Header Insight */}
+          <div className="max-w-3xl space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#C27D53] bg-[#F9EFE9] px-3.5 py-1.5 rounded-full inline-block">
+              Lắng nghe tiếng lòng bạn
+            </span>
+            <h2 className="text-2xl md:text-4xl font-bold font-serif text-[#2D312E] leading-tight">
+              Nếu bạn tìm đến trang web này, chắc hẳn sâu thẳm bên trong, bạn đang tìm kiếm một sự thay đổi.
+            </h2>
+            <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
+              Bạn có nhận ra rằng cuộc sống của mình dường như đang bị điều khiển bởi những thứ nằm ngoài tầm kiểm soát? Mỗi ngày trôi qua như một phản xạ tự động: thức dậy trong sự uể oải, vội vã vớ lấy chiếc điện thoại, và kết thúc ngày bằng những giờ lướt màn hình vô thức đến cay xè mắt.
+            </p>
+          </div>
+
+          {/* 2 Cột Gương Soi Chiếu Nỗi Đau */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            
+            {/* Box 1: Niềm vui bình dị bị đánh cắp */}
+            <div className="p-7 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3.5 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  🍵
+                </div>
+                <h3 className="text-lg font-bold font-serif text-[#2D312E]">
+                  Đã bao lâu rồi bạn không cảm nhận được niềm vui trong một bữa cơm?
+                </h3>
+                <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed">
+                  Khi thế giới hiện đại diễn ra quá nhanh, những điều giản dị và thuần khiết nhất dần biến mất: Một bữa cơm gia đình ấm cúng mà không có chiếc màn hình trước mặt, một buổi sáng thức dậy thảnh thơi ngắm ánh nắng sớm, một giấc ngủ sâu không mộng mị, hay sự hiện diện trọn vẹn bên những người bạn yêu thương. Chúng ta ăn trong vội vã, sống trong lo âu và quên mất cảm giác bình yên thật sự.
+                </p>
+              </div>
+              <div className="text-xs font-semibold text-[#3A5A40] pt-2 border-t border-[#E6E1D8]/60">
+                ✦ Đánh mất sự hiện diện trong đời thực
+              </div>
+            </div>
+
+            {/* Box 2: Ma trận cám dỗ & kiểm soát vô hình */}
+            <div className="p-7 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3.5 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  📱
+                </div>
+                <h3 className="text-lg font-bold font-serif text-[#2D312E]">
+                  Cuộc sống đang bị gián tiếp kiểm soát bởi một hệ thống bẫy tinh vi
+                </h3>
+                <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed">
+                  Bạn không hề yếu đuối. Chỉ là chúng ta đang bị ném vào một hệ thống quá dày đặc những chiếc bẫy kích thích siêu ngưỡng: Tiếng chuông thông báo điện thoại kéo giật sự chú ý, hộp thư email công việc dồn dập khiến tâm trí luôn trong trạng thái báo động, mạng xã hội giật dây dopamine mỗi 3 giây, đồ ăn nhanh làm tê liệt cảm giác no tự nhiên, và game thâu đêm cướp đi sinh lực.
+                </p>
+              </div>
+              <div className="text-xs font-semibold text-[#C27D53] pt-2 border-t border-[#E6E1D8]/60">
+                ✦ Bị thao túng bởi dopamine rẻ tiền
+              </div>
+            </div>
+
+          </div>
+
+          {/* Callout Kết Nối & Động Lực */}
+          <div className="p-6 md:p-8 rounded-2xl bg-[#EBF0EC]/70 border border-[#3A5A40]/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div className="space-y-1 max-w-xl">
+              <p className="text-base font-bold font-serif text-[#2D312E]">
+                Bạn xứng đáng được làm chủ cuộc đời mình — thay vì làm con tin cho các thuật toán.
+              </p>
+              <p className="text-xs md:text-sm text-[#6B726E]">
+                Hãy bắt đầu hành trình bằng việc lắng nghe và gọi tên chính xác điều gì đang vắt kiệt năng lượng sống của bạn.
+              </p>
+            </div>
+            <Link
+              href="/trac-nghiem"
+              className="px-6 py-3.5 rounded-xl text-xs md:text-sm font-bold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-sm shrink-0 transition-all flex items-center gap-2 hover:scale-105"
+            >
+              <span>Đo mức độ nghiện ngay</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       {/* 2. HỆ THỐNG CAI NGHIỆN (PRODUCT SUITE TƯƠNG TỰ DANNY TRAN) */}
       <section className="px-6 max-w-6xl mx-auto" id="he-thong">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
