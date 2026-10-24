@@ -55,71 +55,125 @@ export default function HomePage() {
       </section>
 
       {/* 1.5. KHỐI ĐÁNH THẲNG VÀO INSIGHT NGƯỜI ĐỌC (THỨC TỈNH & ĐỒNG CẢM) */}
-      <section className="px-6 max-w-5xl mx-auto">
+      <section className="px-6 max-w-6xl mx-auto">
         <div className="rounded-3xl p-8 md:p-12 bg-white border border-[#E6E1D8] shadow-sm space-y-10">
           
-          {/* Header Insight */}
-          <div className="max-w-3xl space-y-3">
+          {/* Header Insight (Căn giữa) */}
+          <div className="max-w-3xl mx-auto text-center space-y-4">
             <span className="text-xs font-bold uppercase tracking-wider text-[#C27D53] bg-[#F9EFE9] px-3.5 py-1.5 rounded-full inline-block">
               Lắng nghe tiếng lòng bạn
             </span>
             <h2 className="text-2xl md:text-4xl font-bold font-serif text-[#2D312E] leading-tight">
               Nếu bạn tìm đến trang web này, chắc hẳn sâu thẳm bên trong, bạn đang tìm kiếm một sự thay đổi.
             </h2>
-            <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
-              Bạn có nhận ra rằng cuộc sống của mình dường như đang bị điều khiển bởi những thứ nằm ngoài tầm kiểm soát? Mỗi ngày trôi qua như một phản xạ tự động: thức dậy trong sự uể oải, vội vã vớ lấy chiếc điện thoại, và kết thúc ngày bằng những giờ lướt màn hình vô thức đến cay xè mắt.
+            <p className="text-sm md:text-base text-[#6B726E] leading-relaxed max-w-2xl mx-auto">
+              Đã bao lâu rồi bạn không cảm nhận được những niềm vui đơn giản, khi cuộc sống bị cuốn đi quá nhanh và bị chi phối bởi những cám dỗ số? Có phải bạn cũng đang gặp phải những điều này:
             </p>
           </div>
 
-          {/* 2 Cột Gương Soi Chiếu Nỗi Đau */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          {/* 6 Nỗi Đau Thực Tế (Grid 3 Cột) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             
-            {/* Box 1: Niềm vui bình dị bị đánh cắp */}
-            <div className="p-7 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3.5 flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-11 h-11 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  🍵
+            {/* 1. Đi cafe dùng điện thoại */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  ☕
                 </div>
-                <h3 className="text-lg font-bold font-serif text-[#2D312E]">
-                  Đã bao lâu rồi bạn không cảm nhận được niềm vui trong một bữa cơm?
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                  Đi cafe cùng bạn bè nhưng ai cũng cắm mặt vào điện thoại
                 </h3>
-                <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed">
-                  Khi thế giới hiện đại diễn ra quá nhanh, những điều giản dị và thuần khiết nhất dần biến mất: Một bữa cơm gia đình ấm cúng mà không có chiếc màn hình trước mặt, một buổi sáng thức dậy thảnh thơi ngắm ánh nắng sớm, một giấc ngủ sâu không mộng mị, hay sự hiện diện trọn vẹn bên những người bạn yêu thương. Chúng ta ăn trong vội vã, sống trong lo âu và quên mất cảm giác bình yên thật sự.
+                <p className="text-xs text-[#6B726E] leading-relaxed">
+                  Ngồi cạnh nhau nhưng tâm trí mỗi người ở một thế giới ảo. Những cuộc trò chuyện sâu sắc, ánh mắt chân thành và tiếng cười tự nhiên dần biến mất.
                 </p>
-              </div>
-              <div className="text-xs font-semibold text-[#3A5A40] pt-2 border-t border-[#E6E1D8]/60">
-                ✦ Đánh mất sự hiện diện trong đời thực
               </div>
             </div>
 
-            {/* Box 2: Ma trận cám dỗ & kiểm soát vô hình */}
-            <div className="p-7 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3.5 flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-11 h-11 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  📱
+            {/* 2. 2h sáng cay mắt */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  🌙
                 </div>
-                <h3 className="text-lg font-bold font-serif text-[#2D312E]">
-                  Cuộc sống đang bị gián tiếp kiểm soát bởi một hệ thống bẫy tinh vi
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                  2 giờ sáng mắt cay xè nhưng ngón tay vẫn không ngừng lướt
                 </h3>
-                <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed">
-                  Bạn không hề yếu đuối. Chỉ là chúng ta đang bị ném vào một hệ thống quá dày đặc những chiếc bẫy kích thích siêu ngưỡng: Tiếng chuông thông báo điện thoại kéo giật sự chú ý, hộp thư email công việc dồn dập khiến tâm trí luôn trong trạng thái báo động, mạng xã hội giật dây dopamine mỗi 3 giây, đồ ăn nhanh làm tê liệt cảm giác no tự nhiên, và game thâu đêm cướp đi sinh lực.
+                <p className="text-xs text-[#6B726E] leading-relaxed">
+                  Tự nhủ "lướt 5 phút rồi ngủ", nhưng ngẩng lên đã nửa đêm. Chiếc máy nóng ran, đầu óc trống rỗng và sáng hôm sau thức dậy trong cảm giác tội lỗi.
                 </p>
               </div>
-              <div className="text-xs font-semibold text-[#C27D53] pt-2 border-t border-[#E6E1D8]/60">
-                ✦ Bị thao túng bởi dopamine rẻ tiền
+            </div>
+
+            {/* 3. Mua sắm Shopee */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  🛍️
+                </div>
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                  Chốt đơn Shopee, TikTok Shop trong vô thức lúc nửa đêm
+                </h3>
+                <p className="text-xs text-[#6B726E] leading-relaxed">
+                  Mua sắm như một liều thuốc gây tê cảm xúc khi căng thẳng. Hàng giao về bóc ra chẳng buồn dùng, chỉ còn lại sự tiếc nuối và ví tiền vơi đi.
+                </p>
+              </div>
+            </div>
+
+            {/* 4. Mất tập trung */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  🧠
+                </div>
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                  Không thể ngồi yên tập trung làm việc quá 10 phút
+                </h3>
+                <p className="text-xs text-[#6B726E] leading-relaxed">
+                  Vừa mở tài liệu lên là tay lại vô thức nhảy tab, bấm vào Facebook, YouTube. Cả ngày bận rộn nhưng cuối ngày không hoàn thành được mục tiêu lớn nào.
+                </p>
+              </div>
+            </div>
+
+            {/* 5. Ăn uống cảm xúc */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  🍔
+                </div>
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                  Bữa ăn vội vã với đồ ăn nhanh và màn hình trước mặt
+                </h3>
+                <p className="text-xs text-[#6B726E] leading-relaxed">
+                  Ăn không phải để thưởng thức mà chỉ để có cớ xem video. Nạp vào người đồ ngọt, thức ăn nhanh trong vô thức, bụng no căng nhưng tâm trí vẫn cạn kiệt.
+                </p>
+              </div>
+            </div>
+
+            {/* 6. Cáu gắt người thân */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                  ⚡
+                </div>
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                  Dễ cáu gắt và mất kiên nhẫn với những người yêu thương
+                </h3>
+                <p className="text-xs text-[#6B726E] leading-relaxed">
+                  Bực bội vô cớ khi cha mẹ, vợ con hay người yêu vô tình ngắt quãng một ván game hay đoạn video đang xem dở. "Con người nghiện" đang làm tổn thương họ.
+                </p>
               </div>
             </div>
 
           </div>
 
-          {/* Callout Kết Nối & Động Lực */}
-          <div className="p-6 md:p-8 rounded-2xl bg-[#EBF0EC]/70 border border-[#3A5A40]/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          {/* Callout Kết Nối & Động Lực (Căn giữa) */}
+          <div className="p-6 md:p-8 rounded-2xl bg-[#EBF0EC]/70 border border-[#3A5A40]/20 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div className="space-y-1 max-w-xl">
               <p className="text-base font-bold font-serif text-[#2D312E]">
-                Bạn xứng đáng được làm chủ cuộc đời mình — thay vì làm con tin cho các thuật toán.
+                Bạn không hề yếu đuối — bạn chỉ đang bị kẹt trong một hệ thống bẫy dopamine.
               </p>
               <p className="text-xs md:text-sm text-[#6B726E]">
-                Hãy bắt đầu hành trình bằng việc lắng nghe và gọi tên chính xác điều gì đang vắt kiệt năng lượng sống của bạn.
+                Bước đầu tiên để giành lại tự do là gọi tên chính xác điều gì đang chi phối bạn.
               </p>
             </div>
             <Link
