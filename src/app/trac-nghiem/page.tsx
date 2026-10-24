@@ -333,15 +333,15 @@ export default function TracNghiemPage() {
             </div>
           </div>
 
-          {/* Gợi ý Tủ Sách & Công Cụ */}
+          {/* Gợi ý Công Cụ & Bài Viết */}
           <div className="p-6 rounded-2xl bg-white border border-[#E6E1D8] text-center space-y-3">
-            <h4 className="text-sm font-bold font-serif text-[#2D312E]">Trang bị công cụ bẻ gãy thói quen</h4>
+            <h4 className="text-sm font-bold font-serif text-[#2D312E]">Trang bị đồ nghề bẻ gãy thói quen</h4>
             <p className="text-xs text-[#6B726E]">
-              Khám phá tủ sách đúc kết 14 cuốn kinh điển và các app khóa màn hình thực chiến để hỗ trợ bạn trong những ngày đầu.
+              Khám phá các app khóa màn hình nghiêm ngặt, bảng theo dõi streak và kho bài viết thực chiến để hỗ trợ bạn trong những ngày đầu.
             </p>
             <div className="flex justify-center gap-4 text-xs font-semibold pt-1">
-              <Link href="/sach" className="text-[#3A5A40] hover:underline">Vào Tủ Sách →</Link>
-              <Link href="/cong-cu" className="text-[#C27D53] hover:underline">Xem Công Cụ →</Link>
+              <Link href="/cong-cu" className="text-[#3A5A40] hover:underline">Xem Đồ Nghề →</Link>
+              <Link href="/bai-viet" className="text-[#C27D53] hover:underline">Đọc Bài Viết →</Link>
             </div>
           </div>
 

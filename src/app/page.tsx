@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { Sparkles, ArrowRight, BookOpen, Wrench, Compass, ShieldCheck, Heart, CheckCircle2 } from "lucide-react";
 import { articles } from "@/data/articles";
-import { books } from "@/data/books";
 import { tools } from "@/data/tools";
 
 export default function HomePage() {
@@ -19,8 +18,8 @@ export default function HomePage() {
           </div>
 
           {/* Slogan Tagline */}
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight font-serif text-[#2D312E] leading-[1.15]">
-            Trở về phiên bản tốt nhất của bạn.
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-serif text-[#2D312E] leading-tight md:whitespace-nowrap">
+            Trở về phiên bản tốt nhất của bạn
           </h1>
 
           {/* Brand Manifesto */}
@@ -47,7 +46,7 @@ export default function HomePage() {
 
           {/* Micro trust indicators */}
           <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-[#6B726E]">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-[#3A5A40]" /> 10 câu trắc nghiệm nhanh 3 phút</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-[#3A5A40]" /> 25 câu trắc nghiệm trong 3 phút</span>
             <span className="flex items-center gap-1.5"><Heart className="w-3.5 h-3.5 text-[#C27D53]" /> Tuyệt đối không phán xét</span>
             <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-[#3A5A40]" /> Hoàn toàn miễn phí</span>
           </div>
@@ -312,64 +311,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. TỦ SÁCH & CÔNG CỤ PREVIEW (HAI MỤC RIÊNG BIỆT) */}
+      {/* 5. CÔNG CỤ THỰC HÀNH PREVIEW */}
       <section className="px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          {/* Box Sách */}
-          <div className="p-8 rounded-3xl bg-white border border-[#E6E1D8] space-y-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">📖</span>
-                <h3 className="text-2xl font-bold font-serif text-[#2D312E]">Tủ Sách Chắt Lọc</h3>
-              </div>
-              <Link href="/sach" className="text-xs font-bold text-[#3A5A40] hover:underline">Xem tất cả →</Link>
-            </div>
-            <p className="text-xs text-[#6B726E] leading-relaxed">
-              Đúc kết thực tế từ 14 cuốn sách kinh điển về dopamine, thói quen và lẽ sống. Chúng tôi chỉ chia sẻ những cuốn sách đã đọc thật và thấy có ích thực sự.
-            </p>
-            <div className="space-y-3">
-              {books.slice(0, 2).map((book) => (
-                <div key={book.id} className="p-3.5 rounded-xl border border-[#E6E1D8] bg-[#FAF7F2] flex items-center justify-between text-xs">
-                  <div>
-                    <span className="font-bold text-[#2D312E] block">{book.title}</span>
-                    <span className="text-[#6B726E] text-[11px]">{book.author}</span>
-                  </div>
-                  <Link href="/sach" className="text-[#3A5A40] font-semibold hover:underline shrink-0 ml-3">
-                    Xem đúc kết →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Box Công Cụ */}
-          <div className="p-8 rounded-3xl bg-white border border-[#E6E1D8] space-y-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
+        <div className="p-8 md:p-10 rounded-3xl bg-white border border-[#E6E1D8] space-y-8 shadow-sm">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-[#E6E1D8]">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2.5">
                 <span className="text-2xl">🛠️</span>
-                <h3 className="text-2xl font-bold font-serif text-[#2D312E]">Công Cụ Thực Hành</h3>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40]">Đồ Nghề Thực Chiến</span>
               </div>
-              <Link href="/cong-cu" className="text-xs font-bold text-[#3A5A40] hover:underline">Xem tất cả →</Link>
+              <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">Công Cụ Hỗ Trợ Chuyển Hóa</h3>
+              <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed max-w-2xl">
+                Đừng chỉ dựa vào ý chí trần trụi. Hãy trang bị cho mình những rào cản và công cụ thông minh để khiến thói quen xấu trở nên khó khăn, và thói quen tốt trở nên dễ dàng.
+              </p>
             </div>
-            <p className="text-xs text-[#6B726E] leading-relaxed">
-              Các đồ nghề đồng hành cùng bạn: ứng dụng khóa màn hình nghiêm ngặt, bảng theo dõi streak và tài liệu Dopamine Menu tải về miễn phí.
-            </p>
-            <div className="space-y-3">
-              {tools.slice(0, 2).map((tool) => (
-                <div key={tool.id} className="p-3.5 rounded-xl border border-[#E6E1D8] bg-[#FAF7F2] flex items-center justify-between text-xs">
-                  <div>
-                    <span className="font-bold text-[#2D312E] block">{tool.name}</span>
-                    <span className="text-[#6B726E] text-[11px]">{tool.categoryLabel}</span>
-                  </div>
-                  <Link href="/cong-cu" className="text-[#3A5A40] font-semibold hover:underline shrink-0 ml-3">
-                    Xem chi tiết →
-                  </Link>
-                </div>
-              ))}
-            </div>
+            <Link
+              href="/cong-cu"
+              className="text-xs md:text-sm font-bold text-[#3A5A40] hover:underline flex items-center gap-1 shrink-0"
+            >
+              <span>Xem tất cả đồ nghề</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {tools.map((tool) => (
+              <div
+                key={tool.id}
+                className="p-5 rounded-2xl border border-[#E6E1D8] bg-[#FAF7F2] flex flex-col justify-between hover:border-[#3A5A40]/40 transition-all group"
+              >
+                <div className="space-y-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#C27D53] px-2 py-0.5 rounded bg-[#F9EFE9] inline-block">
+                    {tool.categoryLabel}
+                  </span>
+                  <h4 className="font-bold text-sm text-[#2D312E] leading-snug group-hover:text-[#3A5A40] transition-colors line-clamp-2">
+                    {tool.name}
+                  </h4>
+                  <p className="text-xs text-[#6B726E] leading-relaxed line-clamp-2">
+                    {tool.description}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-[#E6E1D8]/60">
+                  <Link
+                    href="/cong-cu"
+                    className="text-xs font-semibold text-[#3A5A40] flex items-center gap-1 hover:underline"
+                  >
+                    <span>Khám phá</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -14,7 +14,6 @@ export default function Navbar() {
     { href: "/he-thong-cai-nghien", label: "Hệ Thống Cai Nghiện" },
     { href: "/trac-nghiem", label: "Trắc Nghiệm" },
     { href: "/bai-viet", label: "Bài Viết" },
-    { href: "/sach", label: "Sách" },
     { href: "/cong-cu", label: "Công Cụ" },
     { href: "/gioi-thieu", label: "Giới Thiệu" },
   ];
@@ -27,10 +26,10 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#E6E1D8]">
-      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group shrink-0">
+        <Link href="/" className="flex items-center gap-3.5 group shrink-0 mr-8 lg:mr-12 xl:mr-16">
           <div className="w-11 h-11 rounded-xl bg-[#3A5A40] text-white flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105 shrink-0">
             🌿
           </div>
@@ -45,7 +44,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop 6 Menu Items */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
           {navLinks.map((link) => {
             const active = isActive(link.href);
             return (
