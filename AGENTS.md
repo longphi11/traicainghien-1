@@ -23,8 +23,8 @@
 * **Tên thương hiệu:** **Trại Cai Nghiện**
 * **Slogan / Tagline:**  
   > **Trở về phiên bản tốt nhất của bạn.**
-* **Tuyên ngôn Sứ mệnh & Trái Tim Của Trại (Brand Manifesto):**  
-  > *"Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó chúng tôi giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản 'fresh' tươi mới mà bạn đã từng có. Chúng tôi không bán gì cả, chúng tôi chỉ giúp đỡ để bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn. Sự thay đổi của bạn là động lực duy nhất của chúng tôi."*
+* **Tuyên ngôn Sứ mệnh (Brand Manifesto):**  
+  > *"Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn."*
 * **Ba Giá Trị Trục Cột (Core Value Tags):**
   * `Hiểu hành vi`
   * `Thực hành thay đổi`

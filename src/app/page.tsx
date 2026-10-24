@@ -24,7 +24,7 @@ export default function HomePage() {
 
           {/* Brand Manifesto */}
           <p className="text-lg md:text-xl text-[#6B726E] max-w-2xl mx-auto leading-relaxed">
-            "Trại Cai Nghiện chỉ đơn giản là nơi giúp bạn tìm lại con người với nhiều động lực và ước mơ — một phiên bản tươi mới mà bạn đã từng có, vì chính bạn và vì những người yêu thương bạn."
+            "Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn."
           </p>
 
           {/* CTAs */}

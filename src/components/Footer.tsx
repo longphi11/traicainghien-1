@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-xl font-bold font-serif text-[#2D312E]">Trại Cai Nghiện</span>
             </div>
             <p className="text-sm text-[#6B726E] leading-relaxed max-w-md">
-              "Trại Cai Nghiện chỉ đơn giản là nơi giúp bạn tìm lại con người với nhiều động lực và ước mơ — trở về phiên bản tốt nhất của chính mình và của những người yêu thương bạn."
+              "Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn."
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
               <span className="text-xs px-3 py-1 rounded-full bg-[#EBF0EC] text-[#3A5A40] font-medium">#HieuHanhVi</span>

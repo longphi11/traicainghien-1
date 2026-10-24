@@ -20,7 +20,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn",
-  description: "Trại Cai Nghiện giúp bạn tìm lại con người với nhiều động lực, ước mơ — trở về phiên bản tốt nhất của chính mình và của những người yêu thương bạn.",
+  description: "Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn.",
   keywords: ["trại cai nghiện", "cai nghiện dopamine", "trở về phiên bản tốt nhất", "thói quen nguyên tử", "làm chủ thói quen", "ikigai", "kaizen"],
 };
 
