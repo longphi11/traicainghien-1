@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { articles } from "@/data/articles";
 import { ArrowLeft, Clock, Calendar, Sparkles, CheckCircle2 } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
@@ -11,6 +12,55 @@ export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
+
+  if (!article) {
+    return {
+      title: "Bài viết không tồn tại — Trại Cai Nghiện",
+    };
+  }
+
+  const title = `${article.title} — Trại Cai Nghiện`;
+  const description = article.excerpt;
+  const url = `https://www.traicainghien.com/bai-viet/${article.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Trại Cai Nghiện",
+      images: [
+        {
+          url: article.thumbnail,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      type: "article",
+      publishedTime: article.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [article.thumbnail],
+    },
+  };
 }
 
 // 1. Parser inline Markdown: [text](url), **bold**, *italic*
@@ -266,8 +316,36 @@ export default async function ArticleDetailPage({
 
   const blocks = parseMarkdownBlocks(article.content);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    image: [article.thumbnail],
+    datePublished: article.date,
+    author: {
+      "@type": "Organization",
+      name: "Trại Cai Nghiện",
+      url: "https://www.traicainghien.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Trại Cai Nghiện",
+      url: "https://www.traicainghien.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.traicainghien.com/bai-viet/${article.slug}`,
+    },
+  };
+
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16 space-y-10 animate-fadeIn">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       
       {/* Back button & Breadcrumb */}
       <div className="flex items-center justify-between text-xs pb-3 border-b border-[#E6E1D8]/60">
