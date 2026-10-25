@@ -262,7 +262,7 @@ export const articles: Article[] = [
     "slug": "tai-sao-cang-gang-guong-kiem-soat-cang-de-tai-nghien",
     "title": "Vì sao càng gồng ép kỷ luật, bạn càng dễ tái nghiện?",
     "excerpt": "Nghịch lý ức chế tư tưởng chứng minh: Càng cố cấm mình không nghĩ về con gấu trắng, bạn lại càng thấy nó khắp nơi. Cách tiếp cận buông lỏng và tha thứ Wabi Sabi...",
-    "thumbnail": "https://images.unsplash.com/photo-1508672019048-805b876b67e2?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80",
     "pillar": "Trụ cột 3: Thay đổi không dùng ý chí",
     "pillarTag": "XayDungThoiQuen",
     "tags": [
@@ -598,7 +598,7 @@ export const articles: Article[] = [
     "slug": "bo-nguyen-tac-thiet-lap-ranh-gioi-ky-thuat-so",
     "title": "5 ranh giới số bảo vệ sự bình yên trước thế giới ảo",
     "excerpt": "Nếu bạn không chủ động đặt ra ranh giới, các thuật toán sẽ chiếm đoạt từng giây phút trong ngày của bạn. 5 điều luật thép bất khả xâm phạm...",
-    "thumbnail": "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
     "pillar": "Trụ cột 3: Công cụ & Ma sát hành vi",
     "pillarTag": "CongCuHoTro",
     "tags": [
