@@ -2,6 +2,7 @@ export interface Article {
   slug: string;
   title: string;
   excerpt: string;
+  thumbnail: string;
   pillar: string;
   pillarTag: "HieuHanhVi" | "ThucHanhThayDoi" | "SongCoChuDich";
   readTime: string;
@@ -15,6 +16,7 @@ export const articles: Article[] = [
     slug: "ban-khong-he-yeu-duoi",
     title: "Bạn không hề yếu đuối... Bạn chỉ đang bị bộ não 'đòi nợ' mà thôi",
     excerpt: "2 giờ 15 phút sáng. Phòng tối om. Màn hình điện thoại rọi thẳng vào mặt sáng trưng. Mắt cay xè, ngón tay cái mỏi nhừ nhưng vẫn cứ quẹt lên. Tại sao bạn lại bất lực như thế?",
+    thumbnail: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
     pillar: "Trụ cột 1: Hiểu cơ chế hành vi",
     pillarTag: "HieuHanhVi",
     readTime: "6 phút đọc",
@@ -152,6 +154,7 @@ Chúc bạn có một giấc ngủ thật êm.
     slug: "quy-tac-2-met-thay-doi-khong-can-y-chi",
     title: "Quy tắc 2 mét: Bỏ thói quen xấu mà không cần dùng đến ý chí thép",
     excerpt: "Ý chí chỉ là một bình ắc-quy cạn dần theo ngày. Thay vì cấm đoán, hãy thiết kế lại khoảng cách ổ cắm sạc bằng nghệ thuật Kaizen 1%...",
+    thumbnail: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
     pillar: "Trụ cột 3: Thay đổi không dùng ý chí",
     pillarTag: "ThucHanhThayDoi",
     readTime: "5 phút đọc",
@@ -171,6 +174,7 @@ Chỉ cần cắm sạc điện thoại ở chiếc bàn cách giường đúng 
     slug: "chiem-linh-60-phut-buoi-sang-ikigai",
     title: "Chiếm lĩnh 60 phút buổi sáng: Khi Ikigai đánh bại dopamine rẻ tiền",
     excerpt: "Người thức dậy có một lý do để sống sẽ không bao giờ vồ lấy điện thoại đầu tiên. Cách người Nhật tìm thấy niềm vui trong dòng chảy tĩnh lặng...",
+    thumbnail: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
     pillar: "Trụ cột 4: Sống chủ động & tìm lại sự chú ý",
     pillarTag: "SongCoChuDich",
     readTime: "7 phút đọc",
@@ -193,6 +197,7 @@ Khi buổi sáng được neo đậu bởi một Ikigai (lý do thức dậy) r�
     slug: "dopamine-detox-48h-giai-cuu-su-tap-trung",
     title: "Dopamine Detox: Làm sao để 48 giờ thanh lọc cứu rỗi bộ não đang 'ngộ độc' kích thích?",
     excerpt: "Bạn cầm điện thoại lên xem giờ nhưng 2 tiếng sau vẫn đang nằm lướt TikTok? Đừng tự chửi rủa bản thân nữa. Đây là giao thức 48h 'hạ nhiệt' kích thích siêu ngưỡng và chiến thuật ma sát (Friction)...",
+    thumbnail: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
     pillar: "Trụ cột 3: Thay đổi không dùng ý chí",
     pillarTag: "ThucHanhThayDoi",
     readTime: "8 phút đọc",
@@ -297,6 +302,7 @@ Khi bạn dám từ bỏ những kích thích rẻ tiền, bạn sẽ thấy cu�
     slug: "dung-dopamine-detox-neu-chua-biet-5-dieu-nay",
     title: "Đừng 'Dopamine Detox' theo trào lưu nếu bạn chưa biết 5 sự thật trần trụi này",
     excerpt: "Nhiều bạn trẻ tự giam mình trong phòng tối, nhìn vào tường cả ngày rồi sau đó lại 'ăn bù' TikTok dữ dội hơn. Đây là 5 chiếc bẫy tai hại khi chạy theo phong trào cai dopamine...",
+    thumbnail: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
     pillar: "Trụ cột 1: Hiểu cơ chế hành vi",
     pillarTag: "HieuHanhVi",
     readTime: "7 phút đọc",

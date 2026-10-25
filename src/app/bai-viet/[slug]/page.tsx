@@ -63,6 +63,17 @@ export default async function ArticleDetailPage({
         </div>
       </div>
 
+      {/* Featured Thumbnail Cover */}
+      <div className="space-y-2">
+        <div className="relative w-full h-64 sm:h-80 md:h-[420px] rounded-3xl overflow-hidden shadow-sm border border-[#E6E1D8] bg-[#FAF7F2]">
+          <img
+            src={article.thumbnail}
+            alt={article.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
       {/* Article Body */}
       <div className="prose prose-lg max-w-none text-[#2D312E] leading-relaxed space-y-6 text-sm md:text-base">
         {article.content.split("\n\n").map((paragraph, index) => {
