@@ -54,111 +54,196 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 1.5. KHỐI ĐÁNH THẲNG VÀO INSIGHT NGƯỜI ĐỌC (THỨC TỈNH & ĐỒNG CẢM) */}
-      <section className="px-6 max-w-6xl mx-auto">
-        <div className="rounded-3xl p-8 md:p-12 bg-white border border-[#E6E1D8] shadow-sm space-y-10">
+      {/* 1.5. KHỐI ĐÁNH THẲNG VÀO INSIGHT NGƯỜI ĐỌC (THỨC TỈNH & ĐỒNG CẢM - PHONG CÁCH TYPOGRAPHY ẤN TƯỢNG) */}
+      <section className="px-4 sm:px-6 max-w-6xl mx-auto">
+        <div className="rounded-3xl p-6 sm:p-8 md:p-12 bg-white border border-[#E6E1D8] shadow-sm space-y-8 md:space-y-10">
           
-          {/* Header Insight (Căn giữa) */}
-          <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C27D53] bg-[#F9EFE9] px-3.5 py-1.5 rounded-full inline-block">
-              Lắng nghe tiếng lòng bạn
+          {/* Top Label Bar (Phong cách thanh tiêu đề của RIO Book / Hashtag Business) */}
+          <div className="flex items-center justify-between pb-4 border-b border-[#E6E1D8] text-xs font-bold tracking-wider uppercase text-[#3A5A40]">
+            <div className="flex items-center gap-2">
+              <span className="text-base">🌿</span>
+              <span>TRẠI CAI NGHIỆN • LẮNG NGHE TIẾNG LÒNG BẠN</span>
+            </div>
+            <span className="text-[11px] font-semibold text-[#6B726E] hidden sm:inline-block">
+              TÁI LẬP CUỘC ĐỜI & SỐNG CÓ CHỦ ĐÍCH
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold font-serif text-[#2D312E] leading-tight">
-              Nếu bạn tìm đến trang web này, chắc hẳn sâu thẳm bên trong, bạn đang tìm kiếm một sự thay đổi.
-            </h2>
-            <p className="text-sm md:text-base text-[#6B726E] leading-relaxed max-w-2xl mx-auto">
-              Đã bao lâu rồi bạn không cảm nhận được những niềm vui đơn giản, khi cuộc sống bị cuốn đi quá nhanh và bị chi phối bởi những cám dỗ số? Có phải bạn cũng đang gặp phải những điều này:
-            </p>
           </div>
 
-          {/* 6 Nỗi Đau Thực Tế (Grid 3 Cột) */}
+          {/* Hero Typographic Banner (Điểm nhấn đồ họa chữ theo phong cách ấn tượng) */}
+          <div className="p-6 sm:p-8 md:p-10 rounded-2xl bg-[#F7F5F0] border border-[#E6E1D8] relative overflow-hidden">
+            {/* Background ambient blur */}
+            <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-[#3A5A40]/5 rounded-full blur-2xl pointer-events-none" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
+              
+              {/* Left Graphic Element: Khối biểu tượng xanh rêu cách điệu */}
+              <div className="lg:col-span-3 flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-[200px] h-32 sm:h-36 rounded-2xl bg-[#3A5A40] text-white p-5 flex flex-col justify-between shadow-md overflow-hidden group">
+                  {/* Layered decorative polygons */}
+                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-xl transform rotate-12 transition-transform duration-500 group-hover:rotate-45" />
+                  <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-white/10 rounded-xl transform -rotate-12 transition-transform duration-500 group-hover:-rotate-45" />
+                  
+                  <span className="text-3xl relative z-10">🌱</span>
+                  <div className="relative z-10 space-y-0.5">
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#FAF7F2]/75 block">
+                      BƯỚC THỨC TỈNH
+                    </span>
+                    <span className="text-sm sm:text-base font-extrabold tracking-tight text-white block">
+                      PHIÊN BẢN FRESH
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Center: Bold Headline (Condensed / Impact Display Typography) */}
+              <div className="lg:col-span-5 space-y-2 text-center lg:text-left">
+                <span className="text-[11px] font-bold tracking-widest text-[#C27D53] uppercase block">
+                  NẾU BẠN TÌM ĐẾN ĐÂY...
+                </span>
+                <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black uppercase tracking-tight text-[#2D312E] leading-[1.1]">
+                  BẠN ĐANG TÌM KIẾM <br />
+                  <span className="text-[#3A5A40] underline decoration-[#C27D53] decoration-4 underline-offset-4">
+                    MỘT SỰ THAY ĐỔI
+                  </span>
+                </h2>
+              </div>
+
+              {/* Vertical Green Accent Divider (Thanh màu xanh thẳng đứng như ảnh mẫu) */}
+              <div className="hidden lg:flex lg:col-span-1 justify-center self-stretch">
+                <div className="w-1.5 bg-[#3A5A40] rounded-full self-stretch" />
+              </div>
+
+              {/* Right: Insight & Emotional Punchline */}
+              <div className="lg:col-span-3 space-y-2.5 text-center lg:text-left">
+                <p className="text-sm sm:text-base font-bold text-[#2D312E] leading-snug">
+                  Đã bao lâu rồi bạn không cảm nhận được niềm vui trọn vẹn trong một bữa cơm, một buổi trò chuyện hay một giấc ngủ sâu?
+                </p>
+                <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed">
+                  Khi cuộc sống bị cuốn đi quá nhanh bởi những cám dỗ số, có phải bạn cũng đang gặp phải những điều này:
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* 6 Nỗi Đau Thực Tế (Grid 3 Cột có đánh số thứ tự rõ ràng) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             
-            {/* 1. Đi cafe dùng điện thoại */}
-            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  ☕
+            {/* 01. Đi cafe dùng điện thoại */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40] hover:shadow-md transition-all group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                    ☕
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[#3A5A40] bg-[#EBF0EC] px-2 py-0.5 rounded-md">
+                    01
+                  </span>
                 </div>
-                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug group-hover:text-[#3A5A40] transition-colors">
                   Đi cafe cùng bạn bè nhưng ai cũng cắm mặt vào điện thoại
                 </h3>
-                <p className="text-xs text-[#6B726E] leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#6B726E] leading-relaxed">
                   Ngồi cạnh nhau nhưng tâm trí mỗi người ở một thế giới ảo. Những cuộc trò chuyện sâu sắc, ánh mắt chân thành và tiếng cười tự nhiên dần biến mất.
                 </p>
               </div>
             </div>
 
-            {/* 2. 2h sáng cay mắt */}
-            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  🌙
+            {/* 02. 2h sáng cay mắt */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40] hover:shadow-md transition-all group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                    🌙
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[#3A5A40] bg-[#EBF0EC] px-2 py-0.5 rounded-md">
+                    02
+                  </span>
                 </div>
-                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug group-hover:text-[#3A5A40] transition-colors">
                   2 giờ sáng mắt cay xè nhưng ngón tay vẫn không ngừng lướt
                 </h3>
-                <p className="text-xs text-[#6B726E] leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#6B726E] leading-relaxed">
                   Tự nhủ "lướt 5 phút rồi ngủ", nhưng ngẩng lên đã nửa đêm. Chiếc máy nóng ran, đầu óc trống rỗng và sáng hôm sau thức dậy trong cảm giác tội lỗi.
                 </p>
               </div>
             </div>
 
-            {/* 3. Mua sắm Shopee */}
-            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  🛍️
+            {/* 03. Mua sắm Shopee */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40] hover:shadow-md transition-all group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                    🛍️
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[#3A5A40] bg-[#EBF0EC] px-2 py-0.5 rounded-md">
+                    03
+                  </span>
                 </div>
-                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug group-hover:text-[#3A5A40] transition-colors">
                   Chốt đơn Shopee, TikTok Shop trong vô thức lúc nửa đêm
                 </h3>
-                <p className="text-xs text-[#6B726E] leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#6B726E] leading-relaxed">
                   Mua sắm như một liều thuốc gây tê cảm xúc khi căng thẳng. Hàng giao về bóc ra chẳng buồn dùng, chỉ còn lại sự tiếc nuối và ví tiền vơi đi.
                 </p>
               </div>
             </div>
 
-            {/* 4. Mất tập trung */}
-            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  🧠
+            {/* 04. Mất tập trung */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40] hover:shadow-md transition-all group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                    🧠
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[#3A5A40] bg-[#EBF0EC] px-2 py-0.5 rounded-md">
+                    04
+                  </span>
                 </div>
-                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug group-hover:text-[#3A5A40] transition-colors">
                   Không thể ngồi yên tập trung làm việc quá 10 phút
                 </h3>
-                <p className="text-xs text-[#6B726E] leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#6B726E] leading-relaxed">
                   Vừa mở tài liệu lên là tay lại vô thức nhảy tab, bấm vào Facebook, YouTube. Cả ngày bận rộn nhưng cuối ngày không hoàn thành được mục tiêu lớn nào.
                 </p>
               </div>
             </div>
 
-            {/* 5. Ăn uống cảm xúc */}
-            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  🍔
+            {/* 05. Ăn uống cảm xúc */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40] hover:shadow-md transition-all group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                    🍔
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[#3A5A40] bg-[#EBF0EC] px-2 py-0.5 rounded-md">
+                    05
+                  </span>
                 </div>
-                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug group-hover:text-[#3A5A40] transition-colors">
                   Bữa ăn vội vã với đồ ăn nhanh và màn hình trước mặt
                 </h3>
-                <p className="text-xs text-[#6B726E] leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#6B726E] leading-relaxed">
                   Ăn không phải để thưởng thức mà chỉ để có cớ xem video. Nạp vào người đồ ngọt, thức ăn nhanh trong vô thức, bụng no căng nhưng tâm trí vẫn cạn kiệt.
                 </p>
               </div>
             </div>
 
-            {/* 6. Cáu gắt người thân */}
-            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40]/30 transition-all">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
-                  ⚡
+            {/* 06. Cáu gắt người thân */}
+            <div className="p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] space-y-3 flex flex-col justify-between hover:border-[#3A5A40] hover:shadow-md transition-all group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E6E1D8] flex items-center justify-center text-xl shadow-xs">
+                    ⚡
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[#3A5A40] bg-[#EBF0EC] px-2 py-0.5 rounded-md">
+                    06
+                  </span>
                 </div>
-                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug">
+                <h3 className="font-bold font-serif text-[#2D312E] text-base leading-snug group-hover:text-[#3A5A40] transition-colors">
                   Dễ cáu gắt và mất kiên nhẫn với những người yêu thương
                 </h3>
-                <p className="text-xs text-[#6B726E] leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#6B726E] leading-relaxed">
                   Bực bội vô cớ khi cha mẹ, vợ con hay người yêu vô tình ngắt quãng một ván game hay đoạn video đang xem dở. "Con người nghiện" đang làm tổn thương họ.
                 </p>
               </div>
