@@ -70,52 +70,33 @@ export default function HomePage() {
           </div>
 
           {/* Hero Typographic Banner (Điểm nhấn đồ họa chữ theo phong cách ấn tượng) */}
-          <div className="p-6 sm:p-8 md:p-10 rounded-2xl bg-[#F7F5F0] border border-[#E6E1D8] relative overflow-hidden">
+          <div className="p-6 sm:p-8 md:p-12 rounded-2xl bg-[#F7F5F0] border border-[#E6E1D8] relative overflow-hidden">
             {/* Background ambient blur */}
             <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-[#3A5A40]/5 rounded-full blur-2xl pointer-events-none" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
               
-              {/* Left Graphic Element: Khối biểu tượng xanh rêu cách điệu */}
-              <div className="lg:col-span-3 flex justify-center lg:justify-start">
-                <div className="relative w-full max-w-[200px] h-32 sm:h-36 rounded-2xl bg-[#3A5A40] text-white p-5 flex flex-col justify-between shadow-md overflow-hidden group">
-                  {/* Layered decorative polygons */}
-                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-xl transform rotate-12 transition-transform duration-500 group-hover:rotate-45" />
-                  <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-white/10 rounded-xl transform -rotate-12 transition-transform duration-500 group-hover:-rotate-45" />
-                  
-                  <span className="text-3xl relative z-10">🌱</span>
-                  <div className="relative z-10 space-y-0.5">
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#FAF7F2]/75 block">
-                      BƯỚC THỨC TỈNH
-                    </span>
-                    <span className="text-sm sm:text-base font-extrabold tracking-tight text-white block">
-                      PHIÊN BẢN FRESH
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Center: Bold Headline (Condensed / Impact Display Typography) */}
-              <div className="lg:col-span-5 space-y-2 text-center lg:text-left">
-                <span className="text-[11px] font-bold tracking-widest text-[#C27D53] uppercase block">
+              {/* Left Side: Bold Headline (Không bị díu chữ, ngắt dòng chuẩn xác) */}
+              <div className="lg:col-span-7 space-y-3 text-center lg:text-left">
+                <span className="text-sm sm:text-base md:text-lg font-bold tracking-wider text-[#C27D53] uppercase block">
                   NẾU BẠN TÌM ĐẾN ĐÂY...
                 </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black uppercase tracking-tight text-[#2D312E] leading-[1.1]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-black uppercase tracking-normal text-[#2D312E] leading-[1.25]">
                   BẠN ĐANG TÌM KIẾM <br />
-                  <span className="text-[#3A5A40] underline decoration-[#C27D53] decoration-4 underline-offset-4">
-                    MỘT SỰ THAY ĐỔI
+                  <span className="text-[#3A5A40]">
+                    MỘT SỰ THAY ĐỔI?
                   </span>
                 </h2>
               </div>
 
               {/* Vertical Green Accent Divider (Thanh màu xanh thẳng đứng như ảnh mẫu) */}
-              <div className="hidden lg:flex lg:col-span-1 justify-center self-stretch">
+              <div className="hidden lg:flex lg:col-span-1 justify-center self-stretch py-1">
                 <div className="w-1.5 bg-[#3A5A40] rounded-full self-stretch" />
               </div>
 
-              {/* Right: Insight & Emotional Punchline */}
-              <div className="lg:col-span-3 space-y-2.5 text-center lg:text-left">
-                <p className="text-sm sm:text-base font-bold text-[#2D312E] leading-snug">
+              {/* Right Side: Insight & Emotional Punchline */}
+              <div className="lg:col-span-4 space-y-3 text-center lg:text-left">
+                <p className="text-base sm:text-lg md:text-[19px] font-bold text-[#2D312E] leading-snug">
                   Đã bao lâu rồi bạn không cảm nhận được niềm vui trọn vẹn trong một bữa cơm, một buổi trò chuyện hay một giấc ngủ sâu?
                 </p>
                 <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed">
