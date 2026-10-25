@@ -428,7 +428,7 @@ export default function HomePage() {
                 />
                 <span
                   className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold backdrop-blur-md shadow-sm ${
-                    article.pillarTag === "ThucHanhThayDoi"
+                    article.pillarTag === "XayDungThoiQuen"
                       ? "bg-[#FAF7F2]/95 text-[#C27D53]"
                       : "bg-[#FAF7F2]/95 text-[#3A5A40]"
                   }`}

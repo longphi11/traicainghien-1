@@ -2,130 +2,227 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { articles } from "@/data/articles";
-import { ArrowRight, BookOpen, Clock, Calendar } from "lucide-react";
+import { articles, ArticleTag } from "@/data/articles";
+import { ArrowRight, ArrowLeft, Clock, Calendar, Sparkles } from "lucide-react";
+
+const ITEMS_PER_PAGE = 15;
 
 export default function BaiVietPage() {
   const [activeTab, setActiveTab] = useState<string>("ALL");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    setCurrentPage(1);
+  };
 
   const filteredArticles = activeTab === "ALL" 
     ? articles 
-    : articles.filter((a) => a.pillarTag === activeTab);
+    : articles.filter((a) => a.pillarTag === activeTab || (a.tags && a.tags.includes(`#${activeTab}`)));
+
+  const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
+  const currentArticles = filteredArticles.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  const getTagColor = (tag: string) => {
+    switch (tag) {
+      case "HieuHanhVi":
+        return "bg-[#EBF0EC] text-[#3A5A40]";
+      case "XayDungThoiQuen":
+        return "bg-[#F9EFE9] text-[#C27D53]";
+      case "LayLaiSuTapTrung":
+        return "bg-blue-50 text-blue-800";
+      case "SachHay":
+        return "bg-amber-50 text-amber-800";
+      case "CongCuHoTro":
+        return "bg-emerald-50 text-emerald-800";
+      default:
+        return "bg-[#FAF7F2] text-[#6B726E]";
+    }
+  };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 space-y-12">
+    <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-10 py-16 space-y-12 animate-fadeIn">
       
       {/* Header */}
-      <div className="text-center space-y-4 max-w-2xl mx-auto">
-        <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-3.5 py-1 rounded-full inline-block">
-          Kho Tàng Tri Thức
+      <div className="text-center space-y-4 max-w-3xl mx-auto">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-4 py-1.5 rounded-full inline-block">
+          Kho Tàng Tri Thức • Trại Cai Nghiện
         </span>
-        <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E]">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#2D312E] tracking-tight">
           Bài Viết Tâm Lý Hành Vi
         </h1>
-        <p className="text-sm md:text-base text-[#6B726E]">
-          Đúc kết khoa học thần kinh và kinh nghiệm thực chiến từ người thường dành cho người thường. Không giáo điều, không phán xét.
+        <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
+          Đúc kết khoa học thần kinh và kinh nghiệm thực chiến từ người thường dành cho người thường. Không giáo điều, không phán xét, trao phương pháp để bạn làm chủ cuộc đời.
         </p>
       </div>
 
-      {/* Tabs Filter theo 3 Trục Giá Trị Cốt Lõi */}
-      <div className="flex flex-wrap items-center justify-center gap-2">
+      {/* 5 Chủ Đề Hashtag Filter */}
+      <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-4xl mx-auto">
         <button
-          onClick={() => setActiveTab("ALL")}
-          className={`px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all ${
+          onClick={() => handleTabChange("ALL")}
+          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm ${
             activeTab === "ALL"
-              ? "bg-[#3A5A40] text-white shadow-sm"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E]"
+              ? "bg-[#3A5A40] text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
           }`}
         >
           Tất Cả ({articles.length})
         </button>
+
         <button
-          onClick={() => setActiveTab("HieuHanhVi")}
-          className={`px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all ${
+          onClick={() => handleTabChange("HieuHanhVi")}
+          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "HieuHanhVi"
-              ? "bg-[#3A5A40] text-white shadow-sm"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E]"
+              ? "bg-[#3A5A40] text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
           }`}
         >
-          🧠 #HieuHanhVi
+          <span>🧠</span>
+          <span>#HieuHanhVi</span>
         </button>
+
         <button
-          onClick={() => setActiveTab("ThucHanhThayDoi")}
-          className={`px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all ${
-            activeTab === "ThucHanhThayDoi"
-              ? "bg-[#C27D53] text-white shadow-sm"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E]"
+          onClick={() => handleTabChange("XayDungThoiQuen")}
+          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "XayDungThoiQuen"
+              ? "bg-[#C27D53] text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#C27D53]"
           }`}
         >
-          🛠️ #ThucHanhThayDoi
+          <span>🛠️</span>
+          <span>#XayDungThoiQuen</span>
         </button>
+
         <button
-          onClick={() => setActiveTab("SongCoChuDich")}
-          className={`px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all ${
-            activeTab === "SongCoChuDich"
-              ? "bg-[#3A5A40] text-white shadow-sm"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E]"
+          onClick={() => handleTabChange("LayLaiSuTapTrung")}
+          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "LayLaiSuTapTrung"
+              ? "bg-[#3A5A40] text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
           }`}
         >
-          🌅 #SongCoChuDich
+          <span>🎯</span>
+          <span>#LayLaiSuTapTrung</span>
+        </button>
+
+        <button
+          onClick={() => handleTabChange("SachHay")}
+          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "SachHay"
+              ? "bg-amber-700 text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-amber-600"
+          }`}
+        >
+          <span>📚</span>
+          <span>#SachHay</span>
+        </button>
+
+        <button
+          onClick={() => handleTabChange("CongCuHoTro")}
+          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "CongCuHoTro"
+              ? "bg-emerald-800 text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-emerald-700"
+          }`}
+        >
+          <span>🧰</span>
+          <span>#CongCuHoTro</span>
         </button>
       </div>
 
-      {/* Articles Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {filteredArticles.map((article) => (
+      {/* Articles Grid (To hơn 25%, mở rộng sang 2 bên) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        {currentArticles.map((article) => (
           <article
             key={article.slug}
-            className="group zen-card overflow-hidden flex flex-col p-5 hover:shadow-md transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
+            className="group zen-card overflow-hidden flex flex-col p-6 sm:p-7 hover:shadow-xl transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
           >
-            {/* Thumbnail */}
+            {/* Thumbnail Box */}
             <Link
               href={`/bai-viet/${article.slug}`}
-              className="relative h-48 md:h-52 w-full overflow-hidden rounded-2xl mb-4 bg-[#FAF7F2] block"
+              className="relative h-64 sm:h-72 md:h-64 lg:h-72 w-full overflow-hidden rounded-2xl mb-5 bg-[#FAF7F2] block shadow-inner"
             >
               <img
                 src={article.thumbnail}
                 alt={article.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
               <span
-                className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold backdrop-blur-md shadow-sm ${
-                  article.pillarTag === "ThucHanhThayDoi"
-                    ? "bg-[#FAF7F2]/95 text-[#C27D53]"
-                    : "bg-[#FAF7F2]/95 text-[#3A5A40]"
-                }`}
+                className={`absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md shadow-sm ${getTagColor(
+                  article.pillarTag
+                )}`}
               >
                 #{article.pillarTag}
               </span>
-              <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[11px] font-medium backdrop-blur-md bg-black/50 text-white shadow-sm flex items-center gap-1">
-                <Clock className="w-3 h-3" /> {article.readTime}
+              <span className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md bg-black/50 text-white shadow-sm flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5" /> {article.readTime}
               </span>
             </Link>
 
-            <h2 className="text-lg font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+            {/* Title */}
+            <h2 className="text-xl sm:text-2xl font-bold font-serif text-[#2D312E] mb-3 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
               <Link href={`/bai-viet/${article.slug}`}>
                 {article.title}
               </Link>
             </h2>
 
-            <p className="text-xs text-[#6B726E] leading-relaxed mb-5 flex-1 line-clamp-3">
+            {/* Excerpt */}
+            <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed mb-6 flex-1 line-clamp-3">
               {article.excerpt}
             </p>
 
-            <div className="pt-3.5 border-t border-[#E6E1D8] flex items-center justify-between text-xs font-semibold text-[#3A5A40]">
-              <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1 hover:underline">
+            {/* Footer Row */}
+            <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between text-xs sm:text-sm font-semibold text-[#3A5A40]">
+              <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1.5 hover:underline">
                 <span>Đọc bài viết</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
               </Link>
-              <span className="text-[#6B726E] font-normal flex items-center gap-1 text-[11px]">
-                <Calendar className="w-3 h-3" /> {article.date}
+              <span className="text-[#6B726E] font-normal flex items-center gap-1 text-xs">
+                <Calendar className="w-3.5 h-3.5" /> {article.date}
               </span>
             </div>
           </article>
         ))}
       </div>
+
+      {/* Pagination (Hiển thị tối đa 15 box / 1 trang) */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 pt-8">
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+            disabled={currentPage === 1}
+            className="px-4 py-2 rounded-xl text-xs font-semibold border border-[#E6E1D8] bg-white text-[#6B726E] hover:text-[#2D312E] disabled:opacity-30 disabled:hover:text-[#6B726E] flex items-center gap-1 transition-all"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" /> Trang trước
+          </button>
+
+          {Array.from({ length: totalPages }).map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentPage(idx + 1)}
+              className={`w-9 h-9 rounded-xl text-xs font-bold transition-all ${
+                currentPage === idx + 1
+                  ? "bg-[#3A5A40] text-white shadow-sm"
+                  : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E]"
+              }`}
+            >
+              {idx + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 rounded-xl text-xs font-semibold border border-[#E6E1D8] bg-white text-[#6B726E] hover:text-[#2D312E] disabled:opacity-30 disabled:hover:text-[#6B726E] flex items-center gap-1 transition-all"
+          >
+            Trang sau <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
 
     </div>
   );
