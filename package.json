@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:index": "node scripts/google_indexer.js",
+    "seo:report": "node scripts/seo_monitor.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",
