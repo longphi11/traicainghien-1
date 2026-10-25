@@ -20,6 +20,11 @@ export default function BaiVietPage() {
     ? articles 
     : articles.filter((a) => a.pillarTag === activeTab || (a.tags && a.tags.includes(`#${activeTab}`)));
 
+  const getCount = (tag: string) => {
+    if (tag === "ALL") return articles.length;
+    return articles.filter((a) => a.pillarTag === tag || (a.tags && a.tags.includes(`#${tag}`))).length;
+  };
+
   const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
   const currentArticles = filteredArticles.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
@@ -63,18 +68,18 @@ export default function BaiVietPage() {
       <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-4xl mx-auto">
         <button
           onClick={() => handleTabChange("ALL")}
-          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm ${
+          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm ${
             activeTab === "ALL"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
           }`}
         >
-          Tất Cả ({articles.length})
+          Tất Cả ({getCount("ALL")})
         </button>
 
         <button
           onClick={() => handleTabChange("HieuHanhVi")}
-          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "HieuHanhVi"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
@@ -82,11 +87,16 @@ export default function BaiVietPage() {
         >
           <span>🧠</span>
           <span>#HieuHanhVi</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "HieuHanhVi" ? "bg-white/20 text-white" : "bg-[#EBF0EC] text-[#3A5A40]"
+          }`}>
+            {getCount("HieuHanhVi")}
+          </span>
         </button>
 
         <button
           onClick={() => handleTabChange("XayDungThoiQuen")}
-          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "XayDungThoiQuen"
               ? "bg-[#C27D53] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#C27D53]"
@@ -94,11 +104,16 @@ export default function BaiVietPage() {
         >
           <span>🛠️</span>
           <span>#XayDungThoiQuen</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "XayDungThoiQuen" ? "bg-white/20 text-white" : "bg-[#F9EFE9] text-[#C27D53]"
+          }`}>
+            {getCount("XayDungThoiQuen")}
+          </span>
         </button>
 
         <button
           onClick={() => handleTabChange("LayLaiSuTapTrung")}
-          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "LayLaiSuTapTrung"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
@@ -106,11 +121,16 @@ export default function BaiVietPage() {
         >
           <span>🎯</span>
           <span>#LayLaiSuTapTrung</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "LayLaiSuTapTrung" ? "bg-white/20 text-white" : "bg-blue-50 text-blue-800"
+          }`}>
+            {getCount("LayLaiSuTapTrung")}
+          </span>
         </button>
 
         <button
           onClick={() => handleTabChange("SachHay")}
-          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "SachHay"
               ? "bg-amber-700 text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-amber-600"
@@ -118,11 +138,16 @@ export default function BaiVietPage() {
         >
           <span>📚</span>
           <span>#SachHay</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "SachHay" ? "bg-white/20 text-white" : "bg-amber-50 text-amber-800"
+          }`}>
+            {getCount("SachHay")}
+          </span>
         </button>
 
         <button
           onClick={() => handleTabChange("CongCuHoTro")}
-          className={`px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "CongCuHoTro"
               ? "bg-emerald-800 text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-emerald-700"
@@ -130,6 +155,11 @@ export default function BaiVietPage() {
         >
           <span>🧰</span>
           <span>#CongCuHoTro</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "CongCuHoTro" ? "bg-white/20 text-white" : "bg-emerald-50 text-emerald-800"
+          }`}>
+            {getCount("CongCuHoTro")}
+          </span>
         </button>
       </div>
 
@@ -143,7 +173,7 @@ export default function BaiVietPage() {
             {/* Thumbnail Box */}
             <Link
               href={`/bai-viet/${article.slug}`}
-              className="relative h-64 sm:h-72 md:h-64 lg:h-72 w-full overflow-hidden rounded-2xl mb-5 bg-[#FAF7F2] block shadow-inner"
+              className="relative h-52 sm:h-56 md:h-52 lg:h-56 w-full overflow-hidden rounded-2xl mb-4 bg-[#FAF7F2] block shadow-inner"
             >
               <img
                 src={article.thumbnail}
@@ -158,13 +188,20 @@ export default function BaiVietPage() {
               >
                 #{article.pillarTag}
               </span>
-              <span className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md bg-black/50 text-white shadow-sm flex items-center gap-1">
+              <span className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md bg-black/60 text-white shadow-sm flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5" /> {article.readTime}
               </span>
             </Link>
 
-            {/* Title */}
-            <h2 className="text-xl sm:text-2xl font-bold font-serif text-[#2D312E] mb-3 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+            {/* Date & Metadata Row (Phong cách tinh tế theo ảnh mẫu) */}
+            <div className="text-[11px] font-semibold tracking-wider text-[#6B726E] uppercase mb-2 flex items-center gap-1.5">
+              <span>{article.date}</span>
+              <span>•</span>
+              <span className="text-[#3A5A40] font-bold">#{article.pillarTag}</span>
+            </div>
+
+            {/* Title (Size chữ vừa vặn, tiêu đề ngắn gọn súc tích) */}
+            <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mb-3 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
               <Link href={`/bai-viet/${article.slug}`}>
                 {article.title}
               </Link>
@@ -172,17 +209,17 @@ export default function BaiVietPage() {
 
             {/* Excerpt */}
             <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed mb-6 flex-1 line-clamp-3">
-              {article.excerpt}
+              “{article.excerpt}”
             </p>
 
             {/* Footer Row */}
             <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between text-xs sm:text-sm font-semibold text-[#3A5A40]">
-              <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1.5 hover:underline">
-                <span>Đọc bài viết</span>
+              <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1.5 hover:underline font-bold">
+                <span>Đọc tiếp</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
               </Link>
               <span className="text-[#6B726E] font-normal flex items-center gap-1 text-xs">
-                <Calendar className="w-3.5 h-3.5" /> {article.date}
+                <Clock className="w-3.5 h-3.5" /> {article.readTime}
               </span>
             </div>
           </article>

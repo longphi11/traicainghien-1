@@ -112,7 +112,6 @@ export default async function ArticleDetailPage({
               {t}
             </span>
           ))}
-          <span className="text-xs text-[#6B726E] ml-1">{article.pillar}</span>
         </div>
 
         <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E] leading-tight">
@@ -121,7 +120,7 @@ export default async function ArticleDetailPage({
 
         <div className="flex flex-wrap items-center justify-between text-xs text-[#6B726E] pt-2 gap-4">
           <div className="flex items-center gap-4">
-            <span>Tác giả: <strong>{article.author}</strong></span>
+            <span>Tác giả: <strong>Trại Cai Nghiện</strong></span>
             <span>•</span>
             <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {article.date}</span>
             <span>•</span>
