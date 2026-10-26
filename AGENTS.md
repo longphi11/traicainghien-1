@@ -30,12 +30,10 @@
   * `Thực hành thay đổi`
   * `Sống có chủ đích`
 
-### 2.1. Định vị Dự án
-**Trại Cai Nghiện** là nền tảng số nhân văn và khoa học, ra đời nhằm đồng hành cùng cộng đồng nhận diện, tháo gỡ và giải phóng bản thân khỏi các **thói quen gây nghiện hành vi thời hiện đại (Behavioral Addictions & Dopamine Traps)** đang âm thầm tàn phá chất lượng sống:
-* **Nghiện Kỹ thuật số / Dopamine rẻ tiền:** Lướt mạng xã hội vô thức (doomscrolling), TikTok, Reels, game online, tin tức giật gân.
-* **Nghiện Hành vi xung động:** Mua sắm bốc đồng (impulsive shopping), cờ bạc/cá cược vi mô trực tuyến.
-* **Nghiện Thể chất & Hóa chất nhẹ:** Nghiện đồ ngọt/đường, đồ ăn nhanh cảm xúc, thức khuya, phụ thuộc chất kích thích nhẹ.
-* **Nghiện Tình dục kỹ thuật số:** Phim khiêu dâm (Porn), thủ dâm quá độ gây chai sạn cảm xúc và kiệt quệ sinh lực.
+### 2.1. Định vị Dự án & Hai Trụ Cột Trọng Tâm Tuyệt Đối
+**Trại Cai Nghiện** là nền tảng số nhân văn và khoa học, ra đời nhằm đồng hành cùng cộng đồng nhận diện, tháo gỡ và giải phóng bản thân khỏi các **bẫy kích thích dopamine rẻ tiền thời hiện đại**, tập trung tuyệt đối vào **HAI CHỦ ĐỀ CỐT LÕI (TUYỆT ĐỐI KHÔNG ĐỊNH VỊ VÀO CÁC CHỦ ĐỀ NHẠY CẢM NHƯ PORN/CHẤT KÍCH THÍCH NẶNG)**:
+1. **Cách tập trung làm việc & giải phóng khỏi xao nhãng số:** Trị hội chứng sương mù não (Brain Fog), nhũn não số (Brain Rot), nghiện lướt short video (TikTok, Reels, Shorts), mất tập trung, nhảy tab liên tục, khôi phục năng lực làm việc sâu (Deep Work).
+2. **Xây dựng thói quen tốt & kỷ luật không cần gồng:** Thiết kế môi trường sống theo Atomic Habits, Kaizen 1% mỗi ngày, vượt qua trì hoãn, quản trị năng lượng sinh học và làm chủ 60 phút buổi sáng theo tinh thần Ikigai.
 
 ### 2.2. Triết lý Can thiệp Cốt lõi
 1. **Không phán xét (Non-judgmental Space):** Nghiện không phải là suy đồi đạo đức hay ý chí yếu kém, mà bản chất là **cơ chế đối phó sai lầm (maladaptive coping mechanism)** trước nỗi đau, stress, sự cô đơn hoặc tổn thương tâm lý chưa được chữa lành.
@@ -60,7 +58,7 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
 | # | Nhóm | Chân Dung Tâm Lý | Nỗi Đau Cốt Lõi | Thông Điệp Mây Cần Truyền Tải |
 | :---: | :--- | :--- | :--- | :--- |
 | **1** | **Người phổ thông không có kiến thức tâm lý** | Người dùng bình thường, chưa từng đọc sách tâm lý học, không biết khái niệm dopamine hay thói quen hành vi là gì. | Cảm thấy xa lạ với các nội dung "chuyên gia", không biết mình có đang gặp vấn đề gì không. | Giải thích mọi thứ bằng ngôn ngữ đời thường, ví dụ thực tế, không dùng thuật ngữ. Làm họ thốt lên: *"Ủa, đây là chuyện của mình!"* |
-| **2** | **Người biết mình nghiện nhưng không muốn hoặc không đủ động lực bỏ** | Đang nghiện porn, mạng xã hội, game, đồ ngọt, short video... Họ biết rõ thói quen này không tốt nhưng chưa thấy lý do đủ lớn để dừng lại. | Thiếu lý do cốt lõi (*Why*). Cảm giác từ bỏ sẽ mất đi một thứ gì đó mà chưa có gì thay thế. | Không ép bỏ. Thắp sáng Ikigai — giúp họ nhìn thấy cuộc sống phía sau khi buông bỏ sẽ đẹp hơn, rực rỡ hơn. Tạo ra động lực nội tại chứ không phán xét. |
+| **2** | **Người biết mình nghiện nhưng không muốn hoặc không đủ động lực bỏ** | Đang nghiện lướt mạng xã hội, short video, game, thức khuya, đồ ngọt... Họ biết rõ thói quen này không tốt nhưng chưa thấy lý do đủ lớn để dừng lại. | Thiếu lý do cốt lõi (*Why*). Cảm giác từ bỏ sẽ mất đi một thứ gì đó mà chưa có gì thay thế. | Không ép bỏ. Thắp sáng Ikigai — giúp họ nhìn thấy cuộc sống phía sau khi buông bỏ sẽ đẹp hơn, rực rỡ hơn. Tạo ra động lực nội tại chứ không phán xét. |
 | **3** | **Người bị ảnh hưởng chất lượng sống nhưng chưa nhận ra nguyên nhân** | Luôn lo âu, căng thẳng, mất tập trung, hay cáu gắt, ngủ không ngon, mối quan hệ rạn nứt... nhưng không biết chính thói quen nghiện đang ngầm gây ra tất cả những điều đó. | Đang chữa triệu chứng mà không chữa căn nguyên. Bị mắc kẹt trong vòng lặp khổ sở không tìm được lối ra. | Là người đầu tiên nói thẳng với họ: *"Sự lo âu và mất tập trung của bạn có thể đang đến từ cách não bộ bạn đang bị kiệt quệ dopamine mỗi ngày."* Mở mắt, không phán xét. |
 | **4** | **Người nhận ra vấn đề nhưng thiếu phương pháp, hay tái nghiện** | Đã từng cố bỏ nhiều lần, đã đọc sách, đã xem video... nhưng cứ loay hoay rồi lại thất bại. Cảm giác mệt mỏi, tự ti, không còn tin vào bản thân nữa. | Thiếu hệ thống & phương pháp cụ thể. Cứ cố gắng bằng ý chí thô kệch mà không hiểu cơ chế não bộ. | Tái định hình (*Reframing*): *"Bạn không thất bại vì bạn yếu — bạn thất bại vì bạn dùng sai công cụ."* Trao phương pháp Kaizen, Wabi Sabi và hệ thống thay thế Routine cụ thể. |
 
@@ -197,9 +195,9 @@ flowchart TD
    * **Định dạng:** Lộ trình 4 tuần Kaizen 1% + Workbook tự soi chiếu Wabi Sabi (tha thứ khi trượt chân) + Hướng dẫn làm chủ 60 phút sáng Ikigai.
    * **Mức giá:** **390.000đ – 490.000đ** (Sản phẩm chủ lực).
 
-3. **🛡️ Tầng 3A: TÂM TĨNH KHÍ THUẦN *(Chuyên Đề Thầm Kín)***
-   * **Bản chất:** Dứt điểm nghiện phim khiêu dâm, thủ dâm xung động và kích thích thị giác ảo.
-   * **Định dạng:** Giải mã hiệu ứng Coolidge + Thiết lập chiếc khiên môi trường số + Chuyển hóa năng lượng sinh học sang sự nghiệp & thể chất.
+3. **🛡️ Tầng 3A: TÂM TĨNH TRÍ MINH *(Chuyên Đề Dứt Điểm Nghiện Màn Hình Đêm & Xao Nhãng Số)***
+   * **Bản chất:** Dứt điểm thói quen thức khuya dán mắt vào điện thoại, bẻ gãy cơn sốt rút kích thích ảo, phục hồi giấc ngủ sâu và độ nhạy thần kinh.
+   * **Định dạng:** Thiết lập chiếc khiên môi trường số (Digital Shield) + Giao thức ngủ sâu không màn hình + Chuyển hóa năng lượng sinh học sang sự nghiệp & thể chất.
    * **Mức giá:** **490.000đ – 590.000đ**.
 
 4. **🌊 Tầng 3B: DÒNG CHẢY TĨNH LẶNG *(Chuyên Đề Năng Suất Cho Não Phân Tâm)***
