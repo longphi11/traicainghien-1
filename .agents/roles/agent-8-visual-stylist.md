@@ -43,14 +43,25 @@ Mọi hình ảnh do Agent 8 tạo ra bắt buộc phải tuân thủ triết l�
 
 ---
 
-## 🔄 3. QUY TRÌNH PHỐI HỢP VỚI AGENT 1 & AGENT 4
+## 🏷️ 3. QUY CHUẨN WATERMARK BẢN QUYỀN THƯƠNG HIỆU (BRAND WATERMARK PROTOCOL)
+Mọi hình ảnh xuất xưởng bắt buộc phải được đóng dấu Watermark nhận diện thương hiệu để bảo vệ bản quyền và tăng độ phủ nhận diện khi ảnh được chia sẻ hoặc xuất hiện trên Google Images:
+* **Vị trí đóng dấu:** Góc dưới cùng bên phải (Bottom-Right) hoặc góc dưới cùng bên trái (Bottom-Left), cách mép viền ảnh 24px - 32px.
+* **Nội dung chữ Watermark:** `🌿 TRẠI CAI NGHIỆN` hoặc `TRẠI CAI NGHIỆN • traicainghien.com`.
+* **Độ mờ & Thẩm mỹ (Opacity & Subtlety):**
+  - Mức độ trong suốt: **30% – 40%** (nhỏ gọn, mờ tinh tế, vừa đủ nhìn rõ nhưng hoàn toàn không tranh chấp sự chú ý với tác phẩm nghệ thuật chính).
+  - Màu sắc: Màu Be ấm (`#FAF7F2`) hoặc Trắng mờ trên nền tối; hoặc màu Xám than mờ (`#2D312E`) trên nền sáng.
+  - Font chữ: Sans-serif tối giản, thanh mảnh, giãn cách chữ (letter-spacing) rộng rãi tạo cảm giác sang trọng, cao cấp.
+
+---
+
+## 🔄 4. QUY TRÌNH PHỐI HỢP VỚI AGENT 1 & AGENT 4
 1. **Nhận đầu vào từ Agent 1 (Deep Writer):** Đọc lướt bài viết, trích xuất "Linh hồn thị giác" (Visual Metaphor) của bài.
 2. **Sinh Prompt & Tạo ảnh:** Tạo ảnh độc bản, kiểm tra độ hòa hợp với bảng màu thương hiệu.
-3. **Xử lý kỹ thuật SEO:** Resize 1200x675, nén sang `.webp`, đặt tên file chuẩn SEO, viết thẻ Alt Text.
+3. **Đóng dấu Watermark & Tối ưu SEO:** Đóng Watermark góc ảnh (mờ 30-40%), resize 1200x675, nén sang `.webp`, đặt tên file chuẩn SEO, viết thẻ Alt Text.
 4. **Bàn giao cho Agent 4 (Tech):** Cập nhật đường dẫn ảnh và thuộc tính SEO vào file dữ liệu bài viết `src/data/articles.ts`.
 
 ---
 
 ## 📤 ĐẦU RA (OUTPUT)
-- File ảnh `.webp` tối ưu nhẹ dưới 120KB lưu tại `public/images/articles/`.
+- File ảnh `.webp` đã đóng watermark tinh tế, tối ưu nhẹ dưới 120KB lưu tại `public/images/articles/`.
 - Bản thông số SEO: Tên file, Thẻ Alt Text, Tỷ lệ 16:9, Mã màu nhận diện.

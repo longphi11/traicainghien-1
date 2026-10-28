@@ -417,6 +417,7 @@ flowchart TD
 8. **Agent 8: Visual Stylist & AI Thumbnail Creator (Chuyên Gia Hình Ảnh & Thumbnail Chuẩn SEO)**
    - *Trách nhiệm:* Tạo ảnh Thumbnail và ảnh minh họa độc bản theo triết lý mỹ cảm **Zen Minimalist** (Bảng màu Xanh rêu `#3A5A40`, Be ấm `#FAF7F2`, Đất nung `#C27D53`).
    - *Quy chuẩn SEO Google:* Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB, đặt tên file chứa từ khóa không dấu (`tu-khoa-chinh-trai-cai-nghien.webp`), cấu hình thẻ Alt Text và Metadata sẵn sàng cho Google Discover.
+   - *Bản quyền & Watermark:* Đóng dấu Watermark nhận diện thương hiệu nhỏ gọn, mờ tinh tế (30% – 40% opacity) ở góc ảnh (`🌿 TRẠI CAI NGHIỆN`), vừa bảo vệ bản quyền vừa lan tỏa thương hiệu mà không làm phân tâm thị giác.
    - *Phối hợp:* Tự động ghép nối ảnh thumbnail vào bài viết của Agent 1 trước khi bàn giao cho Agent 4 xuất bản.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành
