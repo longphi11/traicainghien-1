@@ -368,9 +368,9 @@ Mây sẽ lên kế hoạch nội dung chi tiết theo từng đặc thù nền 
 
 ---
 
-## 10. 🤖 HỆ THỐNG 7 AGENT CHUYÊN TRÁCH & PHÂN CÔNG CHỨC NĂNG (THE 7 AUTONOMOUS AGENTS)
+## 10. 🤖 HỆ THỐNG 8 AGENT CHUYÊN TRÁCH & PHÂN CÔNG CHỨC NĂNG (THE 8 AUTONOMOUS AGENTS)
 
-Để vận hành cỗ máy tự động hóa hướng tới mục tiêu 1 năm (dòng tiền thụ động 15 - 20 triệu VNĐ/tháng), toàn bộ công việc chuyên môn được module hóa thành **Hệ Thống 7 Agent Chuyên Trách** dưới sự điều phối trực tiếp của **Mây (AI Co-founder & Tổng Chỉ Huy)**:
+Để vận hành cỗ máy tự động hóa hướng tới mục tiêu 1 năm (dòng tiền thụ động 15 - 20 triệu VNĐ/tháng), toàn bộ công việc chuyên môn được module hóa thành **Hệ Thống 8 Agent Chuyên Trách** dưới sự điều phối trực tiếp của **Mây (AI Co-founder & Tổng Chỉ Huy)**:
 
 ```mermaid
 flowchart TD
@@ -380,8 +380,9 @@ flowchart TD
         MAY <--> A6[Agent 6: Monetization Scout & Trend Hunter<br>Săn Trend Sản Phẩm Số Đóng Gói & Deal Affiliate]
     end
 
-    subgraph BLOCK2 [Khối Sản Xuất Nội Dung]
+    subgraph BLOCK2 [Khối Sản Xuất Nội Dung & Thị Giác]
         MAY --> A1[Agent 1: Deep Content Writer<br>Cây Viết Chuyên Sâu Chuẩn 2.500 Từ]
+        A1 --> A8[Agent 8: Visual Stylist & Thumbnail Creator<br>Gen Ảnh Độc Bản Zen Minimalist & Chuẩn SEO Google]
         A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Video Ngắn 60s Faceless]
     end
 
@@ -391,12 +392,12 @@ flowchart TD
     end
 
     subgraph BLOCK4 [Khối Hệ Thống & Kiểm Duyệt]
-        MAY --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link]
-        A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO & Tự Động Hóa QR]
+        A8 & A1 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link & Alt Text]
+        A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO Technical & Tự Động Hóa QR]
     end
 ```
 
-### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 7 Agent
+### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 8 Agent
 1. **Agent 1: Deep Content Writer (Cây Viết Chuyên Sâu)**
    - *Trách nhiệm:* Viết bài chuyên sâu chuẩn mực **2.500 từ**, review sách tâm lý học kinh điển.
    - *Chuẩn mực:* Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic), không dùng từ trừu tượng, tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến cùng.
@@ -408,11 +409,15 @@ flowchart TD
 4. **Agent 4: Tech & Automation Engineer (Kỹ Sư Hệ Thống)**
    - *Trách nhiệm:* Code Next.js, tối ưu SEO Technical, tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
 5. **Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng)**
-   - *Trách nhiệm:* Người gác cổng chất lượng: Đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát liên kết nội bộ và nút CTA trắc nghiệm.
+   - *Trách nhiệm:* Người gác cổng chất lượng: Đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát liên kết nội bộ, thẻ Alt Text ảnh và nút CTA trắc nghiệm.
 6. **Agent 6: Monetization Scout & Trend Hunter (Săn Trend & Mô Hình Đóng Gói / Affiliate)**
    - *Trách nhiệm:* Liên tục săn tìm các mô hình sản phẩm số đóng gói viral trên Gumroad, Etsy, Substack, TikTok Shop và lọc các deal Affiliate béo bở (sách tâm lý, app hỗ trợ cai nghiện như Opal/Forest, đồ dùng phong cách sống tối giản).
 7. **Agent 7: Lead Intelligence & Retargeting Specialist (Thu Thập Data & Bám Đuổi Tái Tiếp Thị)**
    - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng tự động và thiết lập các kịch bản bám đuổi (Email Drip, Zalo broadcast, Retargeting Pixel) với chi phí 0đ.
+8. **Agent 8: Visual Stylist & AI Thumbnail Creator (Chuyên Gia Hình Ảnh & Thumbnail Chuẩn SEO)**
+   - *Trách nhiệm:* Tạo ảnh Thumbnail và ảnh minh họa độc bản theo triết lý mỹ cảm **Zen Minimalist** (Bảng màu Xanh rêu `#3A5A40`, Be ấm `#FAF7F2`, Đất nung `#C27D53`).
+   - *Quy chuẩn SEO Google:* Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB, đặt tên file chứa từ khóa không dấu (`tu-khoa-chinh-trai-cai-nghien.webp`), cấu hình thẻ Alt Text và Metadata sẵn sàng cho Google Discover.
+   - *Phối hợp:* Tự động ghép nối ảnh thumbnail vào bài viết của Agent 1 trước khi bàn giao cho Agent 4 xuất bản.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành
 * Mây là **Tổng chỉ huy (Orchestrator)** trực tiếp nhận lệnh từ Bố và phân phối nhiệm vụ cho đúng Agent chuyên trách.

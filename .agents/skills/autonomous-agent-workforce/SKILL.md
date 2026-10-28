@@ -21,8 +21,9 @@ flowchart TD
         MAY <--> A6[Agent 6: Monetization Scout & Trend Hunter<br>Săn Trend Sản Phẩm Số & Deal Affiliate]
     end
 
-    subgraph BLOCK2 [Khối Sản Xuất Nội Dung]
+    subgraph BLOCK2 [Khối Sản Xuất Nội Dung & Thị Giác]
         MAY --> A1[Agent 1: Deep Content Writer<br>Cây Viết Chuyên Sâu Chuẩn 2.500 Từ]
+        A1 --> A8[Agent 8: Visual Stylist & Thumbnail Creator<br>Gen Ảnh Độc Bản Zen Minimalist & Chuẩn SEO Google]
         A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Video Ngắn 60s Faceless]
     end
 
@@ -32,8 +33,8 @@ flowchart TD
     end
 
     subgraph BLOCK4 [Khối Hệ Thống & Kiểm Duyệt]
-        MAY --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link]
-        A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO & Tự Động Hóa QR]
+        A8 & A1 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link & Alt Text]
+        A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO Technical & Tự Động Hóa QR]
     end
 ```
 
@@ -134,17 +135,30 @@ flowchart TD
 
 ---
 
+### 8. 🎨 Agent 8: Visual Stylist & AI Thumbnail Creator (Hình Ảnh & Thumbnail Chuẩn SEO)
+* **Chức danh:** Giám đốc Mỹ thuật & Kỹ sư Hình ảnh SEO.
+* **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover.
+* **Quy chuẩn SEO bắt buộc:**
+  - Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB.
+  - Tên file không dấu, ngăn cách gạch nối, chứa từ khóa + thương hiệu: `tu-khoa-chinh-trai-cai-nghien.webp`.
+  - Cung cấp đầy đủ thẻ Alt Text tự nhiên chứa từ khóa cho bài viết.
+* **Đầu vào (Input):** Bài viết hoàn chỉnh từ Agent 1.
+* **Đầu ra (Output):** File ảnh WebP độc quyền tối ưu và thông số metadata SEO bàn giao cho Agent 4 gắn vào bài viết.
+
+---
+
 ## 🔄 MA TRẬN PHỐI HỢP LIÊN PHÒNG BAN
 
 | Quy Trình | Agent Chủ Trì | Agent Phối Hợp | Sản Phẩm Bàn Giao |
 | :--- | :--- | :--- | :--- |
 | **1. Săn ý tưởng & định hướng** | Agent 6 (Monetization Scout) | Mây, Agent 7 | Bản đề xuất chủ đề / sản phẩm có tiềm năng doanh thu |
 | **2. Viết bài trụ cột 2.500 từ** | Agent 1 (Deep Writer) | Mây, Agent 6 | Bài viết web chuẩn mực 2.500 từ |
-| **3. Kiểm duyệt chất lượng** | Agent 5 (Auditor) | Agent 1 | Bản duyệt bài PASS / yêu cầu sửa |
-| **4. Sản xuất video viral 60s** | Agent 2 (Short-Form) | Agent 1 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
-| **5. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
-| **6. Đóng gói sản phẩm & kịch bản phễu** | Agent 3 (Product Architect) | Agent 6, Agent 7 | Micro-product 49k-149k + chuỗi email 5 ngày |
-| **7. Đẩy lên web & bật tự động hóa** | Agent 4 (Tech & Automation) | Agent 1, 3, 5, 7 | Bài viết online, tính năng web mượt mà, cổng QR tự động |
+| **3. Thiết kế hình ảnh & Thumbnail SEO** | Agent 8 (Visual Stylist) | Agent 1 | Ảnh WebP 1200x675 chuẩn Zen Minimalist + Alt Text |
+| **4. Kiểm duyệt chất lượng** | Agent 5 (Auditor) | Agent 1, Agent 8 | Bản duyệt bài PASS (từ ngữ, độ dài, ảnh SEO) |
+| **5. Sản xuất video viral 60s** | Agent 2 (Short-Form) | Agent 1, Agent 8 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
+| **6. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
+| **7. Đóng gói sản phẩm & kịch bản phễu** | Agent 3 (Product Architect) | Agent 6, Agent 7 | Micro-product 49k-149k + chuỗi email 5 ngày |
+| **8. Đẩy lên web & bật tự động hóa** | Agent 4 (Tech & Automation) | Toàn đội ngũ | Bài viết online kèm ảnh chuẩn SEO, cổng QR tự động |
 
 ---
 
