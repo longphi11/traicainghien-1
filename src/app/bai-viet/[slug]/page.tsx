@@ -340,7 +340,7 @@ export default async function ArticleDetailPage({
   };
 
   return (
-    <article className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16 space-y-10 animate-fadeIn">
+    <article className="max-w-3xl md:max-w-4xl lg:max-w-[920px] xl:max-w-[960px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-10 md:py-16 space-y-10 animate-fadeIn">
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
@@ -362,7 +362,7 @@ export default async function ArticleDetailPage({
       </div>
 
       {/* Featured Thumbnail Cover */}
-      <div className="relative w-full h-64 sm:h-80 md:h-[440px] rounded-3xl overflow-hidden shadow-sm border border-[#E6E1D8] bg-[#FAF7F2]">
+      <div className="relative w-full h-64 sm:h-80 md:h-[440px] lg:h-[480px] rounded-3xl overflow-hidden shadow-sm border border-[#E6E1D8] bg-[#FAF7F2]">
         <img
           src={article.thumbnail}
           alt={article.title}
