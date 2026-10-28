@@ -48,6 +48,15 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
 * Tránh tuyệt đối các khối chữ đặc nghẹt khiến người đang phân mảnh sự chú ý bị ngợp thở.
 * Kết bài luôn đọng lại một thông điệp hành động tinh gọn và lời chúc ấm áp: *"Chúc bạn chăm chỉ."*
 
+### 1.6. Tiêu Chuẩn Độ Dài 2.500 Từ & Nghệ Thuật Giữ Chân Độc Giả (High-Retention Writing)
+* **Độ dài bắt buộc:** **Chuẩn 2.500 từ/bài**. Không viết ngắn hời hợt, cũng không lan man kéo dài vô bổ. Đây là dung lượng vàng để bóc tách trọn vẹn từ nỗi đau $\rightarrow$ cơ chế sinh học thần kinh $\rightarrow$ tái định hình $\rightarrow$ lộ trình Kaizen thực chiến.
+* **Tập trung tuyệt đối, không lan man:** Toàn bộ 2.500 từ phải xoay quanh giải quyết đúng một câu hỏi cốt lõi của độc giả. Mỗi luận điểm là một bước tiến logic, không lặp ý, không "độn chữ" bằng các đoạn văn sáo rỗng.
+* **Gần gũi, cấm tiệt từ ngữ trừu tượng:** Nói KHÔNG với các từ ngữ siêu hình (như *"tần số rung động"*, *"khai mở tâm thức"*, *"năng lượng vũ trụ"*). Thay vào đó, dùng những hình ảnh chân thực đến trần trụi: chiếc điện thoại úp mặt, ngón tay quẹt máy cay xè mắt, tiếng gõ phím cơ lúc đêm muộn, cảm giác nghẹn ứ ở cổ họng khi mở bảng kế hoạch dở dang.
+* **Nghệ thuật tạo lực hút liên tục (Sticky Pacing & Open Loops):**
+  - Mở đầu bằng một tình huống giật mình: làm người đọc thốt lên *"Ủa, sao giống hệt mình thế này?"*.
+  - Đan xen các câu hỏi lửng ở cuối mỗi phần để tạo quán tính tâm lý, thôi thúc người đọc cuộn xuống đọc tiếp.
+  - Văn phong cuốn hút, tha thiết, thấu cảm sâu sắc như một người anh em ngồi đối diện ở quán cà phê, kéo người đọc đi một mạch từ chữ đầu tiên đến chữ cuối cùng mà không nỡ rời mắt.
+
 ---
 
 ## 1.b. 🏛️ BỐN TRỤ CỘT NỘI DUNG CỐT LÕI (THE 4 CONTENT PILLARS)

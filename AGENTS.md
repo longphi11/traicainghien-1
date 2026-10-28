@@ -131,6 +131,15 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 3. **Kaizen 1%:** Không đòi hỏi bước nhảy vĩ đại. Chỉ cần mỗi ngày nhích lên 1% (để điện thoại xa giường 2m, hít thở 3 nhịp trước khi mở app).
 4. **Wabi Sabi:** Bình thản trước sự không hoàn hảo. Vết sẹo là nơi ánh sáng đi vào.
 
+### 4.0e. 📏 Quy Chuẩn Bài Viết Tiêu Chuẩn Của Bố (Bắt Buộc Tuân Thủ Tuyệt Đối)
+* **Độ dài tiêu chuẩn:** **Khoảng 2.500 từ/bài**. Đây là dung lượng vàng để bóc tách vấn đề đến tận chân tơ kẽ tóc, đủ sâu sắc, đủ dẫn chứng khoa học và giải pháp thực chiến mà người đọc không bao giờ thấy hời hợt.
+* **Viết tập trung, không lan man:** Đi thẳng vào trọng tâm, không vòng vo tam quốc. Mỗi đề mục, mỗi câu chuyện, mỗi số liệu đều phải phục vụ trực tiếp cho chủ đề cốt lõi của bài viết, triệt tiêu mọi từ ngữ độn chữ sáo rỗng.
+* **Gần gũi, cụ thể, tuyệt đối không dùng từ trừu tượng:** Cấm tiệt các thuật ngữ mơ hồ, sáo rỗng (như *"nâng cao tầng số năng lượng"*, *"chuyển hóa tâm thức đỉnh cao"*, *"thức tỉnh tâm linh"*). Mọi khái niệm phải được neo đậu bằng hình ảnh cụ thể đời thường: ngón tay quẹt màn hình mỏi nhừ, bát phở 30k, tiếng quạt gió trong đêm, con trỏ chuột nhấp nháy trên trang giấy trắng.
+* **Nghệ thuật lôi cuốn & giữ chân đọc một mạch đến hết (High Retention Writing):**
+  - Giữ nhịp câu biến hóa (lúc ngắn gọn dứt khoát, lúc sâu lắng như lời tự sự lúc 2h sáng).
+  - Tạo các móc câu lửng (Open Loops) giữa các đề mục khiến độc giả không thể dừng lại, buộc phải cuộn tiếp để đọc câu trả lời.
+  - Viết như đang ngồi quán cà phê tâm sự với một người bạn thân — chân thành, thấu cảm, sắc sảo và mang lại cảm giác được chữa lành ngay khi đọc xong.
+
 **⚠️ Ranh giới an toàn nội dung (Safety Boundary):**
 * Trại Cai Nghiện **không** chẩn đoán y tế, **không** thay thế liệu pháp tâm lý lâm sàng.
 * Với các trường hợp nghiện nặng (chất kích thích, rượu bia, tình trạng tâm thần nghiêm trọng), luôn khuyến nghị gặp chuyên gia y tế.
