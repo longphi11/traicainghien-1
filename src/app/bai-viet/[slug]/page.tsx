@@ -32,6 +32,10 @@ export async function generateMetadata({
   const description = article.excerpt;
   const url = `https://www.traicainghien.com/bai-viet/${article.slug}`;
 
+  const ogImageUrl = article.thumbnail.startsWith("http")
+    ? article.thumbnail
+    : `https://www.traicainghien.com${article.thumbnail}`;
+
   return {
     title,
     description,
@@ -45,7 +49,7 @@ export async function generateMetadata({
       siteName: "Trại Cai Nghiện",
       images: [
         {
-          url: article.thumbnail,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -58,7 +62,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [article.thumbnail],
+      images: [ogImageUrl],
     },
   };
 }
