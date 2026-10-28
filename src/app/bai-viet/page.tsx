@@ -18,11 +18,11 @@ export default function BaiVietPage() {
 
   const filteredArticles = activeTab === "ALL" 
     ? articles 
-    : articles.filter((a) => a.pillarTag === activeTab || (a.tags && a.tags.includes(`#${activeTab}`)));
+    : articles.filter((a) => a.pillarTag === activeTab);
 
   const getCount = (tag: string) => {
     if (tag === "ALL") return articles.length;
-    return articles.filter((a) => a.pillarTag === tag || (a.tags && a.tags.includes(`#${tag}`))).length;
+    return articles.filter((a) => a.pillarTag === tag).length;
   };
 
   const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
