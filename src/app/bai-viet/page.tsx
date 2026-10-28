@@ -168,12 +168,12 @@ export default function BaiVietPage() {
         {currentArticles.map((article) => (
           <article
             key={article.slug}
-            className="group zen-card overflow-hidden flex flex-col p-6 sm:p-7 hover:shadow-xl transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
+            className="group zen-card overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
           >
-            {/* Thumbnail Box */}
+            {/* Thumbnail Box - Tràn viền hoàn toàn không còn viền trắng bao quanh */}
             <Link
               href={`/bai-viet/${article.slug}`}
-              className="relative h-52 sm:h-56 md:h-52 lg:h-56 w-full overflow-hidden rounded-2xl mb-4 bg-[#FAF7F2] block shadow-inner"
+              className="relative h-52 sm:h-56 md:h-52 lg:h-56 w-full overflow-hidden bg-[#FAF7F2] block"
             >
               <img
                 src={article.thumbnail}
@@ -193,34 +193,37 @@ export default function BaiVietPage() {
               </span>
             </Link>
 
-            {/* Date & Metadata Row (Phong cách tinh tế theo ảnh mẫu) */}
-            <div className="text-[11px] font-semibold tracking-wider text-[#6B726E] uppercase mb-2 flex items-center gap-1.5">
-              <span>{article.date}</span>
-              <span>•</span>
-              <span className="text-[#3A5A40] font-bold">#{article.pillarTag}</span>
-            </div>
+            {/* Nội dung bên dưới bài viết có padding đệm êm ái */}
+            <div className="p-6 sm:p-7 flex-1 flex flex-col">
+              {/* Date & Metadata Row (Phong cách tinh tế theo ảnh mẫu) */}
+              <div className="text-[11px] font-semibold tracking-wider text-[#6B726E] uppercase mb-2 flex items-center gap-1.5">
+                <span>{article.date}</span>
+                <span>•</span>
+                <span className="text-[#3A5A40] font-bold">#{article.pillarTag}</span>
+              </div>
 
-            {/* Title (Size chữ vừa vặn, tiêu đề ngắn gọn súc tích) */}
-            <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mb-3 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
-              <Link href={`/bai-viet/${article.slug}`}>
-                {article.title}
-              </Link>
-            </h2>
+              {/* Title (Size chữ vừa vặn, tiêu đề ngắn gọn súc tích) */}
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mb-3 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+                <Link href={`/bai-viet/${article.slug}`}>
+                  {article.title}
+                </Link>
+              </h2>
 
-            {/* Excerpt */}
-            <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed mb-6 flex-1 line-clamp-3">
-              “{article.excerpt}”
-            </p>
+              {/* Excerpt */}
+              <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed mb-6 flex-1 line-clamp-3">
+                “{article.excerpt}”
+              </p>
 
-            {/* Footer Row */}
-            <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between text-xs sm:text-sm font-semibold text-[#3A5A40]">
-              <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1.5 hover:underline font-bold">
-                <span>Đọc tiếp</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
-              </Link>
-              <span className="text-[#6B726E] font-normal flex items-center gap-1 text-xs">
-                <Clock className="w-3.5 h-3.5" /> {article.readTime}
-              </span>
+              {/* Footer Row */}
+              <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between text-xs sm:text-sm font-semibold text-[#3A5A40]">
+                <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1.5 hover:underline font-bold">
+                  <span>Đọc tiếp</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
+                </Link>
+                <span className="text-[#6B726E] font-normal flex items-center gap-1 text-xs">
+                  <Clock className="w-3.5 h-3.5" /> {article.readTime}
+                </span>
+              </div>
             </div>
           </article>
         ))}

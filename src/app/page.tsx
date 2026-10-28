@@ -479,12 +479,12 @@ export default function HomePage() {
           {articles.slice(0, 3).map((article) => (
             <article
               key={article.slug}
-              className="group zen-card overflow-hidden flex flex-col p-5 hover:shadow-md transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
+              className="group zen-card overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
             >
-              {/* Thumbnail */}
+              {/* Thumbnail - Tràn viền */}
               <Link
                 href={`/bai-viet/${article.slug}`}
-                className="relative h-48 md:h-52 w-full overflow-hidden rounded-2xl mb-4 bg-[#FAF7F2] block"
+                className="relative h-48 md:h-52 w-full overflow-hidden bg-[#FAF7F2] block"
               >
                 <img
                   src={article.thumbnail}
@@ -506,24 +506,26 @@ export default function HomePage() {
                 </span>
               </Link>
               
-              <h3 className="text-lg font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
-                <Link href={`/bai-viet/${article.slug}`}>
-                  {article.title}
-                </Link>
-              </h3>
-              
-              <p className="text-xs text-[#6B726E] leading-relaxed mb-5 flex-1 line-clamp-3">
-                {article.excerpt}
-              </p>
+              <div className="p-5 sm:p-6 flex-1 flex flex-col">
+                <h3 className="text-lg font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+                  <Link href={`/bai-viet/${article.slug}`}>
+                    {article.title}
+                  </Link>
+                </h3>
+                
+                <p className="text-xs text-[#6B726E] leading-relaxed mb-5 flex-1 line-clamp-3">
+                  {article.excerpt}
+                </p>
 
-              <div className="pt-3.5 border-t border-[#E6E1D8] flex items-center justify-between text-xs font-semibold text-[#3A5A40]">
-                <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1 hover:underline">
-                  <span>Đọc tiếp</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <span className="text-[#6B726E] font-normal flex items-center gap-1 text-[11px]">
-                  <Calendar className="w-3 h-3" /> {article.date}
-                </span>
+                <div className="pt-3.5 border-t border-[#E6E1D8] flex items-center justify-between text-xs font-semibold text-[#3A5A40]">
+                  <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1 hover:underline">
+                    <span>Đọc tiếp</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <span className="text-[#6B726E] font-normal flex items-center gap-1 text-[11px]">
+                    <Calendar className="w-3 h-3" /> {article.date}
+                  </span>
+                </div>
               </div>
             </article>
           ))}

@@ -44,12 +44,12 @@ export default function RelatedArticles({ currentSlug, currentTag }: RelatedArti
         {relatedList.map((art) => (
           <article
             key={art.slug}
-            className="group zen-card overflow-hidden flex flex-col p-4 bg-white border border-[#E6E1D8] rounded-2xl hover:shadow-lg transition-all duration-300"
+            className="group zen-card overflow-hidden flex flex-col bg-white border border-[#E6E1D8] rounded-2xl hover:shadow-lg transition-all duration-300"
           >
-            {/* Thumbnail */}
+            {/* Thumbnail - Tràn viền */}
             <Link
               href={`/bai-viet/${art.slug}`}
-              className="relative h-44 w-full overflow-hidden rounded-xl mb-3 bg-[#FAF7F2] block shadow-inner"
+              className="relative h-44 w-full overflow-hidden bg-[#FAF7F2] block shadow-inner"
             >
               <img
                 src={art.thumbnail}
@@ -65,26 +65,28 @@ export default function RelatedArticles({ currentSlug, currentTag }: RelatedArti
               </span>
             </Link>
 
-            <div className="text-[10px] font-semibold text-[#6B726E] uppercase mb-1">
-              {art.date}
-            </div>
+            <div className="p-4 sm:p-5 flex-1 flex flex-col">
+              <div className="text-[10px] font-semibold text-[#6B726E] uppercase mb-1">
+                {art.date}
+              </div>
 
-            <h4 className="text-sm sm:text-base font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors flex-1">
-              <Link href={`/bai-viet/${art.slug}`}>
-                {art.title}
-              </Link>
-            </h4>
+              <h4 className="text-sm sm:text-base font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors flex-1">
+                <Link href={`/bai-viet/${art.slug}`}>
+                  {art.title}
+                </Link>
+              </h4>
 
-            <p className="text-[11px] sm:text-xs text-[#6B726E] leading-relaxed line-clamp-2 mb-3">
-              “{art.excerpt}”
-            </p>
+              <p className="text-[11px] sm:text-xs text-[#6B726E] leading-relaxed line-clamp-2 mb-3">
+                “{art.excerpt}”
+              </p>
 
-            <div className="pt-2.5 border-t border-[#E6E1D8]/80 flex items-center justify-between text-xs font-semibold text-[#3A5A40]">
-              <Link href={`/bai-viet/${art.slug}`} className="flex items-center gap-1 hover:underline text-xs font-bold">
-                <span>Đọc tiếp</span>
-                <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <span className="text-[11px] text-[#6B726E] font-normal">{art.readTime}</span>
+              <div className="pt-2.5 border-t border-[#E6E1D8]/80 flex items-center justify-between text-xs font-semibold text-[#3A5A40]">
+                <Link href={`/bai-viet/${art.slug}`} className="flex items-center gap-1 hover:underline text-xs font-bold">
+                  <span>Đọc tiếp</span>
+                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <span className="text-[11px] text-[#6B726E] font-normal">{art.readTime}</span>
+              </div>
             </div>
           </article>
         ))}
