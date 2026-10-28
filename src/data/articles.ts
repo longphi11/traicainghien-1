@@ -238,7 +238,7 @@ const rawArticles: Article[] = [
     "slug": "review-sach-ikigai-di-tim-le-song",
     "title": "Đọc \"Ikigai\": Khi có một lý do để thức dậy mỗi sớm mai, dopamine rẻ tiền tự khắc vô vị",
     "excerpt": "Tại sao người già ở ngôi làng trường thọ Ogimi (Okinawa) không bao giờ biết đến khái niệm nghỉ hưu hay trầm cảm? Bí mật không nằm ở nhân sâm hay thuốc bổ, mà nằm ở một hạt mầm mang tên Ikigai...",
-    "thumbnail": "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
     "pillarTag": "SachHay",
     "tags": [
