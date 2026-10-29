@@ -57,6 +57,19 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
   - Đan xen các câu hỏi lửng ở cuối mỗi phần để tạo quán tính tâm lý, thôi thúc người đọc cuộn xuống đọc tiếp.
   - Văn phong cuốn hút, tha thiết, thấu cảm sâu sắc như một người anh em ngồi đối diện ở quán cà phê, kéo người đọc đi một mạch từ chữ đầu tiên đến chữ cuối cùng mà không nỡ rời mắt.
 
+### 1.7. Nghệ Thuật Đặt Tiêu Đề 2 Dòng Kích Thích Tò Mò (Catchy 2-Line Curiosity Hook)
+* **Độ dài vàng:** **50 – 62 ký tự (vừa khít 2 dòng hiển thị ở box card bài viết bên ngoài)**.
+* **Triệt tiêu lỗi hiển thị:** Tuyệt đối không đặt tiêu đề quá dài khiến giao diện cắt cụt bằng dấu ba chấm `...`.
+* **Công thức tạo lực hút tò mò:** Kết hợp hình tượng lạ lẫm hoặc nghịch lý đánh trúng tâm lý người đọc:
+  - *Tim Ferriss: Bí Quyết 'Hai Trang Giấy Dở Tệ' & Khối 3 Giờ Vàng* (62 ký tự)
+  - *Charlie Munger & Darwin: Bộ Não Đồ Đá Và Thuật Tư Duy Ngược* (59 ký tự)
+  - *Bẫy Tích Lũy Kiến Thức: Vì Sao Càng Học Lại Càng Trì Hoãn?* (59 ký tự)
+  - *Thuật Đảo Ngược Dopamine: Để 'Nghiện' Làm Việc Như Lướt Mạng* (60 ký tự)
+
+### 1.8. Vị Trí Khối "Những Điểm Chính" (Key Takeaways)
+* **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
+* **Ý nghĩa:** Tuyệt đối không đặt ở đầu bài. Hãy để người đọc trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước, sau đó nhận khối "Những Điểm Chính" như một món quà đúc kết hành động thực hành tinh gọn trước khi khép lại trang web.
+
 ---
 
 ## 1.b. 🏛️ BỐN TRỤ CỘT NỘI DUNG CỐT LÕI (THE 4 CONTENT PILLARS)

@@ -3,7 +3,7 @@ name: autonomous-agent-workforce
 description: Bản đồ phân công nhân sự, vai trò, chức năng và quy trình phối hợp của Bộ máy 7 Agent chuyên trách cho dự án Trại Cai Nghiện. Bao gồm chi tiết nhiệm vụ, đầu vào, đầu ra và prompt vận hành cho từng Agent.
 ---
 
-# 🤖 BỘ MÁY 7 AGENT CHUYÊN TRÁCH: TRẠI CAI NGHIỆN
+# 🤖 BỘ MÁY 8 AGENT CHUYÊN TRÁCH: TRẠI CAI NGHIỆN
 > **Kiến trúc:** Hub & Spoke Multi-Agent System  
 > **Tổng chỉ huy (Orchestrator / AI Co-founder):** **Mây**  
 > **Người sáng lập & Điều hành:** **Bố**  
@@ -47,6 +47,8 @@ flowchart TD
 * **Sứ mệnh:** Xây dựng tài sản tri thức trường tồn cho website, chịu trách nhiệm các bài phân tích sâu 2.500 từ và review sách tâm lý.
 * **Nguyên tắc ngòi bút:**
   - Chuẩn mực 2.500 từ/bài, tập trung giải quyết 1 vấn đề, không lan man, không độn chữ.
+  - **Tiêu đề chuẩn 2 dòng (50 - 62 ký tự):** Vừa khít card bên ngoài, không tràn dòng `...`, giật curiosity hook bằng hình ảnh đối nghịch hoặc nghịch lý lạ lẫm.
+  - **Vị trí "Những Điểm Chính":** Bắt buộc đặt ở cuối cùng của bài viết, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*, không để ở đầu bài.
   - Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic).
   - Cấm tiệt từ ngữ trừu tượng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*). Neo đậu bằng chi tiết đời thực (*màn hình lướt 2h sáng cay xè mắt, bát phở 30k*).
   - Nghệ thuật tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến chữ cuối cùng.
@@ -83,7 +85,9 @@ flowchart TD
 * **Chức danh:** Trưởng nhóm Kỹ thuật & Tự Động Hóa.
 * **Sứ mệnh:** Giữ cho hạ tầng website luôn đạt tốc độ tối đa, giao diện mượt mà và tự động hóa 100% dòng tiền mà không cần người trực.
 * **Nhiệm vụ cụ thể:**
-  - Lập trình Next.js (App Router), Tailwind CSS, tối ưu UI/UX Zen Minimalist.
+  - Lập trình Next.js (App Router), Tailwind CSS, tối ưu UI/UX Zen Minimalist, typography chống díu chữ.
+  - Quản lý **Google Indexing API (`npm run seo:index`)**: Ép Googlebot cào bài mới trong 24h bằng Service Account bot.
+  - Theo dõi **Google Search Console & GA4 (`npm run seo:report`)**: Báo cáo thứ hạng từ khóa, lượt click và hành vi độc giả.
   - Tích hợp cổng thanh toán QR SePay / VietQR tự động: Khách quét mã $\rightarrow$ Tiền về tài khoản $\rightarrow$ Web tự động gửi link download tài liệu qua email trong 30 giây.
   - Tối ưu SEO Onpage, tốc độ tải trang Core Web Vitals, kiểm tra link và build/deploy Vercel.
 * **Đầu vào (Input):** Yêu cầu tính năng, bài viết mới từ Agent 1 hoặc sản phẩm từ Agent 3.
@@ -95,9 +99,13 @@ flowchart TD
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
 * **Sứ mệnh:** Người gác cổng khó tính nhất — đảm bảo mọi ấn phẩm trước khi ra mắt công chúng đều đạt chuẩn 10/10.
 * **Tiêu chí kiểm duyệt:**
-  - Đếm từ chính xác: Bài viết có đạt 2.500 từ không?
+  - Đếm từ chính xác: Bài viết có đạt tối thiểu 2.500 từ không?
+  - Tiêu đề: Có ngắn gọn 2 dòng (50 - 62 ký tự) và đủ kích thích tò mò không? Có bị cắt `...` không?
+  - Vị trí khối "Những Điểm Chính": Đã nằm ở dưới cùng sau "Lời nhắn gửi từ Trại Cai Nghiện" chưa?
   - Quét lỗi văn phong: Có bị lẫn từ ngữ giáo điều, phán xét, hay từ trừu tượng không?
-  - Kiểm tra điều hướng: Đã có liên kết nội bộ (Internal Links), nút trắc nghiệm và CTA sản phẩm chưa?
+  - Kiểm tra điều hướng: Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm và CTA sản phẩm chưa?
+* **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 hoặc kịch bản video từ Agent 2.
+* **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL) kèm các điểm chỉnh sửa cụ thể trước khi bàn giao cho Agent 4 đẩy lên web.
 * **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 hoặc kịch bản video từ Agent 2.
 * **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL) kèm các điểm chỉnh sửa cụ thể trước khi bàn giao cho Agent 4 đẩy lên web.
 
