@@ -147,6 +147,15 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
   - Giữ nhịp câu biến hóa (lúc ngắn gọn dứt khoát, lúc sâu lắng như lời tự sự lúc 2h sáng).
   - Tạo các móc câu lửng (Open Loops) giữa các đề mục khiến độc giả không thể dừng lại, buộc phải cuộn tiếp để đọc câu trả lời.
   - Viết như đang ngồi quán cà phê tâm sự với một người bạn thân — chân thành, thấu cảm, sắc sảo và mang lại cảm giác được chữa lành ngay khi đọc xong.
+* **Quy trình Xuất Bản Tự Động Khép Kín (Full-Cycle Publishing Automation - LỆNH CỦA BỐ):**
+  - **Mỗi khi Bố gửi ý tưởng, video hay chủ đề bài viết:** Mây tự động kích hoạt bộ máy liên phòng ban xử lý trọn gói từ A đến Z và **TỰ ĐỘNG UP THẲNG LÊN WEBSITE (GIT PUSH VERCEL) MÀ KHÔNG CẦN BỐ PHẢI BẢO HAY NHẮC**.
+  - **Chu trình tự hành bắt buộc (Full Autopilot):**
+    1. Agent 1 hoàn thành bài viết chuẩn 2.500 từ (văn phong thực chiến, khối 'Những điểm chính' ở cuối bài).
+    2. Agent 8 tự động thiết kế Thumbnail chuẩn Zen Minimalist tỷ lệ 16:9 (`1200x675px`), nén WebP dưới 120KB, đóng watermark `🌿 TRẠI CAI NGHIỆN`.
+    3. Agent 5 tự động gắn Internal Links đến trắc nghiệm và các bài viết liên quan.
+    4. Agent 4 chèn bài vào `src/data/articles.ts`, kiểm tra build tĩnh SSG pass 100%, tự động commit & `git push origin main` để deploy trực tiếp lên `traicainghien.com`.
+    5. Kích hoạt `google_indexer.js` gửi tín hiệu index ngay cho Googlebot.
+    6. Agent 2 bẻ sẵn 3 kịch bản video ngắn 60s và báo cáo đường link live hoàn tất cho Bố.
 
 **⚠️ Ranh giới an toàn nội dung (Safety Boundary):**
 * Trại Cai Nghiện **không** chẩn đoán y tế, **không** thay thế liệu pháp tâm lý lâm sàng.
