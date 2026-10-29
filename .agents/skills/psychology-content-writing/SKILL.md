@@ -149,3 +149,26 @@ Mỗi bài viết cần nhắm trúng tâm lý của ít nhất 1 trong 4 nhóm:
 2. **Nhóm 2 (Biết nghiện nhưng chưa muốn hoặc thiếu lý do bỏ):** Không cấm đoán, không ép bỏ; thắp sáng Ikigai để họ thấy cuộc đời phía sau buông bỏ sẽ rực rỡ và đáng sống hơn.
 3. **Nhóm 3 (Bị ảnh hưởng chất lượng sống nhưng không biết do nghiện):** Thức tỉnh trực diện: chỉ ra lo âu, mất tập trung, hay cáu gắt chính là do não bộ đang bị kiệt quệ dopamine mỗi ngày.
 4. **Nhóm 4 (Nhận ra vấn đề nhưng hay tái nghiện, thiếu phương pháp):** Reframing: *"Bạn không yếu đuối, bạn chỉ dùng sai công cụ"*. Trao Kaizen 1%, Wabi Sabi tha thứ và hệ thống thay thế Routine cụ thể.
+
+---
+
+## 6. 📡 HỆ QUY CHIẾU 8 KÊNH YOUTUBE & REELS ĐỊNH HƯỚNG TREND (BENCHMARK CHANNELS)
+Khi Agent 1 viết bài, Agent 2 bẻ kịch bản video hoặc Agent 6 quét ý tưởng xu hướng, **bắt buộc bám sát hệ quy chiếu 8 kênh chuẩn mực** sau đây để vừa chuẩn xác tâm lý học, vừa cuốn hút và bắt trúng thị hiếu:
+
+### 🌟 5 Kênh Khung Cốt Lõi Quốc Tế & Bản Địa Hóa:
+1. **Einzelgänger** (`@einzelganger`): Triết lý Stoicism, chữa lành tâm lý cô đơn, sống chậm, giải phóng khỏi kích thích quá độ (Overstimulation), chất lượng video essay trầm mặc và bao dung.
+2. **Better Ideas** (`@betterideas` - Joey Schweitzer): Phong cách *"Người thường nói chuyện với người thường"*, chân thực đến trần trụi (Radical Honesty), bóc trần những khoảnh khắc lười biếng và nghiện điện thoại, trao giải pháp Kaizen vi mô đời thực.
+3. **Malama Life** (`@malamalife` - Sophie): Chuẩn mực thẩm mỹ Zen Minimalist (gỗ, ánh sáng sớm, trà mộc, sách giấy), tối giản kỹ thuật số (Digital Minimalism), dọn rác tâm trí và nuôi dưỡng dopamine tự nhiên.
+4. **Dan Koe** (`@thedankoe`): Bậc thầy Attention Economy và bẫy dopamine thời hiện đại; công thức viết bài phân tích dài chuyển hóa thành kịch bản video ngắn (Reels/Shorts) kéo phễu sản phẩm số tự động.
+5. **Better Version** (`@betterversionvn`): Kênh tóm tắt sách hành vi & thói quen hàng đầu Việt Nam; công thức chuyển tải kiến thức sách kinh điển phương Tây (*Atomic Habits, Dopamine Nation*) thành ngôn ngữ trực quan, dễ hiểu.
+
+### 🌟 3 Kênh Định Hướng Đặc Biệt Của Bố (Bố Chỉ Định):
+6. **The Gọn Life** (`@thegonlife` - Đồng Gọn):
+   - *Điểm mạnh cốt lõi:* Lối sống tinh gọn, trị dứt điểm trì hoãn (*Trì Hoãn Podcast*), hệ thống năng suất cá nhân (Clarity Yearplan/Monthplan), biến Atomic Habits thành các hành động đời thường cho người trẻ Việt.
+   - *Ứng dụng cho Trại:* Khai thác các chủ đề về dọn dẹp không gian sống/số, trị trì hoãn trong công việc và học tập, xây dựng thời gian biểu không áp lực.
+7. **Psychologie** (`@psychologie-france`):
+   - *Điểm mạnh cốt lõi:* Phân tích chuyên sâu các cơ chế tâm lý học hành vi (Coping mechanisms, tâm lý cảm xúc, bẫy mục tiêu mơ hồ, rào cản nội tâm), cấu trúc kịch bản mạch lạc, bố cục lập luận chặt chẽ chuẩn quốc tế.
+   - *Ứng dụng cho Trại:* Đưa ra những phân tích tâm lý sâu sắc, chuẩn khoa học về lý do con người hay tự lừa dối bản thân và trốn tránh thực tại.
+8. **Vua Trở Lại** (`@vuatrolai`):
+   - *Điểm mạnh cốt lõi:* Triết lý Samurai / Miyamoto Musashi, rèn luyện tâm trí thép nhưng không gồng, tái thiết nội lực và hồi sinh nghị lực sống sau những lần vấp ngã/khủng hoảng tâm lý.
+   - *Ứng dụng cho Trại:* Thổi bùng ngọn lửa ý chí tự thân, nâng đỡ tinh thần cho độc giả đang ở đáy vực tự ti, giúp họ dũng cảm đứng lên "trở lại phiên bản tốt nhất của chính mình".

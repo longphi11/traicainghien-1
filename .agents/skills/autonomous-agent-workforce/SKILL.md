@@ -121,7 +121,16 @@ flowchart TD
     - Ứng dụng công nghệ hỗ trợ tập trung (Opal, Forest, One Sec, Notion, Endel).
     - Phụ kiện làm việc sâu & Zen Minimalist (Đồng hồ Pomodoro cơ, đèn làm việc, nến thơm).
   - Đánh giá tính khả thi: Sản phẩm nào có biên lợi nhuận cao, dễ bàn giao tự động hóa 100%?
-* **Đầu vào (Input):** Xu hướng tìm kiếm, dữ liệu thị trường và từ khóa nóng.
+  - **Hệ quy chiếu 8 kênh chuẩn mực săn trend & ý tưởng (Bố chỉ định):**
+    1. `Einzelgänger`: Triết lý Stoicism, giải phóng overstimulation, video essay trầm mặc.
+    2. `Better Ideas`: Street-Smart Academic, trần trụi, Kaizen 1% trị thói quen lười.
+    3. `Malama Life`: Thẩm mỹ Zen Minimalist B-roll faceless, dọn rác tâm trí.
+    4. `Dan Koe`: Bẫy dopamine & attention economy, bẻ bài dài thành kịch bản short-form.
+    5. `Better Version`: Tóm tắt sách hành vi & tâm lý kinh điển cho khán giả Việt Nam.
+    6. `The Gọn Life`: Sống tinh gọn, trị dứt điểm trì hoãn (Trì Hoãn Podcast), hệ thống năng suất cá nhân (Clarity Plan).
+    7. `Psychologie`: Cơ chế tâm lý học hành vi sâu sắc (Coping mechanisms, tâm lý cảm xúc, bẫy mục tiêu mơ hồ).
+    8. `Vua Trở Lại`: Tinh thần Samurai / Miyamoto Musashi, rèn luyện nội lực, tái thiết bản thân và phục hồi nghị lực.
+* **Đầu vào (Input):** Xu hướng tìm kiếm, dữ liệu thị trường và từ khóa nóng từ 8 kênh chuẩn mực.
 * **Đầu ra (Output):** Báo cáo xu hướng tuần, danh mục deal affiliate tiềm năng, bản đề xuất sản phẩm đóng gói mới (Winner Product Hypothesis).
 
 ---

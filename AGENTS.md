@@ -429,6 +429,15 @@ flowchart TD
    - *Trách nhiệm:* Người gác cổng chất lượng: Đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát tiêu chuẩn SEO On-page (từ khóa trong title, slug, H2, meta description, thẻ alt ảnh 16:9), soát liên kết nội bộ giảm Bounce Rate trên Google Analytics, và nút CTA trắc nghiệm.
 6. **Agent 6: Monetization Scout & Trend Hunter (Săn Trend & Mô Hình Đóng Gói / Affiliate)**
    - *Trách nhiệm:* Liên tục săn tìm các mô hình sản phẩm số đóng gói viral trên Gumroad, Etsy, Substack, TikTok Shop và lọc các deal Affiliate béo bở (sách tâm lý, app hỗ trợ cai nghiện như Opal/Forest, đồ dùng phong cách sống tối giản).
+   - *Hệ quy chiếu 8 kênh chuẩn mực bắt buộc để săn trend & khai thác ý tưởng (Bố chỉ định):*
+     1. `Einzelgänger` (@einzelganger): Triết lý Stoicism, giải phóng overstimulation, video essay tĩnh lặng.
+     2. `Better Ideas` (@betterideas): Street-Smart Academic, trần trụi, Kaizen vi mô trị thói quen lười lướt máy.
+     3. `Malama Life` (@malamalife): Chuẩn mỹ cảm Zen Minimalist, Digital Minimalism, dọn rác tâm trí.
+     4. `Dan Koe` (@thedankoe): Bẫy dopamine & attention economy, bẻ bài dài thành kịch bản short-form.
+     5. `Better Version` (@betterversionvn): Tóm tắt sách hành vi & tâm lý kinh điển cho khán giả Việt Nam.
+     6. `The Gọn Life` (@thegonlife): Sống tinh gọn, trị dứt điểm trì hoãn (Trì Hoãn Podcast), hệ thống năng suất (Clarity Plan).
+     7. `Psychologie` (@psychologie-france): Cơ chế tâm lý học hành vi sâu sắc (Coping mechanisms, tâm lý cảm xúc, bẫy mục tiêu mơ hồ).
+     8. `Vua Trở Lại` (@vuatrolai): Tinh thần Samurai / Miyamoto Musashi, rèn luyện nội lực, tái thiết bản thân và phục hồi nghị lực sống.
 7. **Agent 7: Lead Intelligence & Retargeting Specialist (Thu Thập Data & Bám Đuổi Tái Tiếp Thị)**
    - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng tự động và thiết lập các kịch bản bám đuổi (Email Drip, Zalo broadcast, Retargeting Pixel) với chi phí 0đ.
 8. **Agent 8: Visual Stylist & AI Thumbnail Creator (Chuyên Gia Hình Ảnh & Thumbnail Chuẩn SEO)**
