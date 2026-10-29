@@ -407,9 +407,9 @@ flowchart TD
 3. **Agent 3: Product & Funnel Architect (Kiến Trúc Sư Sản Phẩm & Phễu)**
    - *Trách nhiệm:* Thiết kế bài trắc nghiệm nhận diện 25 câu hỏi, đóng gói sản phẩm vi mô (49k - 149k) và Core Offer (390k - 490k), soạn chuỗi Email Sequence 5 ngày nuôi dưỡng lead.
 4. **Agent 4: Tech & Automation Engineer (Kỹ Sư Hệ Thống)**
-   - *Trách nhiệm:* Code Next.js, tối ưu SEO Technical, tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
+   - *Trách nhiệm:* Code Next.js, quản trị SEO Technical, kích hoạt Google Indexing API (`npm run seo:index`) ép Googlebot cào bài mới trong 24h, theo dõi Google Search Console & Google Analytics (`npm run seo:report`), tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
 5. **Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng)**
-   - *Trách nhiệm:* Người gác cổng chất lượng: Đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát liên kết nội bộ, thẻ Alt Text ảnh và nút CTA trắc nghiệm.
+   - *Trách nhiệm:* Người gác cổng chất lượng: Đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát tiêu chuẩn SEO On-page (từ khóa trong title, slug, H2, meta description, thẻ alt ảnh 16:9), soát liên kết nội bộ giảm Bounce Rate trên Google Analytics, và nút CTA trắc nghiệm.
 6. **Agent 6: Monetization Scout & Trend Hunter (Săn Trend & Mô Hình Đóng Gói / Affiliate)**
    - *Trách nhiệm:* Liên tục săn tìm các mô hình sản phẩm số đóng gói viral trên Gumroad, Etsy, Substack, TikTok Shop và lọc các deal Affiliate béo bở (sách tâm lý, app hỗ trợ cai nghiện như Opal/Forest, đồ dùng phong cách sống tối giản).
 7. **Agent 7: Lead Intelligence & Retargeting Specialist (Thu Thập Data & Bám Đuổi Tái Tiếp Thị)**
