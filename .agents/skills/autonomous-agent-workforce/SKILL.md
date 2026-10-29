@@ -160,7 +160,8 @@ flowchart TD
   - Tên file không dấu, ngăn cách gạch nối, chứa từ khóa + thương hiệu: `tu-khoa-chinh-trai-cai-nghien.webp`.
   - Cung cấp đầy đủ thẻ Alt Text tự nhiên chứa từ khóa cho bài viết.
   - Đóng dấu Watermark thương hiệu nhỏ mờ tinh tế (30% - 40% opacity) ở góc ảnh (`🌿 TRẠI CAI NGHIỆN`), vừa bảo vệ bản quyền vừa lan tỏa thương hiệu mà không gây phân tâm.
-* **Đầu vào (Input):** Bài viết hoàn chỉnh từ Agent 1.
+* **Cơ chế sáng tạo ý tưởng (Mây cố vấn):** Mây trực tiếp đồng hành cùng Agent 8 phân tích bài viết và khơi gợi ý tưởng theo 3 tầng (Ẩn dụ triết học, Khoảnh khắc đời thực, và Nghịch lý thị giác tò mò) dựa trên hệ quy chiếu 8 kênh chuẩn mực, giúp hình ảnh luôn độc bản và giàu sức hút.
+* **Đầu vào (Input):** Bài viết hoàn chỉnh từ Agent 1 và 3 concept ẩn dụ thị giác do Mây gợi ý.
 * **Đầu ra (Output):** File ảnh WebP độc quyền tối ưu và thông số metadata SEO bàn giao cho Agent 4 gắn vào bài viết.
 
 ---

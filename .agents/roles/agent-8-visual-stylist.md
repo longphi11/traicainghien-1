@@ -25,6 +25,30 @@ Mọi hình ảnh do Agent 8 tạo ra bắt buộc phải tuân thủ triết l�
 
 ---
 
+## 💡 1.b. HỆ THỐNG KHƠI GỢI ẨN DỤ THỊ GIÁC SÁNG TẠO (MÂY ĐỒNG HÀNH CÙNG AGENT 8)
+Để hình ảnh Thumbnail trên website không bao giờ bị rập khuôn, nhàm chán hay sáo rỗng, **Mây (Tổng biên tập)** sẽ cùng Agent 8 phân tích bài viết và kích hoạt **Bộ 3 Tầng Ý Tưởng Sáng Tạo** kết hợp với tinh hoa từ **8 Kênh Chuẩn Mực**:
+
+### 🎯 3 Tầng Tiếp Cận Ý Tưởng Thị Giác:
+1. **Tầng 1 — Ẩn Dụ Triết Học & Trừu Tượng Tối Giản (Philosophical Metaphors):**
+   - *Lấy cảm hứng từ:* `Einzelgänger` & `Vua Trở Lại`.
+   - *Hình tượng tiêu biểu:* Vòng tròn Enso dở dang, chén gốm Kintsugi rạn vàng, thanh kiếm gỗ bên tách trà, mầm cây đâm chồi qua tảng đá, chiếc cân bập bênh thăng bằng.
+   - *Cảm xúc gợi mở:* Sâu sắc, trường tồn, đánh thức bản lĩnh và nội lực tự thân.
+2. **Tầng 2 — Khoảnh Khắc Đời Thực Chạm Cảm Xúc (Relatable Human Moments):**
+   - *Lấy cảm hứng từ:* `Better Ideas`, `Malama Life` & `The Gọn Life`.
+   - *Hình tượng tiêu biểu:* Chiếc điện thoại úp mặt bên bàn gỗ, trang giấy trắng với vài dòng chữ nắn nót, góc bàn làm việc đón nắng sớm, đôi giày chạy bộ để cạnh cửa, ngọn đèn vàng soi cuốn sách đêm muộn.
+   - *Cảm xúc gợi mở:* Thấu cảm, gần gũi, người xem lập tức thấy hình bóng của chính mình.
+3. **Tầng 3 — Nghịch Lý Thị Giác Gây Tò Mò (Visual Paradox & Curiosity Hooks):**
+   - *Lấy cảm hứng từ:* `Dan Koe` & `Psychologie`.
+   - *Hình tượng tiêu biểu:* Một cánh cửa mở ra khu rừng xanh giữa căn phòng trống, chiếc đồng hồ cát với hạt cát lơ lửng, một chiếc điện thoại vỡ màn hình mọc lên bông hoa dại, cái bóng của một người vươn vai tự do dù đang ngồi yên.
+   - *Cảm xúc gợi mở:* Kích thích trí tò mò cực độ (*Curiosity Gap*), thôi thúc độc giả bấm vào bài viết ngay lập tức.
+
+### 🔄 Quy Trình Mây Khơi Gợi Ý Tưởng Cho Agent 8:
+* **Bước 1:** Khi Agent 1 hoàn thành bài viết, Mây trích xuất: **(1) Nỗi đau cốt lõi**, **(2) Cú bẻ lái Reframing**, và **(3) Ẩn dụ đắt giá nhất của bài**.
+* **Bước 2:** Mây gợi ý cho Agent 8 từ **2 - 3 góc nhìn ẩn dụ** (kết hợp yếu tố cụ thể: tách trà, trang sách, ánh sáng, góc nghiêng).
+* **Bước 3:** Agent 8 lựa chọn góc nhìn có tác động thị giác mạnh nhất, nạp bảng màu Zen Minimalist (`#3A5A40`, `#FAF7F2`, `#C27D53`, `#2D312E`) và xuất xưởng Thumbnail độc bản chuẩn 16:9.
+
+---
+
 ## 🔍 2. BỘ TIÊU CHUẨN KỸ THUẬT GOOGLE SEO IMAGE & DISCOVER
 Để hình ảnh được Google đánh giá 10/10 và cắn đề xuất trên Google Discover:
 1. **Tỷ lệ & Kích thước chuẩn:**
