@@ -14,7 +14,6 @@ export default function Navbar() {
     { href: "/he-thong-cai-nghien", label: "Hệ Thống Cai Nghiện" },
     { href: "/trac-nghiem", label: "Trắc Nghiệm" },
     { href: "/bai-viet", label: "Bài Viết" },
-    { href: "/cong-cu", label: "Công Cụ" },
     { href: "/gioi-thieu", label: "Giới Thiệu" },
   ];
 

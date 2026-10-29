@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/cong-cu',
+        destination: '/bai-viet',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

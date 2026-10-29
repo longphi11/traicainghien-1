@@ -144,23 +144,6 @@ export default function BaiVietPage() {
             {getCount("SachHay")}
           </span>
         </button>
-
-        <button
-          onClick={() => handleTabChange("CongCuHoTro")}
-          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
-            activeTab === "CongCuHoTro"
-              ? "bg-emerald-800 text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-emerald-700"
-          }`}
-        >
-          <span>🧰</span>
-          <span>#CongCuHoTro</span>
-          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "CongCuHoTro" ? "bg-white/20 text-white" : "bg-emerald-50 text-emerald-800"
-          }`}>
-            {getCount("CongCuHoTro")}
-          </span>
-        </button>
       </div>
 
       {/* Articles Grid (To hơn 25%, mở rộng sang 2 bên) */}

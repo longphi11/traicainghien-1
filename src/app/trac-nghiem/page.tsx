@@ -344,8 +344,7 @@ export default function TracNghiemPage() {
               Khám phá các app khóa màn hình nghiêm ngặt, bảng theo dõi streak và kho bài viết thực chiến để hỗ trợ bạn trong những ngày đầu.
             </p>
             <div className="flex justify-center gap-4 text-xs font-semibold pt-1">
-              <Link href="/cong-cu" className="text-[#3A5A40] hover:underline">Xem Đồ Nghề →</Link>
-              <Link href="/bai-viet" className="text-[#C27D53] hover:underline">Đọc Bài Viết →</Link>
+              <Link href="/bai-viet" className="text-[#3A5A40] hover:underline font-bold">Khám Phá Kho Bài Viết Thực Chiến →</Link>
             </div>
           </div>
 

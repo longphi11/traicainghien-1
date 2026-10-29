@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, ArrowRight, BookOpen, Wrench, Compass, ShieldCheck, Heart, CheckCircle2, Clock, Calendar } from "lucide-react";
+import { Sparkles, ArrowRight, BookOpen, Compass, ShieldCheck, Heart, CheckCircle2, Clock, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
-import { tools } from "@/data/tools";
 
 export default function HomePage() {
   return (
@@ -532,62 +531,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. CÔNG CỤ THỰC HÀNH PREVIEW */}
-      <section className="px-6 max-w-6xl mx-auto">
-        <div className="p-8 md:p-10 rounded-3xl bg-white border border-[#E6E1D8] space-y-8 shadow-sm">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-[#E6E1D8]">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2.5">
-                <span className="text-2xl">🛠️</span>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40]">Đồ Nghề Thực Chiến</span>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">Công Cụ Hỗ Trợ Chuyển Hóa</h3>
-              <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed max-w-2xl">
-                Đừng chỉ dựa vào ý chí trần trụi. Hãy trang bị cho mình những rào cản và công cụ thông minh để khiến thói quen xấu trở nên khó khăn, và thói quen tốt trở nên dễ dàng.
-              </p>
-            </div>
-            <Link
-              href="/cong-cu"
-              className="text-xs md:text-sm font-bold text-[#3A5A40] hover:underline flex items-center gap-1 shrink-0"
-            >
-              <span>Xem tất cả đồ nghề</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {tools.map((tool) => (
-              <div
-                key={tool.id}
-                className="p-5 rounded-2xl border border-[#E6E1D8] bg-[#FAF7F2] flex flex-col justify-between hover:border-[#3A5A40]/40 transition-all group"
-              >
-                <div className="space-y-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#C27D53] px-2 py-0.5 rounded bg-[#F9EFE9] inline-block">
-                    {tool.categoryLabel}
-                  </span>
-                  <h4 className="font-bold text-sm text-[#2D312E] leading-snug group-hover:text-[#3A5A40] transition-colors line-clamp-2">
-                    {tool.name}
-                  </h4>
-                  <p className="text-xs text-[#6B726E] leading-relaxed line-clamp-2">
-                    {tool.description}
-                  </p>
-                </div>
-                <div className="pt-4 mt-4 border-t border-[#E6E1D8]/60">
-                  <Link
-                    href="/cong-cu"
-                    className="text-xs font-semibold text-[#3A5A40] flex items-center gap-1 hover:underline"
-                  >
-                    <span>Khám phá</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. HỘP ĐĂNG KÝ BẢN TIN SUBSTACK */}
+      {/* 5. HỘP ĐĂNG KÝ BẢN TIN SUBSTACK */}
       <section className="px-6">
         <div className="max-w-4xl mx-auto rounded-3xl p-8 md:p-12 bg-[#EBF0EC] border border-[#E6E1D8] text-center space-y-6">
           <span className="text-2xl">✉️</span>
