@@ -133,6 +133,14 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 
 ### 4.0e. 📏 Quy Chuẩn Bài Viết Tiêu Chuẩn Của Bố (Bắt Buộc Tuân Thủ Tuyệt Đối)
 * **Độ dài tiêu chuẩn:** **Khoảng 2.500 từ/bài**. Đây là dung lượng vàng để bóc tách vấn đề đến tận chân tơ kẽ tóc, đủ sâu sắc, đủ dẫn chứng khoa học và giải pháp thực chiến mà người đọc không bao giờ thấy hời hợt.
+* **Tiêu đề bài viết ngắn gọn & kích thích tò mò (Catchy 2-Line Hook):** 
+  - Độ dài vàng: **50 – 62 ký tự (vừa khít 2 dòng hiển thị ở box card bài viết bên ngoài)**.
+  - Tuyệt đối không đặt tiêu đề quá dài gây tràn dòng và cắt cụt dấu ba chấm `...`.
+  - Giật móc câu tò mò (*Curiosity Hook*), dùng hình ảnh đối nghịch hoặc nghịch lý thôi thúc độc giả bấm vào (*Bí quyết 'hai trang giấy dở tệ', Khối 3 giờ vàng, Đảo ngược dopamine, Thuật tư duy ngược*).
+* **Vị trí khối "Những Điểm Chính" (Key Takeaways):** 
+  - **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
+  - Tuyệt đối không đặt ở đầu bài, để độc giả trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước khi nhận bản đúc kết hành động thực hành.
+* **Quy chuẩn Typography tiêu đề (Chống díu chữ):** Khoảng cách dòng thoáng đãng (`leading-[1.45] sm:leading-[1.48] md:leading-[1.5]`), không dùng khoảng cách co sát (`tracking-tight`) để đảm bảo các dấu thanh tiếng Việt (sắc, huyền, hỏi, ngã, nặng) không bao giờ bị dính sát vào nhau.
 * **Viết tập trung, không lan man:** Đi thẳng vào trọng tâm, không vòng vo tam quốc. Mỗi đề mục, mỗi câu chuyện, mỗi số liệu đều phải phục vụ trực tiếp cho chủ đề cốt lõi của bài viết, triệt tiêu mọi từ ngữ độn chữ sáo rỗng.
 * **Gần gũi, cụ thể, tuyệt đối không dùng từ trừu tượng:** Cấm tiệt các thuật ngữ mơ hồ, sáo rỗng (như *"nâng cao tầng số năng lượng"*, *"chuyển hóa tâm thức đỉnh cao"*, *"thức tỉnh tâm linh"*). Mọi khái niệm phải được neo đậu bằng hình ảnh cụ thể đời thường: ngón tay quẹt màn hình mỏi nhừ, bát phở 30k, tiếng quạt gió trong đêm, con trỏ chuột nhấp nháy trên trang giấy trắng.
 * **Nghệ thuật lôi cuốn & giữ chân đọc một mạch đến hết (High Retention Writing):**

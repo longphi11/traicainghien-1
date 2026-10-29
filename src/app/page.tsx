@@ -507,7 +507,7 @@ export default function HomePage() {
               </Link>
               
               <div className="p-5 sm:p-6 flex-1 flex flex-col">
-                <h3 className="text-lg font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+                <h3 className="text-lg font-bold font-serif text-[#2D312E] mb-2.5 leading-[1.42] sm:leading-[1.45] tracking-normal line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
                   <Link href={`/bai-viet/${article.slug}`}>
                     {article.title}
                   </Link>

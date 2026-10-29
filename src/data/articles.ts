@@ -67,7 +67,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "thanh-loc-nao-bo-de-lam-viec-sau",
-    "title": "Thanh lọc não bộ: Vì sao bạn chán làm việc và thèm quẹt màn hình?",
+    "title": "Thanh Lọc Não Bộ: Vì Sao Ta Chán Làm Việc Và Thèm Quẹt Máy?",
     "excerpt": "Mở laptop lên định làm việc, nhưng mới gõ được vài dòng là ngứa ngáy thò tay lấy điện thoại. Não bạn không bị hỏng, nó chỉ đang bị 'bội thực' Dopamine kích thích cao...",
     "thumbnail": "/images/articles/thanh-loc-nao-bo-dopamine-detox-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động & tìm lại sự chú ý",
@@ -135,7 +135,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-bay-hanh-phuc-russ-harris",
-    "title": "Đọc \"Bẫy Hạnh Phúc\": Vì sao càng cố vui vẻ, bạn lại càng dễ nghiện ngập và khổ sở?",
+    "title": "Đọc 'Bẫy Hạnh Phúc': Càng Cố Vui Vẻ Càng Dễ Khổ Sở Và Nghiện",
     "excerpt": "Bạn bị ép phải luôn suy nghĩ tích cực, luôn nở nụ cười? Càng cố né tránh nỗi buồn, bạn càng lao vào lướt mạng, ăn vặt để trốn chạy. Đây là cách thoát khỏi chiếc bẫy tinh vi nhất của tâm trí...",
     "thumbnail": "/images/articles/sach-bay-hanh-phuc-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -152,7 +152,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-bay-tien-nghi-michael-easter",
-    "title": "Đọc \"Bẫy Tiện Nghi\": Sự sung sướng thừa mứa đang âm thầm hủy hoại nghị lực của bạn ra sao?",
+    "title": "Đọc 'Bẫy Tiện Nghi': Sự Thừa Mứa Đang Giết Chết Nghị Lực Bạn",
     "excerpt": "33 ngày giữa băng tuyết Bắc Cực đã dạy Michael Easter một sự thật tàn nhẫn: Con người hiện đại đang chết dần vì... quá tiện nghi. Muốn thoát khỏi sự bồn chồn và nhũn não số, bạn phải học cách tự nguyện đón nhận sự khó chịu lành mạnh.",
     "thumbnail": "/images/articles/sach-bay-tien-nghi-comfort-crisis-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -169,7 +169,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-bay-so-hai-vuot-qua-tri-hoan",
-    "title": "Đọc \"Bẫy Sợ Hãi\": Bạn không lười biếng, bạn chỉ đang sợ hãi cuộc đời mình",
+    "title": "Đọc 'Bẫy Sợ Hãi': Bạn Không Hề Lười, Bạn Đang Sợ Cuộc Đời Mình",
     "excerpt": "Cứ ngồi vào bàn làm việc 5 phút là lại thò tay lướt TikTok? Gốc rễ của sự trì hoãn không phải vì bạn vô kỷ luật, mà là vì một nỗi sợ vô hình đang điều khiển hạch hạnh nhân của bạn...",
     "thumbnail": "/images/articles/sach-bay-so-hai-tri-hoan-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -186,7 +186,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-deep-work-cal-newport",
-    "title": "Đọc \"Deep Work\": Tấm khiên bảo vệ tâm trí trước thời đại giật dây thần kinh",
+    "title": "Đọc 'Deep Work': Tấm Khiên Bảo Vệ Tâm Trí Khỏi Xao Nhãng Số",
     "excerpt": "Trong một thế giới mà ai cũng nhảy tab liên tục và trả lời tin nhắn sau 3 giây, năng lực ngồi yên làm việc sâu 90 phút chính là thứ phân chia người làm chủ cuộc chơi và kẻ làm nô lệ cho thuật toán...",
     "thumbnail": "/images/articles/sach-deep-work-lam-sau-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
@@ -203,7 +203,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-flow-dong-chay-mihaly-csikszentmihalyi",
-    "title": "Đọc \"Flow - Dòng Chảy\": Tìm lại cảm giác đắm chìm tuyệt đối mà màn hình ảo không bao giờ trao cho bạn",
+    "title": "Đọc 'Dòng Chảy': Tìm Lại Sự Đắm Chìm Mà Màn Hình Ảo Không Có",
     "excerpt": "Đã bao lâu rồi bạn chưa có cảm giác làm một việc gì đó say mê đến mức quên cả thời gian, đói bụng hay tiếng điện thoại? Đây là bản đồ giải phẫu trạng thái thăng hoa cao nhất của bộ não con người...",
     "thumbnail": "/images/articles/sach-flow-dong-chay-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
@@ -220,7 +220,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-ikigai-di-tim-le-song",
-    "title": "Đọc \"Ikigai\": Khi có một lý do để thức dậy mỗi sớm mai, dopamine rẻ tiền tự khắc vô vị",
+    "title": "Đọc 'Ikigai': Có Một Lý Do Thức Dậy, Đồ Rẻ Tiền Tự Khắc Vô Vị",
     "excerpt": "Tại sao người già ở ngôi làng trường thọ Ogimi (Okinawa) không bao giờ biết đến khái niệm nghỉ hưu hay trầm cảm? Bí mật không nằm ở nhân sâm hay thuốc bổ, mà nằm ở một hạt mầm mang tên Ikigai...",
     "thumbnail": "/images/articles/sach-ikigai-di-tim-le-song-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
@@ -237,7 +237,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-kaizen-1-phan-tram-moi-ngay",
-    "title": "Đọc \"Kaizen\": Nghệ thuật nhích từng bước 1% để bộ não không kịp báo động sợ hãi",
+    "title": "Nghệ Thuật Kaizen: Nhích 1% Mỗi Ngày Để Đánh Lừa Não Bộ",
     "excerpt": "Cứ mỗi lần hạ quyết tâm dậy 5h sáng hay tập gym là y như rằng bỏ cuộc sau 3 ngày? Hãy ngừng dùng búa tạ đập vào não bộ. Đây là cách người Nhật thay đổi cả một đời bằng những bước đi vi mô nhẹ tênh...",
     "thumbnail": "/images/articles/sach-kaizen-1-phan-tram-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
@@ -254,7 +254,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-tu-duy-nhanh-va-cham-daniel-kahneman",
-    "title": "Đọc \"Tư Duy Nhanh Và Chậm\": Giải mã vì sao ngón tay luôn quẹt máy trước khi não bạn kịp nghĩ",
+    "title": "Tư Duy Nhanh & Chậm: Vì Sao Ngón Tay Luôn Quẹt Trước Khi Nghĩ",
     "excerpt": "Cuốn sách kinh điển của nhà đoạt giải Nobel Daniel Kahneman bóc trần cuộc chiến ngầm giữa Hệ thống 1 bốc đồng và Hệ thống 2 chậm chạp — bí mật mà mọi ứng dụng mạng xã hội đều lợi dụng để biến bạn thành con nghiện...",
     "thumbnail": "/images/articles/sach-tu-duy-nhanh-va-cham-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -271,7 +271,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-thoi-dai-cua-su-chu-y-stolen-focus",
-    "title": "Đọc \"Thời Đại Của Sự Chú Ý\": Bạn không mất tập trung, sự chú ý của bạn đã bị đánh cắp có chủ đích",
+    "title": "Thời Đại Sự Chú Ý: Não Bạn Đang Bị Đánh Cắp Có Chủ Đích",
     "excerpt": "Bạn tự trách mình không thể đọc nổi 3 trang sách? Johann Hari đã đi 30.000 dặm phỏng vấn các nhà khoa học hàng đầu thế giới để đưa ra một kết luận chấn động: Cả một hệ thống kinh tế nghìn tỷ USD đang sống dựa trên sự phân tâm của bạn...",
     "thumbnail": "/images/articles/sach-thoi-dai-cua-su-chu-y-stolen-focus-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
@@ -288,7 +288,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-giai-ma-hoocmon-dopamine-anna-lembke",
-    "title": "Đọc \"Quốc Gia Dopamine\": Chiếc bập bênh oan nghiệt và cẩm nang thoát khỏi hố sâu trống rỗng",
+    "title": "Đọc 'Quốc Gia Dopamine': Chiếc Bập Bênh Và Hố Sâu Trống Rỗng",
     "excerpt": "Tại sao càng tìm kiếm niềm vui tức thì, bạn lại càng thấy bồn chồn và đau khổ? Trưởng khoa cai nghiện Đại học Stanford Anna Lembke bóc tách cơ chế sinh học bập bênh và hướng dẫn cách thiết lập lại ngưỡng hạnh phúc đích thực...",
     "thumbnail": "/images/articles/sach-giai-ma-dopamine-nation-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -305,7 +305,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "bi-quyet-danh-thuc-trang-thai-dong-chay-flow",
-    "title": "Bí quyết đánh thức Trạng thái Dòng chảy (Flow): Cách bộ não nhân 5 lần tốc độ làm việc mà không kiệt sức",
+    "title": "Đánh Thức Dòng Chảy (Flow): Nhân 5 Hiệu Suất Không Kiệt Sức",
     "excerpt": "Có những ngày bạn ngồi vào bàn 8 tiếng mà chỉ làm được 2 việc vụn vặt, nhưng cũng có những buổi sáng bạn giải quyết xong cả núi việc trong 2 tiếng nhẹ nhõm. Đâu là công tắc kích hoạt trạng thái làm việc đỉnh cao này?",
     "thumbnail": "/images/articles/bi-quyet-dong-chay-flow-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
@@ -322,7 +322,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "nghien-lam-viec-nhu-nghien-mang-xa-hoi-dao-nguoc-dopamine",
-    "title": "Làm sao để \"nghiện\" làm việc như nghiện mạng xã hội: Thuật đảo ngược vòng lặp Dopamine",
+    "title": "Thuật Đảo Ngược Dopamine: Để 'Nghiện' Làm Việc Như Lướt Mạng",
     "excerpt": "Tại sao bạn có thể nằm quẹt TikTok 4 tiếng không thấy mỏi, nhưng ngồi vào bàn làm việc 15 phút là muốn bỏ cuộc? Đừng cố luyện ý chí sắt đá. Đây là cách 'đánh tráo' 3 cơ chế gây nghiện của mạng xã hội để biến công việc thành đam mê...",
     "thumbnail": "/images/articles/dao-nguoc-dopamine-lam-viec-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
@@ -339,7 +339,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "cai-bay-nghien-tich-luy-kien-thuc-tieu-thu-thu-dong",
-    "title": "Cái bẫy \"nghiện tích lũy kiến thức\": Vì sao càng xem nhiều video phát triển bản thân, bạn càng bất lực và trì hoãn?",
+    "title": "Bẫy Tích Lũy Kiến Thức: Vì Sao Càng Học Lại Càng Trì Hoãn?",
     "excerpt": "Lưu hàng trăm bài viết hay, xem hàng chục video podcast tâm lý học, mua hàng đống sách về để trên kệ... nhưng cuộc đời bạn vẫn giẫm chân tại chỗ? Đây là chiếc bẫy tinh vi nhất của não bộ mang tên 'Tiêu thụ thụ động'...",
     "thumbnail": "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -356,7 +356,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "phuong-phap-nang-luong-musashi-tri-kiet-que-tinh-than",
-    "title": "Phương pháp năng lượng của Musashi: Chấm dứt kiệt quệ và phục hồi thần khí cho người hay mệt mỏi",
+    "title": "Bí Mật Musashi: Chấm Dứt Kiệt Quệ Tinh Thần Cho Người Hay Mệt",
     "excerpt": "Bạn ngủ đủ 8 tiếng nhưng sáng dậy vẫn mệt như đeo chì? Bạn không ốm đau nhưng lúc nào cũng thấy kiệt sức, uể oải? Đây là bí mật quản trị năng lượng sinh học từ kiếm thánh Miyamoto Musashi giúp bạn tìm lại thần khí tĩnh tại...",
     "thumbnail": "/images/articles/phuong-phap-nang-luong-musashi-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
@@ -373,7 +373,7 @@ const rawArticles: Article[] = [
   },
   {
   "slug": "bo-nao-thoi-do-da-bay-dan-va-nghe-thuat-tu-duy-nguoc-charlie-munger",
-  "title": "Charles Darwin & Charlie Munger: Bộ Não Thời Đồ Đá, Cạm Bẫy Bầy Đàn Và Nghệ Thuật Tư Duy Ngược",
+  "title": "Charlie Munger & Darwin: Bộ Não Đồ Đá Và Thuật Tư Duy Ngược",
   "excerpt": "Tại sao những người rất thông minh lại liên tục đưa ra quyết định sai lầm thảm họa? Giải phẫu cỗ máy sinh tồn đồ đá trong não bộ người hiện đại và nghệ thuật tư duy ngược giúp bạn bớt ngu ngốc để giành lại tự do.",
   "thumbnail": "/images/articles/tu-duy-nguoc-charlie-munger-trai-cai-nghien.webp",
   "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -408,7 +408,7 @@ const rawArticles: Article[] = [
 ,
   {
   "slug": "bai-hoc-hoan-thien-ban-than-tim-ferriss-khoi-3-gio-vang",
-  "title": "Bài Học Hoàn Thiện Bản Thân Từ Tim Ferriss: Nghịch Lý Bận Rộn, Khối 3 Giờ Vàng Và Bí Quyết 'Hai Trang Giấy Dở Tệ'",
+  "title": "Tim Ferriss: Bí Quyết 'Hai Trang Giấy Dở Tệ' & Khối 3 Giờ Vàng",
   "excerpt": "Bạn bận rộn quần quật cả ngày nhưng vẫn thấy mình dậm chân tại chỗ? Khám phá tư duy 80/20, khối 3 giờ vàng không chắp vá và chiến lược hạ thấp rào cản hành động từ tác giả best-seller huyền thoại Tim Ferriss.",
   "thumbnail": "/images/articles/bai-hoc-tim-ferriss-trai-cai-nghien.webp",
   "pillar": "Trụ cột 1: Cách tập trung làm việc & giải phóng khỏi xao nhãng số",

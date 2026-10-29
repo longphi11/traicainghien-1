@@ -13,6 +13,8 @@ Agent 5 chịu trách nhiệm thẩm định chất lượng trước khi bất 
 
 ### 1. Chuẩn Mực Nội Dung & Triết Lý
 - [ ] **Độ dài bài viết:** Phải đạt tối thiểu 2.500 từ (đếm từ chính xác, không tính code rác).
+- [ ] **Tiêu đề bài viết:** Tối đa 2 dòng (50 – 62 ký tự), không tràn card, có curiosity hook gây tò mò kích thích click.
+- [ ] **Vị trí "Những Điểm Chính":** Đặt ở dưới cùng sau *"Lời nhắn gửi từ Trại Cai Nghiện"*, không nằm ở đầu bài.
 - [ ] **Quy tắc 4 KHÔNG:** Không phán xét đạo đức, không dùng từ ngữ self-help sáo rỗng, không kết án vấp ngã, không lý thuyết suông.
 - [ ] **Văn phong:** Đã đạt chuẩn "Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu" chưa? Có bị từ trừu tượng không?
 - [ ] **Móc câu (Retention):** Có các câu hỏi lửng (Open Loops) giữa các phần để giữ chân độc giả không?

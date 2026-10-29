@@ -318,7 +318,10 @@ export default async function ArticleDetailPage({
     }
   };
 
-  const blocks = parseMarkdownBlocks(article.content);
+  const allBlocks = parseMarkdownBlocks(article.content);
+  // Tách riêng khối "NHỮNG ĐIỂM CHÍNH" để đặt xuống phía dưới cùng, sau "Lời nhắn gửi từ Trại Cai Nghiện"
+  const takeawaysBlocks = allBlocks.filter((b) => b.type === "key_takeaways");
+  const mainBlocks = allBlocks.filter((b) => b.type !== "key_takeaways");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -407,8 +410,8 @@ export default async function ArticleDetailPage({
           </div>
         </div>
 
-        {/* Tiêu đề chính */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold font-serif text-[#2D312E] leading-[1.3] tracking-tight">
+        {/* Tiêu đề chính - Cân chỉnh khoảng cách dòng thoáng đãng, dễ nhìn, không díu chữ */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-bold font-serif text-[#2D312E] leading-[1.45] sm:leading-[1.48] md:leading-[1.5] tracking-normal mb-5">
           {article.title}
         </h1>
 
@@ -429,29 +432,8 @@ export default async function ArticleDetailPage({
 
       {/* Article Body - Trình bày thoáng đãng, chuẩn mực xuất bản */}
       <div className="article-content text-[#2D312E]/90">
-        {blocks.map((block, idx) => {
+        {mainBlocks.map((block, idx) => {
           switch (block.type) {
-            case "key_takeaways":
-              return (
-                <div
-                  key={idx}
-                  className="my-10 p-6 sm:p-8 rounded-3xl bg-[#FAF7F2] border border-[#E6E1D8] shadow-xs space-y-4"
-                >
-                  <div className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-[#3A5A40]">
-                    <CheckCircle2 className="w-5 h-5 text-[#3A5A40]" />
-                    <span>{block.title}</span>
-                  </div>
-                  <ul className="space-y-3.5 pt-1">
-                    {block.items.map((item, bIdx) => (
-                      <li key={bIdx} className="flex items-start gap-3 text-[15px] sm:text-[16px] text-[#2D312E] leading-relaxed">
-                        <span className="w-2 h-2 rounded-full bg-[#3A5A40] mt-2.5 shrink-0" />
-                        <span className="flex-1 font-medium">{renderFormattedText(item)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-
             case "h2":
               return (
                 <h2
@@ -531,6 +513,27 @@ export default async function ArticleDetailPage({
               );
           }
         })}
+
+        {/* Khối NHỮNG ĐIỂM CHÍNH - Đặt ở cuối bài viết, sau 'Lời nhắn gửi từ Trại Cai Nghiện' */}
+        {takeawaysBlocks.map((block, idx) => (
+          <div
+            key={`takeaways-${idx}`}
+            className="mt-14 mb-8 p-6 sm:p-8 rounded-3xl bg-[#FAF7F2] border-2 border-[#3A5A40]/30 shadow-sm space-y-4"
+          >
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-[#3A5A40]">
+              <CheckCircle2 className="w-5 h-5 text-[#3A5A40]" />
+              <span>{block.title || "NHỮNG ĐIỂM CHÍNH (ĐÚC KẾT BÀI HỌC)"}</span>
+            </div>
+            <ul className="space-y-3.5 pt-1">
+              {block.items.map((item, bIdx) => (
+                <li key={bIdx} className="flex items-start gap-3 text-[15px] sm:text-[16px] text-[#2D312E] leading-relaxed">
+                  <span className="w-2 h-2 rounded-full bg-[#3A5A40] mt-2.5 shrink-0" />
+                  <span className="flex-1 font-medium">{renderFormattedText(item)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
 
       {/* Share Buttons */}

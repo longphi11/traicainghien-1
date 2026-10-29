@@ -202,8 +202,8 @@ export default function BaiVietPage() {
                 <span className="text-[#3A5A40] font-bold">#{article.pillarTag}</span>
               </div>
 
-              {/* Title (Size chữ vừa vặn, tiêu đề ngắn gọn súc tích) */}
-              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mb-3 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+              {/* Title (Khoảng cách dòng thoáng đãng, vừa khít 2 dòng không díu chữ) */}
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mb-3 leading-[1.42] sm:leading-[1.46] tracking-normal line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
                 <Link href={`/bai-viet/${article.slug}`}>
                   {article.title}
                 </Link>

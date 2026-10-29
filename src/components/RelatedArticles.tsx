@@ -70,7 +70,7 @@ export default function RelatedArticles({ currentSlug, currentTag }: RelatedArti
                 {art.date}
               </div>
 
-              <h4 className="text-sm sm:text-base font-bold font-serif text-[#2D312E] mb-2 leading-snug line-clamp-2 group-hover:text-[#3A5A40] transition-colors flex-1">
+              <h4 className="text-sm sm:text-base font-bold font-serif text-[#2D312E] mb-2 leading-[1.42] sm:leading-[1.46] tracking-normal line-clamp-2 group-hover:text-[#3A5A40] transition-colors flex-1">
                 <Link href={`/bai-viet/${art.slug}`}>
                   {art.title}
                 </Link>
