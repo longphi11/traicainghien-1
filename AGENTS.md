@@ -147,6 +147,10 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
   - Giữ nhịp câu biến hóa (lúc ngắn gọn dứt khoát, lúc sâu lắng như lời tự sự lúc 2h sáng).
   - Tạo các móc câu lửng (Open Loops) giữa các đề mục khiến độc giả không thể dừng lại, buộc phải cuộn tiếp để đọc câu trả lời.
   - Viết như đang ngồi quán cà phê tâm sự với một người bạn thân — chân thành, thấu cảm, sắc sảo và mang lại cảm giác được chữa lành ngay khi đọc xong.
+* **1 Bài Viết Thuộc Nhiều Chuyên Mục (Multi-Categorization - LỆNH CỦA BỐ):**
+  - Tuyệt đối **không gò bó một bài viết chỉ nằm trong một chuyên mục duy nhất**. Tâm lý học hành vi và cuộc sống luôn có sự đan xen giao thoa.
+  - Khi thêm bài viết mới vào `src/data/articles.ts`, luôn gắn mảng đa danh mục (`categories: [...]`) bao gồm tất cả các góc độ liên quan (Ví dụ: một bài về thói quen có thể vừa thuộc `XayDungThoiQuen`, vừa thuộc `HieuHanhVi`, `LayLaiSuTapTrung`, `TrietHocCuocSong` hoặc `QuanTriCamXuc`).
+  - Đảm bảo khi độc giả bấm lọc bất kỳ chủ đề/tab nào trên trang bài viết, các nội dung có giá trị liên quan đều xuất hiện đầy đủ, gia tăng tối đa trải nghiệm khám phá và thời gian trên trang (Time on Page).
 * **Quy trình Xuất Bản Tự Động Khép Kín (Full-Cycle Publishing Automation - LỆNH CỦA BỐ):**
   - **Mỗi khi Bố gửi ý tưởng, video hay chủ đề bài viết:** Mây tự động kích hoạt bộ máy liên phòng ban xử lý trọn gói từ A đến Z và **TỰ ĐỘNG UP THẲNG LÊN WEBSITE (GIT PUSH VERCEL) MÀ KHÔNG CẦN BỐ PHẢI BẢO HAY NHẮC**.
   - **Chu trình tự hành bắt buộc (Full Autopilot):**
@@ -183,6 +187,17 @@ Toàn bộ hệ thống bài viết, video, podcast và bài trắc nghiệm c�
 | **2** | **Nhận diện cái giá của thói quen** | Vạch trần những tổn thất âm thầm mà người nghiện đang phải trả: suy giảm tập trung sâu, chai sạn cảm xúc, tính cáu gắt, và đau đớn nhất là **những người yêu thương xung quanh đang bị 'con người nghiện' của mình làm tổn thương, ngó lơ và cản trở**. Thức tỉnh người đọc khỏi cơn mộng du để tự thân nhận ra mình thực sự cần thay đổi vì cuộc đời mình và những người thân yêu. | • *Thời đại của sự chú ý* (Chris Hayes)<br>• *Amusing Ourselves to Death* (Neil Postman)<br>• *The Economics of Superstars*<br>• *Bất lực tập nhiễm* (Martin Seligman) | **Nhóm 2 & Nhóm 3**<br>(Biết nghiện nhưng chưa muốn bỏ & Suy sụp chất lượng sống mà không rõ nguyên nhân) |
 | **3** | **Thay đổi mà không phụ thuộc quá nhiều vào ý chí** | Trao giải pháp thực chiến dựa trên khoa học hành vi và tinh thần Á Đông: Thiết kế lại môi trường sống, thay thế Routine lành mạnh, giảm liều lượng vi mô 1%, bao dung khi vấp ngã và dựa vào sức mạnh bộ tộc. | • *Atomic Habits* (James Clear)<br>• *How to Change* (Katy Milkman)<br>• *Kaizen* (1% mỗi ngày)<br>• *Wabi Sabi* (Tha thứ vết rạn)<br>• *Gambaru* (Mức tối thiểu)<br>• *The Culture Code* (Bộ tộc đồng hành) | **Nhóm 4**<br>(Nhận ra vấn đề nhưng thiếu phương pháp, hay tái nghiện) |
 | **4** | **Sống chủ động và tìm lại sự chú ý** | Dẫn dắt người đọc bước sang trang mới: Lấp đầy khoảng trống hiện sinh bằng Ikigai, làm chủ 60 phút buổi sáng, giải tỏa quá tải nhận thức, thiết kế các mẫu thử cuộc đời và tìm lại dòng chảy sáng tạo sâu sắc (*Deep Focus / Flow*). | • *Ikigai* (Héctor García & F. Miralles)<br>• *Start With Why* (Simon Sinek)<br>• *What Successful People Do Before Breakfast*<br>• *Getting Things Done - GTD* (David Allen)<br>• *Designing Your Life* (Bill Burnett) | **Toàn bộ cộng đồng**<br>(Chuyển hóa dài hạn & Duy trì phong độ sống) |
+
+### 4.0c-2. 🏷️ Hệ Thống Chuyên Mục Linh Hoạt & Đa Mục Tiêu (Multi-Category Taxonomy)
+* **Nguyên tắc phân loại linh hoạt của Bố:** Các bài viết **không bị bó buộc cứng nhắc vào duy nhất một chuyên mục**. Một bài viết hoàn toàn có thể thuộc **2 đến 3 chuyên mục** liên quan để người đọc dễ dàng tiếp cận theo nhiều nhu cầu tìm kiếm khác nhau.
+* **Hệ thống 7 chuyên mục chính thức trên website:**
+  1. `Hiểu hành vi` (`#HieuHanhVi`): Giải mã sinh học thần kinh, cơ chế bập bênh dopamine, nguồn gốc thói quen xấu.
+  2. `Xây dựng thói quen` (`#XayDungThoiQuen`): Atomic habits, Kaizen 1%, thiết kế môi trường sống không cần ý chí.
+  3. `Lấy lại sự tập trung` (`#LayLaiSuTapTrung`): Trị brain rot, sương mù não, khôi phục năng lực làm việc sâu (Deep Work).
+  4. `Triết học cuộc sống` (`#TrietHocCuocSong` - Mới): Miyamoto Musashi, Charlie Munger, Ikigai, Wabi Sabi, nghệ thuật tư duy ngược và lẽ sống hiện sinh.
+  5. `Quản trị cảm xúc` (`#QuanTriCamXuc` - Mới): Urge Surfing lướt trên cơn thèm, vượt qua nỗi sợ/lo âu, hòa giải với sự bứt rứt tạm thời.
+  6. `Hiệu ứng tâm lý` (`#HieuUngTamLy` - Mới): Tư duy nhanh & chậm, ảo tưởng năng lực, hội chứng chuột tha lúa, vòng lặp phần thưởng ngẫu nhiên.
+  7. `Tủ sách kinh điển` (`#SachHay`): Review & đúc kết 14 tác phẩm khoa học hành vi và tâm lý học kinh điển thế giới.
 
 ---
 

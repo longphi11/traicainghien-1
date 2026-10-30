@@ -16,13 +16,21 @@ export default function BaiVietPage() {
     setCurrentPage(1);
   };
 
+  const articleMatchesTab = (article: (typeof articles)[0], tab: string) => {
+    if (tab === "ALL") return true;
+    if (article.pillarTag === tab) return true;
+    if (article.categories && article.categories.includes(tab as any)) return true;
+    if (article.tags && (article.tags.includes(`#${tab}`) || article.tags.includes(tab))) return true;
+    return false;
+  };
+
   const filteredArticles = activeTab === "ALL" 
     ? articles 
-    : articles.filter((a) => a.pillarTag === activeTab);
+    : articles.filter((a) => articleMatchesTab(a, activeTab));
 
   const getCount = (tag: string) => {
     if (tag === "ALL") return articles.length;
-    return articles.filter((a) => a.pillarTag === tag).length;
+    return articles.filter((a) => articleMatchesTab(a, tag)).length;
   };
 
   const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
@@ -39,10 +47,14 @@ export default function BaiVietPage() {
         return "bg-[#F9EFE9] text-[#C27D53]";
       case "LayLaiSuTapTrung":
         return "bg-blue-50 text-blue-800";
+      case "TrietHocCuocSong":
+        return "bg-stone-100 text-stone-800";
+      case "QuanTriCamXuc":
+        return "bg-rose-50 text-rose-800";
+      case "HieuUngTamLy":
+        return "bg-purple-50 text-purple-800";
       case "SachHay":
         return "bg-amber-50 text-amber-800";
-      case "CongCuHoTro":
-        return "bg-emerald-50 text-emerald-800";
       default:
         return "bg-[#FAF7F2] text-[#6B726E]";
     }
@@ -64,11 +76,11 @@ export default function BaiVietPage() {
         </p>
       </div>
 
-      {/* 5 Chủ Đề Hashtag Filter */}
-      <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-4xl mx-auto">
+      {/* 8 Chủ Đề Filter - Tinh gọn, thẩm mỹ Zen Minimalist */}
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 max-w-5xl mx-auto">
         <button
           onClick={() => handleTabChange("ALL")}
-          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm ${
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm ${
             activeTab === "ALL"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
@@ -79,13 +91,13 @@ export default function BaiVietPage() {
 
         <button
           onClick={() => handleTabChange("HieuHanhVi")}
-          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "HieuHanhVi"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
           }`}
         >
-          <span>🧠</span>
+          <span>🌱</span>
           <span>#HieuHanhVi</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
             activeTab === "HieuHanhVi" ? "bg-white/20 text-white" : "bg-[#EBF0EC] text-[#3A5A40]"
@@ -96,7 +108,7 @@ export default function BaiVietPage() {
 
         <button
           onClick={() => handleTabChange("XayDungThoiQuen")}
-          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "XayDungThoiQuen"
               ? "bg-[#C27D53] text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#C27D53]"
@@ -113,10 +125,10 @@ export default function BaiVietPage() {
 
         <button
           onClick={() => handleTabChange("LayLaiSuTapTrung")}
-          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "LayLaiSuTapTrung"
-              ? "bg-[#3A5A40] text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
+              ? "bg-blue-700 text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-blue-600"
           }`}
         >
           <span>🎯</span>
@@ -129,8 +141,59 @@ export default function BaiVietPage() {
         </button>
 
         <button
+          onClick={() => handleTabChange("TrietHocCuocSong")}
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "TrietHocCuocSong"
+              ? "bg-stone-800 text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-stone-700"
+          }`}
+        >
+          <span>📜</span>
+          <span>#TrietHocCuocSong</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "TrietHocCuocSong" ? "bg-white/20 text-white" : "bg-stone-100 text-stone-800"
+          }`}>
+            {getCount("TrietHocCuocSong")}
+          </span>
+        </button>
+
+        <button
+          onClick={() => handleTabChange("QuanTriCamXuc")}
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "QuanTriCamXuc"
+              ? "bg-rose-700 text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-rose-600"
+          }`}
+        >
+          <span>🌊</span>
+          <span>#QuanTriCamXuc</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "QuanTriCamXuc" ? "bg-white/20 text-white" : "bg-rose-50 text-rose-800"
+          }`}>
+            {getCount("QuanTriCamXuc")}
+          </span>
+        </button>
+
+        <button
+          onClick={() => handleTabChange("HieuUngTamLy")}
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "HieuUngTamLy"
+              ? "bg-purple-800 text-white shadow-md scale-105"
+              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-purple-700"
+          }`}
+        >
+          <span>🧠</span>
+          <span>#HieuUngTamLy</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "HieuUngTamLy" ? "bg-white/20 text-white" : "bg-purple-50 text-purple-800"
+          }`}>
+            {getCount("HieuUngTamLy")}
+          </span>
+        </button>
+
+        <button
           onClick={() => handleTabChange("SachHay")}
-          className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "SachHay"
               ? "bg-amber-700 text-white shadow-md scale-105"
               : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-amber-600"

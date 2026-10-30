@@ -1,4 +1,4 @@
-export type ArticleTag = "HieuHanhVi" | "XayDungThoiQuen" | "LayLaiSuTapTrung" | "SachHay";
+export type ArticleTag = "HieuHanhVi" | "XayDungThoiQuen" | "LayLaiSuTapTrung" | "SachHay" | "TrietHocCuocSong" | "QuanTriCamXuc" | "HieuUngTamLy";
 
 export interface Article {
   slug: string;
@@ -8,6 +8,7 @@ export interface Article {
   date: string;
   readTime: string;
   pillarTag: ArticleTag;
+  categories?: ArticleTag[];
   pillar?: string;
   author?: string;
   tags: string[];
@@ -23,6 +24,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/quy-tac-2-met-sac-pin-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi không dùng ý chí",
     "pillarTag": "XayDungThoiQuen",
+    "categories": ["XayDungThoiQuen","HieuUngTamLy","TrietHocCuocSong"],
     "tags": [
       "#XayDungThoiQuen",
       "#SachHay"
@@ -39,6 +41,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/5-cong-cu-chan-cam-do-man-hinh-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Công cụ & Ma sát hành vi",
     "pillarTag": "LayLaiSuTapTrung",
+    "categories": ["LayLaiSuTapTrung","XayDungThoiQuen"],
     "tags": [
       "#LayLaiSuTapTrung",
       "#LayLaiSuTapTrung",
@@ -56,6 +59,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/6-buoc-urge-surfing-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Công cụ & Ma sát hành vi",
     "pillarTag": "XayDungThoiQuen",
+    "categories": ["QuanTriCamXuc","XayDungThoiQuen","HieuHanhVi"],
     "tags": [
       "#LayLaiSuTapTrung",
       "#XayDungThoiQuen"
@@ -72,6 +76,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/thanh-loc-nao-bo-dopamine-detox-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động & tìm lại sự chú ý",
     "pillarTag": "LayLaiSuTapTrung",
+    "categories": ["LayLaiSuTapTrung","QuanTriCamXuc","HieuHanhVi"],
     "tags": [
       "#LayLaiSuTapTrung",
       "#HieuHanhVi",
@@ -89,6 +94,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/chua-lanh-nao-bo-sau-tiktok-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
+    "categories": ["LayLaiSuTapTrung","QuanTriCamXuc","HieuHanhVi"],
     "tags": [
       "#HieuHanhVi",
       "#LayLaiSuTapTrung",
@@ -106,6 +112,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/bi-quyet-nhan-10-tap-trung-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động & tìm lại sự chú ý",
     "pillarTag": "LayLaiSuTapTrung",
+    "categories": ["LayLaiSuTapTrung","HieuUngTamLy"],
     "tags": [
       "#LayLaiSuTapTrung",
       "#HieuHanhVi",
@@ -123,6 +130,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/2-quy-tac-cai-thien-tap-trung-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi không dùng ý chí",
     "pillarTag": "XayDungThoiQuen",
+    "categories": ["LayLaiSuTapTrung","XayDungThoiQuen","HieuHanhVi"],
     "tags": [
       "#XayDungThoiQuen",
       "#LayLaiSuTapTrung",
@@ -140,6 +148,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-bay-hanh-phuc-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","QuanTriCamXuc","TrietHocCuocSong"],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -157,6 +166,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-bay-tien-nghi-comfort-crisis-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","TrietHocCuocSong","HieuHanhVi"],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -174,6 +184,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-bay-so-hai-tri-hoan-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","QuanTriCamXuc","HieuHanhVi"],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -191,6 +202,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-deep-work-lam-sau-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","LayLaiSuTapTrung","XayDungThoiQuen"],
     "tags": [
       "#SachHay",
       "#LayLaiSuTapTrung",
@@ -208,6 +220,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-flow-dong-chay-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","TrietHocCuocSong","LayLaiSuTapTrung"],
     "tags": [
       "#SachHay",
       "#LayLaiSuTapTrung",
@@ -225,6 +238,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-ikigai-di-tim-le-song-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","TrietHocCuocSong","XayDungThoiQuen"],
     "tags": [
       "#SachHay",
       "#XayDungThoiQuen",
@@ -242,6 +256,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-kaizen-1-phan-tram-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","XayDungThoiQuen","TrietHocCuocSong"],
     "tags": [
       "#SachHay",
       "#XayDungThoiQuen",
@@ -259,6 +274,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-tu-duy-nhanh-va-cham-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","HieuUngTamLy","HieuHanhVi"],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -276,6 +292,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-thoi-dai-cua-su-chu-y-stolen-focus-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","LayLaiSuTapTrung","HieuUngTamLy"],
     "tags": [
       "#SachHay",
       "#LayLaiSuTapTrung",
@@ -293,6 +310,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/sach-giai-ma-dopamine-nation-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
+    "categories": ["SachHay","QuanTriCamXuc","HieuHanhVi"],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -310,6 +328,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/bi-quyet-dong-chay-flow-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
     "pillarTag": "LayLaiSuTapTrung",
+    "categories": ["LayLaiSuTapTrung","TrietHocCuocSong","HieuUngTamLy"],
     "tags": [
       "#LayLaiSuTapTrung",
       "#HieuHanhVi",
@@ -327,6 +346,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/dao-nguoc-dopamine-lam-viec-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
     "pillarTag": "XayDungThoiQuen",
+    "categories": ["HieuUngTamLy","XayDungThoiQuen","LayLaiSuTapTrung"],
     "tags": [
       "#XayDungThoiQuen",
       "#HieuHanhVi",
@@ -344,6 +364,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
+    "categories": ["HieuUngTamLy","HieuHanhVi","LayLaiSuTapTrung"],
     "tags": [
       "#HieuHanhVi",
       "#XayDungThoiQuen",
@@ -361,6 +382,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/phuong-phap-nang-luong-musashi-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
     "pillarTag": "LayLaiSuTapTrung",
+    "categories": ["TrietHocCuocSong","LayLaiSuTapTrung","QuanTriCamXuc"],
     "tags": [
       "#LayLaiSuTapTrung",
       "#XayDungThoiQuen",
@@ -378,6 +400,7 @@ const rawArticles: Article[] = [
   "thumbnail": "/images/articles/tu-duy-nguoc-charlie-munger-trai-cai-nghien.webp",
   "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
   "pillarTag": "HieuHanhVi",
+    "categories": ["HieuHanhVi","TrietHocCuocSong","HieuUngTamLy"],
   "tags": [
     "#HieuHanhVi",
     "#SachHay",
@@ -396,6 +419,7 @@ const rawArticles: Article[] = [
     "thumbnail": "/images/articles/ban-khong-he-yeu-duoi-kintsugi-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
+    "categories": ["QuanTriCamXuc","HieuHanhVi","TrietHocCuocSong"],
     "tags": [
       "#HieuHanhVi",
       "#SachHay"
@@ -413,6 +437,7 @@ const rawArticles: Article[] = [
   "thumbnail": "/images/articles/bai-hoc-tim-ferriss-trai-cai-nghien.webp",
   "pillar": "Trụ cột 1: Cách tập trung làm việc & giải phóng khỏi xao nhãng số",
   "pillarTag": "LayLaiSuTapTrung",
+    "categories": ["LayLaiSuTapTrung","XayDungThoiQuen","TrietHocCuocSong"],
   "tags": [
     "#LayLaiSuTapTrung",
     "#XayDungThoiQuen",
@@ -432,6 +457,7 @@ const rawArticles: Article[] = [
   "thumbnail": "/images/articles/bi-mat-xep-gach-lego-xay-thoi-quen-trai-cai-nghien.webp",
   "pillar": "Trụ cột 3: Thay đổi không dùng ý chí",
   "pillarTag": "XayDungThoiQuen",
+  "categories": ["XayDungThoiQuen", "HieuUngTamLy", "LayLaiSuTapTrung"],
   "tags": [
     "#XayDungThoiQuen",
     "#HieuHanhVi",
@@ -451,6 +477,7 @@ const rawArticles: Article[] = [
   "thumbnail": "/images/articles/ao-tuong-chua-lanh-nao-bo-trai-cai-nghien.webp",
   "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
   "pillarTag": "HieuHanhVi",
+  "categories": ["HieuHanhVi", "QuanTriCamXuc", "LayLaiSuTapTrung"],
   "tags": [
     "#HieuHanhVi",
     "#LayLaiSuTapTrung",

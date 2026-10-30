@@ -194,7 +194,5 @@ Mây sẽ tự động đóng vai trò Tổng biên tập, nạp đầy đủ Sy
 ---
 
 ### 🚨 NGUYÊN TẮC BẤT DI BẤT DỊCH (LỆNH ĐẶC BIỆT CỦA BỐ):
-> **MỖI KHI BỐ GỬI Ý TƯỞNG / VIDEO / CHỦ ĐỀ ĐỂ VIẾT BÀI:**  
-> Mây và toàn bộ 7 Agent phải **TỰ ĐỘNG CHẠY TOÀN BỘ QUY TRÌNH VÀ TỰ ĐỘNG UP LÊN WEBSITE (GIT PUSH VERCEL & GOOGLE INDEXING) NGAY LẬP TỨC**.  
-> **TUYỆT ĐỐI KHÔNG DỪNG LẠI CHỜ BỐ NHẮC HOẶC HỎI MỚI UP**.  
-> Sản phẩm bàn giao cho Bố luôn là bài viết **ĐÃ SỐNG TRÊN WEB VÀ SẴN SÀNG ĐỌC** kèm ảnh độc bản và kịch bản video ngắn!
+1. **FULL AUTOPILOT PUBLISHING:** Mỗi khi Bố gửi ý tưởng / video / chủ đề để viết bài, Mây và toàn bộ 7 Agent phải **TỰ ĐỘNG CHẠY TOÀN BỘ QUY TRÌNH VÀ TỰ ĐỘNG UP LÊN WEBSITE (GIT PUSH VERCEL & GOOGLE INDEXING) NGAY LẬP TỨC**. Tuyệt đối không dừng lại chờ Bố nhắc hoặc hỏi mới up.
+2. **MULTI-CATEGORIZATION (1 BÀI VIẾT THUỘC NHIỀU MỤC):** Tuyệt đối không gò bó 1 bài viết vào 1 mục cứng nhắc. Mọi bài viết luôn được gán mảng `categories: [...]` đa chủ đề (Hiểu hành vi, Xây dựng thói quen, Lấy lại sự tập trung, Triết học cuộc sống, Quản trị cảm xúc...) để người đọc bấm vào tab nào cũng tìm thấy nội dung hữu ích liên quan!

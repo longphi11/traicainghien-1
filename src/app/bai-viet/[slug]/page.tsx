@@ -302,17 +302,22 @@ export default async function ArticleDetailPage({
   }
 
   const getTagColor = (tag: string) => {
-    switch (tag) {
+    const cleanTag = tag.replace("#", "");
+    switch (cleanTag) {
       case "HieuHanhVi":
         return "bg-[#EBF0EC] text-[#3A5A40] border-[#3A5A40]/20";
       case "XayDungThoiQuen":
         return "bg-[#F9EFE9] text-[#C27D53] border-[#C27D53]/20";
       case "LayLaiSuTapTrung":
         return "bg-blue-50 text-blue-800 border-blue-200";
+      case "TrietHocCuocSong":
+        return "bg-stone-100 text-stone-800 border-stone-300";
+      case "QuanTriCamXuc":
+        return "bg-rose-50 text-rose-800 border-rose-200";
+      case "HieuUngTamLy":
+        return "bg-purple-50 text-purple-800 border-purple-200";
       case "SachHay":
         return "bg-amber-50 text-amber-800 border-amber-200";
-      case "CongCuHoTro":
-        return "bg-emerald-50 text-emerald-800 border-emerald-200";
       default:
         return "bg-[#FAF7F2] text-[#6B726E] border-[#E6E1D8]";
     }
@@ -390,7 +395,7 @@ export default async function ArticleDetailPage({
             {article.tags?.filter((t) => t !== `#${article.pillarTag}`).map((t) => (
               <span
                 key={t}
-                className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#FAF7F2] text-[#6B726E] border border-[#E6E1D8]"
+                className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${getTagColor(t)}`}
               >
                 {t}
               </span>
