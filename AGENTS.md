@@ -167,29 +167,46 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 
 ---
 
-### 4.0f. 🛡️ Bộ Tiêu Chuẩn Thẩm Định & Kiểm Duyệt Chất Lượng Xuất Bản (12 Tiêu Chí Vàng - Lệnh Của Bố)
+### 4.0f. 🛡️ Hệ Thống 4 Cổng Kiểm Duyệt Đa Kênh Trước Khi Go-Live (Lệnh Của Bố)
 
-Trước khi bất kỳ bài viết nào được Agent 4 đưa lên web chính thức (`traicainghien.com`), **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)** bắt buộc phải trực tiếp rà soát và phê duyệt trọn gói: **Chất lượng nội dung, Trình bày, và Hình ảnh** theo đúng bộ tiêu chuẩn 12 tiêu chí (Skill: `content-quality-standards`). Chỉ khi bài viết đạt **100% PASS (12/12 điểm)** mới được phép xuất bản:
+Trước khi bất kỳ sản phẩm nào được đưa lên live chính thức (dù là bài viết website, kịch bản video short media, thiết kế hình ảnh visual hay bài đăng Facebook Fanpage), **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)** bắt buộc phải trực tiếp rà soát và phê duyệt độc lập qua **Hệ Thống 4 Cổng Kiểm Duyệt Toàn Diện** (Skill: `content-quality-standards`). Tuyệt đối không cho phép bất kỳ Agent nào tự ý go-live sản phẩm khi chưa đạt **100% PASS**:
 
-* **Trục 1 — Chiều Sâu Nội Dung & Tâm Lý Học:**
-  1. *Dung lượng chuẩn:* Đạt khoảng 2.400 - 2.800 từ/bài, mổ xẻ tận gốc rễ cơ chế hành vi.
-  2. *Văn phong Street-Smart Academic:* Gần gũi như bạn bè cà phê, kết hợp tri thức viện nghiên cứu Harvard/Stanford; neo đậu bằng chi tiết đời thực (điện thoại đầu giường 2h sáng cay mắt, bát phở 30k).
-  3. *Bộ lọc 4 KHÔNG:* Không phán xét đạo đức, không dùng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*), không bi kịch hóa lần trượt chân (triết lý Wabi Sabi), không nói lý thuyết suông.
-  4. *Tái định hình nhận thức (Grand Reframing):* Phá vỡ mặc cảm tội lỗi của người đọc bằng cơ chế sinh học thần kinh (Dopamine, Amygdala, Vỏ não trước trán).
-  5. *Giữ chân High-Retention & Open Loops:* Nhịp câu biến hóa, liên tục đặt câu hỏi lửng thôi thúc đọc hết bài.
+#### 🚪 CỔNG 1: BÀI VIẾT WEBSITE (AGENT 1 - DEEP WRITER)
+1. *Dung lượng:* 2.400 - 2.800 từ/bài, mổ xẻ tận gốc rễ cơ chế hành vi.
+2. *Văn phong Street-Smart Academic:* Gần gũi như bạn bè cà phê, kết hợp tri thức viện nghiên cứu Harvard/Stanford; neo đậu bằng chi tiết đời thực (điện thoại đầu giường 2h sáng cay mắt, bát phở 30k).
+3. *Bộ lọc 4 KHÔNG:* Không phán xét đạo đức, không dùng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*), không bi kịch hóa lần trượt chân (triết lý Wabi Sabi), không nói lý thuyết suông.
+4. *Tái định hình nhận thức (Grand Reframing):* Phá vỡ mặc cảm tội lỗi của người đọc bằng cơ chế sinh học thần kinh (Dopamine, Amygdala, Vỏ não trước trán).
+5. *Giữ chân High-Retention & Open Loops:* Nhịp câu biến hóa, liên tục đặt câu hỏi lửng thôi thúc đọc hết bài.
+6. *Tiêu đề chuẩn 2 dòng:* 50 - 62 ký tự, giật curiosity hook, vừa khít card ngoài trang chủ, **tuyệt đối không tràn dòng gây cắt cụt dấu ba chấm `...`**.
+7. *Vị trí khối "Những Điểm Chính":* Bắt buộc đặt ở cuối cùng của bài viết (sau mục *Lời nhắn gửi từ Trại Cai Nghiện*), tuyệt đối không để ở đầu bài.
+8. *CẤM TUYỆT ĐỐI Text Art / ASCII Diagram:* Nghiêm cấm ký tự `╭───╮`, `▲`, `│`, `└──►` hoặc vẽ hình bằng text; phát hiện là REJECT BẮT SỬA NGAY.
+9. *Markdown dễ thở & Chuẩn Heading:* Mỗi đoạn tối đa 2-4 câu; chuẩn hóa `## ` (H2), `### ` (H3), `#### ` (H4) có dòng trống phân cách, không lộ raw markdown.
+10. *Mỹ cảm Zen Minimalist:* Tĩnh lặng, mộc mạc, bình an.
+11. *Kỹ thuật ảnh chuẩn SEO:* Tỷ lệ 16:9 (`1200x675px`), WebP dưới 120KB, đóng Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file không dấu chuẩn SEO, thẻ Alt Text tự nhiên.
+12. *Đa chuyên mục & Internal Links:* Gán mảng `categories: [...]` (2-4 chuyên mục liên quan), tối thiểu 2-3 liên kết nội bộ (trỏ đến trắc nghiệm 25 câu hoặc bài viết cùng chủ đề), test build Next.js pass 100%.
 
-* **Trục 2 — Trình Bày & Cấu Trúc Layout:**
-  6. *Tiêu đề chuẩn 2 dòng:* 50 - 62 ký tự, giật curiosity hook, vừa khít card ngoài trang chủ, **tuyệt đối không tràn dòng gây cắt cụt dấu ba chấm `...`**.
-  7. *Vị trí khối "Những Điểm Chính":* Bắt buộc đặt ở cuối cùng của bài viết (sau mục *Lời nhắn gửi từ Trại Cai Nghiện*), tuyệt đối không để ở đầu bài.
-  8. *CẤM TUYỆT ĐỐI Text Art / ASCII Diagram:* Nghiêm cấm ký tự `╭───╮`, `▲`, `│`, `└──►` hoặc vẽ hình bằng text; phát hiện là REJECT BẮT SỬA NGAY.
-  9. *Markdown dễ thở & Chuẩn Heading:* Mỗi đoạn tối đa 2-4 câu; chuẩn hóa `## ` (H2), `### ` (H3), `#### ` (H4) có dòng trống phân cách, không lộ raw markdown.
+#### 🚪 CỔNG 2: THẰNG MEDIA (AGENT 2 - SHORT-FORM VIDEO 60S - 150S)
+1. *Hook 3s đầu trần trụi:* Mở đầu bằng con số thật gây sốc hoặc lời tự thú đánh trúng nỗi đau ngầm; cấm chào hỏi lòng vòng hay giật tít đa cấp.
+2. *Cấu trúc 5 hồi kịch tính Loliteo:* Tự thú (0-15s) $\rightarrow$ Đập vỡ ngộ nhận (15-35s) $\rightarrow$ Dẫn sách kinh điển (35-75s) $\rightarrow$ Nghịch lý Kaizen 1% (75-110s) $\rightarrow$ Open Loop CTA (110-135s).
+3. *Giọng đọc Voiceover:* Radio trầm ấm, thủ thỉ đêm khuya, tốc độ vừa phải (140-160 từ/phút), ngắt nghỉ đúng nhịp thở.
+4. *Visual 100% Faceless:* Không lộ mặt; chỉ dùng góc tĩnh Zen Minimalist (pha cà phê, lật sách, mưa rơi, bàn gỗ) hoặc vector animation 2D phẳng; cấm meme rác, gái nhảy.
+5. *Âm thanh Lo-fi/ASMR:* Nhạc nền tĩnh lặng, âm lượng -18dB đến -22dB, không lấn át lời đọc.
+6. *Open Loop CTA điều hướng Bio:* Kêu gọi nhẹ nhàng dẫn về bài viết dài hoặc trắc nghiệm 25 câu tại link Bio.
 
-* **Trục 3 — Mỹ Cảm & Hình Ảnh Zen Minimalist (Agent 8):**
-  10. *Bản sắc Zen Minimalist:* Bảng màu nhận diện Xanh Rêu Rừng (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung Mờ (`#C27D53`), Xám Than Trầm (`#2D312E`); concept góc tĩnh, mộc mạc, bình an.
-  11. *Kỹ thuật ảnh chuẩn SEO:* Tỷ lệ 16:9 (`1200x675px`), định dạng WebP nén dưới 120KB, đóng Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file không dấu chuẩn SEO, thẻ Alt Text tự nhiên.
+#### 🚪 CỔNG 3: THẰNG VISUAL (AGENT 8 - VISUAL STYLIST & THUMBNAIL)
+1. *Bản sắc Zen Minimalist:* Bảng màu Xanh Rêu Rừng (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung Mờ (`#C27D53`), Xám Than Trầm (`#2D312E`); concept góc tĩnh, mộc mạc; cấm màu neon chói mắt.
+2. *Đúng tỷ lệ kênh:* Web/YouTube 16:9 (`1200x675px`), Shorts/Reels/TikTok 9:16 (`1080x1920px`), Facebook Post 1:1 (`1080x1080px`) hoặc 4:5 (`1080x1350px`).
+3. *Chuẩn nén WebP siêu nhẹ:* Nén dưới 120KB, giữ độ sắc nét tối đa, tối ưu Core Web Vitals.
+4. *Đóng Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế (30%-40% opacity) ở góc ảnh: `🌿 TRẠI CAI NGHIỆN`.
+5. *Image SEO:* Tên file không dấu ngăn cách gạch nối + thẻ Alt Text mô tả tự nhiên chứa từ khóa.
+6. *Typography trên ảnh:* Tối đa 5-7 chữ, font chữ thanh lịch, thoáng đãng, không díu dấu tiếng Việt.
 
-* **Trục 4 — Điều Hướng & Hạ Tầng Kỹ Thuật:**
-  12. *Đa chuyên mục & Internal Links:* Gán mảng `categories: [...]` (2-4 chuyên mục liên quan), tối thiểu 2-3 liên kết nội bộ (trỏ đến trắc nghiệm 25 câu hoặc bài viết cùng chủ đề), test build Next.js pass 100%.
+#### 🚪 CỔNG 4: THẰNG FACEBOOK (AGENT 9 - FANPAGE & REELS SPECIALIST)
+1. *Luật thép về Link:* **TUYỆT ĐỐI KHÔNG CHÈN LINK VÀO STATUS/CAPTION** để chống thuật toán bóp reach tự nhiên.
+2. *First Comment tự động:* Tự động thả bình luận đầu tiên ghim top chứa link web/trắc nghiệm với lời dẫn tử tế, phụng sự.
+3. *Khung giờ vàng chuẩn xác:* Bài quote sáng lúc 07h30, Video Reels tối lúc 19h30.
+4. *Chất lượng bài Quote sáng:* Chạm đáy tâm lý, trích tinh hoa sách, ngắt dòng thoáng, đi kèm ảnh Zen từ Agent 8.
+5. *Bộ lọc văn minh & Bản sắc Fanpage:* Không giật tít câu tương tác rẻ tiền ("hãy like nếu..."), giữ trọn vẹn phong thái ốc đảo bình yên.
 
 ---
 

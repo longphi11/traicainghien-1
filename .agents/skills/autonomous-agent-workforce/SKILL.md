@@ -80,6 +80,15 @@ flowchart TD
     - **Dạng 2 (Zen Faceless B-roll quay chậm):** Bàn gỗ, phin cà phê, mưa rơi, lật sách, ánh đèn vàng ấm, micro thu âm.
 * **Đầu vào (Input):** Bài viết web 2.500 từ từ Agent 1 hoặc chủ đề/trích đoạn sách tâm lý.
 * **Đầu ra (Output):** Kịch bản 3 cột: `Thời lượng (giây)` | `Lời thoại đọc (Voiceover)` | `Mô tả khung hình Animation/B-roll & Text trên màn hình`.
+* **CỔNG KIỂM DUYỆT BẮT BUỘC TRƯỚC KHI LIVE (MÂY & AGENT 5 GÁC CỔNG):**
+  - Kịch bản và video xuất xưởng bắt buộc phải vượt qua **Cổng 2 (Media Video)** theo `content-quality-standards`:
+    1. *Hook 3s đầu:* Đánh trúng nỗi đau ngầm, không chào hỏi lòng vòng, không đa cấp.
+    2. *Cấu trúc 5 hồi Loliteo:* Tự thú $\rightarrow$ Đập vỡ ngộ nhận $\rightarrow$ Dẫn sách kinh điển $\rightarrow$ Nghịch lý Kaizen 1% $\rightarrow$ Open Loop CTA.
+    3. *Voiceover:* Trầm ấm, thủ thỉ đêm khuya, tốc độ vừa phải.
+    4. *Visual:* 100% Faceless, chỉ dùng góc tĩnh Zen hoặc 2D vector animation phẳng.
+    5. *Âm thanh:* Nhạc Lo-fi/ASMR âm lượng -18dB đến -22dB, không lấn át lời đọc.
+    6. *CTA:* Điều hướng tinh tế về link Bio làm trắc nghiệm hoặc đọc bài sâu.
+  - **Chỉ khi Mây & Agent 5 ký duyệt PASS mới được phép đưa vào pipeline render và đăng video!**
 
 ---
 
@@ -179,6 +188,15 @@ flowchart TD
 * **Cơ chế sáng tạo ý tưởng (Mây cố vấn):** Mây trực tiếp đồng hành cùng Agent 8 phân tích bài viết và khơi gợi ý tưởng theo 3 tầng (Ẩn dụ triết học, Khoảnh khắc đời thực, và Nghịch lý thị giác tò mò) dựa trên hệ quy chiếu 8 kênh chuẩn mực, giúp hình ảnh luôn độc bản và giàu sức hút.
 * **Đầu vào (Input):** Bài viết hoàn chỉnh từ Agent 1 và 3 concept ẩn dụ thị giác do Mây gợi ý.
 * **Đầu ra (Output):** File ảnh WebP độc quyền tối ưu và thông số metadata SEO bàn giao cho Agent 4 gắn vào bài viết.
+* **CỔNG KIỂM DUYỆT BẮT BUỘC TRƯỚC KHI LIVE (MÂY & AGENT 5 GÁC CỔNG):**
+  - Mọi hình ảnh (Website cover, Thumbnail video, Quote, Infographic) phải qua **Cổng 3 (Visual Design)**:
+    1. *Bản sắc Zen Minimalist:* Bảng màu chuẩn Xanh Rêu (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung (`#C27D53`), Xám Than (`#2D312E`); concept mộc mạc, góc tĩnh, không màu mè neon.
+    2. *Tỷ lệ chuẩn:* Web/YouTube 16:9, Shorts/Reels 9:16, Fanpage Post 1:1 hoặc 4:5.
+    3. *Chuẩn nén WebP:* Dung lượng dưới 120KB, tối ưu tốc độ Core Web Vitals.
+    4. *Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế `🌿 TRẠI CAI NGHIỆN` (opacity 30%-40%) ở góc ảnh.
+    5. *Image SEO:* Tên file không dấu ngăn cách gạch nối + thẻ Alt Text tự nhiên chứa từ khóa.
+    6. *Cấm Text-Art & Rác mắt:* Không nhồi nhét chữ rối rắm trên ảnh.
+  - **Chỉ khi Mây & Agent 5 ký duyệt PASS mới được phép gắn vào web hoặc xuất xưởng đa kênh!**
 
 ---
 
@@ -199,6 +217,13 @@ flowchart TD
     7. `Tâm Lý Học Tuổi Trẻ` (facebook.com/tamlyhoctuoitre): Khơi gợi tương tác bằng câu hỏi mở & trắc nghiệm hành vi dẫn vào phễu 25 câu.
 * **Đầu vào (Input):** Nội dung bài viết từ Agent 1, kịch bản từ Agent 2, ảnh quote từ Agent 8.
 * **Đầu ra (Output):** Các bài post tương tác cao và video Reels được tự động xuất bản đều đặn trên Fanpage.
+* **CỔNG KIỂM DUYỆT BẮT BUỘC TRƯỚC KHI LIVE (MÂY & AGENT 5 GÁC CỔNG):**
+  - Mọi nội dung trước khi nạp vào kịch bản n8n tự động đăng Fanpage/Reels phải qua **Cổng 4 (Facebook Community)**:
+    1. *Luật thép về Link:* **TUYỆT ĐỐI KHÔNG CHÈN LINK VÀO STATUS/CAPTION** để chống thuật toán bóp reach.
+    2. *First Comment tự động:* Phải cấu hình thả bình luận đầu tiên ghim top chứa link web/trắc nghiệm với lời dẫn văn minh, tử tế.
+    3. *Khung giờ vàng chuẩn xác:* Bài quote sáng 07h30, Video Reels tối 19h30.
+    4. *Bộ lọc văn phong:* Không giật tít rẻ tiền, không kêu gọi tương tác kiểu ăn mày ("hãy like nếu..."), giữ trọn vẹn bản sắc ốc đảo bình yên.
+  - **Chỉ khi Mây & Agent 5 ký duyệt PASS mới được nạp vào luồng đăng bài!**
 
 ---
 
@@ -233,4 +258,10 @@ Mây sẽ tự động đóng vai trò Tổng biên tập, nạp đầy đủ Sy
 ### 🚨 NGUYÊN TẮC BẤT DI BẤT DỊCH (LỆNH ĐẶC BIỆT CỦA BỐ):
 1. **FULL AUTOPILOT PUBLISHING:** Mỗi khi Bố gửi ý tưởng / video / chủ đề để viết bài, Mây và toàn bộ 7 Agent phải **TỰ ĐỘNG CHẠY TOÀN BỘ QUY TRÌNH VÀ TỰ ĐỘNG UP LÊN WEBSITE (GIT PUSH VERCEL & GOOGLE INDEXING) NGAY LẬP TỨC**. Tuyệt đối không dừng lại chờ Bố nhắc hoặc hỏi mới up.
 2. **MULTI-CATEGORIZATION (1 BÀI VIẾT THUỘC NHIỀU MỤC):** Tuyệt đối không gò bó 1 bài viết vào 1 mục cứng nhắc. Mọi bài viết luôn được gán mảng `categories: [...]` đa chủ đề (Hiểu hành vi, Xây dựng thói quen, Lấy lại sự tập trung, Triết học cuộc sống, Quản trị cảm xúc...) để người đọc bấm vào tab nào cũng tìm thấy nội dung hữu ích liên quan!
-3. **MÂY & AGENT 5 GÁC CỔNG KIỂM DUYỆT 100% (QUALITY GATEWAY - LỆNH CỦA BỐ):** Trước khi bất kỳ bài viết nào được Agent 4 đưa lên web chính thức, **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)** bắt buộc phải trực tiếp rà soát và phê duyệt trọn gói: **Chất lượng nội dung, Trình bày, và Hình ảnh** theo đúng [Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng](content-quality-standards). Tuyệt đối không cho phép đẩy bài lên web nếu chưa đạt điểm tuyệt đối 12/12 PASS! Mọi bài viết có text art, sai độ dài, tiêu đề tràn `...`, hay đặt khối điểm chính sai chỗ đều bị yêu cầu sửa lại ngay lập tức!
+3. **MÂY & AGENT 5 GÁC CỔNG KIỂM DUYỆT ĐA KÊNH 100% TRƯỚC KHI GO-LIVE (HỆ THỐNG 4 CỔNG - LỆNH CỦA BỐ):**
+   Trước khi bất kỳ sản phẩm nào được đưa lên live (dù là bài viết website, video short media, hình ảnh visual, hay bài đăng Facebook), **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)** bắt buộc phải trực tiếp rà soát và phê duyệt độc lập qua [Hệ Thống 4 Cổng Kiểm Duyệt](content-quality-standards):
+   - **Cổng 1 (Website):** Đạt chuẩn 12 tiêu chí vàng (~2.500 từ, không text art, tiêu đề 2 dòng 50-62 ký tự, Key Takeaways cuối bài, đa danh mục, build clean).
+   - **Cổng 2 (Media Video):** Đạt chuẩn 6 bộ lọc Loliteo (Hook 3s, kịch bản 5 hồi, voiceover trầm ấm, visual 100% faceless, nhạc Lo-fi/ASMR không lấn át tiếng, CTA link bio).
+   - **Cổng 3 (Visual Design):** Đạt chuẩn 6 tiêu chí Zen (bảng màu rêu - be - đất nung, đúng tỷ lệ 16:9/9:16/1:1, nén WebP <120KB, đóng Watermark `🌿 TRẠI CAI NGHIỆN`, Image SEO).
+   - **Cổng 4 (Facebook):** Đạt chuẩn 5 quy tắc Reach 0đ (TUYỆT ĐỐI KHÔNG để link ở caption, First comment tự động điều hướng link web/trắc nghiệm, đăng đúng giờ vàng 07h30 sáng & 19h30 tối).
+   - **CHỈ KHI MÂY & AGENT 5 KÝ DUYỆT 100% PASS MỚI ĐƯỢC PHÉP GO-LIVE! VI PHẠM $\ge$ 1 LỖI ĐỎ LẬP TỨC REJECT BẮT SỬA NGAY!**
