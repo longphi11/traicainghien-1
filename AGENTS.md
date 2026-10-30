@@ -324,9 +324,13 @@ flowchart TD
    * **Triết lý:** Bền bỉ nhẫn nại đi qua giông bão, giữ vững lời hứa với chính mình.
    * **Ứng dụng viết bài:** Vào những ngày tồi tệ nhất khi ý chí kiệt cùng, không cần phải làm điều gì to tát, chỉ cần làm **"mức tối thiểu để không buông xuôi"** (*Micro-Gambaru*): hít thở sâu 1 phút, viết 1 dòng nhật ký biết ơn, giữ nguyên chuỗi Streak 1 ngày. Duy trì sợi dây kết nối mỏng manh để thói quen không bao giờ bị đứt đoạn.
 
-### 6.5. Các Tác Giả & Phương Pháp Bổ Trợ Khác
+### 6.5. Các Tác Giả, Phương Pháp & Nguồn Tham Khảo Ý Tưởng
 * **Dr. Gabor Maté (*In the Realm of Hungry Ghosts*):** "Đừng hỏi tại sao nghiện, hãy hỏi tại sao đau đớn?".
 * **Dr. Judson Brewer (*The Craving Mind*):** Kỹ thuật RAIN và Urge Surfing (Lướt sóng cơn thèm).
+* **Hai Mỏ Neo Tham Khảo Ý Tưởng Thực Chiến Của Bố:**
+  1. **Tâm Lý Học Tội Phạm (`tamlyhoctoipham.com`):** Khai thác các góc nhìn sâu sắc về tâm lý học hành vi, các bẫy tâm lý vô thức, sang chấn (trauma), cơ chế tự vệ (defense mechanisms), bóng tối nội tâm (shadow self), sự thao túng và các rối loạn hành vi thời hiện đại.
+  2. **Triết Học Đường Phố (`triethocduongpho.wordpress.com` / `triethocduongpho.net`):** Khai thác tư duy phản biện gai góc, triết học hiện sinh, chủ nghĩa khắc kỷ (Stoicism), nghệ thuật chuyển hóa năng lượng, làm chủ dục vọng (Nofap/Dopamine reset) và lối sống thức tỉnh, sống có chủ đích giữa ma trận xã hội tiêu thụ.
+  - *Nguyên tắc của Mây:* Lấy ý tưởng và chất liệu tâm lý từ 2 nguồn này, nhưng luôn **"dân dã hóa" và nhào nặn theo đúng bản sắc Trại Cai Nghiện** (ấm áp, không phán xét, thực chiến 2.500 từ, chuẩn Zen Minimalist).
 
 ### 6.6. Khung Bài Viết Hoàn Chỉnh: Chuỗi Mắt Xích Thấu Cảm $\rightarrow$ Thức Tỉnh $\rightarrow$ Tái Sinh Mềm Mại
 Mỗi bài viết của Mây là một hành trình chữa lành toàn diện:
