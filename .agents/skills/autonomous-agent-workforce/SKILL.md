@@ -111,7 +111,7 @@ flowchart TD
 
 ### 5. 🔍 Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng & Kiểm Duyệt)
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
-* **Sứ mệnh:** Người gác cổng khó tính nhất — đảm bảo mọi ấn phẩm trước khi ra mắt công chúng đều đạt chuẩn 10/10.
+* **Sứ mệnh:** Người gác cổng khó tính nhất — phối hợp cùng **Mây (Tổng Biên Tập)** kiểm duyệt 100% nội dung, trình bày và hình ảnh theo **Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng** (`content-quality-standards`) trước khi cho phép xuất bản lên website.
 * **Tiêu chí kiểm duyệt bắt buộc (RED FLAGS - PHẢI YÊU CẦU SỬA NGAY):**
   - **LỆNH CẤM TEXT ART CỦA BỐ (REJECT NGAY LẬP TỨC):** 
     - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ đoạn text art, ASCII art, vẽ hình/đồ thị/sơ đồ bằng ký tự thô (`╭───╮`, `▲`, `│`, `└──►`) $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, tuyệt đối không duyệt!**
@@ -120,9 +120,10 @@ flowchart TD
   - **Tiêu đề chuẩn 2 dòng:** Ngắn gọn (50 - 62 ký tự), đủ tò mò, không bị cắt dấu `...` trên card.
   - **Vị trí khối "Những Điểm Chính":** Bắt buộc nằm ở cuối cùng sau "Lời nhắn gửi từ Trại Cai Nghiện".
   - **Quét lỗi văn phong:** Có bị lẫn từ ngữ giáo điều, phán xét, hay từ trừu tượng self-help sáo rỗng không?
-  - **Kiểm tra điều hướng & SEO:** Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm 25 câu, CTA sản phẩm và thẻ Alt Text ảnh WebP 16:9 chưa?
-* **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 hoặc kịch bản video từ Agent 2.
-* **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL) kèm các điểm chỉnh sửa cụ thể trước khi bàn giao cho Agent 4 đẩy lên web.
+  - **Kiểm tra hình ảnh & SEO (Agent 8):** Ảnh WebP tỷ lệ 16:9 (`1200x675px`), nén dưới 120KB, đóng Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file chuẩn SEO và có thẻ Alt Text đầy đủ.
+  - **Kiểm tra điều hướng & SEO:** Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm 25 câu, CTA sản phẩm và mảng đa danh mục (`categories: [...]`) chưa?
+* **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 và hình ảnh từ Agent 8.
+* **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL theo mẫu Biên bản thẩm định) gửi cho Mây xác nhận trước khi bàn giao cho Agent 4 đẩy lên web.
 
 ---
 
@@ -208,7 +209,7 @@ flowchart TD
 | **1. Săn ý tưởng & định hướng** | Agent 6 (Monetization Scout) | Mây, Agent 7 | Bản đề xuất chủ đề / sản phẩm có tiềm năng doanh thu |
 | **2. Viết bài trụ cột 2.500 từ** | Agent 1 (Deep Writer) | Mây, Agent 6 | Bài viết web chuẩn mực 2.500 từ |
 | **3. Thiết kế hình ảnh & Thumbnail SEO** | Agent 8 (Visual Stylist) | Agent 1 | Ảnh WebP 1200x675 chuẩn Zen Minimalist + Alt Text |
-| **4. Kiểm duyệt chất lượng** | Agent 5 (Auditor) | Agent 1, Agent 8 | Bản duyệt bài PASS (từ ngữ, độ dài, ảnh SEO) |
+| **4. Kiểm duyệt chất lượng** | Agent 5 & Mây (Auditor & Editor-in-Chief) | Agent 1, Agent 8 | Biên bản thẩm định PASS 12/12 tiêu chí (nội dung, trình bày, ảnh) |
 | **5. Sản xuất video viral 60s** | Agent 2 (Short-Form) | Agent 1, Agent 8 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
 | **6. Vận hành & Phân phối Facebook 0đ** | Agent 9 (Facebook Specialist)| Agent 1, Agent 2, Agent 8 | Bài đăng Fanpage và video Reels tự động qua n8n |
 | **7. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3, Agent 9 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
@@ -232,3 +233,4 @@ Mây sẽ tự động đóng vai trò Tổng biên tập, nạp đầy đủ Sy
 ### 🚨 NGUYÊN TẮC BẤT DI BẤT DỊCH (LỆNH ĐẶC BIỆT CỦA BỐ):
 1. **FULL AUTOPILOT PUBLISHING:** Mỗi khi Bố gửi ý tưởng / video / chủ đề để viết bài, Mây và toàn bộ 7 Agent phải **TỰ ĐỘNG CHẠY TOÀN BỘ QUY TRÌNH VÀ TỰ ĐỘNG UP LÊN WEBSITE (GIT PUSH VERCEL & GOOGLE INDEXING) NGAY LẬP TỨC**. Tuyệt đối không dừng lại chờ Bố nhắc hoặc hỏi mới up.
 2. **MULTI-CATEGORIZATION (1 BÀI VIẾT THUỘC NHIỀU MỤC):** Tuyệt đối không gò bó 1 bài viết vào 1 mục cứng nhắc. Mọi bài viết luôn được gán mảng `categories: [...]` đa chủ đề (Hiểu hành vi, Xây dựng thói quen, Lấy lại sự tập trung, Triết học cuộc sống, Quản trị cảm xúc...) để người đọc bấm vào tab nào cũng tìm thấy nội dung hữu ích liên quan!
+3. **MÂY & AGENT 5 GÁC CỔNG KIỂM DUYỆT 100% (QUALITY GATEWAY - LỆNH CỦA BỐ):** Trước khi bất kỳ bài viết nào được Agent 4 đưa lên web chính thức, **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)** bắt buộc phải trực tiếp rà soát và phê duyệt trọn gói: **Chất lượng nội dung, Trình bày, và Hình ảnh** theo đúng [Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng](content-quality-standards). Tuyệt đối không cho phép đẩy bài lên web nếu chưa đạt điểm tuyệt đối 12/12 PASS! Mọi bài viết có text art, sai độ dài, tiêu đề tràn `...`, hay đặt khối điểm chính sai chỗ đều bị yêu cầu sửa lại ngay lập tức!

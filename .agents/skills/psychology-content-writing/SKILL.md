@@ -78,6 +78,23 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
   - Nếu là hình ảnh minh họa / đồ thị / infographic phức tạp: Báo ngay cho **Agent 8 (Visual Stylist)** để thiết kế ảnh đồ họa WebP chuẩn 16:9 sắc nét, đóng dấu watermark thương hiệu và chèn vào bài.
   - Chuẩn hóa Heading: Sử dụng `## ` cho H2, `### ` cho H3, `#### ` cho H4 (luôn có dòng trống phân cách) để hiển thị mượt mà trên website.
 
+### 1.10. Cổng Kiểm Duyệt Chất Lượng Xuất Bản Của Mây & Bố (12 Tiêu Chí Vàng)
+* Mọi bài viết từ Agent 1 trước khi được chuyển sang bộ phận kỹ thuật để đẩy lên website chính thức đều phải vượt qua sự kiểm duyệt trực tiếp của **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)**.
+* Tiêu chuẩn áp dụng đầy đủ theo kỹ năng `content-quality-standards`: 
+  1. Dung lượng ~2.500 từ.
+  2. Văn phong Street-Smart Academic.
+  3. Bộ lọc 4 KHÔNG.
+  4. Tái định hình nhận thức.
+  5. Giữ chân High-Retention.
+  6. Tiêu đề 2 dòng 50-62 ký tự.
+  7. Key Takeaways ở cuối bài.
+  8. Sạch bóng Text art / ASCII.
+  9. Markdown thoáng đãng.
+  10. Mỹ cảm Zen Minimalist.
+  11. Ảnh WebP 16:9 dưới 120KB đóng Watermark.
+  12. Đa danh mục & 2-3 liên kết nội bộ.
+* **Chỉ khi đạt 12/12 điểm PASS mới được phép xuất bản.** Bất kỳ lỗi nào cũng phải sửa xong trước khi lên web.
+
 ---
 
 ## 1.b. 🏛️ BỐN TRỤ CỘT NỘI DUNG CỐT LÕI (THE 4 CONTENT PILLARS)

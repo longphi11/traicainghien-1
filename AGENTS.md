@@ -165,6 +165,34 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
     5. Kích hoạt `google_indexer.js` gửi tín hiệu index ngay cho Googlebot.
     6. Agent 2 bẻ sẵn 3 kịch bản video ngắn 60s và báo cáo đường link live hoàn tất cho Bố.
 
+---
+
+### 4.0f. 🛡️ Bộ Tiêu Chuẩn Thẩm Định & Kiểm Duyệt Chất Lượng Xuất Bản (12 Tiêu Chí Vàng - Lệnh Của Bố)
+
+Trước khi bất kỳ bài viết nào được Agent 4 đưa lên web chính thức (`traicainghien.com`), **Mây (Tổng Biên Tập)** và **Agent 5 (Kiểm Toán Trưởng)** bắt buộc phải trực tiếp rà soát và phê duyệt trọn gói: **Chất lượng nội dung, Trình bày, và Hình ảnh** theo đúng bộ tiêu chuẩn 12 tiêu chí (Skill: `content-quality-standards`). Chỉ khi bài viết đạt **100% PASS (12/12 điểm)** mới được phép xuất bản:
+
+* **Trục 1 — Chiều Sâu Nội Dung & Tâm Lý Học:**
+  1. *Dung lượng chuẩn:* Đạt khoảng 2.400 - 2.800 từ/bài, mổ xẻ tận gốc rễ cơ chế hành vi.
+  2. *Văn phong Street-Smart Academic:* Gần gũi như bạn bè cà phê, kết hợp tri thức viện nghiên cứu Harvard/Stanford; neo đậu bằng chi tiết đời thực (điện thoại đầu giường 2h sáng cay mắt, bát phở 30k).
+  3. *Bộ lọc 4 KHÔNG:* Không phán xét đạo đức, không dùng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*), không bi kịch hóa lần trượt chân (triết lý Wabi Sabi), không nói lý thuyết suông.
+  4. *Tái định hình nhận thức (Grand Reframing):* Phá vỡ mặc cảm tội lỗi của người đọc bằng cơ chế sinh học thần kinh (Dopamine, Amygdala, Vỏ não trước trán).
+  5. *Giữ chân High-Retention & Open Loops:* Nhịp câu biến hóa, liên tục đặt câu hỏi lửng thôi thúc đọc hết bài.
+
+* **Trục 2 — Trình Bày & Cấu Trúc Layout:**
+  6. *Tiêu đề chuẩn 2 dòng:* 50 - 62 ký tự, giật curiosity hook, vừa khít card ngoài trang chủ, **tuyệt đối không tràn dòng gây cắt cụt dấu ba chấm `...`**.
+  7. *Vị trí khối "Những Điểm Chính":* Bắt buộc đặt ở cuối cùng của bài viết (sau mục *Lời nhắn gửi từ Trại Cai Nghiện*), tuyệt đối không để ở đầu bài.
+  8. *CẤM TUYỆT ĐỐI Text Art / ASCII Diagram:* Nghiêm cấm ký tự `╭───╮`, `▲`, `│`, `└──►` hoặc vẽ hình bằng text; phát hiện là REJECT BẮT SỬA NGAY.
+  9. *Markdown dễ thở & Chuẩn Heading:* Mỗi đoạn tối đa 2-4 câu; chuẩn hóa `## ` (H2), `### ` (H3), `#### ` (H4) có dòng trống phân cách, không lộ raw markdown.
+
+* **Trục 3 — Mỹ Cảm & Hình Ảnh Zen Minimalist (Agent 8):**
+  10. *Bản sắc Zen Minimalist:* Bảng màu nhận diện Xanh Rêu Rừng (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung Mờ (`#C27D53`), Xám Than Trầm (`#2D312E`); concept góc tĩnh, mộc mạc, bình an.
+  11. *Kỹ thuật ảnh chuẩn SEO:* Tỷ lệ 16:9 (`1200x675px`), định dạng WebP nén dưới 120KB, đóng Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file không dấu chuẩn SEO, thẻ Alt Text tự nhiên.
+
+* **Trục 4 — Điều Hướng & Hạ Tầng Kỹ Thuật:**
+  12. *Đa chuyên mục & Internal Links:* Gán mảng `categories: [...]` (2-4 chuyên mục liên quan), tối thiểu 2-3 liên kết nội bộ (trỏ đến trắc nghiệm 25 câu hoặc bài viết cùng chủ đề), test build Next.js pass 100%.
+
+---
+
 **⚠️ Ranh giới an toàn nội dung (Safety Boundary):**
 * Trại Cai Nghiện **không** chẩn đoán y tế, **không** thay thế liệu pháp tâm lý lâm sàng.
 * Với các trường hợp nghiện nặng (chất kích thích, rượu bia, tình trạng tâm thần nghiêm trọng), luôn khuyến nghị gặp chuyên gia y tế.
