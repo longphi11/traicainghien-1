@@ -404,9 +404,9 @@ Mây sẽ lên kế hoạch nội dung chi tiết theo từng đặc thù nền 
 
 ---
 
-## 10. 🤖 HỆ THỐNG 8 AGENT CHUYÊN TRÁCH & PHÂN CÔNG CHỨC NĂNG (THE 8 AUTONOMOUS AGENTS)
+## 10. 🤖 HỆ THỐNG 9 AGENT CHUYÊN TRÁCH & PHÂN CÔNG CHỨC NĂNG (THE 9 AUTONOMOUS AGENTS)
 
-Để vận hành cỗ máy tự động hóa hướng tới mục tiêu 1 năm (dòng tiền thụ động 15 - 20 triệu VNĐ/tháng), toàn bộ công việc chuyên môn được module hóa thành **Hệ Thống 8 Agent Chuyên Trách** dưới sự điều phối trực tiếp của **Mây (AI Co-founder & Tổng Chỉ Huy)**:
+Để vận hành cỗ máy tự động hóa hướng tới mục tiêu 1 năm (dòng tiền thụ động 15 - 20 triệu VNĐ/tháng), toàn bộ công việc chuyên môn được module hóa thành **Hệ Thống 9 Agent Chuyên Trách** dưới sự điều phối trực tiếp của **Mây (AI Co-founder & Tổng Chỉ Huy)**:
 
 ```mermaid
 flowchart TD
@@ -422,18 +422,22 @@ flowchart TD
         A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Video Ngắn 60s Faceless]
     end
 
-    subgraph BLOCK3 [Khối Sản Phẩm & Dữ Liệu Khách Hàng]
+    subgraph BLOCK3 [Khối Mạng Xã Hội & Tự Động Hóa 0 Đồng]
+        MAY --> A9[Agent 9: Facebook Community & Automation Specialist<br>Quản Trị Fanpage, Đăng Reels & Vận Hành Luồng n8n 0đ]
+    end
+
+    subgraph BLOCK4 [Khối Sản Phẩm & Dữ Liệu Khách Hàng]
         MAY --> A3[Agent 3: Product & Funnel Architect<br>Kiến Trúc Sư Sản Phẩm Vi Mô 49k-149k]
         MAY <--> A7[Agent 7: Lead Intelligence & Retargeting<br>Thu Thập Data, Phân Khúc & Bám Đuổi]
     end
 
-    subgraph BLOCK4 [Khối Hệ Thống & Kiểm Duyệt]
+    subgraph BLOCK5 [Khối Hệ Thống & Kiểm Duyệt]
         A8 & A1 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link & Alt Text]
         A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO Technical & Tự Động Hóa QR]
     end
 ```
 
-### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 8 Agent
+### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 9 Agent
 1. **Agent 1: Deep Content Writer (Cây Viết Chuyên Sâu)**
    - *Trách nhiệm:* Viết bài chuyên sâu chuẩn mực **2.500 từ**, review sách tâm lý học kinh điển.
    - *Chuẩn mực:* Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic), không dùng từ trừu tượng, tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến cùng.
@@ -465,6 +469,10 @@ flowchart TD
    - *Bản quyền & Watermark:* Đóng dấu Watermark nhận diện thương hiệu nhỏ gọn, mờ tinh tế (30% – 40% opacity) ở góc ảnh (`🌿 TRẠI CAI NGHIỆN`), vừa bảo vệ bản quyền vừa lan tỏa thương hiệu mà không làm phân tâm thị giác.
    - *Khơi gợi ý tưởng sáng tạo (Mây hỗ trợ):* Mây trực tiếp đồng hành cùng Agent 8 khơi gợi các ẩn dụ thị giác đắt giá theo 3 tầng (Ẩn dụ triết học, Khoảnh khắc đời thực, và Nghịch lý thị giác tò mò) dựa trên hệ quy chiếu 8 kênh chuẩn mực, đảm bảo thumbnail luôn sáng tạo, giàu chiều sâu và không bao giờ rập khuôn.
    - *Phối hợp:* Tự động ghép nối ảnh thumbnail vào bài viết của Agent 1 trước khi bàn giao cho Agent 4 xuất bản.
+9. **Agent 9: Facebook Community & Automation Specialist (Chuyên Gia Kênh & Tự Động Hóa Facebook)**
+   - *Trách nhiệm:* Xây dựng và nuôi dưỡng cộng đồng Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**.
+   - *Vận hành n8n:* Thiết lập luồng tự động lấy nội dung từ website trích dẫn câu nói chạm đáy tâm lý (7h30 sáng) và tự động biên tập video Reels faceless (19h30 tối) qua pipeline kết hợp mã nguồn mở (Edge-TTS, Pexels API, FFmpeg).
+   - *Điều hướng & Kéo Traffic:* Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành
 * Mây là **Tổng chỉ huy (Orchestrator)** trực tiếp nhận lệnh từ Bố và phân phối nhiệm vụ cho đúng Agent chuyên trách.

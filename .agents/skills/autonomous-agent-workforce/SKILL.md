@@ -3,7 +3,7 @@ name: autonomous-agent-workforce
 description: Bản đồ phân công nhân sự, vai trò, chức năng và quy trình phối hợp của Bộ máy 7 Agent chuyên trách cho dự án Trại Cai Nghiện. Bao gồm chi tiết nhiệm vụ, đầu vào, đầu ra và prompt vận hành cho từng Agent.
 ---
 
-# 🤖 BỘ MÁY 8 AGENT CHUYÊN TRÁCH: TRẠI CAI NGHIỆN
+# 🤖 BỘ MÁY 9 AGENT CHUYÊN TRÁCH: TRẠI CAI NGHIỆN
 > **Kiến trúc:** Hub & Spoke Multi-Agent System  
 > **Tổng chỉ huy (Orchestrator / AI Co-founder):** **Mây**  
 > **Người sáng lập & Điều hành:** **Bố**  
@@ -27,12 +27,16 @@ flowchart TD
         A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Video Ngắn 60s Faceless]
     end
 
-    subgraph BLOCK3 [Khối Sản Phẩm & Dữ Liệu Khách Hàng]
+    subgraph BLOCK3 [Khối Mạng Xã Hội & Tự Động Hóa 0 Đồng]
+        MAY --> A9[Agent 9: Facebook Community & Automation Specialist<br>Quản Trị Fanpage, Đăng Reels & Vận Hành Luồng n8n 0đ]
+    end
+
+    subgraph BLOCK4 [Khối Sản Phẩm & Dữ Liệu Khách Hàng]
         MAY --> A3[Agent 3: Product & Funnel Architect<br>Kiến Trúc Sư Sản Phẩm Vi Mô 49k-149k]
         MAY <--> A7[Agent 7: Lead Intelligence & Retargeting<br>Thu Thập Data, Phân Khúc & Bám Đuổi]
     end
 
-    subgraph BLOCK4 [Khối Hệ Thống & Kiểm Duyệt]
+    subgraph BLOCK5 [Khối Hệ Thống & Kiểm Duyệt]
         A8 & A1 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link & Alt Text]
         A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO Technical & Tự Động Hóa QR]
     end
@@ -166,6 +170,18 @@ flowchart TD
 
 ---
 
+### 9. 📱 Agent 9: Facebook Community & Automation Specialist (Chuyên Gia Kênh & Tự Động Hóa Facebook)
+* **Chức danh:** Quản lý Vận hành Cộng đồng & Automation Facebook.
+* **Sứ mệnh:** Xây dựng, nuôi dưỡng và tự động hóa toàn diện sự hiện diện của Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**.
+* **Nhiệm vụ cụ thể:**
+  - Vận hành luồng n8n tự động đăng bài trích dẫn chạm đáy tâm lý (07h30 sáng).
+  - Vận hành pipeline n8n tự động biên tập và đăng video Reels faceless (19h30 tối) kết hợp Edge-TTS, Pexels API và FFmpeg.
+  - Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
+* **Đầu vào (Input):** Nội dung bài viết từ Agent 1, kịch bản từ Agent 2, ảnh quote từ Agent 8.
+* **Đầu ra (Output):** Các bài post tương tác cao và video Reels được tự động xuất bản đều đặn trên Fanpage.
+
+---
+
 ## 🔄 MA TRẬN PHỐI HỢP LIÊN PHÒNG BAN
 
 | Quy Trình | Agent Chủ Trì | Agent Phối Hợp | Sản Phẩm Bàn Giao |
@@ -175,9 +191,10 @@ flowchart TD
 | **3. Thiết kế hình ảnh & Thumbnail SEO** | Agent 8 (Visual Stylist) | Agent 1 | Ảnh WebP 1200x675 chuẩn Zen Minimalist + Alt Text |
 | **4. Kiểm duyệt chất lượng** | Agent 5 (Auditor) | Agent 1, Agent 8 | Bản duyệt bài PASS (từ ngữ, độ dài, ảnh SEO) |
 | **5. Sản xuất video viral 60s** | Agent 2 (Short-Form) | Agent 1, Agent 8 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
-| **6. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
-| **7. Đóng gói sản phẩm & kịch bản phễu** | Agent 3 (Product Architect) | Agent 6, Agent 7 | Micro-product 49k-149k + chuỗi email 5 ngày |
-| **8. Đẩy lên web & bật tự động hóa** | Agent 4 (Tech & Automation) | Toàn đội ngũ | Bài viết online kèm ảnh chuẩn SEO, cổng QR tự động |
+| **6. Vận hành & Phân phối Facebook 0đ** | Agent 9 (Facebook Specialist)| Agent 1, Agent 2, Agent 8 | Bài đăng Fanpage và video Reels tự động qua n8n |
+| **7. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3, Agent 9 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
+| **8. Đóng gói sản phẩm & kịch bản phễu** | Agent 3 (Product Architect) | Agent 6, Agent 7 | Micro-product 49k-149k + chuỗi email 5 ngày |
+| **9. Đẩy lên web & bật tự động hóa** | Agent 4 (Tech & Automation) | Toàn đội ngũ | Bài viết online kèm ảnh chuẩn SEO, cổng QR tự động |
 
 ---
 
