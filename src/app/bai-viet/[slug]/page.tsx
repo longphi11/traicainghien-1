@@ -129,6 +129,8 @@ type Block =
   | { type: "key_takeaways"; title: string; items: string[] }
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
+  | { type: "h4"; text: string }
+  | { type: "image"; alt: string; src: string }
   | { type: "hr" }
   | { type: "blockquote"; text: string }
   | { type: "numbered_list"; items: string[] }
@@ -181,6 +183,20 @@ function parseMarkdownBlocks(content: string): Block[] {
       continue;
     }
 
+    // B2. Hình ảnh Markdown: ![alt](url)
+    if (/^!\[(.*?)\]\((.*?)\)$/.test(line)) {
+      const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+      if (imgMatch) {
+        blocks.push({
+          type: "image",
+          alt: imgMatch[1],
+          src: imgMatch[2],
+        });
+        i++;
+        continue;
+      }
+    }
+
     // C. Tiêu đề H2
     if (line.startsWith("## ")) {
       blocks.push({ type: "h2", text: line.replace("## ", "").trim() });
@@ -188,7 +204,14 @@ function parseMarkdownBlocks(content: string): Block[] {
       continue;
     }
 
-    // D. Tiêu đề H3
+    // D1. Tiêu đề H4 (Kiểm tra trước H3 để không bị khớp nhầm)
+    if (line.startsWith("#### ")) {
+      blocks.push({ type: "h4", text: line.replace("#### ", "").trim() });
+      i++;
+      continue;
+    }
+
+    // D2. Tiêu đề H3
     if (line.startsWith("### ")) {
       blocks.push({ type: "h3", text: line.replace("### ", "").trim() });
       i++;
@@ -275,6 +298,7 @@ function parseMarkdownBlocks(content: string): Block[] {
         nextLine.startsWith("> ") ||
         nextLine.startsWith("* ") ||
         nextLine.startsWith("- ") ||
+        nextLine.startsWith("![") ||
         /^\d+\.\s/.test(nextLine) ||
         nextLine.includes("NHỮNG ĐIỂM CHÍNH")
       ) {
@@ -459,8 +483,37 @@ export default async function ArticleDetailPage({
                 </h3>
               );
 
+            case "h4":
+              return (
+                <h4
+                  key={idx}
+                  className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mt-6 mb-3 leading-snug"
+                >
+                  {renderFormattedText(block.text)}
+                </h4>
+              );
+
             case "hr":
               return <hr key={idx} className="border-[#E6E1D8] my-10" />;
+
+            case "image":
+              return (
+                <figure key={idx} className="my-10 space-y-3">
+                  <div className="rounded-2xl overflow-hidden border border-[#E6E1D8] shadow-sm bg-[#FAF7F2]">
+                    <img
+                      src={block.src}
+                      alt={block.alt}
+                      className="w-full h-auto object-cover max-h-[540px]"
+                      loading="lazy"
+                    />
+                  </div>
+                  {block.alt && (
+                    <figcaption className="text-center text-xs sm:text-sm text-[#6B726E] italic font-serif">
+                      {block.alt}
+                    </figcaption>
+                  )}
+                </figure>
+              );
 
             case "blockquote":
               return (
