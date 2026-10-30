@@ -53,6 +53,10 @@ flowchart TD
   - Chuẩn mực 2.500 từ/bài, tập trung giải quyết 1 vấn đề, không lan man, không độn chữ.
   - **Tiêu đề chuẩn 2 dòng (50 - 62 ký tự):** Vừa khít card bên ngoài, không tràn dòng `...`, giật curiosity hook bằng hình ảnh đối nghịch hoặc nghịch lý lạ lẫm.
   - **Vị trí "Những Điểm Chính":** Bắt buộc đặt ở cuối cùng của bài viết, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*, không để ở đầu bài.
+  - **CẤM TUYỆT ĐỐI TEXT ART / ASCII DIAGRAM (LỆNH ĐẶC BIỆT CỦA BỐ):** 
+    - Tuyệt đối **KHÔNG BAO GIỜ** vẽ biểu đồ, đồ thị, sơ đồ phân nhánh hay minh họa hình ảnh dưới dạng khối text/ASCII ký tự (`╭───╮`, `▲`, `│`, `└──►`, v.v.). Trình duyệt web và thiết bị di động sẽ làm vỡ nát layout, biến thành một chuỗi ký tự hỗn độn, nhem nhuốc và phá nát hoàn toàn mỹ cảm Zen Minimalist.
+    - Khi cần trình bày mô hình hay so sánh: Phải diễn đạt bằng câu chữ mạch lạc, các gạch đầu dòng rõ ràng, bảng so sánh chuẩn; hoặc nếu cần đồ họa trực quan thì chuyển giao cho **Agent 8** thiết kế ảnh Infographic WebP độc bản chuyên nghiệp.
+    - Tuân thủ cú pháp Heading chuẩn (`## ` cho H2, `### ` cho H3, `#### ` cho H4), luôn có dòng trống phía trước và sau tiêu đề để parser hiển thị chuẩn xác, không để lộ raw markdown.
   - Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic).
   - Cấm tiệt từ ngữ trừu tượng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*). Neo đậu bằng chi tiết đời thực (*màn hình lướt 2h sáng cay xè mắt, bát phở 30k*).
   - Nghệ thuật tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến chữ cuối cùng.
@@ -105,17 +109,18 @@ flowchart TD
 
 ---
 
-### 5. 🔍 Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng)
+### 5. 🔍 Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng & Kiểm Duyệt)
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
 * **Sứ mệnh:** Người gác cổng khó tính nhất — đảm bảo mọi ấn phẩm trước khi ra mắt công chúng đều đạt chuẩn 10/10.
-* **Tiêu chí kiểm duyệt:**
-  - Đếm từ chính xác: Bài viết có đạt tối thiểu 2.500 từ không?
-  - Tiêu đề: Có ngắn gọn 2 dòng (50 - 62 ký tự) và đủ kích thích tò mò không? Có bị cắt `...` không?
-  - Vị trí khối "Những Điểm Chính": Đã nằm ở dưới cùng sau "Lời nhắn gửi từ Trại Cai Nghiện" chưa?
-  - Quét lỗi văn phong: Có bị lẫn từ ngữ giáo điều, phán xét, hay từ trừu tượng không?
-  - Kiểm tra điều hướng: Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm và CTA sản phẩm chưa?
-* **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 hoặc kịch bản video từ Agent 2.
-* **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL) kèm các điểm chỉnh sửa cụ thể trước khi bàn giao cho Agent 4 đẩy lên web.
+* **Tiêu chí kiểm duyệt bắt buộc (RED FLAGS - PHẢI YÊU CẦU SỬA NGAY):**
+  - **LỆNH CẤM TEXT ART CỦA BỐ (REJECT NGAY LẬP TỨC):** 
+    - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ đoạn text art, ASCII art, vẽ hình/đồ thị/sơ đồ bằng ký tự thô (`╭───╮`, `▲`, `│`, `└──►`) $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, tuyệt đối không duyệt!**
+    - Kiểm tra lỗi Markdown thô: Đảm bảo không bị sót các thẻ Heading (`#### `) trơ ra text ngoài trang hiển thị do thiếu dòng trắng hoặc sai cấu trúc.
+  - **Đếm từ chính xác:** Bài viết có đạt tối thiểu 2.500 từ không?
+  - **Tiêu đề chuẩn 2 dòng:** Ngắn gọn (50 - 62 ký tự), đủ tò mò, không bị cắt dấu `...` trên card.
+  - **Vị trí khối "Những Điểm Chính":** Bắt buộc nằm ở cuối cùng sau "Lời nhắn gửi từ Trại Cai Nghiện".
+  - **Quét lỗi văn phong:** Có bị lẫn từ ngữ giáo điều, phán xét, hay từ trừu tượng self-help sáo rỗng không?
+  - **Kiểm tra điều hướng & SEO:** Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm 25 câu, CTA sản phẩm và thẻ Alt Text ảnh WebP 16:9 chưa?
 * **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 hoặc kịch bản video từ Agent 2.
 * **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL) kèm các điểm chỉnh sửa cụ thể trước khi bàn giao cho Agent 4 đẩy lên web.
 

@@ -70,6 +70,14 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
 * **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
 * **Ý nghĩa:** Tuyệt đối không đặt ở đầu bài. Hãy để người đọc trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước, sau đó nhận khối "Những Điểm Chính" như một món quà đúc kết hành động thực hành tinh gọn trước khi khép lại trang web.
 
+### 1.9. Tuyệt Đối Cấm Text Art & ASCII Diagram (Lệnh Đặc Biệt Của Bố)
+* **CẤM TUYỆT ĐỐI:** Không bao giờ thể hiện hình ảnh, biểu đồ, đồ thị hình chuông, sơ đồ phân nhánh dưới dạng khối ký tự văn bản / ASCII art (như `╭───╮`, `▲`, `│`, `└──►`, hay khối text code mô phỏng hình).
+* **Lý do:** Giao diện web và thiết bị di động sẽ bẻ dòng, dồn các ký tự này thành một hàng chữ lộn xộn, xấu xí, tạo cảm giác tạm bợ và phá nát phong cách Zen Minimalist.
+* **Cách xử lý chuẩn mực:**
+  - Nếu là so sánh/dữ liệu: Dùng câu văn mạch lạc kết hợp các đầu dòng in đậm nổi bật (`* **Nhóm 1:** ...`), hoặc bảng Markdown chuẩn.
+  - Nếu là hình ảnh minh họa / đồ thị / infographic phức tạp: Báo ngay cho **Agent 8 (Visual Stylist)** để thiết kế ảnh đồ họa WebP chuẩn 16:9 sắc nét, đóng dấu watermark thương hiệu và chèn vào bài.
+  - Chuẩn hóa Heading: Sử dụng `## ` cho H2, `### ` cho H3, `#### ` cho H4 (luôn có dòng trống phân cách) để hiển thị mượt mà trên website.
+
 ---
 
 ## 1.b. 🏛️ BỐN TRỤ CỘT NỘI DUNG CỐT LÕI (THE 4 CONTENT PILLARS)
