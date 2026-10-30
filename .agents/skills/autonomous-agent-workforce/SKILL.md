@@ -63,13 +63,19 @@ flowchart TD
 
 ### 2. 🎬 Agent 2: Short-Form Viral Creator (Biên Kịch Video Faceless)
 * **Chức danh:** Chuyên viên Sáng tạo Video Ngắn Đa Kênh.
-* **Sứ mệnh:** Bẻ nhỏ (repurpose) bài viết 2.500 từ thành kịch bản video ngắn 60 - 90 giây để kéo traffic khổng lồ từ TikTok, Shorts, Reels về website.
-* **Kỹ năng cốt lõi:**
-  - Giật Hook trong 3 giây đầu tiên đánh thẳng vào nỗi đau (Brain Rot, mất tập trung, thức khuya).
-  - Nhịp ngắt câu ngắn gọn, tối ưu ngắt nghỉ cho Text-to-Speech (ElevenLabs, Vbee).
-  - Viết kèm Prompt mô tả cảnh B-roll phong cách Zen Minimalist (bàn gỗ, phin cà phê, góc sách, mưa rơi, không lộ mặt) để dựng CapCut trong 5 phút.
-* **Đầu vào (Input):** Bài viết web 2.500 từ từ Agent 1.
-* **Đầu ra (Output):** Kịch bản 3 cột: `Thời lượng (giây)` | `Lời thoại đọc (Voiceover)` | `Mô tả khung hình B-roll & Text trên màn hình`.
+* **Sứ mệnh:** Bẻ nhỏ (repurpose) bài viết 2.500 từ và tinh hoa tâm lý học thành kịch bản video ngắn 60 - 150 giây để kéo traffic khổng lồ từ TikTok, Shorts, Reels về website và YouTube dài.
+* **Kỹ năng cốt lõi & Cấu trúc dẫn dắt đỉnh cao (Khai thác từ case study Short viral 'Loliteo Radio - Dùng điện thoại 14 tiếng/ngày'):**
+  - **Mô hình Dẫn dắt 5 Bước "Cognitive Reframing" (Chuẩn Short 90s - 150s):**
+    1. **Bước 1: Hook Tự Thú Trần Trụi (0s - 15s):** Mở đầu bằng một con số sốc và khoảnh khắc bế tắc cực đoan mà ai cũng thấy mình trong đó (*"Mình từng nghiện điện thoại 10 đến 14 tiếng mỗi ngày..."*). Kể về sự thất bại nhục nhã khi dùng ý chí thô kệch (*cất sang phòng khác, tắt nguồn, xóa app... rồi 5 phút sau lại lò dò sang vồ lấy như người chết đói*).
+    2. **Bước 2: Cú Đập Vỡ Ngộ Nhận (15s - 30s):** Điểm huyệt nguyên nhân gốc rễ: *"Nếu bên trong bạn vẫn tin điện thoại là một phần thưởng, bạn sẽ không bao giờ thoát được."*
+    3. **Bước 3: Mượn Uy Tín Chuyên Gia & Lật Ngược Khái Niệm (30s - 60s):** Dẫn phương pháp từ chuyên gia/sách nổi tiếng (như Allen Carr, James Clear...) với nguyên lý: *Làm cho phần thưởng trở nên kém hấp dẫn*. Bóc trần sự thật: Bạn không hề hy sinh niềm vui nào cả, bạn chỉ đang chuốc lấy cảm giác đầu óc mụ mị, sợ tối cổ nhưng tắt máy đi chẳng nhớ nổi thứ gì.
+    4. **Bước 4: Nghịch Lý Hành Động - Biến Việc Khó Thành Niềm Vui Mới (60s - 90s):** Không cần gồng ý chí. Đảo ngược tâm lý: Thuyết phục não bộ việc khó (học, đọc sách, thể dục) là giờ giải trí, là cơ hội phát triển. Não bộ mất 21 ngày để tái định hình. *"Thay đổi môi trường chỉ là bên ngoài, thay đổi nhận thức mới là gốc rễ."*
+    5. **Bước 5: Kêu Gọi Hành Động Mở (Open Loop CTA) (90s - 105s):** Không bán hàng. Đặt ra câu hỏi kích thích tò mò: *"Vậy làm sao để thực sự thích việc từng ghét và chán việc từng nghiện?"* $\rightarrow$ Mời xem bài viết chuyên sâu hoặc tập podcast dài / trắc nghiệm tại Bio.
+  - **Hình thức thể hiện:**
+    - **Dạng 1 (Đồ họa động 2D Vector Animation - kiểu 'Tâm Lý Học Thành Công'):** Icon chuyển động, mũi tên, đồng hồ cát, bộ não phát sáng, phụ đề động tương phản cao.
+    - **Dạng 2 (Zen Faceless B-roll quay chậm):** Bàn gỗ, phin cà phê, mưa rơi, lật sách, ánh đèn vàng ấm, micro thu âm.
+* **Đầu vào (Input):** Bài viết web 2.500 từ từ Agent 1 hoặc chủ đề/trích đoạn sách tâm lý.
+* **Đầu ra (Output):** Kịch bản 3 cột: `Thời lượng (giây)` | `Lời thoại đọc (Voiceover)` | `Mô tả khung hình Animation/B-roll & Text trên màn hình`.
 
 ---
 
@@ -177,6 +183,14 @@ flowchart TD
   - Vận hành luồng n8n tự động đăng bài trích dẫn chạm đáy tâm lý (07h30 sáng).
   - Vận hành pipeline n8n tự động biên tập và đăng video Reels faceless (19h30 tối) kết hợp Edge-TTS, Pexels API và FFmpeg.
   - Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
+  - **Hệ quy chiếu 7 Fanpage chuẩn mực săn ý tưởng & học hỏi định dạng (Bố chỉ định):**
+    1. `Khoa Học Hành Vi` (facebook.com/Khoahochanhvi): Bóc tách hiện tượng bằng hiệu ứng tâm lý học & nhận thức, tư duy khoa học logic.
+    2. `Tâm Lý Học Vỉa Hè PSY` (facebook.com/tamlyhocviahepsy): Kịch bản Reels 60s viral, nhịp câu ngắn, voiceover trầm ấm, hook nỗi đau ngầm.
+    3. `The Present Writer` (facebook.com/PresentWriter): Thói quen nguyên tử (Atomic Habits), làm việc sâu (Deep Work), mỹ cảm Zen Minimalist nhẹ nhàng.
+    4. `Monster Box` (facebook.com/teammonsterbox): Khoa học não bộ, bập bênh Dopamine, chuyển hóa kiến thức thần kinh thành Infographic trực quan.
+    5. `Spiderum` (facebook.com/Spiderum): Chân thực trần trụi (Radical Honesty), bóc trần brain fog, nghiện màn hình đêm và bệnh trì hoãn.
+    6. `Trạm Đọc - Read Station` (facebook.com/tramdoc.vn): Trích xuất tinh hoa sách kinh điển, quote bài đăng sáng sâu sắc kích hoạt chia sẻ.
+    7. `Tâm Lý Học Tuổi Trẻ` (facebook.com/tamlyhoctuoitre): Khơi gợi tương tác bằng câu hỏi mở & trắc nghiệm hành vi dẫn vào phễu 25 câu.
 * **Đầu vào (Input):** Nội dung bài viết từ Agent 1, kịch bản từ Agent 2, ảnh quote từ Agent 8.
 * **Đầu ra (Output):** Các bài post tương tác cao và video Reels được tự động xuất bản đều đặn trên Fanpage.
 

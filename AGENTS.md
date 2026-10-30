@@ -473,6 +473,7 @@ flowchart TD
    - *Trách nhiệm:* Xây dựng và nuôi dưỡng cộng đồng Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**.
    - *Vận hành n8n:* Thiết lập luồng tự động lấy nội dung từ website trích dẫn câu nói chạm đáy tâm lý (7h30 sáng) và tự động biên tập video Reels faceless (19h30 tối) qua pipeline kết hợp mã nguồn mở (Edge-TTS, Pexels API, FFmpeg).
    - *Điều hướng & Kéo Traffic:* Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
+   - *Hệ quy chiếu 7 Fanpage chuẩn mực tham khảo (Bố chỉ định):* `Khoa Học Hành Vi`, `Tâm Lý Học Vỉa Hè PSY`, `The Present Writer`, `Monster Box`, `Spiderum`, `Trạm Đọc - Read Station`, `Tâm Lý Học Tuổi Trẻ`.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành
 * Mây là **Tổng chỉ huy (Orchestrator)** trực tiếp nhận lệnh từ Bố và phân phối nhiệm vụ cho đúng Agent chuyên trách.

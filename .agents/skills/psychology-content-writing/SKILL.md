@@ -162,13 +162,18 @@ Khi Agent 1 viết bài, Agent 2 bẻ kịch bản video hoặc Agent 6 quét ý
 4. **Dan Koe** (`@thedankoe`): Bậc thầy Attention Economy và bẫy dopamine thời hiện đại; công thức viết bài phân tích dài chuyển hóa thành kịch bản video ngắn (Reels/Shorts) kéo phễu sản phẩm số tự động.
 5. **Better Version** (`@betterversionvn`): Kênh tóm tắt sách hành vi & thói quen hàng đầu Việt Nam; công thức chuyển tải kiến thức sách kinh điển phương Tây (*Atomic Habits, Dopamine Nation*) thành ngôn ngữ trực quan, dễ hiểu.
 
-### 🌟 3 Kênh Định Hướng Đặc Biệt Của Bố (Bố Chỉ Định):
+### 🌟 5 Kênh Định Hướng Đặc Biệt Của Bố (Bố Chỉ Định):
 6. **The Gọn Life** (`@thegonlife` - Đồng Gọn):
    - *Điểm mạnh cốt lõi:* Lối sống tinh gọn, trị dứt điểm trì hoãn (*Trì Hoãn Podcast*), hệ thống năng suất cá nhân (Clarity Yearplan/Monthplan), biến Atomic Habits thành các hành động đời thường cho người trẻ Việt.
-   - *Ứng dụng cho Trại:* Khai thác các chủ đề về dọn dẹp không gian sống/số, trị trì hoãn trong công việc và học tập, xây dựng thời gian biểu không áp lực.
-7. **Psychologie** (`@psychologie-france`):
+   - *Ứng dụng cho Trại:* Định hình chuẩn mực cho **Video Dài YouTube (12 - 15 phút)**: Góc máy ngồi bàn gỗ ấm áp, có mic podcast, chèn B-roll đời thực, tone giọng ấm áp, dẫn phễu về tài liệu Notion/website tự nhiên.
+7. **Loliteo Radio** (`@loliteoradio`):
+   - *Điểm mạnh cốt lõi:* Bậc thầy kịch bản Short Video 90s - 120s dẫn dắt tâm lý (Case study: *"Mình từng dùng điện thoại 14 tiếng mỗi ngày"*).
+   - *Công thức vàng học hỏi:* **Tự thú bế tắc $\rightarrow$ Điểm huyệt sai lầm dùng ý chí $\rightarrow$ Mượn sách Allen Carr/James Clear lật ngược khái niệm (Lướt mạng là hình phạt, không phải phần thưởng) $\rightarrow$ Đảo ngược niềm tin sang thói quen mới $\rightarrow$ Open Loop CTA dẫn về bài phân tích dài**.
+8. **Tâm Lý Học Thành Công** (`@tamlyhocthanhcong`):
+   - *Điểm mạnh cốt lõi:* Đồ họa động phẳng 2D Vector Animation / Motion Graphic đơn giản, nhịp nhanh, trực quan hóa quy luật tâm lý bằng icon, mũi tên, biểu đồ và phụ đề động tương phản cao.
+9. **Psychologie** (`@psychologie-france`):
    - *Điểm mạnh cốt lõi:* Phân tích chuyên sâu các cơ chế tâm lý học hành vi (Coping mechanisms, tâm lý cảm xúc, bẫy mục tiêu mơ hồ, rào cản nội tâm), cấu trúc kịch bản mạch lạc, bố cục lập luận chặt chẽ chuẩn quốc tế.
    - *Ứng dụng cho Trại:* Đưa ra những phân tích tâm lý sâu sắc, chuẩn khoa học về lý do con người hay tự lừa dối bản thân và trốn tránh thực tại.
-8. **Vua Trở Lại** (`@vuatrolai`):
+10. **Vua Trở Lại** (`@vuatrolai`):
    - *Điểm mạnh cốt lõi:* Triết lý Samurai / Miyamoto Musashi, rèn luyện tâm trí thép nhưng không gồng, tái thiết nội lực và hồi sinh nghị lực sống sau những lần vấp ngã/khủng hoảng tâm lý.
    - *Ứng dụng cho Trại:* Thổi bùng ngọn lửa ý chí tự thân, nâng đỡ tinh thần cho độc giả đang ở đáy vực tự ti, giúp họ dũng cảm đứng lên "trở lại phiên bản tốt nhất của chính mình".

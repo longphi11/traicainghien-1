@@ -33,6 +33,29 @@ Agent 9 chịu trách nhiệm xây dựng, nuôi dưỡng và tự động hóa 
 
 ---
 
+## 📚 HỆ QUY CHIẾU 7 FANPAGE CHUẨN MỰC THAM KHẢO NỘI DUNG (BỐ CHỈ ĐỊNH)
+
+Khi lên ý tưởng bài đăng, kịch bản Reels hay triển khai chiến dịch cộng đồng, Agent 9 luôn đối chiếu và học hỏi tinh hoa từ 7 trang chuẩn mực sau:
+
+1. **Khoa Học Hành Vi** ([facebook.com/Khoahochanhvi](https://www.facebook.com/Khoahochanhvi)):
+   - *Học hỏi:* Bóc tách hành vi đời sống bằng các hiệu ứng tâm lý học & nhận thức, logic khoa học mạch lạc, phân tích chiều sâu.
+2. **Tâm Lý Học Vỉa Hè PSY** ([facebook.com/tamlyhocviahepsy](https://www.facebook.com/tamlyhocviahepsy)):
+   - *Học hỏi:* Bậc thầy Reels 60s viral, nhịp điệu câu từ ngắn gọn, khoảng lặng ngắt nghỉ cho AI voiceover (trầm ấm, chiêm nghiệm), hook 3 giây chạm đúng nỗi đau ngầm.
+3. **The Present Writer** ([facebook.com/PresentWriter](https://www.facebook.com/PresentWriter) - TS. Chi Nguyễn):
+   - *Học hỏi:* Mỹ cảm Zen Minimalist, rèn luyện thói quen nguyên tử (Atomic Habits), làm việc sâu (Deep Work), quản trị năng lượng sinh học không cần gồng.
+4. **Monster Box** ([facebook.com/teammonsterbox](https://www.facebook.com/teammonsterbox)):
+   - *Học hỏi:* Cơ chế sinh học não bộ và bập bênh Dopamine, chuyển hóa kiến thức thần kinh khô khan thành Infographic trực quan, giải phóng mặc cảm tội lỗi cho độc giả.
+5. **Spiderum** ([facebook.com/Spiderum](https://www.facebook.com/Spiderum)):
+   - *Học hỏi:* Chân thực đến trần trụi (Radical Honesty), bóc trần hội chứng sương mù não (Brain Fog), nghiện màn hình đêm và căn bệnh trì hoãn của người trẻ.
+6. **Trạm Đọc - Read Station** ([facebook.com/tramdoc.vn](https://www.facebook.com/tramdoc.vn)):
+   - *Học hỏi:* Trích xuất tinh hoa từ sách tâm lý kinh điển, các câu trích dẫn (Quote) đắt giá khung giờ sáng (07h30) kích thích lượt chia sẻ và phản tư.
+7. **Tâm Lý Học Tuổi Trẻ** ([facebook.com/tamlyhoctuoitre](https://www.facebook.com/tamlyhoctuoitre)):
+   - *Học hỏi:* Khơi gợi tương tác bằng câu hỏi mở và các bài trắc nghiệm tâm lý/hành vi, điều hướng khéo léo về phễu trắc nghiệm 25 câu hỏi của website.
+
+---
+
+---
+
 ## 📋 CHECKLIST ĐĂNG BÀI FACEBOOK (PASS / FAIL)
 - [ ] **Bản quyền âm thanh:** Nhạc nền có thuộc kho No-Copyright Music không? Tuyệt đối không dính bản quyền Meta.
 - [ ] **Bản quyền hình ảnh/video:** 100% video B-roll từ Pexels/Pixabay với giấy phép Free Commercial Use.
