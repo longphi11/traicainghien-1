@@ -40,7 +40,27 @@ flowchart TD
     H4 --> H5["Hồi 5: Vòng Lặp Mở (Open Loop CTA) (110s - 135s)<br>Để lại câu hỏi bỏ ngỏ kích thích tò mò, dẫn về YouTube/Website"]
 ```
 
-### Chi Tiết Từng Hồi & Kỹ Thuật Hành Văn:
+---
+
+## 2.1. ⚡ MÔ HÌNH THỨ HAI: PHẢN BIỆN "TOP BẪY TÂM LÝ & ẢO TƯỞNG THAY ĐỔI" (TOP 3 TRAPS BLUEPRINT)
+*(Đúc kết từ kiệt tác Short viral: "Chữa lành hay chữa rách? - Top 3 cái bẫy tâm lý trên mạng xã hội khiến bạn học mãi mà vẫn dậm chân tại chỗ" - Loliteo Radio)*
+
+Mô hình này là vũ khí tối thượng cho **các chủ đề cai nghiện thói quen xấu, xây dựng sự tập trung và rèn luyện thói quen mới** tại Trại Cai Nghiện:
+
+### 3 Cú Điểm Huyệt Sát Thương Nhất Của Dạng Kịch Bản Này:
+1. **Bẫy 1: Dán nhãn tâm lý quá sớm để né tránh giải quyết tận gốc:**
+   * *Biểu hiện:* Học được vài thuật ngữ trên mạng (*ADHD, dopamine deficit, sương mù não, burn out*) rồi lập tức dùng nó làm "tấm khiên" ngụy biện cho sự trì hoãn: *"Do tôi bị ADHD nên tôi không thể ngồi yên 15 phút"*.
+   * *Điểm huyệt:* **Biết tên một chứng bệnh và thực sự vượt qua nó là hai khoảng cách rất xa nhau.** Đừng nhầm lẫn giữa việc "gọi tên vấn đề" với việc "đã giải quyết được nó".
+2. **Bẫy 2: Lạm dụng việc 'Bảo vệ năng lượng' để trốn tránh đối diện sự thật:**
+   * *Biểu hiện:* Gặp một đầu việc khó khăn, một áp lực công việc hay một cơn thèm điện thoại là lập tức bỏ cuộc với lý do *"tôi đang lắng nghe bản thân, tôi đang bảo vệ năng lượng"*.
+   * *Điểm huyệt:* **Cảm giác khó chịu không phải là kẻ thù, mà là cơ hội duy nhất để cơ bắp ý chí được rèn luyện.** Trốn tránh sự khó chịu chỉ khiến ngưỡng chịu đựng ngày càng teo tóp lại (theo Michael Easter - *The Comfort Crisis*).
+3. **Bẫy 3: Nghiện cảm giác 'Đang thay đổi' nhưng hành vi thực tế thì dậm chân tại chỗ:**
+   * *Biểu hiện:* Nghiện xem video self-help, mua sổ tay đẹp, lập notion template hoành tráng, ghi chép todo-list lung linh... nhưng đến giờ làm thì vẫn nhảy tab, đến đêm vẫn lướt tới 2h sáng.
+   * *Điểm huyệt kinh điển (M. Scott Peck - The Road Less Traveled):* **Phát triển bản thân và cai nghiện là một hành trình cực kỳ khó chịu, vì nó đòi hỏi ta phải nhìn thẳng vào phần đen tối và bất toàn nhất của chính mình — chứ không phải là việc quây quần đốt nến thơm, làm vision board và tự huyễn hoặc bản thân.**
+
+---
+
+## 3. 🎨 HAI ĐỊNH DẠNG HÌNH ẢNH ÁP DỤNG CHO BỐ
 
 | Hồi | Thời Lượng | Mục Tiêu Tâm Lý | Kỹ Thuật Lời Thoại (Voiceover) | Mô Tả Thị Giác (Visual/B-roll) |
 | :---: | :---: | :--- | :--- | :--- |
