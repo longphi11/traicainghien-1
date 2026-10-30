@@ -70,12 +70,12 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
 * **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
 * **Ý nghĩa:** Tuyệt đối không đặt ở đầu bài. Hãy để người đọc trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước, sau đó nhận khối "Những Điểm Chính" như một món quà đúc kết hành động thực hành tinh gọn trước khi khép lại trang web.
 
-### 1.9. Tuyệt Đối Cấm Text Art & ASCII Diagram (Lệnh Đặc Biệt Của Bố)
-* **CẤM TUYỆT ĐỐI:** Không bao giờ thể hiện hình ảnh, biểu đồ, đồ thị hình chuông, sơ đồ phân nhánh dưới dạng khối ký tự văn bản / ASCII art (như `╭───╮`, `▲`, `│`, `└──►`, hay khối text code mô phỏng hình).
+### 1.9. Cấm Tuyệt Đối Hình Ảnh Dạng Ký Tự - Bắt Buộc Dùng Hình Ảnh Dạng Picture (Lệnh Của Bố)
+* **CẤM TUYỆT ĐỐI:** Tuyệt đối không bao giờ sử dụng hình ảnh dạng ký tự văn bản, khối code mô phỏng hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, sơ đồ vẽ bằng chữ) để minh họa trong bài viết.
 * **Lý do:** Giao diện web và thiết bị di động sẽ bẻ dòng, dồn các ký tự này thành một hàng chữ lộn xộn, xấu xí, tạo cảm giác tạm bợ và phá nát phong cách Zen Minimalist.
-* **Cách xử lý chuẩn mực:**
-  - Nếu là so sánh/dữ liệu: Dùng câu văn mạch lạc kết hợp các đầu dòng in đậm nổi bật (`* **Nhóm 1:** ...`), hoặc bảng Markdown chuẩn.
-  - Nếu là hình ảnh minh họa / đồ thị / infographic phức tạp: Báo ngay cho **Agent 8 (Visual Stylist)** để thiết kế ảnh đồ họa WebP chuẩn 16:9 sắc nét, đóng dấu watermark thương hiệu và chèn vào bài.
+* **BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE THẬT SỰ:**
+  - Mọi minh họa hình ảnh, sơ đồ quy trình, đồ thị, biểu đồ khoa học... **bắt buộc phải được xuất ra file hình ảnh thật sự dạng picture (WebP/PNG)**, lưu trữ trong thư mục `public/images/articles/` và chèn vào bài viết bằng cú pháp ảnh chuẩn `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
+  - Nếu là so sánh/dữ liệu dạng bảng: Dùng bảng Markdown chuẩn (`| Tiêu chí | Cột A | Cột B |`).
   - Chuẩn hóa Heading: Sử dụng `## ` cho H2, `### ` cho H3, `#### ` cho H4 (luôn có dòng trống phân cách) để hiển thị mượt mà trên website.
 
 ### 1.10. Cổng Kiểm Duyệt Chất Lượng Xuất Bản Của Mây & Bố (12 Tiêu Chí Vàng)

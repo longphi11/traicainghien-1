@@ -33,9 +33,9 @@ Agent 9 chịu trách nhiệm xây dựng, nuôi dưỡng và tự động hóa 
 
 ---
 
-## 📚 HỆ QUY CHIẾU 7 FANPAGE CHUẨN MỰC THAM KHẢO NỘI DUNG (BỐ CHỈ ĐỊNH)
+## 📚 HỆ QUY CHIẾU 8 FANPAGE CHUẨN MỰC THAM KHẢO NỘI DUNG (BỐ CHỈ ĐỊNH)
 
-Khi lên ý tưởng bài đăng, kịch bản Reels hay triển khai chiến dịch cộng đồng, Agent 9 luôn đối chiếu và học hỏi tinh hoa từ 7 trang chuẩn mực sau:
+Khi lên ý tưởng bài đăng, kịch bản Reels hay triển khai chiến dịch cộng đồng, Agent 9 luôn đối chiếu và học hỏi tinh hoa từ 8 trang chuẩn mực sau:
 
 1. **Khoa Học Hành Vi** ([facebook.com/Khoahochanhvi](https://www.facebook.com/Khoahochanhvi)):
    - *Học hỏi:* Bóc tách hành vi đời sống bằng các hiệu ứng tâm lý học & nhận thức, logic khoa học mạch lạc, phân tích chiều sâu.
@@ -51,6 +51,8 @@ Khi lên ý tưởng bài đăng, kịch bản Reels hay triển khai chiến d�
    - *Học hỏi:* Trích xuất tinh hoa từ sách tâm lý kinh điển, các câu trích dẫn (Quote) đắt giá khung giờ sáng (07h30) kích thích lượt chia sẻ và phản tư.
 7. **Tâm Lý Học Tuổi Trẻ** ([facebook.com/tamlyhoctuoitre](https://www.facebook.com/tamlyhoctuoitre)):
    - *Học hỏi:* Khơi gợi tương tác bằng câu hỏi mở và các bài trắc nghiệm tâm lý/hành vi, điều hướng khéo léo về phễu trắc nghiệm 25 câu hỏi của website.
+8. **Thuốc Giải Độc** ([facebook.com/thuocgiaidoc](https://www.facebook.com/thuocgiaidoc)):
+   - *Học hỏi:* Góc nhìn "giải độc tâm trí" (Mental Detox), vạch trần các ảo tưởng, bẫy tiện nghi và độc tố số (Digital Toxicity); cách đặt vấn đề sắc sảo, châm biếm sâu cay và đánh thức nhận thức tự thân.
 
 ---
 

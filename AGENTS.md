@@ -140,10 +140,10 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 * **Vị trí khối "Những Điểm Chính" (Key Takeaways):** 
   - **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
   - Tuyệt đối không đặt ở đầu bài, để độc giả trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước khi nhận bản đúc kết hành động thực hành.
-* **CẤM TUYỆT ĐỐI TEXT ART & VẼ HÌNH BẰNG TEXT (LỆNH ĐẶC BIỆT CỦA BỐ):**
-  - Tuyệt đối **KHÔNG BAO GIỜ** dùng ký tự văn bản / ASCII art (`╭───╮`, `▲`, `│`, `└──►`) để mô phỏng hình ảnh, biểu đồ, đồ thị hình chuông trong bài viết. Trên giao diện web và mobile, text art sẽ bị vỡ vụn layout, biến thành khối chữ rác mắt và phá hỏng mỹ cảm Zen Minimalist.
-  - Phải diễn đạt bằng lời văn khúc chiết, phân loại rõ bằng đầu dòng in đậm hoặc chuyển Agent 8 thiết kế hình ảnh Infographic WebP thật sự.
-  - Agent 5 có nhiệm vụ **QUÉT & REJECT NGAY LẬP TỨC** bất kỳ bài viết nào vi phạm quy tắc này!
+* **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE (LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **CẤM TUYỆT ĐỐI:** Tuyệt đối **KHÔNG BAO GIỜ** dùng hình ảnh dạng ký tự văn bản, khối text code mô phỏng hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, sơ đồ vẽ bằng chữ) để minh họa trong bài viết. Trên giao diện web và mobile, hình ảnh dạng ký tự sẽ bị bẻ dòng vỡ vụn layout, biến thành khối chữ rác mắt và phá hỏng hoàn toàn mỹ cảm Zen Minimalist.
+  - **BẮT BUỘC DÙNG HÌNH ẢNH PICTURE THẬT SỰ:** Mọi hình ảnh minh họa, biểu đồ khoa học, sơ đồ quy trình, đồ thị hình chuông... **bắt buộc phải sử dụng hình ảnh thật sự dạng picture (WebP/PNG)**, được thiết kế trực quan sắc nét, chuẩn phong cách Zen Minimalist, lưu trữ trong thư mục `public/images/articles/` và chèn vào bài bằng cú pháp hình ảnh chuẩn `![Tên hình ảnh](/images/articles/ten-hinh-anh.webp)`.
+  - **Cơ chế cưỡng chế:** Agent 5 (Kiểm toán trưởng) có nhiệm vụ **QUÉT & REJECT NGAY LẬP TỨC** bất kỳ bài viết nào vi phạm quy tắc này, bắt buộc Agent 8 xuất file ảnh picture thật sự rồi mới được duyệt xuất bản!
 * **Quy chuẩn Typography tiêu đề (Chống díu chữ):** Khoảng cách dòng thoáng đãng (`leading-[1.45] sm:leading-[1.48] md:leading-[1.5]`), không dùng khoảng cách co sát (`tracking-tight`) để đảm bảo các dấu thanh tiếng Việt (sắc, huyền, hỏi, ngã, nặng) không bao giờ bị dính sát vào nhau.
 * **Viết tập trung, không lan man:** Đi thẳng vào trọng tâm, không vòng vo tam quốc. Mỗi đề mục, mỗi câu chuyện, mỗi số liệu đều phải phục vụ trực tiếp cho chủ đề cốt lõi của bài viết, triệt tiêu mọi từ ngữ độn chữ sáo rỗng.
 * **Gần gũi, cụ thể, tuyệt đối không dùng từ trừu tượng:** Cấm tiệt các thuật ngữ mơ hồ, sáo rỗng (như *"nâng cao tầng số năng lượng"*, *"chuyển hóa tâm thức đỉnh cao"*, *"thức tỉnh tâm linh"*). Mọi khái niệm phải được neo đậu bằng hình ảnh cụ thể đời thường: ngón tay quẹt màn hình mỏi nhừ, bát phở 30k, tiếng quạt gió trong đêm, con trỏ chuột nhấp nháy trên trang giấy trắng.
@@ -522,7 +522,7 @@ flowchart TD
    - *Trách nhiệm:* Xây dựng và nuôi dưỡng cộng đồng Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**.
    - *Vận hành n8n:* Thiết lập luồng tự động lấy nội dung từ website trích dẫn câu nói chạm đáy tâm lý (7h30 sáng) và tự động biên tập video Reels faceless (19h30 tối) qua pipeline kết hợp mã nguồn mở (Edge-TTS, Pexels API, FFmpeg).
    - *Điều hướng & Kéo Traffic:* Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
-   - *Hệ quy chiếu 7 Fanpage chuẩn mực tham khảo (Bố chỉ định):* `Khoa Học Hành Vi`, `Tâm Lý Học Vỉa Hè PSY`, `The Present Writer`, `Monster Box`, `Spiderum`, `Trạm Đọc - Read Station`, `Tâm Lý Học Tuổi Trẻ`.
+   - *Hệ quy chiếu 8 Fanpage chuẩn mực tham khảo (Bố chỉ định):* `Khoa Học Hành Vi`, `Tâm Lý Học Vỉa Hè PSY`, `The Present Writer`, `Monster Box`, `Spiderum`, `Trạm Đọc - Read Station`, `Tâm Lý Học Tuổi Trẻ`, `Thuốc Giải Độc`.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành
 * Mây là **Tổng chỉ huy (Orchestrator)** trực tiếp nhận lệnh từ Bố và phân phối nhiệm vụ cho đúng Agent chuyên trách.

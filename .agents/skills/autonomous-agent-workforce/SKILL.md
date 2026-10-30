@@ -53,9 +53,9 @@ flowchart TD
   - Chuẩn mực 2.500 từ/bài, tập trung giải quyết 1 vấn đề, không lan man, không độn chữ.
   - **Tiêu đề chuẩn 2 dòng (50 - 62 ký tự):** Vừa khít card bên ngoài, không tràn dòng `...`, giật curiosity hook bằng hình ảnh đối nghịch hoặc nghịch lý lạ lẫm.
   - **Vị trí "Những Điểm Chính":** Bắt buộc đặt ở cuối cùng của bài viết, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*, không để ở đầu bài.
-  - **CẤM TUYỆT ĐỐI TEXT ART / ASCII DIAGRAM (LỆNH ĐẶC BIỆT CỦA BỐ):** 
-    - Tuyệt đối **KHÔNG BAO GIỜ** vẽ biểu đồ, đồ thị, sơ đồ phân nhánh hay minh họa hình ảnh dưới dạng khối text/ASCII ký tự (`╭───╮`, `▲`, `│`, `└──►`, v.v.). Trình duyệt web và thiết bị di động sẽ làm vỡ nát layout, biến thành một chuỗi ký tự hỗn độn, nhem nhuốc và phá nát hoàn toàn mỹ cảm Zen Minimalist.
-    - Khi cần trình bày mô hình hay so sánh: Phải diễn đạt bằng câu chữ mạch lạc, các gạch đầu dòng rõ ràng, bảng so sánh chuẩn; hoặc nếu cần đồ họa trực quan thì chuyển giao cho **Agent 8** thiết kế ảnh Infographic WebP độc bản chuyên nghiệp.
+  - **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE (LỆNH ĐẶC BIỆT CỦA BỐ):** 
+    - Tuyệt đối **KHÔNG BAO GIỜ** sử dụng hình ảnh dạng ký tự văn bản, khối code mô phỏng, hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, v.v.) để minh họa hình ảnh hay biểu đồ trong bài viết. Trình duyệt web và thiết bị di động sẽ làm vỡ nát layout, biến thành một chuỗi ký tự hỗn độn, nhem nhuốc và phá nát hoàn toàn mỹ cảm Zen Minimalist.
+    - **BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE THẬT SỰ:** Khi cần minh họa biểu đồ, đồ thị, sơ đồ phân nhánh hay so sánh trực quan, **bắt buộc phải xuất ra file hình ảnh thật sự dạng picture (WebP/PNG)** được thiết kế chuyên nghiệp, tối ưu dung lượng dưới 120KB, lưu trong `public/images/articles/` và chèn vào bài bằng thẻ Markdown ảnh `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
     - Tuân thủ cú pháp Heading chuẩn (`## ` cho H2, `### ` cho H3, `#### ` cho H4), luôn có dòng trống phía trước và sau tiêu đề để parser hiển thị chuẩn xác, không để lộ raw markdown.
   - Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic).
   - Cấm tiệt từ ngữ trừu tượng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*). Neo đậu bằng chi tiết đời thực (*màn hình lướt 2h sáng cay xè mắt, bát phở 30k*).
@@ -122,8 +122,8 @@ flowchart TD
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
 * **Sứ mệnh:** Người gác cổng khó tính nhất — phối hợp cùng **Mây (Tổng Biên Tập)** kiểm duyệt 100% nội dung, trình bày và hình ảnh theo **Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng** (`content-quality-standards`) trước khi cho phép xuất bản lên website.
 * **Tiêu chí kiểm duyệt bắt buộc (RED FLAGS - PHẢI YÊU CẦU SỬA NGAY):**
-  - **LỆNH CẤM TEXT ART CỦA BỐ (REJECT NGAY LẬP TỨC):** 
-    - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ đoạn text art, ASCII art, vẽ hình/đồ thị/sơ đồ bằng ký tự thô (`╭───╮`, `▲`, `│`, `└──►`) $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, tuyệt đối không duyệt!**
+  - **LỆNH CỦA BỐ: CẤM HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG ẢNH PICTURE THẬT (REJECT NGAY LẬP TỨC):** 
+    - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ hình ảnh nào được vẽ dưới dạng ký tự thô, khối text code hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`) $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, bắt buộc thay bằng file hình ảnh thật sự dạng picture (WebP/PNG), tuyệt đối không duyệt!**
     - Kiểm tra lỗi Markdown thô: Đảm bảo không bị sót các thẻ Heading (`#### `) trơ ra text ngoài trang hiển thị do thiếu dòng trắng hoặc sai cấu trúc.
   - **Đếm từ chính xác:** Bài viết có đạt tối thiểu 2.500 từ không?
   - **Tiêu đề chuẩn 2 dòng:** Ngắn gọn (50 - 62 ký tự), đủ tò mò, không bị cắt dấu `...` trên card.
@@ -207,7 +207,7 @@ flowchart TD
   - Vận hành luồng n8n tự động đăng bài trích dẫn chạm đáy tâm lý (07h30 sáng).
   - Vận hành pipeline n8n tự động biên tập và đăng video Reels faceless (19h30 tối) kết hợp Edge-TTS, Pexels API và FFmpeg.
   - Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
-  - **Hệ quy chiếu 7 Fanpage chuẩn mực săn ý tưởng & học hỏi định dạng (Bố chỉ định):**
+  - **Hệ quy chiếu 8 Fanpage chuẩn mực săn ý tưởng & học hỏi định dạng (Bố chỉ định):**
     1. `Khoa Học Hành Vi` (facebook.com/Khoahochanhvi): Bóc tách hiện tượng bằng hiệu ứng tâm lý học & nhận thức, tư duy khoa học logic.
     2. `Tâm Lý Học Vỉa Hè PSY` (facebook.com/tamlyhocviahepsy): Kịch bản Reels 60s viral, nhịp câu ngắn, voiceover trầm ấm, hook nỗi đau ngầm.
     3. `The Present Writer` (facebook.com/PresentWriter): Thói quen nguyên tử (Atomic Habits), làm việc sâu (Deep Work), mỹ cảm Zen Minimalist nhẹ nhàng.
@@ -215,6 +215,7 @@ flowchart TD
     5. `Spiderum` (facebook.com/Spiderum): Chân thực trần trụi (Radical Honesty), bóc trần brain fog, nghiện màn hình đêm và bệnh trì hoãn.
     6. `Trạm Đọc - Read Station` (facebook.com/tramdoc.vn): Trích xuất tinh hoa sách kinh điển, quote bài đăng sáng sâu sắc kích hoạt chia sẻ.
     7. `Tâm Lý Học Tuổi Trẻ` (facebook.com/tamlyhoctuoitre): Khơi gợi tương tác bằng câu hỏi mở & trắc nghiệm hành vi dẫn vào phễu 25 câu.
+    8. `Thuốc Giải Độc` (facebook.com/thuocgiaidoc): Góc nhìn "giải độc tâm trí" (Mental Detox), vạch trần bẫy ảo tưởng, độc tố số và thức tỉnh nhận thức tự thân.
 * **Đầu vào (Input):** Nội dung bài viết từ Agent 1, kịch bản từ Agent 2, ảnh quote từ Agent 8.
 * **Đầu ra (Output):** Các bài post tương tác cao và video Reels được tự động xuất bản đều đặn trên Fanpage.
 * **CỔNG KIỂM DUYỆT BẮT BUỘC TRƯỚC KHI LIVE (MÂY & AGENT 5 GÁC CỔNG):**

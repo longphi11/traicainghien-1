@@ -58,10 +58,10 @@ flowchart TD
 5. **Giữ chân High-Retention & Open Loops:** Nhịp câu biến hóa, liên tục đặt câu hỏi lửng thôi thúc đọc hết bài.
 6. **Tiêu đề chuẩn 2 dòng (50 – 62 ký tự):** Giật curiosity hook, vừa khít thẻ card bài viết ngoài trang chủ, **tuyệt đối không bị tràn dòng hay cắt cụt dấu ba chấm `...`**.
 7. **Khối "Những Điểm Chính" (Key Takeaways) ở CUỐI BÀI:** Bắt buộc đặt sau mục *Lời nhắn gửi từ Trại Cai Nghiện*, cấm đặt đầu bài.
-8. **CẤM TUYỆT ĐỐI TEXT ART & ASCII DIAGRAM (LỆNH ĐẶC BIỆT CỦA BỐ):**
-   - Nghiêm cấm ký tự thô (`╭───╮`, `▲`, `│`, `└──►`) hoặc vẽ hình/đồ thị bằng text.
-   - Bắt buộc diễn đạt bằng câu chữ mạch lạc, phân loại gạch đầu dòng in đậm, hoặc chuyển Agent 8 thiết kế hình ảnh thật.
-   - **Agent 5 quét thấy là REJECT NGAY LẬP TỨC.**
+8. **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG ẢNH PICTURE THẬT (LỆNH ĐẶC BIỆT CỦA BỐ):**
+   - Tuyệt đối nghiêm cấm ký tự thô (`╭───╮`, `▲`, `│`, `└──►`), khối text code mô phỏng hoặc vẽ hình/đồ thị minh họa bằng text.
+   - **Bắt buộc dùng hình ảnh dạng picture thật sự (WebP/PNG):** Mọi biểu đồ, đồ thị, sơ đồ phân nhánh hay minh họa số liệu đều phải là file hình ảnh thật sự, được lưu tại `public/images/articles/` và nhúng bằng thẻ ảnh `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
+   - **Agent 5 quét thấy bất kỳ hình ảnh nào vẽ bằng ký tự là REJECT NGAY LẬP TỨC.**
 9. **Định dạng Markdown dễ thở:** Mỗi đoạn tối đa 2–4 câu. Cú pháp Heading chuẩn (`## ` H2, `### ` H3, `#### ` H4) luôn có dòng trống phân cách.
 10. **Mỹ cảm Zen Minimalist:** Nội dung toát lên sự tĩnh lặng, sâu sắc, chữa lành.
 11. **Hình ảnh & SEO:** Thumbnail WebP 16:9 dưới 120KB, có Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file chuẩn SEO và thẻ Alt Text đầy đủ.
