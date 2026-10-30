@@ -140,6 +140,10 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 * **Vị trí khối "Những Điểm Chính" (Key Takeaways):** 
   - **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
   - Tuyệt đối không đặt ở đầu bài, để độc giả trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước khi nhận bản đúc kết hành động thực hành.
+* **CẤM TUYỆT ĐỐI TEXT ART & VẼ HÌNH BẰNG TEXT (LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - Tuyệt đối **KHÔNG BAO GIỜ** dùng ký tự văn bản / ASCII art (`╭───╮`, `▲`, `│`, `└──►`) để mô phỏng hình ảnh, biểu đồ, đồ thị hình chuông trong bài viết. Trên giao diện web và mobile, text art sẽ bị vỡ vụn layout, biến thành khối chữ rác mắt và phá hỏng mỹ cảm Zen Minimalist.
+  - Phải diễn đạt bằng lời văn khúc chiết, phân loại rõ bằng đầu dòng in đậm hoặc chuyển Agent 8 thiết kế hình ảnh Infographic WebP thật sự.
+  - Agent 5 có nhiệm vụ **QUÉT & REJECT NGAY LẬP TỨC** bất kỳ bài viết nào vi phạm quy tắc này!
 * **Quy chuẩn Typography tiêu đề (Chống díu chữ):** Khoảng cách dòng thoáng đãng (`leading-[1.45] sm:leading-[1.48] md:leading-[1.5]`), không dùng khoảng cách co sát (`tracking-tight`) để đảm bảo các dấu thanh tiếng Việt (sắc, huyền, hỏi, ngã, nặng) không bao giờ bị dính sát vào nhau.
 * **Viết tập trung, không lan man:** Đi thẳng vào trọng tâm, không vòng vo tam quốc. Mỗi đề mục, mỗi câu chuyện, mỗi số liệu đều phải phục vụ trực tiếp cho chủ đề cốt lõi của bài viết, triệt tiêu mọi từ ngữ độn chữ sáo rỗng.
 * **Gần gũi, cụ thể, tuyệt đối không dùng từ trừu tượng:** Cấm tiệt các thuật ngữ mơ hồ, sáo rỗng (như *"nâng cao tầng số năng lượng"*, *"chuyển hóa tâm thức đỉnh cao"*, *"thức tỉnh tâm linh"*). Mọi khái niệm phải được neo đậu bằng hình ảnh cụ thể đời thường: ngón tay quẹt màn hình mỏi nhừ, bát phở 30k, tiếng quạt gió trong đêm, con trỏ chuột nhấp nháy trên trang giấy trắng.
@@ -440,7 +444,7 @@ flowchart TD
 ### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 9 Agent
 1. **Agent 1: Deep Content Writer (Cây Viết Chuyên Sâu)**
    - *Trách nhiệm:* Viết bài chuyên sâu chuẩn mực **2.500 từ**, review sách tâm lý học kinh điển.
-   - *Chuẩn mực:* Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic), không dùng từ trừu tượng, tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến cùng.
+   - *Chuẩn mực:* Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic), không dùng từ trừu tượng, tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến cùng. **Tuyệt đối cấm dùng text-art/ASCII art để vẽ biểu đồ hay mô phỏng hình ảnh.**
 2. **Agent 2: Short-Form Viral Creator (Biên Kịch Video Ngắn Faceless)**
    - *Trách nhiệm:* Bẻ nhỏ bài viết 2.500 từ thành kịch bản video ngắn 60 - 90 giây cho TikTok, Shorts, Reels.
    - *Chuẩn mực:* Giật Hook 3 giây đầu đánh trúng nỗi đau, tối ưu ngắt nghỉ cho giọng đọc AI (TTS), kèm prompt mô tả cảnh B-roll Zen Minimalist không lộ mặt.
@@ -448,8 +452,8 @@ flowchart TD
    - *Trách nhiệm:* Thiết kế bài trắc nghiệm nhận diện 25 câu hỏi, đóng gói sản phẩm vi mô (49k - 149k) và Core Offer (390k - 490k), soạn chuỗi Email Sequence 5 ngày nuôi dưỡng lead.
 4. **Agent 4: Tech & Automation Engineer (Kỹ Sư Hệ Thống)**
    - *Trách nhiệm:* Code Next.js, quản trị SEO Technical, kích hoạt Google Indexing API (`npm run seo:index`) ép Googlebot cào bài mới trong 24h, theo dõi Google Search Console & Google Analytics (`npm run seo:report`), tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
-5. **Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng)**
-   - *Trách nhiệm:* Người gác cổng chất lượng: Đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát tiêu chuẩn SEO On-page (từ khóa trong title, slug, H2, meta description, thẻ alt ảnh 16:9), soát liên kết nội bộ giảm Bounce Rate trên Google Analytics, và nút CTA trắc nghiệm.
+5. **Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng & Kiểm Duyệt)**
+   - *Trách nhiệm:* Người gác cổng chất lượng: **Quét và từ chối duyệt ngay lập tức (bắt sửa ngay) nếu phát hiện text art / ASCII art vẽ hình hoặc lỗi markdown thô**; đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát tiêu chuẩn SEO On-page (từ khóa trong title, slug, H2, meta description, thẻ alt ảnh 16:9), soát liên kết nội bộ giảm Bounce Rate trên Google Analytics, và nút CTA trắc nghiệm.
 6. **Agent 6: Monetization Scout & Trend Hunter (Săn Trend & Mô Hình Đóng Gói / Affiliate)**
    - *Trách nhiệm:* Liên tục săn tìm các mô hình sản phẩm số đóng gói viral trên Gumroad, Etsy, Substack, TikTok Shop và lọc các deal Affiliate béo bở (sách tâm lý, app hỗ trợ cai nghiện như Opal/Forest, đồ dùng phong cách sống tối giản).
    - *Hệ quy chiếu 8 kênh chuẩn mực bắt buộc để săn trend & khai thác ý tưởng (Bố chỉ định):*
