@@ -68,7 +68,20 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
 * Nhóm **4** là đối tượng trung thành và sẵn sàng chi trả nhất cho các giải pháp chuyên sâu (Core Offers).
 
 ### 2.4. 🎨 Quy Chuẩn Mỹ Cảm & Phong Cách Hình Ảnh (Visual & Aesthetic Identity)
-* **Phong cách chủ đạo:** **Zen Minimalist (Tĩnh lặng & Mộc mạc Á Đông)**. Cảm giác như bước vào một ngôi nhà gỗ giữa rừng, tách biệt hoàn toàn khỏi sự kích thích ồn ào của thế giới bên ngoài.
+* **Trường phái hội họa cốt lõi:** **Zen Watercolor & Vintage Ink Wash on Textured Paper**  
+  *(Tranh vẽ tay Màu nước Thủy mặc & Nét viền mực than mộc mạc trên nền giấy sần có hạt grain)*. Cùng ngôn ngữ thị giác với bài *"Bẫy Tích Lũy Kiến Thức"* và video Viktor Frankl của *Podcast Trung Niên Học Triết*.
+* **Tệp độc giả mục tiêu:** Người trẻ trưởng thành **18 – 35 tuổi** (Gen Z & Millennial trẻ).
+* **Cảm xúc tối thượng:** Sâu lắng, mộc mạc, tĩnh tại, như một thứ gì đó từ sâu thẳm bên trong đang nói ra.
+* **Ba Nguyên Tắc Hội Họa Bất Di Bất Dịch:**
+  1. **Chất liệu vẽ tay mộc mạc:** Bắt buộc có nét viền mực than xước nhẹ (`#2D312E`), vệt loang màu nước tự nhiên thấm vào thớ giấy, ánh sáng vàng ấm đất nung (`#C27D53`) và xanh rêu rừng (`#3A5A40`). Tuyệt đối **CẤM** phong cách hoạt hình 2D vector phẳng lỳ, cấm 3D CGI bóng bẩy, cấm màu neon lòe loẹt.
+  2. **Bối cảnh Đương đại & Thiên nhiên gần gũi (TUYỆT ĐỐI KHÔNG CỔ TRANG, KHÔNG GIÀ NUA, KHÔNG KHÔNG GIAN NHẬT BẢN THỜI XƯA):**
+     - Đưa vào không gian sống thực tế của người trẻ 18 - 35: Căn hộ chung cư/phòng trọ hiện đại, khung cửa kính nhìn ra toàn cảnh thành phố đêm lung linh ánh đèn, góc bàn làm việc gỗ sáng màu có laptop, quán cà phê phố thị chiều muộn, ban công lộng gió, bến xe buýt, hoặc lối mòn đồi thông/bờ suối thiên nhiên tiếp đất (*Grounding*).
+     - Tuyệt đối không vẽ căn chòi thời xưa, không phong cách cung đình, không thầy đồ nho hay thư phòng Nhật Bản cổ lỗ sĩ già dặn.
+  3. **Hình tượng nhân vật trẻ trung, có gu:** Chàng trai / cô gái trẻ (20 - 30 tuổi), trang phục đời thường mộc mạc (áo len be, áo thun dài tay, hoodie), toát lên vẻ điềm tĩnh, tự do, đang lắng nghe chính mình giữa lòng đô thị.
+* **Quy Trình Bóc Tách "Lát Cắt Đời Thực" Sát Nội Dung Bài Viết (The Living Scene):**
+  - **Bước 1 (Đọc sâu nội dung):** Tìm đúng khoảnh khắc đời thực đắt giá nhất mà bài viết miêu tả (ví dụ: bài về Deep Work -> góc bàn làm việc nhìn ra thành phố đêm với laptop đóng gọn và trang sổ viết tay; bài về sạc 2m -> chiếc điện thoại úp mặt trên bàn cách giường 2m trong bóng đêm dịu).
+  - **Bước 2 (Chuyển thể thành prompt chuẩn):** Kết hợp cảnh tượng đời thực đó với chất liệu Màu nước Thủy mặc & Viền mực than trên giấy sần.
+  - **Bước 3 (Đóng watermark & nén WebP):** Chuẩn tỷ lệ 16:9 (`1200x675px`), nén WebP dưới 150KB và đóng watermark mờ góc phải: `🌿 TRẠI CAI NGHIỆN`.
 * **Bảng màu nhận diện chính thức:**
   * `Xanh Rêu Rừng (#3A5A40)`: Màu chủ đạo đại diện cho sự hồi sinh, kiên nhẫn, điềm tĩnh và sinh mệnh tự nhiên.
   * `Be Ấm / Giấy Mộc (#FAF7F2, #E6E1D8)`: Màu nền dịu mắt, ấm cúng như một trang sách cổ điển, chống mỏi mắt cho người đọc đêm.
