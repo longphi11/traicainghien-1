@@ -26,12 +26,15 @@ console.log("🛡️ [MÂY & AGENT 5] ĐANG KHỞI CHẠY KIỂM TOÁN TẤT C�
 
 let hasErrors = false;
 
-// 1. Kiểm tra Text Art / ASCII Diagram / Mermaid / LaTeX
+// 1. Kiểm tra Text Art / ASCII Diagram / Mermaid / LaTeX / Code blocks
 const forbiddenPatterns = [
   { name: 'Khối mã Mermaid', regex: /```mermaid/i },
+  { name: 'Khối mã code (```)', regex: /```/ },
   { name: 'Ký tự mũi tên LaTeX ($\\rightarrow$)', regex: /\$\\rightarrow\$/ },
   { name: 'Công thức toán LaTeX ($$...$$)', regex: /\$\$.*?\$\$/ },
-  { name: 'ASCII Art / Text diagram', regex: /[▲▼│╭╮╰╯─┌┐└┘├┤┬┴┼]/ }
+  { name: 'Công thức toán LaTeX inline ($...$)', regex: /\$[a-zA-Z0-9\^_\\\{\}\+\-\*\/=]{2,}\$/ },
+  { name: 'Ký tự lỗi font / glyph rỗng (□)', regex: /□/ },
+  { name: 'ASCII Art / Text diagram', regex: /[▲▼│╭╮╰╯─┌┐└┘├┤┬┴┼►]/ }
 ];
 
 for (const fp of forbiddenPatterns) {
