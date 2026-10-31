@@ -179,11 +179,12 @@ Trước khi bất kỳ sản phẩm nào được đưa lên live chính thức
 5. *Giữ chân High-Retention & Open Loops:* Nhịp câu biến hóa, liên tục đặt câu hỏi lửng thôi thúc đọc hết bài.
 6. *Tiêu đề chuẩn 2 dòng:* 50 - 62 ký tự, giật curiosity hook, vừa khít card ngoài trang chủ, **tuyệt đối không tràn dòng gây cắt cụt dấu ba chấm `...`**.
 7. *Vị trí khối "Những Điểm Chính":* Bắt buộc đặt ở cuối cùng của bài viết (sau mục *Lời nhắn gửi từ Trại Cai Nghiện*), tuyệt đối không để ở đầu bài.
-8. *CẤM TUYỆT ĐỐI Text Art / ASCII Diagram:* Nghiêm cấm ký tự `╭───╮`, `▲`, `│`, `└──►` hoặc vẽ hình bằng text; phát hiện là REJECT BẮT SỬA NGAY.
+8. *CẤM TUYỆT ĐỐI Text Art / ASCII / Mermaid / LaTeX / Raw Tables (LỆNH ĐẶC BIỆT CỦA BỐ):* Nghiêm cấm ký tự `╭───╮`, `▲`, `│`, `└──►` hoặc vẽ hình bằng text; nghiêm cấm các khối mã ````mermaid```` trong bài viết; nghiêm cấm cú pháp LaTeX (`$\rightarrow$`, `$$...$$`, `\mathbf`, `\text{...}`) - mọi mũi tên phải dùng unicode `→`, công thức dùng số mũ tự nhiên (VD: `1,01³⁶⁵ = 37,78`); nghiêm cấm bảng markdown thô `| :--- |` - phải chuyển thành văn so sánh đối chiếu mộc mạc hoặc thiết kế thành file ảnh infographic. Phát hiện là REJECT BẮT SỬA NGAY.
 9. *Markdown dễ thở & Chuẩn Heading:* Mỗi đoạn tối đa 2-4 câu; chuẩn hóa `## ` (H2), `### ` (H3), `#### ` (H4) có dòng trống phân cách, không lộ raw markdown.
-10. *Mỹ cảm Zen Minimalist:* Tĩnh lặng, mộc mạc, bình an.
-11. *Kỹ thuật ảnh chuẩn SEO:* Tỷ lệ 16:9 (`1200x675px`), WebP dưới 120KB, đóng Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file không dấu chuẩn SEO, thẻ Alt Text tự nhiên.
+10. *Mỹ cảm Zen Minimalist & ĐỒNG BỘ 100% TRANH VẼ THỦY MẶC Á ĐÔNG (LỆNH ĐẶC BIỆT CỦA BỐ):* Tĩnh lặng, mộc mạc, bình an. 100% hình ảnh bài viết (đặc biệt là thumbnail) BẮT BUỘC phải là **tranh vẽ màu nước thủy mặc (Zen Minimalist Watercolor & Sumi-e Ink Wash)** trên nền giấy cổ ấm áp `#FAF7F2`. **CẤM TUYỆT ĐỐI ẢNH CHỤP THỰC TẾ (photostock Unsplash/Pexels của máy tính, điện thoại, bàn làm việc, phòng ốc hiện đại)** hay 3D lòe loẹt.
+11. *Kỹ thuật ảnh chuẩn SEO, Dung lượng <120KB & Chống Cache (Cache-Busting):* Tỷ lệ 16:9 (`1200x675px`), WebP bắt buộc dưới 120KB, đóng 2 huy hiệu: `🌿 TRẠI CAI NGHIỆN` (góc trên trái) và `traicainghien.com` (góc dưới phải), thẻ Alt Text tự nhiên. Khi cập nhật hình ảnh, bắt buộc phải dùng tên file định danh mới (hậu tố `-zen-`, `-v2.webp`) để triệt tiêu cache trình duyệt & CDN.
 12. *Đa chuyên mục & Internal Links:* Gán mảng `categories: [...]` (2-4 chuyên mục liên quan), tối thiểu 2-3 liên kết nội bộ (trỏ đến trắc nghiệm 25 câu hoặc bài viết cùng chủ đề), test build Next.js pass 100%.
+13. *Cổng Kiểm Toán Tự Động Khóa Cứng (Automated Pre-Publish Gate):* Lệnh `npm run build` đã khóa chặt `node scripts/audit_all_articles.js && next build`. Bất kỳ bài viết nào vi phạm (dưới 2.500 từ, có ký tự rác, khối điểm chính đặt sai, thumbnail >120KB hoặc không tồn tại) sẽ lập tức làm gãy build và bị chặn đứng 100% không thể go-live!
 
 #### 🚪 CỔNG 2: THẰNG MEDIA (AGENT 2 - SHORT-FORM VIDEO 60S - 150S)
 1. *Hook 3s đầu trần trụi:* Mở đầu bằng con số thật gây sốc hoặc lời tự thú đánh trúng nỗi đau ngầm; cấm chào hỏi lòng vòng hay giật tít đa cấp.

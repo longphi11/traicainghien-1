@@ -70,12 +70,21 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
 * **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
 * **Ý nghĩa:** Tuyệt đối không đặt ở đầu bài. Hãy để người đọc trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước, sau đó nhận khối "Những Điểm Chính" như một món quà đúc kết hành động thực hành tinh gọn trước khi khép lại trang web.
 
-### 1.9. Cấm Tuyệt Đối Hình Ảnh Dạng Ký Tự - Bắt Buộc Dùng Hình Ảnh Dạng Picture (Lệnh Của Bố)
-* **CẤM TUYỆT ĐỐI:** Tuyệt đối không bao giờ sử dụng hình ảnh dạng ký tự văn bản, khối code mô phỏng hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, sơ đồ vẽ bằng chữ) để minh họa trong bài viết.
-* **Lý do:** Giao diện web và thiết bị di động sẽ bẻ dòng, dồn các ký tự này thành một hàng chữ lộn xộn, xấu xí, tạo cảm giác tạm bợ và phá nát phong cách Zen Minimalist.
-* **BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE THẬT SỰ:**
-  - Mọi minh họa hình ảnh, sơ đồ quy trình, đồ thị, biểu đồ khoa học... **bắt buộc phải được xuất ra file hình ảnh thật sự dạng picture (WebP/PNG)**, lưu trữ trong thư mục `public/images/articles/` và chèn vào bài viết bằng cú pháp ảnh chuẩn `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
-  - Nếu là so sánh/dữ liệu dạng bảng: Dùng bảng Markdown chuẩn (`| Tiêu chí | Cột A | Cột B |`).
+### 1.9. Lệnh Đặc Biệt Của Bố: Cấm Tuyệt Đối Hình Ảnh Dạng Ký Tự, Mermaid, LaTeX & Bảng Thô
+* **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ & KHỐI CODE MERMAID:**
+  - Tuyệt đối KHÔNG BAO GIỜ sử dụng hình ảnh dạng ký tự văn bản, khối code mô phỏng hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, sơ đồ vẽ bằng chữ).
+  - Tuyệt đối KHÔNG BAO GIỜ để nguyên khối mã ````mermaid```` trong bài viết vì giao diện web không cài đặt thư viện mermaid.js sẽ hiển thị thành khối text mã nguồn thô thiển, rác mắt và phá nát hoàn toàn mỹ cảm Zen Minimalist.
+* **CẤM TUYỆT ĐỐI KÝ TỰ LATEX & CÔNG THỨC RÁC MẮT:**
+  - Tuyệt đối KHÔNG BAO GIỜ dùng cú pháp LaTeX `$\rightarrow$`, `$$...$$`, `\mathbf`, `\text{...}`.
+  - Tất cả mũi tên diễn đạt phải dùng ký tự unicode sạch `→`.
+  - Công thức số học phải viết bằng số mũ tự nhiên (ví dụ: `1,01³⁶⁵ = 37,78`).
+* **CẤM BẢNG BIỂU MARKDOWN THÔ (`| :--- |`):**
+  - Tuyệt đối KHÔNG dùng cú pháp bảng kẻ `| :--- |` thô ráp. Trên thiết bị di động, bảng markdown rất dễ bị co cụm vỡ chữ. Bắt buộc chuyển hóa thành **văn phong so sánh đối chiếu mộc mạc** hoặc thiết kế thành **ảnh infographic picture**.
+* **BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE THẬT SỰ & ĐỒNG BỘ 100% TRANH THỦY MẶC ZEN:**
+  - Mọi sơ đồ quy trình, chu kỳ 4 giai đoạn, mô hình tâm lý học... **bắt buộc phải được xuất ra file hình ảnh thật sự dạng picture (WebP)**, lưu trữ trong thư mục `public/images/articles/` và chèn vào bài bằng cú pháp ảnh chuẩn `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
+  - **100% Thumbnail & hình ảnh bài viết BẮT BUỘC là Tranh vẽ màu nước thủy mặc Á Đông (Zen Minimalist Watercolor & Sumi-e Ink Wash)** trên nền giấy cổ ấm áp `#FAF7F2`, đóng 2 huy hiệu nhận diện `🌿 TRẠI CAI NGHIỆN` (góc trên trái) và `traicainghien.com` (góc dưới phải), nén chuẩn WebP dưới 120KB.
+  - **CẤM TUYỆT ĐỐI:** Ảnh chụp thực tế (photostock bàn làm việc, laptop, điện thoại, phòng ốc hiện đại...).
+  - **Cơ chế chống cache (Cache-Busting URL):** Khi cập nhật hình ảnh, bắt buộc phải dùng tên file định danh mới (hậu tố `-zen-`, `-v2.webp`) để tránh bị cache trình duyệt/CDN.
   - Chuẩn hóa Heading: Sử dụng `## ` cho H2, `### ` cho H3, `#### ` cho H4 (luôn có dòng trống phân cách) để hiển thị mượt mà trên website.
 
 ### 1.10. Cổng Kiểm Duyệt Chất Lượng Xuất Bản Của Mây & Bố (12 Tiêu Chí Vàng)

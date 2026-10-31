@@ -53,8 +53,11 @@ flowchart TD
   - Chuẩn mực 2.500 từ/bài, tập trung giải quyết 1 vấn đề, không lan man, không độn chữ.
   - **Tiêu đề chuẩn 2 dòng (50 - 62 ký tự):** Vừa khít card bên ngoài, không tràn dòng `...`, giật curiosity hook bằng hình ảnh đối nghịch hoặc nghịch lý lạ lẫm.
   - **Vị trí "Những Điểm Chính":** Bắt buộc đặt ở cuối cùng của bài viết, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*, không để ở đầu bài.
-  - **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE (LỆNH ĐẶC BIỆT CỦA BỐ):** 
-    - Tuyệt đối **KHÔNG BAO GIỜ** sử dụng hình ảnh dạng ký tự văn bản, khối code mô phỏng, hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, v.v.) để minh họa hình ảnh hay biểu đồ trong bài viết. Trình duyệt web và thiết bị di động sẽ làm vỡ nát layout, biến thành một chuỗi ký tự hỗn độn, nhem nhuốc và phá nát hoàn toàn mỹ cảm Zen Minimalist.
+  - **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ, MERMAID, LATEX & BẢNG THÔ (LỆNH ĐẶC BIỆT CỦA BỐ):** 
+    - Tuyệt đối **KHÔNG BAO GIỜ** sử dụng hình ảnh dạng ký tự văn bản, khối code mô phỏng, hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`, v.v.) để minh họa hình ảnh hay biểu đồ trong bài viết.
+    - Tuyệt đối **KHÔNG BAO GIỜ** để khối mã ````mermaid```` trong bài viết.
+    - Tuyệt đối **KHÔNG BAO GIỜ** dùng cú pháp LaTeX `$\rightarrow$`, `$$...$$`, `\mathbf`, `\text{...}` (dùng unicode `→` và số mũ tự nhiên).
+    - Tuyệt đối **KHÔNG BAO GIỜ** dùng bảng markdown thô `| :--- |` (chuyển thành văn phong so sánh đối chiếu mộc mạc hoặc thiết kế thành infographic hình ảnh).
     - **BẮT BUỘC DÙNG HÌNH ẢNH DẠNG PICTURE THẬT SỰ:** Khi cần minh họa biểu đồ, đồ thị, sơ đồ phân nhánh hay so sánh trực quan, **bắt buộc phải xuất ra file hình ảnh thật sự dạng picture (WebP/PNG)** được thiết kế chuyên nghiệp, tối ưu dung lượng dưới 120KB, lưu trong `public/images/articles/` và chèn vào bài bằng thẻ Markdown ảnh `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
     - Tuân thủ cú pháp Heading chuẩn (`## ` cho H2, `### ` cho H3, `#### ` cho H4), luôn có dòng trống phía trước và sau tiêu đề để parser hiển thị chuẩn xác, không để lộ raw markdown.
   - Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic).
