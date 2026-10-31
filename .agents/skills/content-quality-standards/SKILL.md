@@ -58,10 +58,11 @@ flowchart TD
 5. **Giữ chân High-Retention & Open Loops:** Nhịp câu biến hóa, liên tục đặt câu hỏi lửng thôi thúc đọc hết bài.
 6. **Tiêu đề chuẩn 2 dòng (50 – 62 ký tự):** Giật curiosity hook, vừa khít thẻ card bài viết ngoài trang chủ, **tuyệt đối không bị tràn dòng hay cắt cụt dấu ba chấm `...`**.
 7. **Khối "Những Điểm Chính" (Key Takeaways) ở CUỐI BÀI:** Bắt buộc đặt sau mục *Lời nhắn gửi từ Trại Cai Nghiện*, cấm đặt đầu bài.
-8. **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG ẢNH PICTURE THẬT (LỆNH ĐẶC BIỆT CỦA BỐ):**
+8. **CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ & BẢNG KÝ TỰ RÁC MẮT (LỆNH ĐẶC BIỆT CỦA BỐ):**
    - Tuyệt đối nghiêm cấm ký tự thô (`╭───╮`, `▲`, `│`, `└──►`), khối text code mô phỏng hoặc vẽ hình/đồ thị minh họa bằng text.
+   - **Tuyệt đối không chèn cú pháp bảng markdown thô (`| :--- | :--- |`):** Tránh việc vỡ vụn layout và hiện mớ ký tự pipe `|` gây khó hiểu, rác mắt cho người đọc. Bắt buộc so sánh bằng văn phong mượt mà, gạch đầu dòng in đậm rõ ràng.
    - **Bắt buộc dùng hình ảnh dạng picture thật sự (WebP/PNG):** Mọi biểu đồ, đồ thị, sơ đồ phân nhánh hay minh họa số liệu đều phải là file hình ảnh thật sự, được lưu tại `public/images/articles/` và nhúng bằng thẻ ảnh `![Tên hình ảnh](/images/articles/ten-anh.webp)`.
-   - **Agent 5 quét thấy bất kỳ hình ảnh nào vẽ bằng ký tự là REJECT NGAY LẬP TỨC.**
+   - **Agent 5 quét thấy bất kỳ hình ảnh nào vẽ bằng ký tự hoặc bảng ký tự thô là REJECT NGAY LẬP TỨC.**
 9. **Định dạng Markdown dễ thở:** Mỗi đoạn tối đa 2–4 câu. Cú pháp Heading chuẩn (`## ` H2, `### ` H3, `#### ` H4) luôn có dòng trống phân cách.
 10. **Mỹ cảm Zen Minimalist:** Nội dung toát lên sự tĩnh lặng, sâu sắc, chữa lành.
 11. **Hình ảnh & SEO:** Thumbnail WebP 16:9 dưới 120KB, có Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file chuẩn SEO và thẻ Alt Text đầy đủ.
@@ -102,7 +103,8 @@ flowchart TD
 *(Kiểm tra toàn bộ hình ảnh website, thumbnail video, infographic và ảnh quote)*
 
 ### 6 Tiêu Chí Bắt Buộc Của Cổng Visual:
-1. **Bản sắc thị giác Zen Minimalist Á Đông:**
+1. **Bản sắc thị giác Zen Minimalist Á Đông (BẮT BUỘC DẠNG TRANH VẼ ĐỒNG BỘ - LỆNH CỦA BỐ):**
+   * **100% THUMBNAIL PHẢI LÀ TRANH VẼ MINH HỌA (ILLUSTRATION):** Tuyệt đối **CẤM DÙNG ẢNH CHỤP THỰC TẾ (REALISTIC PHOTOGRAPH)**. Toàn bộ ảnh đại diện bài viết bắt buộc phải là tranh vẽ theo phong cách **Màu Nước & Thủy Mặc Zen Minimalist (Zen Watercolor & Ink Wash)** để đồng bộ tuyệt đối với toàn bộ kho bài viết của Trại Cai Nghiện.
    * Bảng màu chuẩn mực nhận diện:
      * `Xanh Rêu Rừng (#3A5A40)`: Tĩnh lặng, hồi sinh.
      * `Be Ấm / Giấy Mộc (#FAF7F2, #E6E1D8)`: Màu nền dịu mắt, ấm áp như trang sách.
@@ -122,9 +124,9 @@ flowchart TD
 5. **Quy chuẩn SEO Tên File & Thẻ Alt:**
    * Tên file không dấu, ngăn cách bằng dấu gạch ngang, chứa từ khóa chính + thương hiệu (Ví dụ: `cai-nghien-dien-thoai-trai-cai-nghien.webp`).
    * Thẻ Alt Text tự nhiên mô tả đúng nội dung ảnh và chứa từ khóa.
-6. **Typography trên ảnh (nếu có chữ):**
-   * Tối đa 5–7 chữ trên một ảnh, không nhồi nhét chữ làm rối mắt.
-   * Font chữ có chân cổ điển hoặc sans-serif tối giản, khoảng cách chữ thoáng đãng, không díu dấu tiếng Việt.
+6. **Typography & Thiết kế Infographic (CHỈN CHU, KHÔNG TRÀN CHỮ - LỆNH CỦA BỐ):**
+   * Mọi sơ đồ, Infographic hoặc box nội dung phải được căn lề hoàn hảo: **Tuyệt đối không để chữ tràn ra ngoài viền box**, không đè chữ lên nhau, ngắt dòng thông minh theo cụm từ.
+   * Font chữ thanh lịch, khoảng cách chữ và dòng thoáng đãng, dễ đọc rõ nét trên điện thoại.
 
 ---
 
