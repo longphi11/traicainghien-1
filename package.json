@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "audit:articles": "node scripts/audit_all_articles.js",
+    "build": "node scripts/audit_all_articles.js && next build",
     "start": "next start",
     "lint": "next lint",
     "seo:index": "node scripts/google_indexer.js",
