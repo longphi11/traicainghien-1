@@ -125,14 +125,16 @@ flowchart TD
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
 * **Sứ mệnh:** Người gác cổng khó tính nhất — phối hợp cùng **Mây (Tổng Biên Tập)** kiểm duyệt 100% nội dung, trình bày và hình ảnh theo **Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng** (`content-quality-standards`) trước khi cho phép xuất bản lên website.
 * **Tiêu chí kiểm duyệt bắt buộc (RED FLAGS - PHẢI YÊU CẦU SỬA NGAY):**
-  - **LỆNH CỦA BỐ: CẤM HÌNH ẢNH DẠNG KÝ TỰ - BẮT BUỘC DÙNG ẢNH PICTURE THẬT (REJECT NGAY LẬP TỨC):** 
-    - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ hình ảnh nào được vẽ dưới dạng ký tự thô, khối text code hay ASCII art (`╭───╮`, `▲`, `│`, `└──►`) $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, bắt buộc thay bằng file hình ảnh thật sự dạng picture (WebP/PNG), tuyệt đối không duyệt!**
+  - **LỆNH CỦA BỐ: CẤM HÌNH ẢNH DẠNG KÝ TỰ, MERMAID, LATEX, BẢNG THÔ & ẢNH CHỤP THỰC TẾ (REJECT NGAY LẬP TỨC):** 
+    - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ hình ảnh nào được vẽ dưới dạng ký tự thô, khối text code, ASCII art (`╭───╮`, `▲`, `│`, `└──►`), khối mã ````mermaid````, ký tự LaTeX (`$\rightarrow$`, `$$...$$`), hoặc bảng kẻ `| :--- |` $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, bắt buộc thay bằng file hình ảnh thật sự dạng picture (WebP) hoặc văn so sánh mộc mạc, tuyệt đối không duyệt!**
+    - Kiểm tra hình ảnh: Bắt buộc 100% thumbnail và minh họa là **tranh vẽ màu nước thủy mặc Zen Minimalist**. Nếu phát hiện ảnh chụp thực tế (photostock bàn làm việc, laptop, người ngồi văn phòng...) $\rightarrow$ **REJECT NGAY LẬP TỨC, yêu cầu Agent 8 vẽ lại tranh thủy mặc!**
     - Kiểm tra lỗi Markdown thô: Đảm bảo không bị sót các thẻ Heading (`#### `) trơ ra text ngoài trang hiển thị do thiếu dòng trắng hoặc sai cấu trúc.
   - **Đếm từ chính xác:** Bài viết có đạt tối thiểu 2.500 từ không?
   - **Tiêu đề chuẩn 2 dòng:** Ngắn gọn (50 - 62 ký tự), đủ tò mò, không bị cắt dấu `...` trên card.
   - **Vị trí khối "Những Điểm Chính":** Bắt buộc nằm ở cuối cùng sau "Lời nhắn gửi từ Trại Cai Nghiện".
   - **Quét lỗi văn phong:** Có bị lẫn từ ngữ giáo điều, phán xét, hay từ trừu tượng self-help sáo rỗng không?
-  - **Kiểm tra hình ảnh & SEO (Agent 8):** Ảnh WebP tỷ lệ 16:9 (`1200x675px`), nén dưới 120KB, đóng Watermark mờ `🌿 TRẠI CAI NGHIỆN`, tên file chuẩn SEO và có thẻ Alt Text đầy đủ.
+  - **Kiểm tra hình ảnh & SEO (Agent 8):** Ảnh WebP tỷ lệ 16:9 (`1200x675px`), nén dưới 120KB, đóng 2 huy hiệu `🌿 TRẠI CAI NGHIỆN` (góc trên trái) và `traicainghien.com` (góc dưới phải), tên file chuẩn SEO có hậu tố chống cache (`-zen-`, `-v2.webp`) và có thẻ Alt Text đầy đủ.
+  - **Cổng Kiểm Toán Khóa Cứng (Automated Pre-Publish Gate):** Kiểm tra lệnh `npm run build` đảm bảo script `node scripts/audit_all_articles.js` chạy tự động và pass 100% trước khi cho phép deploy.
   - **Kiểm tra điều hướng & SEO:** Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm 25 câu, CTA sản phẩm và mảng đa danh mục (`categories: [...]`) chưa?
 * **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 và hình ảnh từ Agent 8.
 * **Đầu ra (Output):** Báo cáo duyệt bài (PASS/FAIL theo mẫu Biên bản thẩm định) gửi cho Mây xác nhận trước khi bàn giao cho Agent 4 đẩy lên web.
@@ -183,11 +185,14 @@ flowchart TD
 ### 8. 🎨 Agent 8: Visual Stylist & AI Thumbnail Creator (Hình Ảnh & Thumbnail Chuẩn SEO)
 * **Chức danh:** Giám đốc Mỹ thuật & Kỹ sư Hình ảnh SEO.
 * **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover.
-* **Quy chuẩn SEO & Bản quyền bắt buộc:**
-  - Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB.
-  - Tên file không dấu, ngăn cách gạch nối, chứa từ khóa + thương hiệu: `tu-khoa-chinh-trai-cai-nghien.webp`.
+* **Quy chuẩn Mỹ Cảm & Kỹ Thuật Bắt Buộc (LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **100% LÀ TRANH MÀU NƯỚC THỦY MẶC Á ĐÔNG (ZEN MINIMALIST WATERCOLOR & SUMI-E INK WASH):** Trên nền giấy cổ ấm áp `#FAF7F2`, nét vẽ mực tàu sumi-e thanh thoát kết hợp sắc xanh rêu `#3A5A40` và đất nung `#C27D53`.
+  - **CẤM TUYỆT ĐỐI:** Ảnh chụp thực tế (photostock bàn làm việc, laptop, người ngồi văn phòng...) hoặc hình ảnh 3D lòe loẹt.
+  - **Cơ chế chống cache (Cache-Busting URL):** Khi cập nhật/sửa ảnh, bắt buộc phải dùng tên file mới (hậu tố `-zen-`, `-v2.webp`) để tránh bị cache trình duyệt/CDN.
+  - **Dung lượng & Kích thước:** Tỷ lệ chuẩn 16:9 (`1200x675px`), nén WebP nhẹ **bắt buộc dưới 120KB**.
+  - **Nhận diện thương hiệu kép:** Đóng 2 huy hiệu: `🌿 TRẠI CAI NGHIỆN` (góc trên bên trái) và `traicainghien.com` (góc dưới bên phải).
+  - Tên file không dấu, ngăn cách gạch nối, chứa từ khóa + thương hiệu: `tu-khoa-zen-trai-cai-nghien.webp`.
   - Cung cấp đầy đủ thẻ Alt Text tự nhiên chứa từ khóa cho bài viết.
-  - Đóng dấu Watermark thương hiệu nhỏ mờ tinh tế (30% - 40% opacity) ở góc ảnh (`🌿 TRẠI CAI NGHIỆN`), vừa bảo vệ bản quyền vừa lan tỏa thương hiệu mà không gây phân tâm.
 * **Cơ chế sáng tạo ý tưởng (Mây cố vấn):** Mây trực tiếp đồng hành cùng Agent 8 phân tích bài viết và khơi gợi ý tưởng theo 3 tầng (Ẩn dụ triết học, Khoảnh khắc đời thực, và Nghịch lý thị giác tò mò) dựa trên hệ quy chiếu 8 kênh chuẩn mực, giúp hình ảnh luôn độc bản và giàu sức hút.
 * **Đầu vào (Input):** Bài viết hoàn chỉnh từ Agent 1 và 3 concept ẩn dụ thị giác do Mây gợi ý.
 * **Đầu ra (Output):** File ảnh WebP độc quyền tối ưu và thông số metadata SEO bàn giao cho Agent 4 gắn vào bài viết.

@@ -26,17 +26,23 @@ console.log("🛡️ [MÂY & AGENT 5] ĐANG KHỞI CHẠY KIỂM TOÁN TẤT C�
 
 let hasErrors = false;
 
-// 1. Kiểm tra Text Art / ASCII Diagram
-const asciiChars = ['▲', '│', '╭──', '└──►', '↓\n['];
-for (const char of asciiChars) {
-  if (content.includes(char)) {
-    console.error(`❌ [LỖI ĐỎ] Phát hiện Text Art / ASCII Diagram chứa ký tự '${char}' trong articles.ts!`);
+// 1. Kiểm tra Text Art / ASCII Diagram / Mermaid / LaTeX
+const forbiddenPatterns = [
+  { name: 'Khối mã Mermaid', regex: /```mermaid/i },
+  { name: 'Ký tự mũi tên LaTeX ($\\rightarrow$)', regex: /\$\\rightarrow\$/ },
+  { name: 'Công thức toán LaTeX ($$...$$)', regex: /\$\$.*?\$\$/ },
+  { name: 'ASCII Art / Text diagram', regex: /[▲▼│╭╮╰╯─┌┐└┘├┤┬┴┼]/ }
+];
+
+for (const fp of forbiddenPatterns) {
+  if (fp.regex.test(content)) {
+    console.error(`❌ [LỖI ĐỎ CẤM] Phát hiện '${fp.name}' trong articles.ts! Bắt buộc dùng hình ảnh picture hoặc unicode chuẩn.`);
     hasErrors = true;
   }
 }
 
 // 2. Kiểm tra Cú pháp Bảng Markdown thô (| :--- |)
-if (/\|.*?\|.*?\|\s*\\n\s*\|.*?:---.*?\|/.test(content) || /\| :--- \|/.test(content)) {
+if (/\|.*?\|.*?\|\s*\\n\s*\|.*?:---.*?\|/.test(content) || /\| :--- \|/.test(content) || /\|:---/.test(content)) {
   console.error("❌ [LỖI ĐỎ] Phát hiện cú pháp Bảng Markdown thô (| :--- |) chưa được chuẩn hóa thành văn phong so sánh!");
   hasErrors = true;
 }
@@ -75,13 +81,19 @@ articleBlocks.forEach((block, index) => {
     }
   }
 
-  // C. Kiểm tra thumbnail có tồn tại trên disk không
+  // C. Kiểm tra thumbnail có tồn tại trên disk và dung lượng <= 120KB không
   if (thumbnail) {
     const cleanThumbPath = thumbnail.startsWith('/') ? thumbnail.slice(1) : thumbnail;
     const fullThumbPath = path.join(__dirname, '..', 'public', cleanThumbPath);
     if (!fs.existsSync(fullThumbPath)) {
       console.error(`❌ [LỖI THUMBNAIL] Bài '${slug}': File ảnh '${thumbnail}' không tồn tại trên ổ cứng!`);
       hasErrors = true;
+    } else {
+      const stats = fs.statSync(fullThumbPath);
+      if (stats.size > 122880) { // 120 KB
+        console.error(`❌ [LỖI DUNG LƯỢNG ẢNH] Bài '${slug}': Thumbnail '${thumbnail}' nặng ${(stats.size/1024).toFixed(1)}KB (Vượt quá trần 120KB của Bố)!`);
+        hasErrors = true;
+      }
     }
   }
 });
