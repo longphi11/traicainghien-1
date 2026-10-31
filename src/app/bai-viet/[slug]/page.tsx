@@ -166,7 +166,7 @@ function parseMarkdownBlocks(content: string): Block[] {
           break;
         }
         if (itemLine.startsWith("*") || itemLine.startsWith("-") || /^\d+\./.test(itemLine)) {
-          items.push(itemLine.replace(/^[*-\d.]\s*/, "").trim());
+          items.push(itemLine.replace(/^([-*]|\d+\.)\s+/, "").trim());
           i++;
         } else {
           break;
@@ -263,7 +263,7 @@ function parseMarkdownBlocks(content: string): Block[] {
       while (i < lines.length) {
         const currLine = lines[i].trim();
         if (currLine.startsWith("* ") || currLine.startsWith("- ")) {
-          items.push(currLine.replace(/^[*-\s]+/, "").trim());
+          items.push(currLine.replace(/^[-*]\s+/, "").trim());
           i++;
         } else if (
           currLine &&
