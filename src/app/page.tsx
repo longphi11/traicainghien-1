@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Sparkles, ArrowRight, BookOpen, Compass, ShieldCheck, Heart, CheckCircle2, Clock, Calendar } from "lucide-react";
 import { articles } from "@/data/articles";
 
@@ -421,8 +422,14 @@ export default function HomePage() {
       <section className="px-6 max-w-5xl mx-auto">
         <div className="rounded-3xl p-8 md:p-12 bg-[#FAF7F2] border border-[#E6E1D8] space-y-8">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-[#3A5A40] text-white flex items-center justify-center font-bold text-xl">
-              🌿
+            <div className="w-12 h-12 rounded-2xl overflow-hidden bg-[#FAF7F2] border border-[#E6E1D8] shadow-sm flex items-center justify-center shrink-0">
+              <Image
+                src="/images/logo-totem.webp"
+                alt="Logo Con quay Totem Trại Cai Nghiện"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <span className="text-xs uppercase tracking-wider font-bold text-[#3A5A40] block">Người Đồng Hành</span>

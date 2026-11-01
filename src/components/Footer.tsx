@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldAlert } from "lucide-react";
 
 export default function Footer() {
@@ -10,8 +11,16 @@ export default function Footer() {
           
           {/* Column 1: Brand Info */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🌿</span>
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl overflow-hidden bg-[#FAF7F2] dark:bg-[#202722] border border-[#E6E1D8] dark:border-[#354037] shadow-sm flex items-center justify-center shrink-0">
+                <Image
+                  src="/images/logo-totem.webp"
+                  alt="Logo Con quay Totem Trại Cai Nghiện"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <span className="text-xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6]">Trại Cai Nghiện</span>
             </div>
             <p className="text-sm text-[#6B726E] dark:text-[#9DA39F] leading-relaxed max-w-md">

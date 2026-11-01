@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Sparkles } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
@@ -30,8 +31,15 @@ export default function Navbar() {
         
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3.5 group shrink-0 mr-8 lg:mr-12 xl:mr-16">
-          <div className="w-11 h-11 rounded-xl bg-[#3A5A40] dark:bg-[#527A59] text-white flex items-center justify-center font-bold text-xl shadow-sm transition-transform group-hover:scale-105 shrink-0">
-            🌿
+          <div className="w-11 h-11 rounded-xl overflow-hidden bg-[#FAF7F2] dark:bg-[#202722] border border-[#E6E1D8] dark:border-[#354037] shadow-sm flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
+            <Image
+              src="/images/logo-totem.webp"
+              alt="Logo Con quay Totem Trại Cai Nghiện"
+              width={44}
+              height={44}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
           <div className="flex flex-col justify-center">
             <span className="text-2xl font-bold block font-serif text-[#2D312E] dark:text-[#F0ECE6] leading-tight tracking-tight">
