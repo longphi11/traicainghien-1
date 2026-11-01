@@ -65,6 +65,11 @@ flowchart TD
   - Góc trên bên trái: Huy hiệu `🌿 TRẠI CAI NGHIỆN` (nền tối mờ, chữ trắng).
   - Góc dưới bên phải: Huy hiệu tên miền `traicainghien.com`.
 - [ ] **5. Kỹ thuật SEO Hình Ảnh & Dung Lượng:** Tỷ lệ chuẩn **16:9** (`1200x675px`), định dạng **WebP**, dung lượng tối ưu **BẮT BUỘC DƯỚI 120KB**, tên file chứa từ khóa không dấu ngăn cách bằng gạch nối (`tu-khoa-zen-trai-cai-nghien.webp`), đầy đủ thẻ `alt`.
+- [ ] **6. Quy chuẩn Chống Cắt Chữ Sơ Đồ Diễn Giải / Infographics (Anti-Clipping & Safe Typography - LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - CẤM TUYỆT ĐỐI các sơ đồ có chữ bị tràn khung, mất chữ đầu cuối (`QUY...ỐI`, `BƯỚC...`).
+  - Tiêu đề infographic: Font tối đa 24px, căn giữa, lề an toàn 2 bên tối thiểu **150px**.
+  - Thẻ nội dung (Cards): Header thẻ PHẢI tách 2 dòng (`BƯỚC X` ở trên, `TÊN BƯỚC` ở dưới), chiều cao thẻ header tối thiểu 65px. Chiều rộng chữ không được vượt quá 75% chiều rộng thẻ.
+  - Mọi sơ đồ phải được kiểm tra bounding box qua `scripts/infographic_engine.py` và lưu ảnh PNG preview vào thư mục `brain` để kiểm tra trực quan trước khi đẩy lên live.
 
 ---
 

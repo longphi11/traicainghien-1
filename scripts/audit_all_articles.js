@@ -109,6 +109,25 @@ articleBlocks.forEach((block, index) => {
       hasErrors = true;
     }
   }
+
+  // E. [LỆNH THÉP CỦA BỐ] Kiểm tra TẤT CẢ các ảnh nội dung bài viết (Infographics, Diagram images)
+  const imgRegex = /!\[.*?\]\(((\/images\/[^)]+))\)/g;
+  let imgMatch;
+  while ((imgMatch = imgRegex.exec(body)) !== null) {
+    const imgUrl = imgMatch[1];
+    const cleanImgPath = imgUrl.startsWith('/') ? imgUrl.slice(1) : imgUrl;
+    const fullImgPath = path.join(__dirname, '..', 'public', cleanImgPath);
+    if (!fs.existsSync(fullImgPath)) {
+      console.error(`❌ [LỖI ẢNH NỘI DUNG] Bài '${slug}': Ảnh sơ đồ/diễn giải '${imgUrl}' KHÔNG TỒN TẠI trên ổ cứng!`);
+      hasErrors = true;
+    } else {
+      const stats = fs.statSync(fullImgPath);
+      if (stats.size > 153600) { // 150 KB trần tối đa cho infographic
+        console.error(`❌ [LỖI DUNG LƯỢNG ẢNH NỘI DUNG] Bài '${slug}': Ảnh '${imgUrl}' nặng ${(stats.size/1024).toFixed(1)}KB (Vượt quá trần 150KB của Bố)!`);
+        hasErrors = true;
+      }
+    }
+  }
 });
 
 if (hasErrors) {

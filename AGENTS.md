@@ -103,6 +103,25 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
   * `Be Ấm / Giấy Mộc (#FAF7F2, #E6E1D8)`: Màu nền dịu mắt, ấm cúng như một trang sách cổ điển, chống mỏi mắt cho người đọc đêm.
   * `Đất Nung Mờ (#C27D53)`: Điểm nhấn nhẹ nhàng cho các nút bấm, nhãn tag và các hành động quan trọng (CTA).
   * `Xám Than Trầm (#2D312E)`: Chữ viết mềm mại, không dùng màu đen gắt (#000000) nhằm giảm tải căng thẳng thần kinh thị giác.
+
+### 2.4.1 🛑 BỘ QUY TẮC THÉP VỀ HÌNH ẢNH & SƠ ĐỒ DIỄN GIẢI (LỆNH ĐẶC BIỆT CỦA BỐ)
+
+> [!CAUTION]
+> **Đây là quy chuẩn tối thượng không được phép vi phạm dù chỉ một lần. Mọi bài viết trước khi xuất bản đều phải đi qua script kiểm toán `scripts/audit_all_articles.js` và tuân thủ trọn vẹn bộ nguyên tắc này:**
+
+1. **Quy chuẩn Ảnh Bìa (Article Thumbnail):**
+   * **Trường phái duy nhất:** 100% Tranh vẽ tay Màu nước Thủy mặc & Nét viền mực than (**Zen Watercolor & Vintage Ink Wash on Textured Paper**).
+   * **CẤM TUYỆT ĐỐI:** Cấm ảnh chụp đời thực (photo stills), cấm 3D CGI bóng bẩy, cấm vector hoạt hình 2D phẳng lỳ, cấm phong cách cổ trang / già nua / trà thất phong kiến. Bối cảnh bắt buộc là đời sống người trẻ đương đại 18 – 35 tuổi (bàn làm việc tối giản, phòng chung cư nhìn ra thành phố đêm, quán cà phê phố thị, ban công đón nắng).
+   * **Dung lượng & Kích thước:** Tối đa **120 KB**, tỷ lệ vàng 16:9 (`1200x675px`), định dạng `.webp`, có watermark mờ góc phải `🌿 TRẠI CAI NGHIỆN`.
+
+2. **Quy chuẩn Hình Ảnh Diễn Giải / Sơ Đồ (Diagrams / Infographics):**
+   * **CẤM 100% SƠ ĐỒ VẼ BẰNG KÝ TỰ TEXT:** Tuyệt đối không dùng ASCII art, bảng ký tự `│`, `▲`, `╭───╮`, không dùng Mermaid code block hay công thức thô. Tất cả sơ đồ tư duy, quy trình, biểu đồ khoa học PHẢI là **hình ảnh picture** được thiết kế đồ họa chỉn chu.
+   * **Nguyên tắc Chống Tràn Chữ & Cắt Chữ (Anti-Clipping & Safe Typography):**
+     * **Tiêu đề sơ đồ:** Font tối đa 24px, căn giữa, lề an toàn 2 bên tối thiểu **150px** (không bao giờ để chữ chạm mép ảnh).
+     * **Thẻ nội dung (Cards):** Tiêu đề thẻ PHẢI tách làm 2 dòng (`BƯỚC X` ở trên, `TÊN BƯỚC` ở dưới), chiều cao thẻ header tối thiểu 65px. Chiều rộng chữ không được vượt quá 75% chiều rộng thẻ để chừa lề an toàn 2 bên.
+     * **Đo đạc tự động:** Mọi đoạn text diễn giải đều phải qua engine đo bounding box (`scripts/infographic_engine.py`) trước khi vẽ lên canvas. Nếu có chữ tràn khung, script lập tức ném lỗi và từ chối xuất ảnh.
+   * **Nguyên tắc Phá Cache (Cache-Busting):** Khi cập nhật bất kỳ hình ảnh nào đã xuất bản, bắt buộc phải dùng phiên bản mới (ví dụ: `-v2.webp`) và cập nhật URL trong `src/data/articles.ts`, tránh lưu đè tên file cũ khiến trình duyệt và CDN phục vụ cache cũ cho người đọc.
+   * **Dung lượng:** Tối đa **150 KB**, định dạng `.webp`, nền giấy mộc `#FAF7F2`, viền `#E6E1D8`, có watermark thương hiệu chân trang.
 * **Quy chuẩn Video Ngắn Faceless (TikTok / YouTube Shorts / Reels):**
   * **Hình ảnh (B-roll):** Không lộ mặt. Sử dụng thước phim quay chậm, góc tĩnh: Cảnh pha phin cà phê buổi sáng, bàn làm việc gỗ tối giản, mưa rơi ngoài cửa sổ, ngón tay lật chậm từng trang sách, đi bộ một mình dưới hàng cây.
   * **Âm thanh & Giọng đọc:** Nhạc nền Lo-fi ambient nhẹ nhàng, âm thanh ASMR thiên nhiên (tiếng mưa, tiếng gõ phím cơ, tiếng gió), giọng đọc AI trầm ấm, chậm rãi như đang tâm sự đêm khuya.
