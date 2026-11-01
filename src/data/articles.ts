@@ -711,7 +711,7 @@ const rawArticles: Article[] = [
     "slug": "dinh-luat-yerkes-dodson-viec-cang-kho-cang-phai-binh-tinh",
     "title": "Nghịch Lý Yerkes-Dodson: Việc Càng Khó Càng Phải Bình Tĩnh",
     "excerpt": "Tại sao việc càng khó, quyết tâm càng cao lại càng dễ hỏng? Khi ra đời, những bài toán mù mờ không có đáp án mẫu đòi hỏi một cái đầu lạnh. Đây là cách làm việc khó đỉnh cao như hít thở...",
-    "thumbnail": "/images/articles/dinh-luat-yerkes-dodson-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/dinh-luat-yerkes-dodson-trai-cai-nghien-v2.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
@@ -736,7 +736,7 @@ const rawArticles: Article[] = [
     "slug": "vi-sao-58-phan-tram-nguoi-dung-xoa-mang-xa-hoi",
     "title": "Vì Sao 58% Người Dùng Xóa Mạng Xã Hội? Cái Giá Của 'Miễn Phí'",
     "excerpt": "Đặt điện thoại xuống chỉ thấy kiệt sức và não nhũn? 58% người dùng đang âm thầm xóa mạng xã hội. Đây là 3 cái giá vô hình bạn đang trả mỗi ngày và bộ ba 'Nhìn - Bớt - Tạo'...",
-    "thumbnail": "/images/articles/cuoc-thao-chay-khoi-mang-xa-hoi-zen-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/roi-xa-mang-xa-hoi-ban-cong-yen-binh.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
