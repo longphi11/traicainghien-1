@@ -30,6 +30,22 @@
   * `Thực hành thay đổi`
   * `Sống có chủ đích`
 
+### 2.0.1 🌀 Biểu Tượng Logo Chính Thức: Con Quay Totem Inception (The Awakening Tilt)
+* **Ý niệm cốt lõi (Core Symbol):** **Con quay Totem** — lấy cảm hứng từ bảo vật định danh thực tại trong kiệt tác điện ảnh *Inception* (Christopher Nolan).
+* **Tư thế chọn lựa chính thức (Mẫu 05):** **The Awakening Tilt** — Con quay hơi nghiêng nhẹ một góc chuẩn bị chao đảo và dừng quay.
+* **Triết lý sâu sắc & Ẩn dụ hành vi:**
+  * *Trong Inception:* Nếu con quay xoay mãi không dừng, nhân vật đang chìm đắm trong cơn mê hư vô vô tận. Chỉ khi con quay chao đảo, nghiêng mình và đổ xuống trên mặt bàn, đó mới là minh chứng đanh thép rằng họ đã thức tỉnh và đang chạm chân vào **ĐỜI THỰC**.
+  * *Trong Trại Cai Nghiện:* Những giờ lướt short video vô thức xuyên đêm, những cơn nghiện dopamine rẻ tiền chính là "ma trận cơn mê tầng sâu" của thời hiện đại. Người trẻ bị ru ngủ bởi tiện nghi công nghiệp và đánh mất dần sinh mệnh.
+  * *Ý nghĩa biểu tượng:* Con quay Totem nghiêng đổ biểu trưng cho **khoảnh khắc thức tỉnh vĩ đại nhất của người nghiện**: Dũng cảm thừa nhận mình đang chìm trong ảo ảnh, chấm dứt vòng lặp vô thức, kéo tâm trí trở về với đời sống hiện tại, giành lại tự do và **trở về phiên bản tốt nhất của chính mình**.
+* **Cấu trúc Typography & Bố cục:**
+  * **Biểu tượng:** Con quay kim loại mộc mạc hơi nghiêng một góc chuẩn bị hạ cánh tĩnh lặng.
+  * **Chữ thương hiệu:** **TRẠI CAI NGHIỆN** — Font chữ tối giản hiện đại, vững chãi, khoảng cách thoáng đãng, sắc xám than trầm (`#2D312E`) hoặc xanh rêu (`#3A5A40`).
+  * **Slogan phụ:** `- trở về phiên bản tốt nhất của bạn.` — Dịu dàng, khiêm nhường đặt ngay dưới chân tên thương hiệu, sắc đất nung ấm (`#C27D53`).
+* **Mỹ cảm & Chất liệu bất di bất dịch:**
+  * 100% Tranh vẽ tay màu nước thủy mặc & viền mực than Sumi-e trên nền giấy thô sần có hạt grain (`#FAF7F2`).
+  * **CẤM TUYỆT ĐỐI:** Không dùng vector phẳng 2D, không dùng SVG code mô phỏng, không dùng 3D CGI bóng bẩy rẻ tiền.
+* **Tài liệu lưu trữ:** Bảng thiết kế gốc lưu tại `public/images/trai_cai_nghien_totem_brand_board.jpg` (Vị trí Concept 05).
+
 ### 2.1. Định vị Dự án & Hai Trụ Cột Trọng Tâm Tuyệt Đối
 **Trại Cai Nghiện** là nền tảng số nhân văn và khoa học, ra đời nhằm đồng hành cùng cộng đồng nhận diện, tháo gỡ và giải phóng bản thân khỏi các **bẫy kích thích dopamine rẻ tiền thời hiện đại**, tập trung tuyệt đối vào **HAI CHỦ ĐỀ CỐT LÕI (TUYỆT ĐỐI KHÔNG ĐỊNH VỊ VÀO CÁC CHỦ ĐỀ NHẠY CẢM NHƯ PORN/CHẤT KÍCH THÍCH NẶNG)**:
 1. **Cách tập trung làm việc & giải phóng khỏi xao nhãng số:** Trị hội chứng sương mù não (Brain Fog), nhũn não số (Brain Rot), nghiện lướt short video (TikTok, Reels, Shorts), mất tập trung, nhảy tab liên tục, khôi phục năng lực làm việc sâu (Deep Work).

@@ -80,3 +80,26 @@ A poetic and serene zen watercolor painting with delicate sumi-e ink wash and dr
 
 [MÔ TẢ ÁNH SÁNG & MÀU SẮC: Bathed in warm gentle amber desk lamp lighting (#C27D53) harmonizing with muted forest moss green accents (#3A5A40) and soothing charcoal shadows (#2D312E). Organic watercolor bleeding edges, tranquil mindful atmosphere, emotional depth, contemporary minimalist aesthetics, masterpiece, authentic traditional painting texture]. --ar 16:9
 ```
+
+---
+
+## 6. 🌀 QUY CHUẨN BIỂU TƯỢNG LOGO CHÍNH THỨC: CON QUAY TOTEM INCEPTION (THE AWAKENING TILT)
+
+> **Quyết định chính thức của Bố:** Lựa chọn **Mẫu 05 — The Awakening Tilt** làm logo đại diện linh hồn cho toàn bộ thương hiệu Trại Cai Nghiện.
+
+### 6.1. Triết Lý Tạo Hình & Ẩn Dụ Hành Vi
+* **Biểu tượng:** Con quay Totem kim loại trong phim *Inception* (Christopher Nolan), được tạo hình trong tư thế **nghiêng nhẹ một góc chuẩn bị chao đảo và dừng quay**.
+* **Ý nghĩa:**
+  * Con quay không ngừng xoay là biểu tượng của việc con người bị mắc kẹt vô thức trong cơn mê số (nghiện lướt short video, dopamine rẻ tiền, mất khả năng kết nối thực tại).
+  * Khoảnh khắc con quay **nghiêng chao đảo và chuẩn bị dừng lại** là thời khắc huy hoàng nhất của sự thức tỉnh: Thoát khỏi cơn mê, dũng cảm đối diện với sự thật, chạm chân vào đời thực và **trở về phiên bản tốt nhất của chính bạn**.
+
+### 6.2. Cấu Trúc Typography & Nhận Diện
+* **Biểu tượng (Icon):** Con quay Totem nghiêng chuẩn bị dừng quay, nét vẽ mực than Sumi-e thanh thoát kết hợp loang màu nước kim loại mộc ấm trên giấy Washi `#FAF7F2`.
+* **Chữ thương hiệu (Brand Name):** `TRẠI CAI NGHIỆN` (Font chữ Sans-serif hiện đại, nét tối giản, đĩnh đạc, màu than trầm `#2D312E` hoặc xanh rêu rừng `#3A5A40`).
+* **Slogan phụ (Tagline):** `- trở về phiên bản tốt nhất của bạn.` (Đặt phía dưới chân thương hiệu, màu đất nung dịu `#C27D53`).
+
+### 6.3. Quy Tắc Ứng Dụng Đa Kênh Cho Agent 8 & Toàn Bộ Đội Ngũ
+* **Website Header & Favicon:** Sử dụng biểu tượng con quay totem nghiêng tối giản tinh tế.
+* **Watermark & End-Card Video:** Biểu tượng con quay kết hợp tên thương hiệu đặt góc trang trọng hoặc xuất hiện ở phân cảnh kết thúc (Outro) như lời nhắc nhở thức tỉnh người xem.
+* **CẤM TUYỆT ĐỐI:** Không bao giờ sử dụng hình ảnh vector 2D phẳng lỳ, SVG code giả lập đồ họa hoặc 3D CGI neon bóng bẩy để tái hiện logo. Logo bắt buộc phải mang phong thái tranh vẽ tay màu nước & mực than hữu cơ, mộc mạc và sâu lắng.
+* **Tài sản thương hiệu tham chiếu:** `public/images/trai_cai_nghien_totem_brand_board.jpg` (Vị trí Concept 05).

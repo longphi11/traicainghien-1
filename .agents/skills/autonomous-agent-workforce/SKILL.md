@@ -198,10 +198,11 @@ flowchart TD
 * **Chức danh:** Giám đốc Mỹ thuật & Kỹ sư Hình ảnh SEO.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/visual-art-direction/SKILL.md`](../visual-art-direction/SKILL.md) (Bộ kỹ năng chỉ đạo nghệ thuật & Prompt FLUX/Midjourney v6: Văn xuôi miêu tả ánh sáng & chất liệu Washi Zen Watercolor)
-* **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover.
+* **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover. Quản lý và vận hành chuẩn mực biểu tượng logo chính thức: **Con quay Totem Inception (The Awakening Tilt - Mẫu 05)**.
 * **Quy chuẩn Mỹ Cảm & Kỹ Thuật Bắt Buộc (LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **BIỂU TƯỢNG LOGO CHÍNH THỨC CỦA THƯƠNG HIỆU:** Con quay Totem trong *Inception* ở tư thế chao đảo nghiêng nhẹ chuẩn bị dừng quay (*The Awakening Tilt*), mang ý nghĩa thức tỉnh khỏi cơn mơ ảo ảnh số để quay về thực tại và phiên bản tốt nhất. Logo đi kèm tên thương hiệu `TRẠI CAI NGHIỆN` và slogan `- trở về phiên bản tốt nhất của bạn.`, được vẽ tay màu nước thủy mặc & viền mực than mộc mạc trên giấy Washi `#FAF7F2`.
   - **100% LÀ TRANH MÀU NƯỚC THỦY MẶC Á ĐÔNG (ZEN MINIMALIST WATERCOLOR & SUMI-E INK WASH):** Trên nền giấy cổ ấm áp `#FAF7F2`, nét vẽ mực tàu sumi-e thanh thoát kết hợp sắc xanh rêu `#3A5A40` và đất nung `#C27D53`.
-  - **CẤM TUYỆT ĐỐI:** Ảnh chụp thực tế (photostock bàn làm việc, laptop, người ngồi văn phòng...) hoặc hình ảnh 3D lòe loẹt.
+  - **CẤM TUYỆT ĐỐI:** Ảnh chụp thực tế (photostock bàn làm việc, laptop, người ngồi văn phòng...) hoặc hình ảnh 3D lòe loẹt, đồ họa vector 2D phẳng, SVG code mô phỏng.
   - **Cơ chế chống cache (Cache-Busting URL):** Khi cập nhật/sửa ảnh, bắt buộc phải dùng tên file mới (hậu tố `-zen-`, `-v2.webp`) để tránh bị cache trình duyệt/CDN.
   - **Dung lượng & Kích thước:** Tỷ lệ chuẩn 16:9 (`1200x675px`), nén WebP nhẹ **bắt buộc dưới 120KB**.
   - **Nhận diện thương hiệu kép:** Đóng 2 huy hiệu: `🌿 TRẠI CAI NGHIỆN` (góc trên bên trái) và `traicainghien.com` (góc dưới bên phải).
