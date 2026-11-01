@@ -21,7 +21,7 @@ const rawArticles: Article[] = [
   "slug": "tinh-deo-than-kinh-tai-lap-trinh-bo-nao-chinh-phuc-viec-kho",
   "title": "Tính Dẻo Thần Kinh: Cách 'Tái Lập Trình' Não Chinh Phục Việc Khó",
   "excerpt": "Sau 25 tuổi não bộ sẽ ngừng phát triển và khó học việc mới? Khám phá bí mật Tính dẻo thần kinh (Neuroplasticity) và cẩm nang 4 bước tái lập trình bộ não...",
-  "thumbnail": "/images/articles/tinh-deo-than-kinh-zen-watercolor.webp",
+  "thumbnail": "/images/articles/tinh-deo-than-kinh-landscape-zen-watercolor.webp",
   "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
   "pillarTag": "RenLuyenBoNao",
   "categories": [
