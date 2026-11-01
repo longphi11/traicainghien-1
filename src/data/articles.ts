@@ -109,7 +109,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "doc-sach-di-tim-le-song-chiec-phao-cuu-sinh-nghich-canh",
-    "title": "Đọc 'Đi Tìm Lẽ Sống': Chiếc Phao Cứu Sinh Duy Nhất Giữa Nghịch Cảnh",
+    "title": "Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh",
     "excerpt": "Giữa tận cùng địa ngục trại tập trung Auschwitz, điều gì đã giúp con người sống sót? Cuốn sách kinh điển của Viktor Frankl trao cho bạn chiếc phao cứu sinh để vượt qua mọi khủng hoảng hiện sinh...",
     "thumbnail": "/images/articles/sach-di-tim-le-song-viktor-frankl-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Lối sống tỉnh thức",
@@ -130,7 +130,7 @@ const rawArticles: Article[] = [
   },
   {
   "slug": "doc-cau-chuyen-dong-song-buong-bo-tim-kiem-de-that-su-thay",
-  "title": "Đọc 'Câu Chuyện Dòng Sông': Buông Bỏ Tìm Kiếm Để Thật Sự Thấy",
+  "title": "Đọc 'Câu Chuyện Dòng Sông' - Buông Bỏ Tìm Kiếm Để Thật Sự Thấy",
   "excerpt": "Càng mải miết đi tìm bình an ta lại càng kiệt sức? Kiệt tác 'Câu Chuyện Dòng Sông' của Hermann Hesse hé lộ bí mật: Ngừng tìm kiếm để thực sự nhìn thấy...",
   "thumbnail": "/images/articles/sach-cau-chuyen-dong-song-siddhartha-zen-trai-cai-nghien.webp",
   "pillar": "Trụ cột 4: Sách hay thay đổi cuộc đời",
@@ -280,7 +280,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-bay-hanh-phuc-russ-harris",
-    "title": "Đọc 'Bẫy Hạnh Phúc': Càng Cố Vui Vẻ Càng Dễ Khổ Sở Và Nghiện",
+    "title": "Đọc 'Bẫy Hạnh Phúc' - Càng Cố Vui Vẻ Càng Dễ Khổ Sở Và Nghiện",
     "excerpt": "Bạn bị ép phải luôn suy nghĩ tích cực, luôn nở nụ cười? Càng cố né tránh nỗi buồn, bạn càng lao vào lướt mạng, ăn vặt để trốn chạy. Đây là cách thoát khỏi chiếc bẫy tinh vi nhất của tâm trí...",
     "thumbnail": "/images/articles/sach-bay-hanh-phuc-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -323,7 +323,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-bay-so-hai-vuot-qua-tri-hoan",
-    "title": "Đọc 'Bẫy Sợ Hãi': Bạn Không Hề Lười, Bạn Đang Sợ Cuộc Đời Mình",
+    "title": "Đọc 'Bẫy Sợ Hãi' - Bạn Không Hề Lười, Bạn Đang Sợ Cuộc Đời Mình",
     "excerpt": "Cứ ngồi vào bàn làm việc 5 phút là lại thò tay lướt TikTok? Gốc rễ của sự trì hoãn không phải vì bạn vô kỷ luật, mà là vì một nỗi sợ vô hình đang điều khiển hạch hạnh nhân của bạn...",
     "thumbnail": "/images/articles/sach-bay-so-hai-tri-hoan-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -367,7 +367,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-flow-dong-chay-mihaly-csikszentmihalyi",
-    "title": "Đọc 'Dòng Chảy': Tìm Lại Sự Đắm Chìm Mà Màn Hình Ảo Không Có",
+    "title": "Đọc 'Dòng Chảy' - Tìm Lại Sự Đắm Chìm Mà Màn Hình Ảo Không Có",
     "excerpt": "Đã bao lâu rồi bạn chưa có cảm giác làm một việc gì đó say mê đến mức quên cả thời gian, đói bụng hay tiếng điện thoại? Đây là bản đồ giải phẫu trạng thái thăng hoa cao nhất của bộ não con người...",
     "thumbnail": "/images/articles/sach-flow-dong-chay-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
@@ -412,7 +412,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-bay-tien-nghi-michael-easter",
-    "title": "Đọc 'Bẫy Tiện Nghi': Sự Thừa Mứa Đang Giết Chết Nghị Lực Bạn",
+    "title": "Đọc 'Bẫy Tiện Nghi' - Sự Thừa Mứa Đang Giết Chết Nghị Lực Bạn",
     "excerpt": "33 ngày giữa băng tuyết Bắc Cực đã dạy Michael Easter một sự thật tàn nhẫn: Con người hiện đại đang chết dần vì... quá tiện nghi. Muốn thoát khỏi sự bồn chồn và nhũn não số, bạn phải học cách tự nguyện đón nhận sự khó chịu lành mạnh.",
     "thumbnail": "/images/articles/sach-bay-tien-nghi-comfort-crisis-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -457,7 +457,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-tu-duy-nhanh-va-cham-daniel-kahneman",
-    "title": "Tư Duy Nhanh & Chậm: Vì Sao Ngón Tay Luôn Quẹt Trước Khi Nghĩ",
+    "title": "Đọc 'Tư Duy Nhanh & Chậm' - Vì Sao Ngón Tay Quẹt Trước Khi Nghĩ",
     "excerpt": "Cuốn sách kinh điển của nhà đoạt giải Nobel Daniel Kahneman bóc trần cuộc chiến ngầm giữa Hệ thống 1 bốc đồng và Hệ thống 2 chậm chạp — bí mật mà mọi ứng dụng mạng xã hội đều lợi dụng để biến bạn thành con nghiện...",
     "thumbnail": "/images/articles/sach-tu-duy-nhanh-va-cham-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
@@ -503,7 +503,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-kaizen-1-phan-tram-moi-ngay",
-    "title": "Nghệ Thuật Kaizen: Nhích 1% Mỗi Ngày Để Đánh Lừa Não Bộ",
+    "title": "Đọc 'Kaizen' - Nhích 1% Mỗi Ngày Để Đánh Lừa Não Bộ Của Bạn",
     "excerpt": "Cứ mỗi lần hạ quyết tâm dậy 5h sáng hay tập gym là y như rằng bỏ cuộc sau 3 ngày? Hãy ngừng dùng búa tạ đập vào não bộ. Đây là cách người Nhật thay đổi cả một đời bằng những bước đi vi mô nhẹ tênh...",
     "thumbnail": "/images/articles/sach-kaizen-1-phan-tram-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
@@ -547,7 +547,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-ikigai-di-tim-le-song",
-    "title": "Đọc 'Ikigai': Có Một Lý Do Thức Dậy, Đồ Rẻ Tiền Tự Khắc Vô Vị",
+    "title": "Đọc 'Ikigai' - Có Một Lý Do Thức Dậy, Đồ Rẻ Tiền Tự Khắc Vô Vị",
     "excerpt": "Tại sao người già ở ngôi làng trường thọ Ogimi (Okinawa) không bao giờ biết đến khái niệm nghỉ hưu hay trầm cảm? Bí mật không nằm ở nhân sâm hay thuốc bổ, mà nằm ở một hạt mầm mang tên Ikigai...",
     "thumbnail": "/images/articles/sach-ikigai-di-tim-le-song-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 4: Sống chủ động và tìm lại sự chú ý",
@@ -591,7 +591,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-deep-work-cal-newport",
-    "title": "Đọc 'Deep Work': Tấm Khiên Bảo Vệ Tâm Trí Khỏi Xao Nhãng Số",
+    "title": "Đọc 'Deep Work' - Tấm Khiên Bảo Vệ Tâm Trí Khỏi Xao Nhãng Số",
     "excerpt": "Trong một thế giới mà ai cũng nhảy tab liên tục và trả lời tin nhắn sau 3 giây, năng lực ngồi yên làm việc sâu 90 phút chính là thứ phân chia người làm chủ cuộc chơi và kẻ làm nô lệ cho thuật toán...",
     "thumbnail": "/images/articles/sach-deep-work-lam-sau-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
@@ -635,7 +635,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-thoi-dai-cua-su-chu-y-stolen-focus",
-    "title": "Thời Đại Sự Chú Ý: Não Bạn Đang Bị Đánh Cắp Có Chủ Đích",
+    "title": "Đọc 'Stolen Focus' - Não Bạn Đang Bị Đánh Cắp Có Chủ Đích",
     "excerpt": "Bạn tự trách mình không thể đọc nổi 3 trang sách? Johann Hari đã đi 30.000 dặm phỏng vấn các nhà khoa học hàng đầu thế giới để đưa ra một kết luận chấn động: Cả một hệ thống kinh tế nghìn tỷ USD đang sống dựa trên sự phân tâm của bạn...",
     "thumbnail": "/images/articles/sach-thoi-dai-cua-su-chu-y-stolen-focus-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
@@ -680,7 +680,7 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "review-sach-giai-ma-hoocmon-dopamine-anna-lembke",
-    "title": "Đọc 'Quốc Gia Dopamine': Chiếc Bập Bênh Và Hố Sâu Trống Rỗng",
+    "title": "Đọc 'Quốc Gia Dopamine' - Chiếc Bập Bênh Và Hố Sâu Trống Rỗng",
     "excerpt": "Tại sao càng tìm kiếm niềm vui tức thì, bạn lại càng thấy bồn chồn và đau khổ? Trưởng khoa cai nghiện Đại học Stanford Anna Lembke bóc tách cơ chế sinh học bập bênh và hướng dẫn cách thiết lập lại ngưỡng hạnh phúc đích thực...",
     "thumbnail": "/images/articles/sach-giai-ma-dopamine-nation-zen-trai-cai-nghien.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",

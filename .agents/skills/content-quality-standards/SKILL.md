@@ -36,6 +36,7 @@ flowchart TD
 *Trước khi Agent 4 đưa vào `src/data/articles.ts`, build tĩnh và push Git, Agent 5 phải rà soát qua 10 chốt chặn thép:*
 - [ ] **1. Độ dài chuẩn:** Đạt tối thiểu **2.500 từ** (chuẩn mực 2.800 - 3.800 từ cho các bài chuyên sâu, đếm từ thực tế, không tính code hay cú pháp rác).
 - [ ] **2. Tiêu đề chuẩn 2 dòng (Curiosity Hook):** Độ dài vàng **50 – 62 ký tự**. Vừa khít 2 dòng ở box card ngoài, tuyệt đối không bị cắt cụt ba chấm `...`.
+- [ ] **2.1. Tiêu chuẩn bài viết về sách (Lệnh đặc biệt của Bố):** Tiêu đề BẮT BUỘC tuân thủ format `"Đọc [tên sách] - [tựa đề]"` (dùng dấu gạch nối ` - `, tuyệt đối không dùng dấu hai chấm `:`). Đồng thời bài viết về sách CHỈ ĐƯỢC PHÉP gắn duy nhất danh mục `SachHay` (`categories: ["SachHay"]`), thumbnail là bìa sách 3D trong không gian Zen, watermark `🌿 TRẠI CAI NGHIỆN`.
 - [ ] **3. Vị trí khối "Những Điểm Chính":** Bắt buộc nằm ở **dưới cùng bài viết**, ngay sau *"Lời nhắn gửi từ Trại Cai Nghiện"*. Tuyệt đối không đặt ở đầu hay giữa bài.
 - [ ] **4. CẤM TUYỆT ĐỐI HÌNH ẢNH DẠNG KÝ TỰ / TEXT ART / MERMAID / ASCII (LỆNH ĐẶC BIỆT CỦA BỐ):**
   - CẤM 100% các khối mã ````mermaid````, sơ đồ vẽ bằng ký tự chữ (`╭───╮`, `▲`, `│`, `└──►`, `┌`, `└`). Trên web và di động, chúng sẽ vỡ layout và biến thành văn bản rác mắt.

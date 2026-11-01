@@ -80,6 +80,7 @@ graph TD
 ### 3.1. Tiêu Đề & Hook (The Hook)
 * Gợi mở một nghịch lý hoặc hình tượng đời thường độc đáo.
 * Độ dài tiêu chuẩn: **50 – 62 ký tự** (hiển thị trọn vẹn 2 dòng, không bao giờ bị cắt cụt).
+* **Quy chuẩn tiêu đề bài viết về sách (Lệnh của Bố):** Bắt buộc bắt đầu bằng format: `"Đọc [tên sách] - [tựa đề]"`. Dùng dấu gạch nối ` - ` (có khoảng cách 2 bên), cấm dùng dấu hai chấm `:`. Độ dài bảo đảm 50 – 62 ký tự. Phân loại duy nhất danh mục `SachHay`.
 
 ### 3.2. Lời Kêu Gọi Hành Động (CTA Guidelines)
 * **Vị kỷ (Self-interested):** Nêu bật việc người đọc **nhận được sự tự do và bình an** gì khi thực hiện, thay vì ra lệnh ép buộc.

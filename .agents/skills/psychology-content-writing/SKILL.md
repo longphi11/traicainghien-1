@@ -66,6 +66,21 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
   - *Bẫy Tích Lũy Kiến Thức: Vì Sao Càng Học Lại Càng Trì Hoãn?* (59 ký tự)
   - *Thuật Đảo Ngược Dopamine: Để 'Nghiện' Làm Việc Như Lướt Mạng* (60 ký tự)
 
+#### 📚 QUY CHUẨN ĐẶT TIÊU ĐỀ CHO BÀI VIẾT VỀ SÁCH (LỆNH ĐẶC BIỆT CỦA BỐ):
+* **Format bắt buộc:** `"Đọc [tên sách] - [tựa đề]"`
+  - *Ví dụ chuẩn mực:*
+    - `Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh` (59 ký tự)
+    - `Đọc 'Câu Chuyện Dòng Sông' - Buông Bỏ Tìm Kiếm Để Thật Sự Thấy` (61 ký tự)
+    - `Đọc 'Bẫy Hạnh Phúc' - Càng Cố Vui Vẻ Càng Dễ Khổ Sở Và Nghiện` (59 ký tự)
+    - `Đọc 'Bẫy Tiện Nghi' - Sự Thừa Mứa Đang Giết Chết Nghị Lực Bạn` (57 ký tự)
+    - `Đọc 'Dòng Chảy' - Tìm Lại Sự Đắm Chìm Mà Màn Hình Ảo Không Có` (58 ký tự)
+    - `Đọc 'Deep Work' - Tấm Khiên Bảo Vệ Tâm Trí Khỏi Xao Nhãng Số` (57 ký tự)
+    - `Đọc 'Quốc Gia Dopamine' - Chiếc Bập Bênh Và Hố Sâu Trống Rỗng` (58 ký tự)
+* **Dấu phân cách bắt buộc:** Dùng dấu gạch nối ` - ` (có khoảng trắng 2 bên). **TUYỆT ĐỐI KHÔNG dùng dấu hai chấm `:`**.
+* **Độ dài tiêu đề:** Luôn bảo đảm nằm gọn trong khoảng chuẩn **50 – 62 ký tự** để vừa khít 2 dòng trên thẻ card ngoài trang chủ và di động.
+* **Quy chuẩn danh mục (Category Tag):** Mọi bài viết về sách **BẮT BUỘC CHỈ GẮN DUY NHẤT MỤC SÁCH HAY** (`categories: ["SachHay"]`), tuyệt đối không gắn lẫn lộn các danh mục khác.
+* **Quy chuẩn Thumbnail:** Bìa sách 3D đặt trong không gian Zen tĩnh lặng, có watermark `🌿 TRẠI CAI NGHIỆN`, chuẩn 1200x675 dưới 120KB.
+
 ### 1.8. Vị Trí Khối "Những Điểm Chính" (Key Takeaways)
 * **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
 * **Ý nghĩa:** Tuyệt đối không đặt ở đầu bài. Hãy để người đọc trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước, sau đó nhận khối "Những Điểm Chính" như một món quà đúc kết hành động thực hành tinh gọn trước khi khép lại trang web.
