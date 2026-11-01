@@ -91,8 +91,7 @@ const rawArticles: Article[] = [
     "RenLuyenBoNao"
   ],
     "tags": [
-      "#HieuHanhVi",
-      "#SachHay"
+      "#HieuHanhVi"
     ],
     "readTime": "8 phút đọc",
     "date": "16/10/2026",
@@ -112,8 +111,7 @@ const rawArticles: Article[] = [
       "TrietHocCuocSong"
     ],
     "tags": [
-      "#XayDungThoiQuen",
-      "#SachHay"
+      "#XayDungThoiQuen"
     ],
     "readTime": "12 phút đọc",
     "date": "17/10/2026",
@@ -356,7 +354,6 @@ const rawArticles: Article[] = [
   ],
     "tags": [
       "#HieuHanhVi",
-      "#SachHay",
       "#TuDuyNguoc",
       "#CharlieMunger"
     ],

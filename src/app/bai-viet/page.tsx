@@ -35,6 +35,10 @@ function BaiVietContent() {
 
   const articleMatchesTab = (article: (typeof articles)[0], tab: string) => {
     if (tab === "ALL") return true;
+    // Riêng mục Sách Hay: Chỉ để các bài viết nói về 1 cuốn sách cụ thể
+    if (tab === "SachHay") {
+      return article.pillarTag === "SachHay" || article.slug.startsWith("review-sach-");
+    }
     if (article.pillarTag === tab) return true;
     if (article.categories && article.categories.includes(tab as any)) return true;
     if (article.tags && (article.tags.includes(`#${tab}`) || article.tags.includes(tab))) return true;
