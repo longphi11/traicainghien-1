@@ -13,56 +13,48 @@ const categories = [
     label: "Hiểu Hành Vi",
     icon: "🌱",
     desc: "Cơ chế dopamine & bẫy tiện nghi",
-    badgeColor: "text-[#3A5A40] dark:text-[#78A380] bg-[#EBF0EC] dark:bg-[#202A23]",
   },
   {
     tag: "XayDungThoiQuen",
     label: "Xây Dựng Thói Quen",
     icon: "🛠️",
     desc: "Atomic Habits & Kaizen 1% mỗi ngày",
-    badgeColor: "text-[#C27D53] dark:text-[#D48C62] bg-[#F9EFE9] dark:bg-[#2D231C]",
   },
   {
     tag: "LayLaiSuTapTrung",
     label: "Lấy Lại Sự Tập Trung",
     icon: "🎯",
     desc: "Trị sương mù não & Deep Work",
-    badgeColor: "text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60",
   },
   {
     tag: "TrietHocCuocSong",
     label: "Triết Học Cuộc Sống",
     icon: "📜",
     desc: "Stoicism, Wabi Sabi & Ikigai",
-    badgeColor: "text-stone-700 dark:text-stone-300 bg-stone-100 dark:bg-stone-800",
   },
   {
     tag: "QuanTriCamXuc",
     label: "Quản Trị Cảm Xúc",
     icon: "🌊",
     desc: "Cân bằng tâm lý & làm chủ xung động",
-    badgeColor: "text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60",
   },
   {
     tag: "HieuUngTamLy",
     label: "Hiệu Ứng Tâm Lý",
     icon: "🧠",
     desc: "Bẫy nhận thức & điểm mù tâm trí",
-    badgeColor: "text-purple-700 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/60",
   },
   {
     tag: "SachHay",
-    label: "Sách Hay Tinh Tuyển",
+    label: "Sách Hay",
     icon: "📚",
     desc: "Tinh hoa 14 cuốn sách kinh điển",
-    badgeColor: "text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60",
   },
   {
     tag: "RenLuyenBoNao",
     label: "Rèn Luyện Bộ Não",
     icon: "⚡",
     desc: "Tái lập nơ-ron, rèn trí lực & phản xạ",
-    badgeColor: "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60",
   },
 ];
 
@@ -181,26 +173,21 @@ export default function Navbar() {
                   </Link>
                 </div>
 
-                {/* 2-column Grid of Categories */}
+                {/* 2-column Grid of Categories - Trực quan, không bị cắt cụt chữ */}
                 <div className="grid grid-cols-2 gap-2">
                   {categories.map((cat) => (
                     <Link
                       key={cat.tag}
                       href={`/bai-viet?chude=${cat.tag}`}
-                      className="p-2.5 rounded-xl hover:bg-white dark:hover:bg-[#202722] border border-transparent hover:border-[#E6E1D8] dark:hover:border-[#354037] transition-all flex items-start gap-2.5 group/item"
+                      className="p-2.5 rounded-xl hover:bg-white dark:hover:bg-[#202722] border border-transparent hover:border-[#E6E1D8] dark:hover:border-[#354037] transition-all flex items-start gap-3 group/item"
                     >
-                      <span className="text-xl shrink-0 p-1 rounded-lg bg-black/5 dark:bg-white/5 group-hover/item:scale-110 transition-transform">
+                      <span className="text-xl shrink-0 p-1.5 rounded-lg bg-black/5 dark:bg-white/5 group-hover/item:scale-110 transition-transform">
                         {cat.icon}
                       </span>
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-1.5 mb-0.5">
-                          <span className="text-xs font-bold text-[#2D312E] dark:text-[#F0ECE6] group-hover/item:text-[#3A5A40] dark:group-hover/item:text-[#78A380] transition-colors truncate">
-                            {cat.label}
-                          </span>
-                          <span className={`text-[10px] font-semibold px-1.5 py-0.2 rounded-full ${cat.badgeColor}`}>
-                            #{cat.tag}
-                          </span>
-                        </div>
+                        <span className="text-[13px] font-bold text-[#2D312E] dark:text-[#F0ECE6] group-hover/item:text-[#3A5A40] dark:group-hover/item:text-[#78A380] transition-colors block leading-snug mb-0.5">
+                          {cat.label}
+                        </span>
                         <p className="text-[11px] text-[#6B726E] dark:text-[#9DA39F] leading-tight line-clamp-1">
                           {cat.desc}
                         </p>
@@ -312,7 +299,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Categories Submenu */}
+            {/* Mobile Categories Submenu - Không hashtag, hiển thị rõ ràng */}
             {mobileArticlesOpen && (
               <div className="pl-3 pr-1 py-2 my-1 space-y-1.5 border-l-2 border-[#E6E1D8] dark:border-[#2E3531]">
                 {categories.map((cat) => (
@@ -320,13 +307,10 @@ export default function Navbar() {
                     key={cat.tag}
                     href={`/bai-viet?chude=${cat.tag}`}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-2 py-1.5 text-xs text-[#6B726E] dark:text-[#9DA39F] hover:text-[#3A5A40] dark:hover:text-[#78A380] transition-colors"
+                    className="flex items-center gap-2.5 py-1.5 text-xs text-[#6B726E] dark:text-[#9DA39F] hover:text-[#3A5A40] dark:hover:text-[#78A380] transition-colors"
                   >
                     <span>{cat.icon}</span>
                     <span className="font-semibold">{cat.label}</span>
-                    <span className={`text-[10px] px-1 rounded-full ${cat.badgeColor}`}>
-                      #{cat.tag}
-                    </span>
                   </Link>
                 ))}
               </div>
