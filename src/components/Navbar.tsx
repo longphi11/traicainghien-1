@@ -157,7 +157,7 @@ export default function Navbar() {
             </Link>
 
             {/* Dropdown Panel */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[640px] pt-1 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 translate-y-1 transition-all duration-200 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[660px] pt-1 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 translate-y-1 transition-all duration-200 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
               <div className="rounded-2xl p-4 bg-[#FAF7F2] dark:bg-[#181C1A] border border-[#E6E1D8] dark:border-[#2E3531] shadow-2xl space-y-3">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-2.5 border-b border-[#E6E1D8] dark:border-[#2E3531]">
@@ -173,22 +173,22 @@ export default function Navbar() {
                   </Link>
                 </div>
 
-                {/* 2-column Grid of Categories - Trực quan, không bị cắt cụt chữ */}
-                <div className="grid grid-cols-2 gap-2">
+                {/* 2-column Grid of Categories - Hiển thị Full 100% nội dung, tự nhiên xuống dòng */}
+                <div className="grid grid-cols-2 gap-2.5">
                   {categories.map((cat) => (
                     <Link
                       key={cat.tag}
                       href={`/bai-viet?chude=${cat.tag}`}
-                      className="p-2.5 rounded-xl hover:bg-white dark:hover:bg-[#202722] border border-transparent hover:border-[#E6E1D8] dark:hover:border-[#354037] transition-all flex items-start gap-3 group/item"
+                      className="p-3 rounded-xl hover:bg-white dark:hover:bg-[#202722] border border-transparent hover:border-[#E6E1D8] dark:hover:border-[#354037] transition-all flex items-start gap-3 group/item"
                     >
-                      <span className="text-xl shrink-0 p-1.5 rounded-lg bg-black/5 dark:bg-white/5 group-hover/item:scale-110 transition-transform">
+                      <span className="text-xl shrink-0 p-1.5 rounded-lg bg-black/5 dark:bg-white/5 group-hover/item:scale-110 transition-transform mt-0.5">
                         {cat.icon}
                       </span>
                       <div className="flex-1 min-w-0">
-                        <span className="text-[13px] font-bold text-[#2D312E] dark:text-[#F0ECE6] group-hover/item:text-[#3A5A40] dark:group-hover/item:text-[#78A380] transition-colors block leading-snug mb-0.5">
+                        <span className="text-[13px] font-bold text-[#2D312E] dark:text-[#F0ECE6] group-hover/item:text-[#3A5A40] dark:group-hover/item:text-[#78A380] transition-colors block leading-snug mb-1">
                           {cat.label}
                         </span>
-                        <p className="text-[11px] text-[#6B726E] dark:text-[#9DA39F] leading-tight line-clamp-1">
+                        <p className="text-[12px] text-[#6B726E] dark:text-[#9DA39F] leading-relaxed">
                           {cat.desc}
                         </p>
                       </div>
