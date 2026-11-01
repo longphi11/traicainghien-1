@@ -4,20 +4,65 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, ChevronDown, ArrowRight } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+
+const categories = [
+  {
+    tag: "HieuHanhVi",
+    label: "Hiểu Hành Vi",
+    icon: "🌱",
+    desc: "Cơ chế dopamine & bẫy tiện nghi",
+    badgeColor: "text-[#3A5A40] dark:text-[#78A380] bg-[#EBF0EC] dark:bg-[#202A23]",
+  },
+  {
+    tag: "XayDungThoiQuen",
+    label: "Xây Dựng Thói Quen",
+    icon: "🛠️",
+    desc: "Atomic Habits & Kaizen 1% mỗi ngày",
+    badgeColor: "text-[#C27D53] dark:text-[#D48C62] bg-[#F9EFE9] dark:bg-[#2D231C]",
+  },
+  {
+    tag: "LayLaiSuTapTrung",
+    label: "Lấy Lại Sự Tập Trung",
+    icon: "🎯",
+    desc: "Trị sương mù não & Deep Work",
+    badgeColor: "text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60",
+  },
+  {
+    tag: "TrietHocCuocSong",
+    label: "Triết Học Cuộc Sống",
+    icon: "📜",
+    desc: "Stoicism, Wabi Sabi & Ikigai",
+    badgeColor: "text-stone-700 dark:text-stone-300 bg-stone-100 dark:bg-stone-800",
+  },
+  {
+    tag: "QuanTriCamXuc",
+    label: "Quản Trị Cảm Xúc",
+    icon: "🌊",
+    desc: "Cân bằng tâm lý & làm chủ xung động",
+    badgeColor: "text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60",
+  },
+  {
+    tag: "HieuUngTamLy",
+    label: "Hiệu Ứng Tâm Lý",
+    icon: "🧠",
+    desc: "Bẫy nhận thức & điểm mù tâm trí",
+    badgeColor: "text-purple-700 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/60",
+  },
+  {
+    tag: "SachHay",
+    label: "Sách Hay Tinh Tuyển",
+    icon: "📚",
+    desc: "Tinh hoa 14 cuốn sách kinh điển",
+    badgeColor: "text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60",
+  },
+];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileArticlesOpen, setMobileArticlesOpen] = useState(false);
   const pathname = usePathname();
-
-  const navLinks = [
-    { href: "/", label: "Trang Chủ" },
-    { href: "/he-thong-cai-nghien", label: "Hệ Thống Cai Nghiện" },
-    { href: "/trac-nghiem", label: "Trắc Nghiệm" },
-    { href: "/bai-viet", label: "Bài Viết" },
-    { href: "/gioi-thieu", label: "Giới Thiệu" },
-  ];
 
   const isActive = (path: string) => {
     if (path === "/" && pathname === "/") return true;
@@ -53,25 +98,126 @@ export default function Navbar() {
 
         {/* Desktop Menu Items */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
-          {navLinks.map((link) => {
-            const active = isActive(link.href);
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors py-1 relative ${
-                  active
-                    ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
-                    : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
-                }`}
-              >
-                {link.label}
-                {active && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
-                )}
-              </Link>
-            );
-          })}
+          <Link
+            href="/"
+            className={`transition-colors py-1 relative ${
+              isActive("/")
+                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+            }`}
+          >
+            Trang Chủ
+            {isActive("/") && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+            )}
+          </Link>
+
+          <Link
+            href="/he-thong-cai-nghien"
+            className={`transition-colors py-1 relative ${
+              isActive("/he-thong-cai-nghien")
+                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+            }`}
+          >
+            Hệ Thống Cai Nghiện
+            {isActive("/he-thong-cai-nghien") && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+            )}
+          </Link>
+
+          <Link
+            href="/trac-nghiem"
+            className={`transition-colors py-1 relative ${
+              isActive("/trac-nghiem")
+                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+            }`}
+          >
+            Trắc Nghiệm
+            {isActive("/trac-nghiem") && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+            )}
+          </Link>
+
+          {/* Bài Viết with Dropdown Menu */}
+          <div className="relative group/dropdown py-6">
+            <Link
+              href="/bai-viet"
+              className={`transition-colors py-1 inline-flex items-center gap-1.5 relative ${
+                isActive("/bai-viet")
+                  ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                  : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+              }`}
+            >
+              <span>Bài Viết</span>
+              <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover/dropdown:rotate-180 opacity-70" />
+              {isActive("/bai-viet") && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+              )}
+            </Link>
+
+            {/* Dropdown Panel */}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] pt-1 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 translate-y-1 transition-all duration-200 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
+              <div className="rounded-2xl p-4 bg-[#FAF7F2] dark:bg-[#181C1A] border border-[#E6E1D8] dark:border-[#2E3531] shadow-2xl space-y-3">
+                {/* Header */}
+                <div className="flex items-center justify-between pb-2.5 border-b border-[#E6E1D8] dark:border-[#2E3531]">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#3A5A40] dark:text-[#78A380] flex items-center gap-1.5">
+                    <span>📖</span> Khám Phá Bài Viết Theo Chủ Đề
+                  </span>
+                  <Link
+                    href="/bai-viet"
+                    className="text-xs font-semibold text-[#6B726E] dark:text-[#9DA39F] hover:text-[#3A5A40] dark:hover:text-[#78A380] flex items-center gap-1 transition-colors"
+                  >
+                    <span>Xem tất cả bài viết</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
+
+                {/* 2-column Grid of Categories */}
+                <div className="grid grid-cols-2 gap-2">
+                  {categories.map((cat) => (
+                    <Link
+                      key={cat.tag}
+                      href={`/bai-viet?chude=${cat.tag}`}
+                      className="p-2.5 rounded-xl hover:bg-white dark:hover:bg-[#202722] border border-transparent hover:border-[#E6E1D8] dark:hover:border-[#354037] transition-all flex items-start gap-2.5 group/item"
+                    >
+                      <span className="text-xl shrink-0 p-1 rounded-lg bg-black/5 dark:bg-white/5 group-hover/item:scale-110 transition-transform">
+                        {cat.icon}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-1.5 mb-0.5">
+                          <span className="text-xs font-bold text-[#2D312E] dark:text-[#F0ECE6] group-hover/item:text-[#3A5A40] dark:group-hover/item:text-[#78A380] transition-colors truncate">
+                            {cat.label}
+                          </span>
+                          <span className={`text-[10px] font-semibold px-1.5 py-0.2 rounded-full ${cat.badgeColor}`}>
+                            #{cat.tag}
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-[#6B726E] dark:text-[#9DA39F] leading-tight line-clamp-1">
+                          {cat.desc}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Link
+            href="/gioi-thieu"
+            className={`transition-colors py-1 relative ${
+              isActive("/gioi-thieu")
+                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+            }`}
+          >
+            Giới Thiệu
+            {isActive("/gioi-thieu") && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+            )}
+          </Link>
         </nav>
 
         {/* Action Button & Theme Toggle (Desktop) */}
@@ -108,20 +254,87 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-b border-[#E6E1D8] dark:border-[#2E3531] bg-[#FAF7F2] dark:bg-[#151816] px-6 py-4 space-y-3 shadow-lg">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block py-2 text-sm font-medium transition-colors ${
-                isActive(link.href) 
-                  ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" 
-                  : "text-[#2D312E] dark:text-[#D1CCC4]"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <Link
+            href="/"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-sm font-medium transition-colors ${
+              isActive("/") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+            }`}
+          >
+            Trang Chủ
+          </Link>
+
+          <Link
+            href="/he-thong-cai-nghien"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-sm font-medium transition-colors ${
+              isActive("/he-thong-cai-nghien") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+            }`}
+          >
+            Hệ Thống Cai Nghiện
+          </Link>
+
+          <Link
+            href="/trac-nghiem"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-sm font-medium transition-colors ${
+              isActive("/trac-nghiem") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+            }`}
+          >
+            Trắc Nghiệm
+          </Link>
+
+          {/* Mobile Accordion for Bài Viết */}
+          <div className="py-1">
+            <div className="flex items-center justify-between py-1">
+              <Link
+                href="/bai-viet"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-sm font-medium transition-colors ${
+                  isActive("/bai-viet") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+                }`}
+              >
+                Bài Viết (Tất cả)
+              </Link>
+              <button
+                onClick={() => setMobileArticlesOpen(!mobileArticlesOpen)}
+                className="p-1 rounded-lg text-[#6B726E] dark:text-[#9DA39F] hover:bg-black/5 dark:hover:bg-white/5"
+                aria-label="Toggle categories"
+              >
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileArticlesOpen ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+
+            {/* Mobile Categories Submenu */}
+            {mobileArticlesOpen && (
+              <div className="pl-3 pr-1 py-2 my-1 space-y-1.5 border-l-2 border-[#E6E1D8] dark:border-[#2E3531]">
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.tag}
+                    href={`/bai-viet?chude=${cat.tag}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 py-1.5 text-xs text-[#6B726E] dark:text-[#9DA39F] hover:text-[#3A5A40] dark:hover:text-[#78A380] transition-colors"
+                  >
+                    <span>{cat.icon}</span>
+                    <span className="font-semibold">{cat.label}</span>
+                    <span className={`text-[10px] px-1 rounded-full ${cat.badgeColor}`}>
+                      #{cat.tag}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/gioi-thieu"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-sm font-medium transition-colors ${
+              isActive("/gioi-thieu") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+            }`}
+          >
+            Giới Thiệu
+          </Link>
         </div>
       )}
     </header>

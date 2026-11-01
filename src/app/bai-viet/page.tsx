@@ -1,19 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
-import { articles, ArticleTag } from "@/data/articles";
-import { ArrowRight, ArrowLeft, Clock, Calendar, Sparkles } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { articles } from "@/data/articles";
+import { ArrowRight, ArrowLeft, Clock } from "lucide-react";
 
 const ITEMS_PER_PAGE = 15;
 
-export default function BaiVietPage() {
+function BaiVietContent() {
+  const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<string>("ALL");
   const [currentPage, setCurrentPage] = useState<number>(1);
+
+  // Sync activeTab with URL search params (?chude=... or ?tab=...)
+  useEffect(() => {
+    const tabParam = searchParams.get("chude") || searchParams.get("tab");
+    if (tabParam) {
+      setActiveTab(tabParam);
+      setCurrentPage(1);
+    } else {
+      setActiveTab("ALL");
+    }
+  }, [searchParams]);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
     setCurrentPage(1);
+    if (typeof window !== "undefined") {
+      const url = tab === "ALL" ? "/bai-viet" : `/bai-viet?chude=${tab}`;
+      window.history.pushState(null, "", url);
+    }
   };
 
   const articleMatchesTab = (article: (typeof articles)[0], tab: string) => {
@@ -65,13 +82,13 @@ export default function BaiVietPage() {
       
       {/* Header */}
       <div className="text-center space-y-4 max-w-3xl mx-auto">
-        <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-4 py-1.5 rounded-full inline-block">
+        <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] dark:text-[#78A380] bg-[#EBF0EC] dark:bg-[#202A23] px-4 py-1.5 rounded-full inline-block">
           Kho Tàng Tri Thức • Trại Cai Nghiện
         </span>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#2D312E] tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6] tracking-tight">
           Bài Viết Tâm Lý Hành Vi
         </h1>
-        <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
+        <p className="text-sm md:text-base text-[#6B726E] dark:text-[#9DA39F] leading-relaxed">
           Đúc kết khoa học thần kinh và kinh nghiệm thực chiến từ người thường dành cho người thường. Không giáo điều, không phán xét, trao phương pháp để bạn làm chủ cuộc đời.
         </p>
       </div>
@@ -83,7 +100,7 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm ${
             activeTab === "ALL"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-[#3A5A40]"
           }`}
         >
           Tất Cả ({getCount("ALL")})
@@ -94,13 +111,13 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "HieuHanhVi"
               ? "bg-[#3A5A40] text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#3A5A40]"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-[#3A5A40]"
           }`}
         >
           <span>🌱</span>
           <span>#HieuHanhVi</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "HieuHanhVi" ? "bg-white/20 text-white" : "bg-[#EBF0EC] text-[#3A5A40]"
+            activeTab === "HieuHanhVi" ? "bg-white/20 text-white" : "bg-[#EBF0EC] dark:bg-[#202A23] text-[#3A5A40] dark:text-[#78A380]"
           }`}>
             {getCount("HieuHanhVi")}
           </span>
@@ -111,13 +128,13 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "XayDungThoiQuen"
               ? "bg-[#C27D53] text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-[#C27D53]"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-[#C27D53]"
           }`}
         >
           <span>🛠️</span>
           <span>#XayDungThoiQuen</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "XayDungThoiQuen" ? "bg-white/20 text-white" : "bg-[#F9EFE9] text-[#C27D53]"
+            activeTab === "XayDungThoiQuen" ? "bg-white/20 text-white" : "bg-[#F9EFE9] dark:bg-[#2D231C] text-[#C27D53] dark:text-[#D48C62]"
           }`}>
             {getCount("XayDungThoiQuen")}
           </span>
@@ -128,13 +145,13 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "LayLaiSuTapTrung"
               ? "bg-blue-700 text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-blue-600"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-blue-600"
           }`}
         >
           <span>🎯</span>
           <span>#LayLaiSuTapTrung</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "LayLaiSuTapTrung" ? "bg-white/20 text-white" : "bg-blue-50 text-blue-800"
+            activeTab === "LayLaiSuTapTrung" ? "bg-white/20 text-white" : "bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300"
           }`}>
             {getCount("LayLaiSuTapTrung")}
           </span>
@@ -144,14 +161,14 @@ export default function BaiVietPage() {
           onClick={() => handleTabChange("TrietHocCuocSong")}
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "TrietHocCuocSong"
-              ? "bg-stone-800 text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-stone-700"
+              ? "bg-stone-700 text-white shadow-md scale-105"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-stone-600"
           }`}
         >
           <span>📜</span>
           <span>#TrietHocCuocSong</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "TrietHocCuocSong" ? "bg-white/20 text-white" : "bg-stone-100 text-stone-800"
+            activeTab === "TrietHocCuocSong" ? "bg-white/20 text-white" : "bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-300"
           }`}>
             {getCount("TrietHocCuocSong")}
           </span>
@@ -162,13 +179,13 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "QuanTriCamXuc"
               ? "bg-rose-700 text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-rose-600"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-rose-600"
           }`}
         >
           <span>🌊</span>
           <span>#QuanTriCamXuc</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "QuanTriCamXuc" ? "bg-white/20 text-white" : "bg-rose-50 text-rose-800"
+            activeTab === "QuanTriCamXuc" ? "bg-white/20 text-white" : "bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300"
           }`}>
             {getCount("QuanTriCamXuc")}
           </span>
@@ -179,13 +196,13 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "HieuUngTamLy"
               ? "bg-purple-800 text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-purple-700"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-purple-700"
           }`}
         >
           <span>🧠</span>
           <span>#HieuUngTamLy</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "HieuUngTamLy" ? "bg-white/20 text-white" : "bg-purple-50 text-purple-800"
+            activeTab === "HieuUngTamLy" ? "bg-white/20 text-white" : "bg-purple-50 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300"
           }`}>
             {getCount("HieuUngTamLy")}
           </span>
@@ -196,13 +213,13 @@ export default function BaiVietPage() {
           className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
             activeTab === "SachHay"
               ? "bg-amber-700 text-white shadow-md scale-105"
-              : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E] hover:border-amber-600"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-amber-600"
           }`}
         >
           <span>📚</span>
           <span>#SachHay</span>
           <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "SachHay" ? "bg-white/20 text-white" : "bg-amber-50 text-amber-800"
+            activeTab === "SachHay" ? "bg-white/20 text-white" : "bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300"
           }`}>
             {getCount("SachHay")}
           </span>
@@ -214,12 +231,12 @@ export default function BaiVietPage() {
         {currentArticles.map((article) => (
           <article
             key={article.slug}
-            className="group zen-card overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 border border-[#E6E1D8] bg-white rounded-3xl"
+            className="group zen-card overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#1D221F] rounded-3xl"
           >
             {/* Thumbnail Box - Tràn viền hoàn toàn không còn viền trắng bao quanh */}
             <Link
               href={`/bai-viet/${article.slug}`}
-              className="relative h-52 sm:h-56 md:h-52 lg:h-56 w-full overflow-hidden bg-[#FAF7F2] block"
+              className="relative h-52 sm:h-56 md:h-52 lg:h-56 w-full overflow-hidden bg-[#FAF7F2] dark:bg-[#151816] block"
             >
               <img
                 src={article.thumbnail}
@@ -242,31 +259,31 @@ export default function BaiVietPage() {
             {/* Nội dung bên dưới bài viết có padding đệm êm ái */}
             <div className="p-6 sm:p-7 flex-1 flex flex-col">
               {/* Date & Metadata Row (Phong cách tinh tế theo ảnh mẫu) */}
-              <div className="text-[11px] font-semibold tracking-wider text-[#6B726E] uppercase mb-2 flex items-center gap-1.5">
+              <div className="text-[11px] font-semibold tracking-wider text-[#6B726E] dark:text-[#9DA39F] uppercase mb-2 flex items-center gap-1.5">
                 <span>{article.date}</span>
                 <span>•</span>
-                <span className="text-[#3A5A40] font-bold">#{article.pillarTag}</span>
+                <span className="text-[#3A5A40] dark:text-[#78A380] font-bold">#{article.pillarTag}</span>
               </div>
 
               {/* Title (Khoảng cách dòng thoáng đãng, vừa khít 2 dòng không díu chữ) */}
-              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mb-3 leading-[1.42] sm:leading-[1.46] tracking-normal line-clamp-2 group-hover:text-[#3A5A40] transition-colors">
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6] mb-3 leading-[1.42] sm:leading-[1.46] tracking-normal line-clamp-2 group-hover:text-[#3A5A40] dark:group-hover:text-[#6B9A73] transition-colors">
                 <Link href={`/bai-viet/${article.slug}`}>
                   {article.title}
                 </Link>
               </h2>
 
               {/* Excerpt */}
-              <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed mb-6 flex-1 line-clamp-3">
+              <p className="text-xs sm:text-sm text-[#6B726E] dark:text-[#9DA39F] leading-relaxed mb-6 flex-1 line-clamp-3">
                 “{article.excerpt}”
               </p>
 
               {/* Footer Row */}
-              <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between text-xs sm:text-sm font-semibold text-[#3A5A40]">
+              <div className="pt-4 border-t border-[#E6E1D8] dark:border-[#2E3531] flex items-center justify-between text-xs sm:text-sm font-semibold text-[#3A5A40] dark:text-[#78A380]">
                 <Link href={`/bai-viet/${article.slug}`} className="flex items-center gap-1.5 hover:underline font-bold">
                   <span>Đọc tiếp</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
                 </Link>
-                <span className="text-[#6B726E] font-normal flex items-center gap-1 text-xs">
+                <span className="text-[#6B726E] dark:text-[#9DA39F] font-normal flex items-center gap-1 text-xs">
                   <Clock className="w-3.5 h-3.5" /> {article.readTime}
                 </span>
               </div>
@@ -281,7 +298,7 @@ export default function BaiVietPage() {
           <button
             onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
             disabled={currentPage === 1}
-            className="px-4 py-2 rounded-xl text-xs font-semibold border border-[#E6E1D8] bg-white text-[#6B726E] hover:text-[#2D312E] disabled:opacity-30 disabled:hover:text-[#6B726E] flex items-center gap-1 transition-all"
+            className="px-4 py-2 rounded-xl text-xs font-semibold border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#1E2220] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] disabled:opacity-30 disabled:hover:text-[#6B726E] flex items-center gap-1 transition-all"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> Trang trước
           </button>
@@ -293,7 +310,7 @@ export default function BaiVietPage() {
               className={`w-9 h-9 rounded-xl text-xs font-bold transition-all ${
                 currentPage === idx + 1
                   ? "bg-[#3A5A40] text-white shadow-sm"
-                  : "bg-white border border-[#E6E1D8] text-[#6B726E] hover:text-[#2D312E]"
+                  : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6]"
               }`}
             >
               {idx + 1}
@@ -303,7 +320,7 @@ export default function BaiVietPage() {
           <button
             onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 rounded-xl text-xs font-semibold border border-[#E6E1D8] bg-white text-[#6B726E] hover:text-[#2D312E] disabled:opacity-30 disabled:hover:text-[#6B726E] flex items-center gap-1 transition-all"
+            className="px-4 py-2 rounded-xl text-xs font-semibold border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#1E2220] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] disabled:opacity-30 disabled:hover:text-[#6B726E] flex items-center gap-1 transition-all"
           >
             Trang sau <ArrowRight className="w-3.5 h-3.5" />
           </button>
@@ -311,5 +328,18 @@ export default function BaiVietPage() {
       )}
 
     </div>
+  );
+}
+
+export default function BaiVietPage() {
+  return (
+    <Suspense fallback={
+      <div className="max-w-[1400px] w-full mx-auto px-4 py-24 text-center text-[#6B726E] dark:text-[#9DA39F]">
+        <div className="w-8 h-8 border-2 border-[#3A5A40] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+        <p className="text-sm">Đang tải kho bài viết...</p>
+      </div>
+    }>
+      <BaiVietContent />
+    </Suspense>
   );
 }
