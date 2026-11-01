@@ -30,8 +30,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${lora.variable} ${plusJakartaSans.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#2D312E] font-sans antialiased">
+    <html lang="vi" suppressHydrationWarning className={`${lora.variable} ${plusJakartaSans.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem('theme');
+                var supportDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (theme === 'dark' || (!theme && supportDark)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col bg-[var(--bg-page)] text-[var(--text-main)] font-sans antialiased selection:bg-[#3A5A40] selection:text-white">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

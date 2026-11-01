@@ -15,11 +15,29 @@
   --border-color: #E6E1D8;
 }
 
+.dark {
+  --bg-page: #151816;
+  --bg-card: #1D221F;
+  --text-main: #F0ECE6;
+  --text-muted: #9DA39F;
+  --primary: #527A59;
+  --primary-hover: #63926B;
+  --primary-light: #222B25;
+  --accent: #D48C62;
+  --accent-light: #33231A;
+  --border-color: #2E3531;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
 body {
   background-color: var(--bg-page);
   color: var(--text-main);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, .font-serif {
@@ -37,4 +55,57 @@ h1, h2, h3, h4, .font-serif {
 .zen-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(58, 90, 64, 0.08);
+}
+
+.dark .zen-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+}
+
+/* Zen Dark Mode Auto-Adaptation for Legacy Hex Utilities */
+.dark .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.dark .bg-\[\#FAF7F2\] {
+  background-color: var(--bg-page) !important;
+}
+
+.dark .bg-\[\#FAF7F2\]\/90 {
+  background-color: rgba(21, 24, 22, 0.9) !important;
+}
+
+.dark .bg-\[\#FAF7F2\]\/80 {
+  background-color: rgba(21, 24, 22, 0.8) !important;
+}
+
+.dark .bg-\[\#F7F5F0\] {
+  background-color: #191D1B !important;
+}
+
+.dark .bg-\[\#F4EFE6\] {
+  background-color: #1B201D !important;
+}
+
+.dark .bg-\[\#EBF0EC\] {
+  background-color: #202A23 !important;
+}
+
+.dark .bg-\[\#EBF0EC\]\/60 {
+  background-color: rgba(32, 42, 35, 0.6) !important;
+}
+
+.dark .bg-\[\#F9EFE9\] {
+  background-color: #2D231C !important;
+}
+
+.dark .text-\[\#2D312E\] {
+  color: var(--text-main) !important;
+}
+
+.dark .text-\[\#6B726E\] {
+  color: var(--text-muted) !important;
+}
+
+.dark .border-\[\#E6E1D8\] {
+  border-color: var(--border-color) !important;
 }
