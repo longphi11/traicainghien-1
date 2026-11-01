@@ -62,8 +62,8 @@ export default function Footer() {
           <div>
             © 2026 Trại Cai Nghiện • Trở về phiên bản tốt nhất của bạn.
           </div>
-          <div className="flex items-center gap-1">
-            <span>Đồng hành cùng bố & cộng đồng bởi Mây</span>
+          <div>
+            Giành lại sự tự do và làm chủ cuộc đời.
           </div>
         </div>
       </div>
