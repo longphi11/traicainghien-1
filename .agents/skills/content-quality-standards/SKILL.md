@@ -65,11 +65,15 @@ flowchart TD
   - **CẤM ĐỔI TÊN FILE ĐỂ TÁI SỬ DỤNG:** Tuyệt đối không lấy ảnh master cũ crop lại hoặc đổi tên file mới để lừa bộ lọc. Mọi hình ảnh phải mang ẩn dụ thị giác độc nhất.
   - **MỞ RỘNG BỐI CẢNH THỊ GIÁC (CẤM BÓ HẸP TRONG PHÒNG):** Không được lặp đi lặp lại bối cảnh bàn làm việc / góc phòng khép kín. Phải đa dạng hóa sang các không gian mở: thiên nhiên khoáng đạt, sườn núi mờ sương, lối mòn ven rừng thông, ban công đón bình minh, quán cà phê phố thị... mang lại cảm giác giải phóng tâm trí và tự do.
   - **Kiểm toán tự động khóa cứng:** Chạy `node scripts/audit_all_articles.js` tự động phát hiện và chặn đứng 100% các vi phạm trùng lặp ảnh trước khi build.
-- [ ] **4. Dấu chìm nhận diện thương hiệu (Watermarks):**
+- [ ] **4. TÍNH BÁM SÁT TUYỆT ĐỐI NỘI DUNG BÀI VIẾT (CONTENT-VISUAL COHERENCE — LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **CẤM TUYỆT ĐỐI ẢNH PHONG CẢNH CHUNG CHUNG, VÔ HỒN:** Không được dùng những hình ảnh phong cảnh trừu tượng, lạc đề không ăn nhập với nội dung bài viết.
+  - **TỰ THÂN ĐỌC SÂU NỘI DUNG (TUYỆT ĐỐI KHÔNG CHỜ BỐ GỢI Ý):** Mây và Agent 8 bắt buộc phải tự động đọc toàn bộ bài viết, trích xuất đúng câu chuyện, ví dụ thực tế hoặc nhân vật hành vi cốt lõi để đưa vào tranh vẽ (Ví dụ: bài về *rèn luyện não bộ / học việc khó / Deliberate Practice* $\rightarrow$ hình ảnh **vận động viên tự thân khổ luyện trên đường dốc sương sớm**; bài về *Deep Work* $\rightarrow$ **người tập trung cao độ bên sổ tay và tách trà**; bài về *cai nghiện màn hình 2m* $\rightarrow$ **chiếc điện thoại úp mặt trên bàn cách xa giường**).
+  - Hình ảnh phải kể được câu chuyện bài viết ngay từ cái nhìn đầu tiên mà không cần đọc chữ.
+- [ ] **5. Dấu chìm nhận diện thương hiệu (Watermarks):**
   - Góc trên bên trái: Huy hiệu `🌿 TRẠI CAI NGHIỆN` (nền tối mờ, chữ trắng).
   - Góc dưới bên phải: Huy hiệu tên miền `traicainghien.com`.
-- [ ] **5. Kỹ thuật SEO Hình Ảnh & Dung Lượng:** Tỷ lệ chuẩn **16:9** (`1200x675px`), định dạng **WebP**, dung lượng tối ưu **BẮT BUỘC DƯỚI 120KB**, tên file chứa từ khóa không dấu ngăn cách bằng gạch nối (`tu-khoa-zen-trai-cai-nghien.webp`), đầy đủ thẻ `alt`.
-- [ ] **6. Quy chuẩn Chống Cắt Chữ Sơ Đồ Diễn Giải / Infographics (Anti-Clipping & Safe Typography - LỆNH ĐẶC BIỆT CỦA BỐ):**
+- [ ] **6. Kỹ thuật SEO Hình Ảnh & Dung Lượng:** Tỷ lệ chuẩn **16:9** (`1200x675px`), định dạng **WebP**, dung lượng tối ưu **BẮT BUỘC DƯỚI 120KB**, tên file chứa từ khóa không dấu ngăn cách bằng gạch nối (`tu-khoa-zen-trai-cai-nghien.webp`), đầy đủ thẻ `alt`.
+- [ ] **7. Quy chuẩn Chống Cắt Chữ Sơ Đồ Diễn Giải / Infographics (Anti-Clipping & Safe Typography - LỆNH ĐẶC BIỆT CỦA BỐ):**
   - CẤM TUYỆT ĐỐI các sơ đồ có chữ bị tràn khung, mất chữ đầu cuối (`QUY...ỐI`, `BƯỚC...`).
   - Tiêu đề infographic: Font tối đa 24px, căn giữa, lề an toàn 2 bên tối thiểu **150px**.
   - Thẻ nội dung (Cards): Header thẻ PHẢI tách 2 dòng (`BƯỚC X` ở trên, `TÊN BƯỚC` ở dưới), chiều cao thẻ header tối thiểu 65px. Chiều rộng chữ không được vượt quá 75% chiều rộng thẻ.

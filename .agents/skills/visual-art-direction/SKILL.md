@@ -57,12 +57,30 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
 
 ---
 
-## 3. 🎯 NGHỆ THUẬT ẨN DỤ THỊ GIÁC (VISUAL METAPHOR)
+## 3. 🎯 NGUYÊN TẮC BÁM SÁT NỘI DUNG & TỰ THÂN BÓC TÁCH "LÁT CẮT HÀNH ĐỘNG" (CONTENT-DRIVEN LIVING SCENE - LỆNH ĐẶC BIỆT CỦA BỐ)
 
-Một bức ảnh đẹp không chỉ minh họa bài viết, mà phải **kể được một câu chuyện chạm đáy cảm xúc**:
-* **Bài về Thoát Nghiện Mạng Xã Hội:** Chiếc điện thoại úp mặt trên bàn gỗ cách xa giường ngủ, bên cạnh là khung cửa sổ mở toang đón làn gió đêm tĩnh lặng, xa xa là chân trời thành phố dịu êm.
-* **Bài về Làm Việc Sâu (Deep Work):** Một người trẻ ngồi tập trung thanh thản bên trang giấy trắng, tách trà bốc làn khói mờ ảo, ánh nắng sớm xuyên qua rèm cửa, mọi sự xao nhãng bên ngoài như tan biến.
-* **Bài về Cân Bằng Động:** Một nhánh tre dẻo dai uốn mình nhẹ nhàng trong cơn gió mùa thu mà không hề gãy đổ.
+> [!IMPORTANT]
+> **LỆNH ĐẶC BIỆT CỦA BỐ (TỰ ĐỘNG HÓA TƯ DUY THỊ GIÁC — TUYỆT ĐỐI KHÔNG ĐỂ BỐ PHẢI NHẮC HOẶC GỢI Ý):**
+> Hình ảnh bìa bài viết KHÔNG ĐƯỢC PHÉP là những bức tranh phong cảnh thiên nhiên vô hồn, chung chung, tách rời khỏi chủ đề. Mây và Agent 8 **bắt buộc phải chủ động đọc sâu nội dung bài viết**, tìm đúng câu chuyện, ví dụ thực tế hoặc nhân vật hành vi cốt lõi trong bài để chuyển thể thành ẩn dụ thị giác sống động.
+
+### 3.1. Quy Trình 3 Bước Tự Thân Bóc Tách Ý Tưởng (Self-Driven Visual Ideation)
+1. **Bước 1: Quét ví dụ thực tế & nhân vật đắt giá nhất trong bài viết:**
+   - Bài viết đưa ra ví dụ về ai? (Vận động viên vượt ngưỡng như Michael Phelps, Eileen Gu; người thợ thủ công rèn kiếm; người trẻ đối diện với chiếc điện thoại lúc 2h sáng; người chạy bộ trong sương sớm; trang giấy viết tay của Tim Ferriss...).
+   - **Quy tắc ngón tay cái:** Nếu bài viết nói về *rèn luyện não bộ, học kỹ năng khó, Deliberate Practice* $\rightarrow$ Lấy ngay hình ảnh **vận động viên tự thân khổ luyện kỹ năng** giữa thiên nhiên khoáng đạt; Nếu bài nói về *Deep Work* $\rightarrow$ Lấy hình ảnh **người ngồi tập trung cao độ bên trang sổ tay và tách trà ấm lúc ban mai**.
+2. **Bước 2: Đặt chủ thể vào bối cảnh không gian mở (Anti-Claustrophobia):**
+   - Kết hợp chủ thể hành động đó với không gian ngoài trời thoáng đãng: Con đường mòn sườn núi, rừng thông mờ sương đón ánh bình minh hổ phách, bờ suối tĩnh lặng, ban công lộng gió... giúp mở rộng tâm trí người đọc.
+3. **Bước 3: Hóa thân vào chất liệu Zen Watercolor & Sumi-e:**
+   - 100% vẽ bằng cọ màu nước loang tự nhiên, viền mực than xước nhẹ `#2D312E` trên nền giấy sần Washi `#FAF7F2`, không bao giờ dùng 3D hay vector.
+
+### 3.2. Bảng Ma Trận Ánh Xạ Nội Dung Sang Hình Ảnh Minh Họa Cụ Thể
+
+| Chủ Đề Cốt Lõi Của Bài Viết | Nhân Vật / Chủ Thể Hành Động Bắt Buộc | Bối Cảnh & Ánh Sáng | Cảm Xúc Thị Giác |
+| :--- | :--- | :--- | :--- |
+| **Rèn Luyện Não Bộ & Học Kỹ Năng Khó** (*Neuroplasticity, Deliberate Practice*) | Vận động viên trẻ tự khổ luyện vượt dốc, hoặc cung thủ kéo căng dây cung với sự điềm tĩnh tuyệt đối. | Sườn núi đá mờ sương sớm, ánh bình minh hổ phách (`#C27D53`) hé rạng phía chân trời. | Kiên định, dũng cảm đối mặt ngưỡng khó, tái sinh nội lực. |
+| **Deep Work & Tập Trung Sâu** | Người trẻ ngồi thẳng lưng, tập trung tuyệt đối vào trang giấy trắng và chiếc bút mực, khói trà ấm bay nhẹ. | Bàn gỗ tối giản cạnh khung cửa sổ lớn đón nắng sớm chiếu rọi tia bụi vàng, xa xa là thành phố dịu êm. | Tĩnh tại, tắt nghẽn mọi xao nhãng, dòng chảy hạnh phúc (*Flow*). |
+| **Cai Nghiện Màn Hình & Quy Tắc 2M** | Chiếc điện thoại thông minh úp mặt trên bàn gỗ xa giường, màn hình tắt lịm hoàn toàn. | Căn phòng tối dịu, rèm cửa mở đón gió đêm thanh lọc tâm trí, trăng thanh ngoài trời. | Buông bỏ áp lực số, bình an, tự do khỏi bẫy dopamine rẻ tiền. |
+| **Chữa Lành & Chấp Nhận Bản Thân** (*Wabi Sabi, Kintsugi*) | Chiếc bát gốm mộc được hàn gắn bằng những đường chỉ vàng lấp lánh, hoặc mầm cây bé nhỏ vươn lên từ kẽ nứt đá khô cằn. | Ánh sáng ban mai dịu dàng rọi xuống thềm đá rêu phong (`#3A5A40`). | Bao dung, chữa lành từ vết thương, vẻ đẹp của sự bất toàn. |
+| **Hành Động Nhỏ Kaizen 1%** | Bàn tay cẩn trọng đặt viên đá cuội hoặc mảnh gỗ mộc xếp thành ngọn tháp cân bằng trên dòng suối. | Dòng suối trong veo chảy róc rách giữa rừng trúc, nước bắn tung bọt mịn. | Kiên trì bền bỉ, từng bước nhỏ tạo nên bước ngoặt vĩ đại. |
 
 ---
 
