@@ -12,49 +12,49 @@ const categories = [
     tag: "HieuHanhVi",
     label: "Hiểu Hành Vi",
     icon: "🌱",
-    desc: "Cơ chế dopamine & bẫy tiện nghi",
+    desc: "Thấu hiểu cơ chế để bắt đầu tha thứ cho chính mình",
   },
   {
     tag: "XayDungThoiQuen",
     label: "Xây Dựng Thói Quen",
     icon: "🛠️",
-    desc: "Atomic Habits & Kaizen 1% mỗi ngày",
+    desc: "Từng bước nhỏ nâng đỡ một cuộc đời tự do",
   },
   {
     tag: "LayLaiSuTapTrung",
     label: "Lấy Lại Sự Tập Trung",
     icon: "🎯",
-    desc: "Trị sương mù não & Deep Work",
+    desc: "Giành lại chủ quyền cho tâm trí của bạn",
   },
   {
     tag: "TrietHocCuocSong",
     label: "Triết Học Cuộc Sống",
     icon: "📜",
-    desc: "Stoicism, Wabi Sabi & Ikigai",
+    desc: "Sống chậm lại một nhịp để thấy đời đẹp hơn",
   },
   {
     tag: "QuanTriCamXuc",
     label: "Quản Trị Cảm Xúc",
     icon: "🌊",
-    desc: "Cân bằng tâm lý & làm chủ xung động",
+    desc: "Học cách dịu dàng ôm lấy những tổn thương",
   },
   {
     tag: "HieuUngTamLy",
     label: "Hiệu Ứng Tâm Lý",
     icon: "🧠",
-    desc: "Bẫy nhận thức & điểm mù tâm trí",
+    desc: "Soi rọi những góc khuất vô thức bên trong",
   },
   {
     tag: "SachHay",
     label: "Sách Hay",
     icon: "📚",
-    desc: "Tinh hoa 14 cuốn sách kinh điển",
+    desc: "Đọc hộ bạn những cuốn sách dày cộp khó nhai",
   },
   {
     tag: "RenLuyenBoNao",
     label: "Rèn Luyện Bộ Não",
     icon: "⚡",
-    desc: "Tái lập nơ-ron, rèn trí lực & phản xạ",
+    desc: "Tìm lại sự minh triết và tươi mới vốn có",
   },
 ];
 
@@ -157,7 +157,7 @@ export default function Navbar() {
             </Link>
 
             {/* Dropdown Panel */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] pt-1 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 translate-y-1 transition-all duration-200 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[640px] pt-1 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 translate-y-1 transition-all duration-200 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
               <div className="rounded-2xl p-4 bg-[#FAF7F2] dark:bg-[#181C1A] border border-[#E6E1D8] dark:border-[#2E3531] shadow-2xl space-y-3">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-2.5 border-b border-[#E6E1D8] dark:border-[#2E3531]">
