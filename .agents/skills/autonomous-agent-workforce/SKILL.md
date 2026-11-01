@@ -143,7 +143,9 @@ flowchart TD
   - **Tiêu đề chuẩn 2 dòng:** Ngắn gọn (50 - 62 ký tự), đủ tò mò, không bị cắt dấu `...` trên card.
   - **Vị trí khối "Những Điểm Chính":** Bắt buộc nằm ở cuối cùng sau "Lời nhắn gửi từ Trại Cai Nghiện".
   - **Quét lỗi văn phong:** Có bị lẫn từ ngữ giáo điều, phán xét, hay từ trừu tượng self-help sáo rỗng không?
-  - **Kiểm tra hình ảnh & SEO (Agent 8):** Ảnh WebP tỷ lệ 16:9 (`1200x675px`), nén dưới 120KB, đóng 2 huy hiệu `🌿 TRẠI CAI NGHIỆN` (góc trên trái) và `traicainghien.com` (góc dưới phải), tên file chuẩn SEO có hậu tố chống cache (`-zen-`, `-v2.webp`) và có thẻ Alt Text đầy đủ.
+  - **Kiểm tra hình ảnh & SEO (Agent 8):** 
+    - **Độc bản 100% (Zero Visual Duplication - LỆNH ĐẶC BIỆT CỦA BỐ):** Quét toàn bộ bài viết, cấm tuyệt đối trùng lặp hình ảnh, trùng tranh vẽ gốc hoặc trùng ý tưởng thị giác với bất kỳ bài viết nào đã có trên web. Bắt buộc mở rộng bối cảnh khoáng đạt (không bó hẹp trong phòng kín).
+    - Kỹ thuật: Ảnh WebP tỷ lệ 16:9 (`1200x675px`), nén dưới 120KB, đóng 2 huy hiệu `🌿 TRẠI CAI NGHIỆN` (góc trên trái) và `traicainghien.com` (góc dưới phải), tên file chuẩn SEO có hậu tố chống cache (`-zen-`, `-v2.webp`) và có thẻ Alt Text đầy đủ.
   - **Cổng Kiểm Toán Khóa Cứng (Automated Pre-Publish Gate):** Kiểm tra lệnh `npm run build` đảm bảo script `node scripts/audit_all_articles.js` chạy tự động và pass 100% trước khi cho phép deploy.
   - **Kiểm tra điều hướng & SEO:** Đã có liên kết nội bộ (Internal Links) giảm Bounce Rate, nút trắc nghiệm 25 câu, CTA sản phẩm và mảng đa danh mục (`categories: [...]`) chưa?
 * **Đầu vào (Input):** Bản nháp bài viết từ Agent 1 và hình ảnh từ Agent 8.
@@ -213,12 +215,13 @@ flowchart TD
 * **Đầu ra (Output):** File ảnh WebP độc quyền tối ưu và thông số metadata SEO bàn giao cho Agent 4 gắn vào bài viết.
 * **CỔNG KIỂM DUYỆT BẮT BUỘC TRƯỚC KHI LIVE (MÂY & AGENT 5 GÁC CỔNG):**
   - Mọi hình ảnh (Website cover, Thumbnail video, Quote, Infographic) phải qua **Cổng 3 (Visual Design)**:
-    1. *Bản sắc Zen Minimalist:* Bảng màu chuẩn Xanh Rêu (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung (`#C27D53`), Xám Than (`#2D312E`); concept mộc mạc, góc tĩnh, không màu mè neon.
-    2. *Tỷ lệ chuẩn:* Web/YouTube 16:9, Shorts/Reels 9:16, Fanpage Post 1:1 hoặc 4:5.
-    3. *Chuẩn nén WebP:* Dung lượng dưới 120KB, tối ưu tốc độ Core Web Vitals.
-    4. *Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế `🌿 TRẠI CAI NGHIỆN` (opacity 30%-40%) ở góc ảnh.
-    5. *Image SEO:* Tên file không dấu ngăn cách gạch nối + thẻ Alt Text tự nhiên chứa từ khóa.
-    6. *Cấm Text-Art & Rác mắt:* Không nhồi nhét chữ rối rắm trên ảnh.
+    1. *Bản sắc Zen Minimalist & Độc Bản 100% (LỆNH ĐẶC BIỆT CỦA BỐ):* Bảng màu chuẩn Xanh Rêu (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung (`#C27D53`), Xám Than (`#2D312E`); concept mộc mạc, góc tĩnh, không màu mè neon. **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC GIỮA CÁC BÀI VIẾT**. Mỗi bài viết bắt buộc phải có một tác phẩm độc bản riêng biệt.
+    2. *Mở Rộng Bối Cảnh (Cấm Bó Hẹp Trong Phòng - LỆNH ĐẶC BIỆT CỦA BỐ):* Chủ động mở rộng bối cảnh sang thiên nhiên khoáng đạt (rừng mờ sương, lối mòn ven núi, ban công đón nắng, quán cà phê phố thị...), không rập khuôn góc phòng kín.
+    3. *Tỷ lệ chuẩn:* Web/YouTube 16:9, Shorts/Reels 9:16, Fanpage Post 1:1 hoặc 4:5.
+    4. *Chuẩn nén WebP:* Dung lượng dưới 120KB, tối ưu tốc độ Core Web Vitals.
+    5. *Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế `🌿 TRẠI CAI NGHIỆN` (opacity 30%-40%) ở góc ảnh.
+    6. *Image SEO & Chống Cache:* Tên file không dấu ngăn cách gạch nối (`-zen-`, `-v2.webp`) + thẻ Alt Text tự nhiên chứa từ khóa.
+    7. *Cấm Text-Art & Rác mắt:* Không nhồi nhét chữ rối rắm trên ảnh, sơ đồ infographic phải có lề an toàn chống cắt chữ.
   - **Chỉ khi Mây & Agent 5 ký duyệt PASS mới được phép gắn vào web hoặc xuất xưởng đa kênh!**
 
 ---

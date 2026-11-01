@@ -122,6 +122,12 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
      * **Đo đạc tự động:** Mọi đoạn text diễn giải đều phải qua engine đo bounding box (`scripts/infographic_engine.py`) trước khi vẽ lên canvas. Nếu có chữ tràn khung, script lập tức ném lỗi và từ chối xuất ảnh.
    * **Nguyên tắc Phá Cache (Cache-Busting):** Khi cập nhật bất kỳ hình ảnh nào đã xuất bản, bắt buộc phải dùng phiên bản mới (ví dụ: `-v2.webp`) và cập nhật URL trong `src/data/articles.ts`, tránh lưu đè tên file cũ khiến trình duyệt và CDN phục vụ cache cũ cho người đọc.
    * **Dung lượng:** Tối đa **150 KB**, định dạng `.webp`, nền giấy mộc `#FAF7F2`, viền `#E6E1D8`, có watermark thương hiệu chân trang.
+
+3. **NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & CẤM TRÙNG LẶP Ý TƯỞNG (ZERO VISUAL DUPLICATION - LỆNH ĐẶC BIỆT CỦA BỐ):**
+   * **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC:** Tuyệt đối không được tái sử dụng hình ảnh thumbnail hoặc sơ đồ đã từng xuất hiện ở bất kỳ bài viết nào khác trên website. Mỗi bài viết là một cá thể độc lập và **BẮT BUỘC phải sở hữu một tác phẩm nghệ thuật độc bản hoàn toàn riêng biệt (Unique Master Artwork)**.
+   * **CẤM ĐỔI TÊN FILE ĐỂ DÙNG LẠI ẢNH CŨ:** Nghiêm cấm mọi hành vi lấy tác phẩm nghệ thuật cũ, crop lại hoặc đổi tên file mới để gán cho bài viết khác. Mỗi bài viết phải mang một ẩn dụ thị giác độc nhất, phản ánh đúng linh hồn của bài viết đó.
+   * **MỞ RỘNG BỐI CẢNH THỊ GIÁC (CẤM BÓ HẸP TRONG CĂN PHÒNG):** Không được lặp đi lặp lại bối cảnh bàn làm việc / góc phòng khép kín. Bắt buộc mở rộng phong phú sang các không gian mở: thiên nhiên khoáng đạt, rừng thông mờ sương, lối mòn ven núi, bờ suối tĩnh lặng, ban công đón bình minh, quán cà phê phố thị, trạm xe buýt chiều tà... mang lại cảm giác giải phóng tâm trí, thư thái và tự do.
+   * **CƠ CHẾ KIỂM SOÁT TỰ ĐỘNG KHÓA CỨNG:** Script kiểm toán `scripts/audit_all_articles.js` tự động rà soát toàn bộ kho ảnh của 100% bài viết. Nếu phát hiện bất kỳ thumbnail nào bị trùng URL hoặc trùng nội dung ảnh với bài viết khác, hệ thống sẽ **BẺ GÃY BUILD VÀ TỪ CHỐI DEPLOY NGAY LẬP TỨC!**
 * **Quy chuẩn Video Ngắn Faceless (TikTok / YouTube Shorts / Reels):**
   * **Hình ảnh (B-roll):** Không lộ mặt. Sử dụng thước phim quay chậm, góc tĩnh: Cảnh pha phin cà phê buổi sáng, bàn làm việc gỗ tối giản, mưa rơi ngoài cửa sổ, ngón tay lật chậm từng trang sách, đi bộ một mình dưới hàng cây.
   * **Âm thanh & Giọng đọc:** Nhạc nền Lo-fi ambient nhẹ nhàng, âm thanh ASMR thiên nhiên (tiếng mưa, tiếng gõ phím cơ, tiếng gió), giọng đọc AI trầm ấm, chậm rãi như đang tâm sự đêm khuya.
@@ -248,12 +254,13 @@ Trước khi bất kỳ sản phẩm nào được đưa lên live chính thức
 6. *Open Loop CTA điều hướng Bio:* Kêu gọi nhẹ nhàng dẫn về bài viết dài hoặc trắc nghiệm 25 câu tại link Bio.
 
 #### 🚪 CỔNG 3: THẰNG VISUAL (AGENT 8 - VISUAL STYLIST & THUMBNAIL)
-1. *Bản sắc Zen Minimalist:* Bảng màu Xanh Rêu Rừng (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung Mờ (`#C27D53`), Xám Than Trầm (`#2D312E`); concept góc tĩnh, mộc mạc; cấm màu neon chói mắt.
-2. *Đúng tỷ lệ kênh:* Web/YouTube 16:9 (`1200x675px`), Shorts/Reels/TikTok 9:16 (`1080x1920px`), Facebook Post 1:1 (`1080x1080px`) hoặc 4:5 (`1080x1350px`).
-3. *Chuẩn nén WebP siêu nhẹ:* Nén dưới 120KB, giữ độ sắc nét tối đa, tối ưu Core Web Vitals.
-4. *Đóng Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế (30%-40% opacity) ở góc ảnh: `🌿 TRẠI CAI NGHIỆN`.
-5. *Image SEO:* Tên file không dấu ngăn cách gạch nối + thẻ Alt Text mô tả tự nhiên chứa từ khóa.
-6. *Typography trên ảnh:* Tối đa 5-7 chữ, font chữ thanh lịch, thoáng đãng, không díu dấu tiếng Việt.
+1. *Bản sắc Zen Minimalist & Độc Bản Tuyệt Đối (LỆNH ĐẶC BIỆT CỦA BỐ):* Bảng màu Xanh Rêu Rừng (`#3A5A40`), Be Ấm (`#FAF7F2`), Đất Nung Mờ (`#C27D53`), Xám Than Trầm (`#2D312E`); concept góc tĩnh, mộc mạc; cấm màu neon chói mắt. **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC VỚI BẤT KỲ BÀI VIẾT NÀO ĐÃ CÓ TRÊN WEB**. Mỗi bài viết bắt buộc phải có một tác phẩm độc bản hoàn toàn mới.
+2. *Mở Rộng Bối Cảnh (Cấm Bó Hẹp Trong Phòng - LỆNH ĐẶC BIỆT CỦA BỐ):* Không lặp đi lặp lại bối cảnh bàn làm việc / góc phòng khép kín. Phải đa dạng hóa bối cảnh sang các không gian mở: thiên nhiên khoáng đạt, sườn núi mờ sương, ban công đón bình minh, quán cà phê phố thị, trạm xe buýt chiều tà... tạo cảm giác khoáng đạt, tự do và thư thái.
+3. *Đúng tỷ lệ kênh:* Web/YouTube 16:9 (`1200x675px`), Shorts/Reels/TikTok 9:16 (`1080x1920px`), Facebook Post 1:1 (`1080x1080px`) hoặc 4:5 (`1080x1350px`).
+4. *Chuẩn nén WebP siêu nhẹ:* Nén dưới 120KB, giữ độ sắc nét tối đa, tối ưu Core Web Vitals.
+5. *Đóng Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế (30%-40% opacity) ở góc ảnh: `🌿 TRẠI CAI NGHIỆN`.
+6. *Image SEO & Chống Cache:* Tên file không dấu ngăn cách gạch nối (`-zen-`, `-v2.webp`) + thẻ Alt Text mô tả tự nhiên chứa từ khóa.
+7. *Typography trên ảnh & Infographic:* Tối đa 5-7 chữ, font chữ thanh lịch, thoáng đãng, lề an toàn chống tràn chữ / cắt chữ (anti-clipping).
 
 #### 🚪 CỔNG 4: THẰNG FACEBOOK (AGENT 9 - FANPAGE & REELS SPECIALIST)
 1. *Luật thép về Link:* **TUYỆT ĐỐI KHÔNG CHÈN LINK VÀO STATUS/CAPTION** để chống thuật toán bóp reach tự nhiên.

@@ -60,7 +60,11 @@ flowchart TD
   - **CẤM TUYỆT ĐỐI:** Ảnh chụp thực tế (photostock Unsplash/Pexels của máy tính, điện thoại, bàn làm việc, người ngồi văn phòng), ảnh render 3D hiện đại hoặc hình minh họa màu sắc lòe loẹt.
   - **BẮT BUỘC:** 100% hình ảnh là tranh vẽ màu nước thủy mặc mộc mạc, tĩnh lặng trên nền giấy cổ ấm áp (`#FAF7F2`), nét vẽ mực sumi-e thanh thoát kết hợp sắc xanh rêu rừng (`#3A5A40`) và đất nung (`#C27D53`).
 - [ ] **2. Cơ chế chống Cache trình duyệt & CDN (Cache-Busting URL):** Khi thay đổi/cập nhật hình ảnh, bắt buộc phải đổi tên file sang định danh mới (ví dụ: `-zen-`, `-v2.webp`) để trình duyệt và CDN không hiển thị lại ảnh cũ trong bộ nhớ đệm.
-- [ ] **3. Bản quyền & Độc bản:** Không dùng ảnh mạng vi phạm bản quyền. Hình ảnh phải được sinh ra từ tư duy ẩn dụ triết học / đời thực đúng với chủ đề bài viết.
+- [ ] **3. NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & CẤM TRÙNG LẶP Ý TƯỞNG (ZERO VISUAL DUPLICATION — LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC:** Không bao giờ tái sử dụng thumbnail hoặc sơ đồ đã từng xuất hiện ở bất kỳ bài viết nào khác trên website. Mỗi bài viết là một thực thể độc lập, BẮT BUỘC phải có một tác phẩm tranh vẽ độc bản hoàn toàn mới.
+  - **CẤM ĐỔI TÊN FILE ĐỂ TÁI SỬ DỤNG:** Tuyệt đối không lấy ảnh master cũ crop lại hoặc đổi tên file mới để lừa bộ lọc. Mọi hình ảnh phải mang ẩn dụ thị giác độc nhất.
+  - **MỞ RỘNG BỐI CẢNH THỊ GIÁC (CẤM BÓ HẸP TRONG PHÒNG):** Không được lặp đi lặp lại bối cảnh bàn làm việc / góc phòng khép kín. Phải đa dạng hóa sang các không gian mở: thiên nhiên khoáng đạt, sườn núi mờ sương, lối mòn ven rừng thông, ban công đón bình minh, quán cà phê phố thị... mang lại cảm giác giải phóng tâm trí và tự do.
+  - **Kiểm toán tự động khóa cứng:** Chạy `node scripts/audit_all_articles.js` tự động phát hiện và chặn đứng 100% các vi phạm trùng lặp ảnh trước khi build.
 - [ ] **4. Dấu chìm nhận diện thương hiệu (Watermarks):**
   - Góc trên bên trái: Huy hiệu `🌿 TRẠI CAI NGHIỆN` (nền tối mờ, chữ trắng).
   - Góc dưới bên phải: Huy hiệu tên miền `traicainghien.com`.

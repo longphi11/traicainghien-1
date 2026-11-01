@@ -47,6 +47,14 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
   * ❌ CẤM phong cách hoạt hình 2D phẳng vector, cấm 3D CGI bóng bẩy, cấm màu neon lòe loẹt.
   * ❌ CẤM hình ảnh dạng ký tự text art, ASCII art hay mã sơ đồ thô thiển.
 
+### 2.3. NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & ĐA DẠNG HÓA BỐI CẢNH (LỆNH ĐẶC BIỆT CỦA BỐ)
+* **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC:** 
+  - Không bao giờ được phép tái sử dụng hình ảnh thumbnail, tranh vẽ bìa hoặc sơ đồ giữa các bài viết trên website. Mỗi bài viết là một tác phẩm độc bản hoàn toàn mới.
+  - Nghiêm cấm đổi tên file hay crop lại tranh cũ để dùng cho bài mới.
+* **MỞ RỘNG BỐI CẢNH (CẤM BÓ HẸP TRONG CĂN PHÒNG):** 
+  - Không được rập khuôn lặp đi lặp lại bối cảnh bàn làm việc / phòng ngủ / góc phòng kín.
+  - Bắt buộc chủ động mở rộng không gian ra ngoài tự nhiên và đời sống đô thị thoáng đạt: Rừng thông mờ sương, cabin gỗ trên sườn núi, hồ nước phẳng lặng, bờ suối tiếp đất, ban công rộng đón ánh bình minh, mái hiên mưa rơi, quán cà phê ven đường chiều tà... tạo cảm giác giải phóng thị giác và tự do nội tâm cho người đọc.
+
 ---
 
 ## 3. 🎯 NGHỆ THUẬT ẨN DỤ THỊ GIÁC (VISUAL METAPHOR)

@@ -6,6 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const articlesPath = path.join(__dirname, '..', 'src', 'data', 'articles.ts');
 if (!fs.existsSync(articlesPath)) {
@@ -56,6 +57,9 @@ articleBlocks.shift(); // remove header before first article
 
 console.log(`🔍 Tìm thấy ${articleBlocks.length} bài viết trong kho tri thức.`);
 
+const seenThumbnails = new Map();
+const seenThumbHashes = new Map();
+
 articleBlocks.forEach((block, index) => {
   const slugMatch = block.match(/^\s*"([^"]+)"/);
   const titleMatch = block.match(/"title":\s*"((?:\\.|[^"\\])*)"/);
@@ -84,8 +88,15 @@ articleBlocks.forEach((block, index) => {
     }
   }
 
-  // C. Kiểm tra thumbnail có tồn tại trên disk và dung lượng <= 120KB không
+  // C. Kiểm tra thumbnail: tồn tại, dung lượng <= 120KB, và NGUYÊN TẮC ĐỘC BẢN TUYỆT ĐỐI (LỆNH ĐẶC BIỆT CỦA BỐ)
   if (thumbnail) {
+    if (seenThumbnails.has(thumbnail)) {
+      console.error(`❌ [LỖI TRÙNG LẶP THUMBNAIL - LỆNH ĐẶC BIỆT CỦA BỐ] Bài '${slug}' bị trùng đường dẫn thumbnail '${thumbnail}' với bài '${seenThumbnails.get(thumbnail)}'! Mỗi bài viết bắt buộc phải có một hình ảnh độc bản riêng biệt.`);
+      hasErrors = true;
+    } else {
+      seenThumbnails.set(thumbnail, slug);
+    }
+
     const cleanThumbPath = thumbnail.startsWith('/') ? thumbnail.slice(1) : thumbnail;
     const fullThumbPath = path.join(__dirname, '..', 'public', cleanThumbPath);
     if (!fs.existsSync(fullThumbPath)) {
@@ -96,6 +107,16 @@ articleBlocks.forEach((block, index) => {
       if (stats.size > 122880) { // 120 KB
         console.error(`❌ [LỖI DUNG LƯỢNG ẢNH] Bài '${slug}': Thumbnail '${thumbnail}' nặng ${(stats.size/1024).toFixed(1)}KB (Vượt quá trần 120KB của Bố)!`);
         hasErrors = true;
+      }
+
+      // Kiểm tra trùng lặp nội dung file nhị phân (chống đổi tên file để xài lại ảnh cũ)
+      const fileBuffer = fs.readFileSync(fullThumbPath);
+      const fileHash = crypto.createHash('md5').update(fileBuffer).digest('hex');
+      if (seenThumbHashes.has(fileHash)) {
+        console.error(`❌ [LỖI TRÙNG KHỚP NỘI DUNG ẢNH - LỆNH ĐẶC BIỆT CỦA BỐ] Thumbnail '${thumbnail}' của bài '${slug}' có nội dung nhị phân trùng khớp 100% với bài '${seenThumbHashes.get(fileHash)}'! Cấm đổi tên file để xài lại ảnh cũ.`);
+        hasErrors = true;
+      } else {
+        seenThumbHashes.set(fileHash, slug);
       }
     }
   }
