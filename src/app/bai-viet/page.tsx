@@ -72,6 +72,8 @@ function BaiVietContent() {
         return "bg-purple-50 text-purple-800";
       case "SachHay":
         return "bg-amber-50 text-amber-800";
+      case "RenLuyenBoNao":
+        return "bg-emerald-50 text-emerald-800";
       default:
         return "bg-[#FAF7F2] text-[#6B726E]";
     }
@@ -222,6 +224,23 @@ function BaiVietContent() {
             activeTab === "SachHay" ? "bg-white/20 text-white" : "bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300"
           }`}>
             {getCount("SachHay")}
+          </span>
+        </button>
+
+        <button
+          onClick={() => handleTabChange("RenLuyenBoNao")}
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "RenLuyenBoNao"
+              ? "bg-emerald-700 text-white shadow-md scale-105"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-emerald-600"
+          }`}
+        >
+          <span>⚡</span>
+          <span>#RenLuyenBoNao</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "RenLuyenBoNao" ? "bg-white/20 text-white" : "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300"
+          }`}>
+            {getCount("RenLuyenBoNao")}
           </span>
         </button>
       </div>

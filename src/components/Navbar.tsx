@@ -57,6 +57,13 @@ const categories = [
     desc: "Tinh hoa 14 cuốn sách kinh điển",
     badgeColor: "text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60",
   },
+  {
+    tag: "RenLuyenBoNao",
+    label: "Rèn Luyện Bộ Não",
+    icon: "⚡",
+    desc: "Tái lập nơ-ron, rèn trí lực & phản xạ",
+    badgeColor: "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60",
+  },
 ];
 
 export default function Navbar() {

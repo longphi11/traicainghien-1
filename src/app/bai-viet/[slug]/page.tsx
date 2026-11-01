@@ -342,6 +342,8 @@ export default async function ArticleDetailPage({
         return "bg-purple-50 text-purple-800 border-purple-200";
       case "SachHay":
         return "bg-amber-50 text-amber-800 border-amber-200";
+      case "RenLuyenBoNao":
+        return "bg-emerald-50 text-emerald-800 border-emerald-200";
       default:
         return "bg-[#FAF7F2] text-[#6B726E] border-[#E6E1D8]";
     }

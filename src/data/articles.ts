@@ -1,4 +1,4 @@
-export type ArticleTag = "HieuHanhVi" | "XayDungThoiQuen" | "LayLaiSuTapTrung" | "SachHay" | "TrietHocCuocSong" | "QuanTriCamXuc" | "HieuUngTamLy";
+export type ArticleTag = "HieuHanhVi" | "XayDungThoiQuen" | "LayLaiSuTapTrung" | "SachHay" | "TrietHocCuocSong" | "QuanTriCamXuc" | "HieuUngTamLy" | "RenLuyenBoNao";
 
 export interface Article {
   slug: string;
@@ -28,7 +28,8 @@ const rawArticles: Article[] = [
     "LayLaiSuTapTrung",
     "XayDungThoiQuen",
     "HieuHanhVi",
-    "TrietHocCuocSong"
+    "TrietHocCuocSong",
+    "RenLuyenBoNao"
   ],
   "tags": [
     "Deep Work",
@@ -50,10 +51,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
-      "QuanTriCamXuc",
+    "QuanTriCamXuc",
       "HieuHanhVi",
-      "TrietHocCuocSong"
-    ],
+      "TrietHocCuocSong",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#HieuHanhVi",
       "#SachHay"
@@ -222,10 +224,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 4: Sống chủ động & tìm lại sự chú ý",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
-      "LayLaiSuTapTrung",
+    "LayLaiSuTapTrung",
       "QuanTriCamXuc",
-      "HieuHanhVi"
-    ],
+      "HieuHanhVi",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#LayLaiSuTapTrung",
       "#HieuHanhVi",
@@ -266,10 +269,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
-      "LayLaiSuTapTrung",
+    "LayLaiSuTapTrung",
       "QuanTriCamXuc",
-      "HieuHanhVi"
-    ],
+      "HieuHanhVi",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#HieuHanhVi",
       "#LayLaiSuTapTrung",
@@ -288,10 +292,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
     "categories": [
-      "SachHay",
+    "SachHay",
       "HieuUngTamLy",
-      "HieuHanhVi"
-    ],
+      "HieuHanhVi",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -310,10 +315,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
-      "HieuHanhVi",
+    "HieuHanhVi",
       "TrietHocCuocSong",
-      "HieuUngTamLy"
-    ],
+      "HieuUngTamLy",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#HieuHanhVi",
       "#SachHay",
@@ -465,10 +471,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 2: Nhận diện cái giá của thói quen",
     "pillarTag": "SachHay",
     "categories": [
-      "SachHay",
+    "SachHay",
       "LayLaiSuTapTrung",
-      "HieuUngTamLy"
-    ],
+      "HieuUngTamLy",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#SachHay",
       "#LayLaiSuTapTrung",
@@ -487,9 +494,10 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 4: Sống chủ động & tìm lại sự chú ý",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
-      "LayLaiSuTapTrung",
-      "HieuUngTamLy"
-    ],
+    "LayLaiSuTapTrung",
+      "HieuUngTamLy",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#LayLaiSuTapTrung",
       "#HieuHanhVi",
@@ -508,10 +516,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "SachHay",
     "categories": [
-      "SachHay",
+    "SachHay",
       "QuanTriCamXuc",
-      "HieuHanhVi"
-    ],
+      "HieuHanhVi",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#SachHay",
       "#HieuHanhVi",
@@ -530,10 +539,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 3: Thay đổi mà không phụ thuộc quá nhiều vào ý chí",
     "pillarTag": "XayDungThoiQuen",
     "categories": [
-      "HieuUngTamLy",
+    "HieuUngTamLy",
       "XayDungThoiQuen",
-      "LayLaiSuTapTrung"
-    ],
+      "LayLaiSuTapTrung",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#XayDungThoiQuen",
       "#HieuHanhVi",
@@ -598,10 +608,11 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
-      "HieuHanhVi",
+    "HieuHanhVi",
       "QuanTriCamXuc",
-      "LayLaiSuTapTrung"
-    ],
+      "LayLaiSuTapTrung",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#HieuHanhVi",
       "#LayLaiSuTapTrung",
@@ -645,11 +656,12 @@ const rawArticles: Article[] = [
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
-      "HieuHanhVi",
+    "HieuHanhVi",
       "LayLaiSuTapTrung",
       "XayDungThoiQuen",
-      "TrietHocCuocSong"
-    ],
+      "TrietHocCuocSong",
+    "RenLuyenBoNao"
+  ],
     "tags": [
       "#HieuHanhVi",
       "#LayLaiSuTapTrung",
