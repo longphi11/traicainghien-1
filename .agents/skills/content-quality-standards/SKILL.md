@@ -50,6 +50,7 @@ flowchart TD
 - [ ] **8. Văn phong thực chiến:** Chuẩn *"Nói chuyện cà phê vỉa hè nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic). Dẫn chứng đời thực (ngón tay quẹt 2h sáng cay xè mắt, bát phở 30k, chiếc điện thoại úp mặt).
 - [ ] **9. Móc câu giữ chân (Retention):** Giữ nhịp câu biến hóa, có câu hỏi lửng (Open Loops) giữa các phần.
 - [ ] **10. SEO On-page:** Từ khóa xuất hiện tự nhiên trong Title, Slug, H1, H2; Meta Excerpt 140 - 160 ký tự; gắn đa danh mục (`categories: [...]`); có ít nhất 2 - 3 link nội bộ và nút CTA dẫn tới bài trắc nghiệm.
+- [ ] **11. Thời gian đọc (readTime) tối đa 12 phút (LỆNH ĐẶC BIỆT CỦA BỐ):** Thuộc tính `readTime` hiển thị ở thẻ card và đầu bài viết chỉ được phép nằm trong khoảng 8 – 12 phút (tối đa không quá 12 phút). Tuyệt đối cấm để 14 – 18 phút làm độc giả bị ngợp và ngại bấm click đọc bài.
 
 ---
 

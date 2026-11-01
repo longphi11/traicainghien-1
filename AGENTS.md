@@ -169,6 +169,10 @@ Thay vì tiếp cận từ góc độ học thuật xa cách, bố chọn hướ
 * **Vị trí khối "Những Điểm Chính" (Key Takeaways):** 
   - **Bắt buộc đặt ở cuối cùng của bài viết**, ngay sau mục *"Lời nhắn gửi từ Trại Cai Nghiện"*.
   - Tuyệt đối không đặt ở đầu bài, để độc giả trải qua trọn vẹn hành trình thức tỉnh và thấu cảm trước khi nhận bản đúc kết hành động thực hành.
+* **Thời Gian Đọc Tối Đa 12 Phút (ReadTime Cap - LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - Mọi bài viết dù dài và phân tích sâu đến đâu, thuộc tính thời gian đọc (`readTime`) hiển thị ngoài card và đầu bài viết **chỉ được phép đặt tối đa là 12 phút (dao động vàng: 8 – 12 phút đọc)**.
+  - Tuyệt đối **KHÔNG ĐƯỢC ĐỂ** thời gian đọc quá dài (14 - 18 phút) khiến độc giả bị ngợp tâm lý (cognitive overload), sinh tâm lý e dè và ngại click vào đọc bài.
+  - Agent 5 có nhiệm vụ gác cổng kiểm toán: Bất kỳ bài viết nào để `readTime > 12 phút` đều bị reject ngay!
 * **CẤM TUYỆT ĐỐI HÌNH ẢNH VECTOR & KÝ TỰ - BẮT BUỘC DÙNG TRANH VẼ TAY THẬT SỰ (LỆNH ĐẶC BIỆT CỦA BỐ):**
   - **CẤM VĨNH VIỄN HÌNH ẢNH DẠNG VECTOR, SVG CODE, 2D HOẠT HÌNH PHẲNG:** Tuyệt đối **CẤM VĨNH VIỄN** việc sử dụng vector art, mã SVG mô phỏng đồ họa, hình vẽ phẳng cartoon trẻ con, hoặc hình ảnh dạng ký tự văn bản / ASCII art. Mọi nỗ lực "chữa cháy" bằng cách vẽ vector hoặc code hình ảnh đều bị nghiêm cấm vì làm phá hỏng hoàn toàn chiều sâu mỹ học và linh hồn tự sự của dự án.
   - **BẮT BUỘC 100% TRANH VẼ TAY MÀU NƯỚC THỦY MẶC THẬT SỰ:** Mọi hình ảnh thumbnail, bìa bài viết hay minh họa đều **bắt buộc phải là tranh vẽ tay thực thụ (Zen Watercolor & Vintage Ink Wash on Textured Paper)** được tạo ra từ cọ vẽ AI độc quyền, có nét cọ loang màu nước tự nhiên, thớ giấy sần có hạt grain và viền mực than mộc mạc (chuẩn phong cách bức *"Chàng trai Deep Work bên cửa sổ thành phố đêm"* và *"Bẫy Tích Lũy Kiến Thức"*).

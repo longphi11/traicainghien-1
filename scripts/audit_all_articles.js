@@ -99,6 +99,16 @@ articleBlocks.forEach((block, index) => {
       }
     }
   }
+
+  // D. Kiểm tra thời gian đọc (readTime) tối đa 12 phút (LỆNH CỦA BỐ: Tránh để độc giả ngại click)
+  const readTimeMatch = block.match(/"readTime":\s*"(\d+)\s*phút/);
+  if (readTimeMatch) {
+    const minutes = parseInt(readTimeMatch[1], 10);
+    if (minutes > 12) {
+      console.error(`❌ [LỖI READTIME] Bài '${slug}': Thời gian đọc là ${minutes} phút (Vượt quá giới hạn tối đa 12 phút của Bố)!`);
+      hasErrors = true;
+    }
+  }
 });
 
 if (hasErrors) {
