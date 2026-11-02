@@ -222,6 +222,7 @@ flowchart TD
     5. *Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế `🌿 TRẠI CAI NGHIỆN` (opacity 30%-40%) ở góc ảnh.
     6. *Image SEO & Chống Cache:* Tên file không dấu ngăn cách gạch nối (`-zen-`, `-v2.webp`) + thẻ Alt Text tự nhiên chứa từ khóa.
     7. *Cấm Text-Art & Rác mắt:* Không nhồi nhét chữ rối rắm trên ảnh, sơ đồ infographic phải có lề an toàn chống cắt chữ.
+    8. *Quy Chuẩn Đồng Bộ Thumbnail Sách Hay (#SachHay — LỆNH ĐẶC BIỆT CỦA BỐ):* 100% bài viết về sách bắt buộc thiết kế thumbnail theo đúng format mẫu bài *Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh*: Mockup 3D bìa sách chính thức đứng nghiêng góc 3/4 trên mặt bàn gỗ Zen bên cửa sổ nhìn ra núi mây thủy mặc, tách trà gốm ấm và cuộn thư pháp. CẤM TUYỆT ĐỐI dùng tranh phong cảnh chung chung hay hình vẽ người không có bìa sách cho bài review sách.
   - **Chỉ khi Mây & Agent 5 ký duyệt PASS mới được phép gắn vào web hoặc xuất xưởng đa kênh!**
 
 ---

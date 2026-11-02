@@ -133,6 +133,12 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
    * **CẤM TUYỆT ĐỐI ẢNH PHONG CẢNH CHUNG CHUNG, VÔ HỒN:** Tuyệt đối không được chọn những bức tranh phong cảnh trừu tượng, lạc đề không ăn nhập với nội dung bài viết.
    * **TỰ THÂN ĐỌC SÂU NỘI DUNG (TUYỆT ĐỐI KHÔNG ĐỂ BỐ PHẢI NHẮC HAY GỢI Ý):** Mây và Agent 8 bắt buộc phải tự giác đọc kỹ toàn bộ nội dung bài viết, bóc tách nhân vật hành vi cốt lõi hoặc câu chuyện đắt giá nhất trong bài để chuyển thể thành hình ảnh (Ví dụ: bài viết về *rèn luyện não bộ / vượt ngưỡng khó khăn / Deliberate Practice* $\rightarrow$ hình ảnh **vận động viên tự thân rèn luyện sải bước trên sườn dốc sương sớm**; bài về *Deep Work* $\rightarrow$ **người trẻ ngồi làm việc sâu bên sổ tay và tách trà**; bài về *cai nghiện màn hình 2m* $\rightarrow$ **chiếc điện thoại úp mặt trên bàn cách xa giường**).
    * Hình ảnh phải kể được câu chuyện bài viết và chạm đáy cảm xúc người đọc ngay từ cái nhìn đầu tiên.
+
+5. **Quy chuẩn Đồng Bộ Thumbnail Bài Viết Về Sách (Mục Sách Hay — LỆNH ĐẶC BIỆT CỦA BỐ):**
+   * **Format Đồng Bộ 100%:** Toàn bộ các bài viết thuộc danh mục `#SachHay` hoặc có tiêu đề bắt đầu bằng `"Đọc [Tên Sách] - ..."` BẮT BUỘC phải dùng chung một format thiết kế ảnh bìa chuẩn như bài *Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh* (`/images/articles/sach-di-tim-le-song-viktor-frankl-zen-trai-cai-nghien.webp`).
+   * **Bố cục chuẩn:** Góc phòng tĩnh lặng phong cách Zen, bàn gỗ mộc bên khung cửa sổ mở nhìn ra rặng núi mây mù bồng bềnh thủy mặc Sumi-e, tách trà gốm bốc khói mỏng và cuộn giấy thư pháp mở hờ.
+   * **Mockup Sách 3D:** Bắt buộc sử dụng đúng ảnh bìa ấn bản dịch tiếng Việt chính thức (hoặc bản quốc tế gốc chuẩn), dựng đứng nghiêng nhẹ góc 3/4 trên mặt bàn gỗ với phối cảnh 3D chân thực (gáy sách bên trái, mép giấy ngà phía trên, bóng đổ mềm mại dưới đáy sách).
+   * **CẤM TUYỆT ĐỐI:** Cấm tranh phong cảnh chung chung, cấm tranh vẽ nhà sư hay người ngồi thiền mà KHÔNG CÓ BÌA SÁCH cho bài review sách. Agent 5 và script kiểm toán sẽ từ chối duyệt ngay nếu vi phạm.
 * **Quy chuẩn Video Ngắn Faceless (TikTok / YouTube Shorts / Reels):**
   * **Hình ảnh (B-roll):** Không lộ mặt. Sử dụng thước phim quay chậm, góc tĩnh: Cảnh pha phin cà phê buổi sáng, bàn làm việc gỗ tối giản, mưa rơi ngoài cửa sổ, ngón tay lật chậm từng trang sách, đi bộ một mình dưới hàng cây.
   * **Âm thanh & Giọng đọc:** Nhạc nền Lo-fi ambient nhẹ nhàng, âm thanh ASMR thiên nhiên (tiếng mưa, tiếng gõ phím cơ, tiếng gió), giọng đọc AI trầm ấm, chậm rãi như đang tâm sự đêm khuya.
@@ -267,6 +273,7 @@ Trước khi bất kỳ sản phẩm nào được đưa lên live chính thức
 5. *Đóng Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế (30%-40% opacity) ở góc ảnh: `🌿 TRẠI CAI NGHIỆN`.
 6. *Image SEO & Chống Cache:* Tên file không dấu ngăn cách gạch nối (`-zen-`, `-v2.webp`) + thẻ Alt Text mô tả tự nhiên chứa từ khóa.
 7. *Typography trên ảnh & Infographic:* Tối đa 5-7 chữ, font chữ thanh lịch, thoáng đãng, lề an toàn chống tràn chữ / cắt chữ (anti-clipping).
+8. *Format Chuẩn Cho Bài Viết Về Sách (#SachHay — LỆNH ĐẶC BIỆT CỦA BỐ):* 100% bài viết về sách bắt buộc dùng template mockup 3D bìa sách đứng trên bàn gỗ Zen bên cửa sổ mây núi thủy mặc (chuẩn bài *Đi Tìm Lẽ Sống*). CẤM TUYỆT ĐỐI dùng ảnh phong cảnh hay hình vẽ người mà không có bìa sách.
 
 #### 🚪 CỔNG 4: THẰNG FACEBOOK (AGENT 9 - FANPAGE & REELS SPECIALIST)
 1. *Luật thép về Link:* **TUYỆT ĐỐI KHÔNG CHÈN LINK VÀO STATUS/CAPTION** để chống thuật toán bóp reach tự nhiên.
@@ -584,6 +591,7 @@ flowchart TD
    - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng tự động và thiết lập các kịch bản bám đuổi (Email Drip, Zalo broadcast, Retargeting Pixel) với chi phí 0đ. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
 8. **Agent 8: Visual Stylist & AI Thumbnail Creator (Chuyên Gia Hình Ảnh & Thumbnail Chuẩn SEO)**
    - *Trách nhiệm:* Tạo ảnh Thumbnail và ảnh minh họa độc bản theo triết lý mỹ cảm **Zen Minimalist** (Bảng màu Xanh rêu `#3A5A40`, Be ấm `#FAF7F2`, Đất nung `#C27D53`).
+   - *Quy chuẩn Sách Hay (#SachHay — LỆNH ĐẶC BIỆT CỦA BỐ):* 100% bài viết về sách bắt buộc phải thiết kế thumbnail theo mẫu chuẩn của bài *Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh*: Mockup bìa sách 3D (bìa dịch chính thức) đứng thẳng tự nhiên trên bàn gỗ Zen bên khung cửa sổ mở nhìn ra núi mây thủy mặc Sumi-e, tách trà ấm và cuộn thư pháp. CẤM TUYỆT ĐỐI tranh phong cảnh hoặc hình người không có bìa sách.
    - *Quy chuẩn SEO Google:* Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB, đặt tên file chứa từ khóa không dấu (`tu-khoa-chinh-trai-cai-nghien.webp`), cấu hình thẻ Alt Text và Metadata sẵn sàng cho Google Discover.
    - *Bản quyền & Watermark:* Đóng dấu Watermark nhận diện thương hiệu nhỏ gọn, mờ tinh tế (30% – 40% opacity) ở góc ảnh (`🌿 TRẠI CAI NGHIỆN`), vừa bảo vệ bản quyền vừa lan tỏa thương hiệu mà không làm phân tâm thị giác.
    - *Khơi gợi ý tưởng sáng tạo (Mây hỗ trợ):* Mây trực tiếp đồng hành cùng Agent 8 khơi gợi các ẩn dụ thị giác đắt giá theo 3 tầng (Ẩn dụ triết học, Khoảnh khắc đời thực, và Nghịch lý thị giác tò mò) dựa trên hệ quy chiếu 8 kênh chuẩn mực, đảm bảo thumbnail luôn sáng tạo, giàu chiều sâu và không bao giờ rập khuôn.

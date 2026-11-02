@@ -109,22 +109,55 @@ A poetic and serene zen watercolor painting with delicate sumi-e ink wash and dr
 
 ---
 
-## 6. 🌀 QUY CHUẨN BIỂU TƯỢNG LOGO CHÍNH THỨC: CON QUAY TOTEM INCEPTION (THE AWAKENING TILT)
+## 7. 📚 QUY CHUẨN THIẾT KẾ ẢNH BÀI VIẾT VỀ SÁCH (MỤC SÁCH HAY) — LỆNH ĐẶC BIỆT CỦA BỐ
+
+> [!IMPORTANT]
+> **LỆNH ĐẶC BIỆT CỦA BỐ (ÁP DỤNG BẮT BUỘC CHO 100% BÀI REVIEW SÁCH TRÊN WEBSITE):**  
+> Mọi bài viết thuộc chuyên mục **Sách Hay (`#SachHay`)** hoặc có tiêu đề bắt đầu bằng cấu trúc `"Đọc [Tên Sách] - ..."` bắt buộc phải tuân thủ **CÙNG MỘT FORMAT ĐỒNG BỘ** với bài viết mẫu chuẩn:  
+> 🔗 [Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh](https://www.traicainghien.com/bai-viet/doc-sach-di-tim-le-song-chiec-phao-cuu-sinh-nghich-canh) (`/images/articles/sach-di-tim-le-song-viktor-frankl-zen-trai-cai-nghien.webp`).
+
+### 7.1. Cấu Trúc Bố Cục Bắt Buộc (The Zen Desk & 3D Book Mockup)
+* **Bối cảnh nền chung (Base Zen Scene Template):**
+  - Căn phòng mộc mạc phong cách Zen tối giản trên nền giấy sần Washi hạt grain (`#FAF7F2`).
+  - Khung cửa sổ gỗ mở rộng sang bên trái nhìn ra rặng núi mờ sương và mây trắng lững lờ theo phong cách tranh thủy mặc Sumi-e Á Đông.
+  - Trên mặt bàn gỗ tự nhiên: một tách trà gốm thô bốc làn khói mỏng uốn lượn bên trái, một cuộn giấy thư pháp mở hờ và cuốn sách được đặt trang trọng ở vị trí trung tâm lệch phải.
+  - Ánh sáng tự nhiên dịu mát của buổi sớm mai hòa với sắc xanh rêu (`#3A5A40`) và đất nung (`#C27D53`).
+* **Mockup Cuốn Sách 3D Đứng Thẳng (3D Standing Paperback Mockup):**
+  - **Bìa sách chính thức:** Bắt buộc sử dụng đúng ảnh bìa của ấn bản dịch tiếng Việt chính thức (hoặc ấn phẩm gốc quốc tế kinh điển nếu sách chưa dịch sang tiếng Việt). Bìa sách phải rõ nét tựa đề và tên tác giả.
+  - **Phối cảnh 3D chân thực (Perspective Quad):**
+    * Mặt trước (Front cover) đặt thẳng đứng, hơi xoay nhẹ góc 3/4 tự nhiên trên bàn gỗ.
+    * Gáy sách (Spine) hiển thị chân thực bên mép trái, tạo độ dày thật cho cuốn sách.
+    * Mép trên (Top paper edges) để lộ thớ giấy màu ngà tự nhiên.
+    * Bóng đổ tiếp xúc mềm mại (Soft drop shadow) trải dài tự nhiên dưới đáy sách trên mặt bàn gỗ.
+  - **Tọa độ đặt sách chuẩn:** Tỷ lệ khung hình 16:9 (`1200x675px`), cuốn sách được định vị tại tọa độ `bx ≈ 690 - 700px`, `by ≈ 300 - 310px`, chiều cao cuốn sách `h ≈ 340 - 350px`, chiều rộng bìa trước `w ≈ 240 - 270px`.
+* **Quy chuẩn Kỹ thuật:**
+  - Định dạng: `.webp`. Dung lượng: **< 120 KB**.
+  - Watermark: Đóng dấu nhận diện mờ tinh tế `🌿 TRẠI CAI NGHIỆN`.
+  - Tên file chuẩn SEO: `sach-[ten-sach]-[tu-khoa]-zen-trai-cai-nghien.webp`.
+
+### 7.2. Điều Cấm Tuyệt Đối Cho Mục Sách Hay
+* ❌ **CẤM TUYỆT ĐỐI:** Không bao giờ dùng tranh vẽ phong cảnh trừu tượng chung chung, không dùng hình vẽ nhà sư hay người ngồi thiền KHÔNG CÓ BÌA SÁCH cho các bài viết thuộc mục Sách Hay.
+* ❌ **CẤM CẮT GHÉP CẨU THẢ:** Không dùng ảnh chụp sách thực tế bị lóa flash hay méo mó chụp bằng điện thoại. Bắt buộc phải qua engine ghép mockup 3D phối cảnh chuẩn chỉnh như bài *Đi Tìm Lẽ Sống*.
+* ✅ **QUY TẮC BẤT DI BẤT DỊCH:** Mỗi khi xuất bản bài viết về sách, Agent 8 chỉ cần lấy ảnh bìa chính thức của cuốn sách đó và tích hợp vào cùng khung cảnh Zen Desk chuẩn mực này. Mọi cuốn sách trong tủ sách của Trại Cai Nghiện sẽ xuất hiện như những viên ngọc quý cùng nằm trên chiếc bàn gỗ tĩnh lặng của độc giả.
+
+---
+
+## 8. 🌀 QUY CHUẨN BIỂU TƯỢNG LOGO CHÍNH THỨC: CON QUAY TOTEM INCEPTION (THE AWAKENING TILT)
 
 > **Quyết định chính thức của Bố:** Lựa chọn **Mẫu 05 — The Awakening Tilt** làm logo đại diện linh hồn cho toàn bộ thương hiệu Trại Cai Nghiện.
 
-### 6.1. Triết Lý Tạo Hình & Ẩn Dụ Hành Vi
+### 8.1. Triết Lý Tạo Hình & Ẩn Dụ Hành Vi
 * **Biểu tượng:** Con quay Totem kim loại trong phim *Inception* (Christopher Nolan), được tạo hình trong tư thế **nghiêng nhẹ một góc chuẩn bị chao đảo và dừng quay**.
 * **Ý nghĩa:**
   * Con quay không ngừng xoay là biểu tượng của việc con người bị mắc kẹt vô thức trong cơn mê số (nghiện lướt short video, dopamine rẻ tiền, mất khả năng kết nối thực tại).
   * Khoảnh khắc con quay **nghiêng chao đảo và chuẩn bị dừng lại** là thời khắc huy hoàng nhất của sự thức tỉnh: Thoát khỏi cơn mê, dũng cảm đối diện với sự thật, chạm chân vào đời thực và **trở về phiên bản tốt nhất của chính bạn**.
 
-### 6.2. Cấu Trúc Typography & Nhận Diện
+### 8.2. Cấu Trúc Typography & Nhận Diện
 * **Biểu tượng (Icon):** Con quay Totem nghiêng chuẩn bị dừng quay, nét vẽ mực than Sumi-e thanh thoát kết hợp loang màu nước kim loại mộc ấm trên giấy Washi `#FAF7F2`.
 * **Chữ thương hiệu (Brand Name):** `TRẠI CAI NGHIỆN` (Font chữ Sans-serif hiện đại, nét tối giản, đĩnh đạc, màu than trầm `#2D312E` hoặc xanh rêu rừng `#3A5A40`).
 * **Slogan phụ (Tagline):** `- trở về phiên bản tốt nhất của bạn.` (Đặt phía dưới chân thương hiệu, màu đất nung dịu `#C27D53`).
 
-### 6.3. Quy Tắc Ứng Dụng Đa Kênh Cho Agent 8 & Toàn Bộ Đội Ngũ
+### 8.3. Quy Tắc Ứng Dụng Đa Kênh Cho Agent 8 & Toàn Bộ Đội Ngũ
 * **Website Header & Favicon:** Sử dụng biểu tượng con quay totem nghiêng tối giản tinh tế.
 * **Watermark & End-Card Video:** Biểu tượng con quay kết hợp tên thương hiệu đặt góc trang trọng hoặc xuất hiện ở phân cảnh kết thúc (Outro) như lời nhắc nhở thức tỉnh người xem.
 * **CẤM TUYỆT ĐỐI:** Không bao giờ sử dụng hình ảnh vector 2D phẳng lỳ, SVG code giả lập đồ họa hoặc 3D CGI neon bóng bẩy để tái hiện logo. Logo bắt buộc phải mang phong thái tranh vẽ tay màu nước & mực than hữu cơ, mộc mạc và sâu lắng.

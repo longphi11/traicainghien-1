@@ -79,6 +79,10 @@ flowchart TD
   - Tiêu đề infographic: Font tối đa 24px, căn giữa, lề an toàn 2 bên tối thiểu **150px**.
   - Thẻ nội dung (Cards): Header thẻ PHẢI tách 2 dòng (`BƯỚC X` ở trên, `TÊN BƯỚC` ở dưới), chiều cao thẻ header tối thiểu 65px. Chiều rộng chữ không được vượt quá 75% chiều rộng thẻ.
   - Mọi sơ đồ phải được kiểm tra bounding box qua `scripts/infographic_engine.py` và lưu ảnh PNG preview vào thư mục `brain` để kiểm tra trực quan trước khi đẩy lên live.
+- [ ] **8. Quy chuẩn Đồng Bộ Thumbnail Bài Viết Về Sách (Mục Sách Hay) — LỆNH ĐẶC BIỆT CỦA BỐ:**
+  - 100% bài viết về sách (`#SachHay` hoặc tiêu đề `"Đọc [Tên Sách] - ..."`) BẮT BUỘC phải dùng chung một format thiết kế ảnh bìa chuẩn như bài *Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh*:
+  - **Bố cục chuẩn:** Mockup 3D bìa sách chính thức đứng thẳng nghiêng nhẹ góc 3/4 tự nhiên trên bàn gỗ Zen, cạnh khung cửa sổ mở hướng ra núi mây thủy mặc Sumi-e, tách trà gốm bốc khói mỏng và cuộn giấy thư pháp mở hờ.
+  - **CẤM TUYỆT ĐỐI:** Cấm tranh phong cảnh chung chung, cấm hình vẽ nhà sư hay người ngồi thiền mà KHÔNG CÓ BÌA SÁCH cho bài review sách. Agent 5 quét và từ chối duyệt ngay nếu vi phạm.
 
 ---
 
