@@ -47,10 +47,11 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
   * ❌ CẤM phong cách hoạt hình 2D phẳng vector, cấm 3D CGI bóng bẩy, cấm màu neon lòe loẹt.
   * ❌ CẤM hình ảnh dạng ký tự text art, ASCII art hay mã sơ đồ thô thiển.
 
-### 2.3. NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & ĐA DẠNG HÓA BỐI CẢNH (LỆNH ĐẶC BIỆT CỦA BỐ)
-* **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC:** 
-  - Không bao giờ được phép tái sử dụng hình ảnh thumbnail, tranh vẽ bìa hoặc sơ đồ giữa các bài viết trên website. Mỗi bài viết là một tác phẩm độc bản hoàn toàn mới.
-  - Nghiêm cấm đổi tên file hay crop lại tranh cũ để dùng cho bài mới.
+### 2.3. NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & CẤM TUYỆT ĐỐI TẠO ẢNH BÌA GIỐNG NHAU (LỆNH ĐẶC BIỆT CỦA BỐ)
+* **CẤM TUYỆT ĐỐI KHÔNG BAO GIỜ ĐƯỢC TẠO ẢNH BÌA GIỐNG NHAU:** 
+  - **Mỗi bài viết là một cá thể độc lập và BẮT BUỘC phải sở hữu một tác phẩm nghệ thuật độc bản hoàn toàn riêng biệt (Unique Master Artwork).** Tuyệt đối không bao giờ được phép tái sử dụng hình ảnh thumbnail, tranh vẽ bìa hoặc concept thị giác giữa các bài viết trên website.
+  - Nghiêm cấm mọi hành vi lấy ảnh cũ crop lại, nén lại hoặc đổi tên file mới để lách luật.
+  - **Hệ thống kiểm toán tự động khóa cứng (Visual Similarity Gate):** Script kiểm toán `scripts/audit_image_similarity.py` được tích hợp thẳng vào lệnh build. Hệ thống tự động đo độ tương đồng điểm ảnh (Perceptual Difference) giữa toàn bộ các bài viết. Nếu phát hiện 2 bài viết bất kỳ có độ chênh lệch thị giác quá thấp (`diff < 15.0`) $\rightarrow$ Hệ thống lập tức bẻ gãy build, từ chối deploy lên production và yêu cầu Agent 8 vẽ lại tranh mới!
 * **MỞ RỘNG BỐI CẢNH (CẤM BÓ HẸP TRONG CĂN PHÒNG):** 
   - Không được rập khuôn lặp đi lặp lại bối cảnh bàn làm việc / phòng ngủ / góc phòng kín.
   - Bắt buộc chủ động mở rộng không gian ra ngoài tự nhiên và đời sống đô thị thoáng đạt: Rừng thông mờ sương, cabin gỗ trên sườn núi, hồ nước phẳng lặng, bờ suối tiếp đất, ban công rộng đón ánh bình minh, mái hiên mưa rơi, quán cà phê ven đường chiều tà... tạo cảm giác giải phóng thị giác và tự do nội tâm cho người đọc.

@@ -154,7 +154,22 @@ articleBlocks.forEach((block, index) => {
 if (hasErrors) {
   console.error("\n⛔ [KẾT LUẬN] KIỂM TOÁN THẤT BẠI (AUDIT FAILED)! Mây & Agent 5 từ chối xuất bản. Vui lòng sửa các lỗi đỏ trước khi deploy.");
   process.exit(1);
-} else {
-  console.log("\n✅ [XÁC NHẬN] 100% BÀI VIẾT ĐẠT CHUẨN XUẤT BẢN! Mây & Agent 5 ký duyệt cho phép go-live.\n");
-  process.exit(0);
 }
+
+// 4. [LỆNH THÉP CỦA BỐ] KIỂM TOÁN TÍNH ĐỘC BẢN THỊ GIÁC (VISUAL PERCEPTUAL AUDIT)
+// Tự động đo độ tương đồng hình ảnh giữa tất cả các bài viết, CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH
+const { execSync } = require('child_process');
+try {
+  const auditVisualScript = path.join(__dirname, 'audit_image_similarity.py');
+  if (fs.existsSync(auditVisualScript)) {
+    const visualAuditOutput = execSync(`python "${auditVisualScript}"`, { encoding: 'utf8' });
+    console.log(visualAuditOutput);
+  }
+} catch (err) {
+  console.error("\n⛔ [LỖI TRÙNG LẶP THỊ GIÁC] Phát hiện hình ảnh bìa bị trùng lặp ý tưởng hoặc quá giống nhau giữa các bài viết!");
+  console.error(err.stdout || err.message);
+  process.exit(1);
+}
+
+console.log("\n✅ [XÁC NHẬN] 100% BÀI VIẾT ĐẠT CHUẨN XUẤT BẢN! Mây & Agent 5 ký duyệt cho phép go-live.\n");
+process.exit(0);

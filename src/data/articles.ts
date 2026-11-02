@@ -67,7 +67,7 @@ const rawArticles: Article[] = [
     "slug": "chung-ta-dang-song-vi-dieu-gi-giai-ma-khung-hoang-hien-sinh",
     "title": "Chúng Ta Đang Sống Vì Điều Gì: Vượt Qua Khủng Hoảng Hiện Sinh",
     "excerpt": "Cảm giác trống rỗng mỗi sáng thức dậy dù vẫn đủ đầy vật chất: Tự vấn hiện sinh cùng câu chuyện Dế Mèn Du Ký và 4 tầng nhu cầu tìm lại lẽ sống đích thực.",
-    "thumbnail": "/images/articles/chung-ta-dang-song-vi-dieu-gi-de-men-du-ky.webp",
+    "thumbnail": "/images/articles/chung-ta-dang-song-vi-dieu-gi-hien-nha-zen-v2.webp",
     "pillar": "Trụ cột 3: Lối sống tỉnh thức",
     "pillarTag": "TrietHocCuocSong",
     "categories": [
@@ -825,7 +825,7 @@ const rawArticles: Article[] = [
     "slug": "vi-sao-58-phan-tram-nguoi-dung-xoa-mang-xa-hoi",
     "title": "Vì Sao 58% Người Dùng Xóa Mạng Xã Hội? Cái Giá Của 'Miễn Phí'",
     "excerpt": "Đặt điện thoại xuống chỉ thấy kiệt sức và não nhũn? 58% người dùng đang âm thầm xóa mạng xã hội. Đây là 3 cái giá vô hình bạn đang trả mỗi ngày và bộ ba 'Nhìn - Bớt - Tạo'...",
-    "thumbnail": "/images/articles/roi-xa-mang-xa-hoi-ban-cong-yen-binh.webp",
+    "thumbnail": "/images/articles/roi-xa-mang-xa-hoi-ke-lu-hanh-zen-v2.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
