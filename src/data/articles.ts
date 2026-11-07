@@ -18,6 +18,32 @@ export interface Article {
 
 const rawArticles: Article[] = [
   {
+    "slug": "chua-lanh-nao-bo-khoi-nhun-nao-so-brain-rot-20261107",
+    "title": "Chữa Lành Não Bộ Khỏi 'Nhũn Não Số' (Brain Rot): Khôi Phục Khả Năng Tập Trung Sâu",
+    "excerpt": "Tập trung không phải là gồng mình chiến đấu, mà là nghệ thuật làm dịu tâm trí và loại bỏ bẫy kích thích rẻ tiền. Góc nhìn sâu sắc được đúc kết từ video triệu view của None.",
+    "thumbnail": "/images/articles/chua-lanh-nao-bo-sau-tiktok-zen-trai-cai-nghien.webp",
+    "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
+    "pillarTag": "LayLaiSuTapTrung",
+    "categories": [
+      "LayLaiSuTapTrung",
+      "RenLuyenBoNao"
+    ],
+    "tags": [
+      "#LayLaiSuTapTrung",
+      "#DeepWork",
+      "#SươngMuNao",
+      "#HocTapDinhCao",
+      "#GiaiPhongXaoNhang"
+    ],
+    "readTime": "10 phút đọc",
+    "date": "07/11/2026",
+    "author": "Mây — Trại Cai Nghiện",
+    "content": "Đã bao giờ bạn bước vào bàn làm việc với một danh sách dài những việc quan trọng cần hoàn thành, nhưng chỉ sau 5 phút, ngón tay bạn đã vô thức cầm lấy chiếc điện thoại thông minh?\n\nBạn tự nhủ: *\"Mình chỉ lướt kiểm tra tin nhắn một tí thôi.\"* Nhưng rồi 10 phút, 30 phút, thậm chí cả tiếng đồng hồ trôi qua trong vô thức. Khi bạn giật mình buông máy xuống, một cảm giác nặng nề, lờ đờ và trống rỗng bao trùm lấy toàn bộ tâm trí. Đầu bạn như bị bọc trong một lớp sương mù dày đặc — người ta gọi đó là hội chứng **Sương mù não (Brain Fog)** hay hiện tượng **\"Nhũn não số\" (Brain Rot)** của thời đại công nghiệp màn hình.\n\nTrong video sâu sắc mang tên *\"[Tóm tắt sách Deep Work] Tập trung cao độ - Năng lực cốt lõi để thành công trong cuộc sống\"* từ kênh *None*, tác giả đã bóc tách một sự thật trần trụi: **Bạn không hề lười biếng hay thiếu ý chí, mà bộ não sinh học của bạn đang bị kiệt quệ hoàn toàn vì các thuật toán kích thích dopamine quá liều.**\n\nHôm nay, Trại Cai Nghiện muốn cùng bạn đi sâu vào cơ chế thần kinh học này và tìm lại chìa khóa giúp bạn lấy lại quyền làm chủ sự chú ý của chính mình.\n\n---\n\n### 1. Hiện Tượng \"Nhũn Não Số\" (Brain Rot) Thực Chất Là Gì?\n\nNão bộ con người tiến hóa qua hàng triệu năm để thích nghi với môi trường tự nhiên, nơi các phần thưởng kích thích đến một cách chậm rãi và đòi hỏi nhiều nỗ lực (săn bắt, hái lượm, học kỹ năng).\n\nThế nhưng trong kỷ nguyên số, chúng ta đang bị ném vào một ma trận kích thích nhân tạo:\n* Các video ngắn 15 giây (TikTok, Reels, Shorts) liên tục giật dây thần kinh mỗi 3 giây một lần.\n* Mỗi cú vuốt tay là một chiếc máy đánh bạc vô thức, kích thích giải phóng những đợt sóng dopamine nhân tạo với cường độ cực đại.\n* **Cơ chế tự bảo vệ của não bộ (Downregulation):** Khi tiếp nhận lượng dopamine quá lớn trong thời gian dài, não bộ sẽ tự động giảm bớt mật độ các thụ thể thần kinh D2 để tránh bị quá tải.\n\nHậu quả là ngưỡng kích thích bình thường của bạn bị đẩy lên rất cao. Những công việc đòi hỏi sự kiên nhẫn và tĩnh lặng như đọc một cuốn sách, viết một bản kế hoạch, hay ngồi lắng nghe một người thân bỗng chốc trở thành một \"cực hình\" đầy chán nản.\n\n---\n\n### 2. Nghịch Lý Của Sự Gồng Mình: Càng Cố Tập Trung Càng Bất An\n\nRất nhiều bạn trẻ cố gắng khắc phục sự mất tập trung bằng cách **gồng ép ý chí (Willpower brute-force)**: Tự trách bản thân lười biếng, ép mình ngồi yên trước màn hình 4 tiếng đồng hồ liên tục.\n\nNhưng tâm lý học thần kinh đã chứng minh: **Ý chí là một nguồn tài nguyên sinh học có giới hạn.** Khi bạn phải liên tục dùng ý chí để chiến đấu với tiếng chuông thông báo và sự cám dỗ của chiếc điện thoại đặt ngay trước mặt, năng lượng tinh thần của bạn sẽ bị vắt kiệt chỉ sau 45 phút.\n\n> *\"Đừng dùng ý chí hữu hạn của bạn để chiến đấu với những thuật toán triệu đô được thiết kế bởi hàng ngàn kỹ sư thông minh nhất thế giới. Hãy dùng thiết kế môi trường để bảo vệ tâm trí.\"*\n\n---\n\n### 3. Quy Trình 3 Bước Tái Lập Sự Chú Ý Sâu (Deep Attention Reset)\n\nDựa trên nghiên cứu của Giáo sư Cal Newport (*Deep Work*) và các chuyên gia thần kinh học, dưới đây là 3 bước thực tế giúp bạn giải cứu bộ não của mình:\n\n#### Bước 1: Áp Dụng Triệt Để \"Quy Tắc 2 Mét\"\nTrước khi bắt đầu bất kỳ phiên làm việc sâu nào, hãy đặt điện thoại ở chế độ im lặng và cất nó sang một căn phòng khác, hoặc ít nhất là đặt cách xa bàn làm việc 2 mét. Chỉ một rào cản ma sát nhỏ (phải đứng dậy bước đi để lấy máy) đã giúp giảm tới 70% các hành vi cầm máy vô thức.\n\n#### Bước 2: Phân Đoạn Làm Việc 45/10 (Pomodoro Cải Tiến)\nNão bộ không thể duy trì sự tập trung cao độ liên tục quá 50 phút. Hãy chia ngày làm việc thành các khối 45 phút làm việc đơn nhiệm (Single-tasking) tuyệt đối, sau đó nghỉ 10 phút.\n* Trong 10 phút nghỉ: **Tuyệt đối không chạm vào màn hình điện thoại**.\n* Hãy đứng dậy uống một ly nước ấm, vươn vai, nhìn ra xa qua khung cửa sổ hoặc hít thở sâu để sóng não quay về trạng thái Alpha tĩnh tại.\n\n#### Bước 3: Tiếp Đất & Hòa Mình Vào Ánh Sáng Tự Nhiên (Grounding)\n15 phút tiếp xúc với ánh sáng mặt trời tự nhiên vào buổi sáng và đi dạo chậm rãi trong công viên giúp điều hòa lại nhịp sinh học và ổn định thụ thể dopamine tự nhiên nhanh gấp 3 lần so với việc nằm nghỉ trong phòng kín.\n\n---\n\n### 4. 🌿 Lời Nhắn Nhủ Từ Trại Cai Nghiện\n\nBạn thân mến,\n\nSự tập trung không phải là một đặc ân bẩm sinh dành riêng cho những thiên tài, mà là một **khả năng sinh học có thể phục hồi và rèn luyện được**.\n\nBạn không thất bại vì bạn yếu đuối. Bạn chỉ đang là một nạn nhân của một hệ thống công nghiệp được thiết kế để giam cầm sự chú ý của bạn. Hãy đối xử dịu dàng với chính mình, bắt đầu từ một bước nhỏ hôm nay: Cất điện thoại đi và cho não bộ của bạn được hít thở sự tĩnh lặng.\n\n---\n\n### NHỮNG ĐIỂM CỐT LÕI (KEY TAKEAWAYS)\n* **Bản chất của Brain Rot:** Do thụ thể dopamine bị chai sạn trước lượng kích thích video ngắn quá liều, không phải do bạn lười biếng.\n* **Môi trường quan trọng hơn ý chí:** Cất điện thoại cách xa 2m giúp triệt tiêu 70% các cơn thèm lướt máy vô thức.\n* **Đơn nhiệm nhịp nhàng:** 45 phút tập trung sâu kết hợp 10 phút nghỉ ngơi không màn hình.\n* **Nguồn tham khảo tri thức:** Đúc kết từ video *\"[Tóm tắt sách Deep Work] Tập trung cao độ - Năng lực cốt lõi để thành công trong cuộc sống\"* của kênh *None* (https://www.youtube.com/watch?v=lXpudZyNB-g).",
+    "sources": [
+      "https://www.youtube.com/watch?v=lXpudZyNB-g"
+    ]
+  },
+  {
     "slug": "dung-flex-doc-sach-vi-sao-doc-nhieu-doi-van-tri-tre",
     "title": "Đừng 'Flex' Đọc Sách: Vì Sao Đọc 50 Cuốn Đời Vẫn Trì Trệ?",
     "excerpt": "Mua sách theo trend, check-in khoe số lượng, nhưng tâm trí vẫn bất an và cuộc sống dậm chân tại chỗ? Khám phá cạm bẫy 'thượng đẳng tri thức' và nghệ thuật đọc để chuyển hóa đời thực.",
@@ -92,7 +118,7 @@ const rawArticles: Article[] = [
     "slug": "dopamine-detox-7-ngay-thao-go-kich-thich-re-tien",
     "title": "Dopamine Detox 7 Ngày: Lấy Lại Cảm Hứng Với Những Việc Khó",
     "excerpt": "Nguyên lý nước đục để yên sẽ tự trong: Lộ trình 7 ngày thanh lọc dopamine giúp tái thiết lập thụ thể D2, xóa tan cảm giác uể oải và tìm lại niềm vui lao động.",
-    "thumbnail": "/images/articles/dopamine-detox-7-ngay-nguyen-huu-tri-zen.webp",
+    "thumbnail": "/images/articles/dopamine-detox-7-ngay-zen-watercolor-v2.webp",
     "pillar": "Trụ cột 1: Thấu hiểu tâm lý & hành vi",
     "pillarTag": "HieuHanhVi",
     "categories": [
