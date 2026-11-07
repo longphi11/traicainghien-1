@@ -32,8 +32,13 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
 
 ## 2. 🌿 BẢN SẮC MỸ HỌC BẤT DI BẤT DỊCH CỦA TRẠI CAI NGHIỆN
 
-### 2.1. Trường Phái Hội Họa Cốt Lõi: Zen Watercolor & Sumi-e Ink Wash
-* **Phong cách:** Tranh vẽ tay màu nước thủy mặc Á Đông trên nền giấy thô mộc có hạt grain.
+### 2.1. Trường Phái Hội Họa Cốt Lõi: Zen Watercolor & Sumi-e Ink Wash (LỆNH ĐẶC BIỆT CỦA BỐ)
+* **QUY CHUẨN ĐỘC TÔN: 100% ẢNH BÌA PHẢI Ở DẠNG TRANH VẼ TAY:** 
+  - Người nhìn vào phải nhận ra NGAY LẬP TỨC đó là một tác phẩm hội họa vẽ tay đầy chất thơ và nghệ thuật.
+  - Bắt buộc phải có dấu ấn rõ nét của chất liệu cọ vẽ: Vệt loang màu nước tự nhiên (*soft organic watercolor pigment bleeds*), nét viền mực than xước nhẹ Sumi-e (*dry-brush charcoal ink outlines*), và thớ giấy sần mộc mạc (*textured handmade washi paper with organic fibers*).
+* **CẤM TUYỆT ĐỐI 100% MỌI DẠNG ẢNH CHỤP & PHOTOREALISTIC:**
+  - ❌ **CẤM ẢNH CHỤP THẬT (Photo stills):** Tuyệt đối không dùng ảnh chụp từ máy ảnh, ảnh stock chụp người thật hay cảnh thật.
+  - ❌ **CẤM ẢNH PHOTOREALISTIC / 3D RENDER TĨNH VẬT THỰC TẾ:** Cấm hoàn toàn phong cách render 3D chân thực như ảnh chụp tĩnh vật (bàn gỗ, tách trà, chậu cây, cuốn sổ render bóng bẩy như chụp máy ảnh). Bất kể đồ vật hay con người đều bắt buộc phải được thể hiện bằng **bút pháp tranh vẽ tay màu nước thủy mặc**.
 * **Bảng màu nhận diện thương hiệu chuẩn Hex:**
   * `Xanh Rêu Rừng (#3A5A40)`: Hơi thở của sự phục hồi, kiên nhẫn và sinh mệnh tự nhiên.
   * `Be Ấm / Giấy Mộc (#FAF7F2, #E6E1D8)`: Màu nền dịu mắt, ấm cúng như một trang sách cũ.

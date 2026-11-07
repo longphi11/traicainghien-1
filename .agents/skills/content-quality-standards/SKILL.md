@@ -57,9 +57,11 @@ flowchart TD
 
 ### CỔNG 2: THỊ GIÁC & HÌNH ẢNH VISUAL (AGENT 8 → AGENT 5)
 *Trước khi bất kỳ hình ảnh nào được gắn vào bài viết web hoặc làm cover media:*
-- [ ] **1. ĐỒNG BỘ 100% TRANH VẼ MÀU NƯỚC THỦY MẶC Á ĐÔNG (ZEN MINIMALIST WATERCOLOR & SUMI-E INK WASH) — LỆNH ĐẶC BIỆT CỦA BỐ:**
-  - **CẤM TUYỆT ĐỐI:** Ảnh chụp thực tế (photostock Unsplash/Pexels của máy tính, điện thoại, bàn làm việc, người ngồi văn phòng), ảnh render 3D hiện đại hoặc hình minh họa màu sắc lòe loẹt.
-  - **BẮT BUỘC:** 100% hình ảnh là tranh vẽ màu nước thủy mặc mộc mạc, tĩnh lặng trên nền giấy cổ ấm áp (`#FAF7F2`), nét vẽ mực sumi-e thanh thoát kết hợp sắc xanh rêu rừng (`#3A5A40`) và đất nung (`#C27D53`).
+- [ ] **1. QUY CHUẨN ĐỘC TÔN: 100% ẢNH BÌA BẮT BUỘC PHẢI LÀ DẠNG TRANH VẼ TAY (LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **CẤM TUYỆT ĐỐI 100% MỌI DẠNG ẢNH CHỤP & PHOTOREALISTIC:**
+    - ❌ **CẤM ẢNH CHỤP THỰC TẾ (Photo stills):** Tuyệt đối không dùng ảnh chụp từ máy ảnh, ảnh stock chụp người thật hay cảnh thật.
+    - ❌ **CẤM ẢNH PHOTOREALISTIC / 3D RENDER TĨNH VẬT THỰC TẾ:** Cấm hoàn toàn phong cách render 3D chân thực như ảnh chụp tĩnh vật (bàn gỗ, tách trà, chậu cây, cuốn sổ render bóng bẩy như chụp máy ảnh). Bất kể đồ vật hay con người đều bắt buộc phải được thể hiện bằng **bút pháp tranh vẽ tay màu nước thủy mặc**.
+  - **BẮT BUỘC TRANH VẼ TAY NGHỆ THUẬT:** 100% hình ảnh là tranh vẽ màu nước thủy mặc mộc mạc, tĩnh lặng trên nền giấy washi sần be ấm (`#FAF7F2`), nhìn rõ nét cọ vẽ tay, vệt loang màu nước tự nhiên (*watercolor pigment bleeds*) và nét viền mực Sumi-e xước nhẹ kết hợp sắc xanh rêu rừng (`#3A5A40`) và đất nung (`#C27D53`). Người xem nhìn vào phải nhận ra NGAY LẬP TỨC đó là một tác phẩm hội họa nghệ thuật.
 - [ ] **2. Cơ chế chống Cache trình duyệt & CDN (Cache-Busting URL):** Khi thay đổi/cập nhật hình ảnh, bắt buộc phải đổi tên file sang định danh mới (ví dụ: `-zen-`, `-v2.webp`) để trình duyệt và CDN không hiển thị lại ảnh cũ trong bộ nhớ đệm.
 - [ ] **3. NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & CẤM TRÙNG LẶP Ý TƯỞNG (ZERO VISUAL DUPLICATION — LỆNH ĐẶC BIỆT CỦA BỐ):**
   - **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC:** Không bao giờ tái sử dụng thumbnail hoặc sơ đồ đã từng xuất hiện ở bất kỳ bài viết nào khác trên website. Mỗi bài viết là một thực thể độc lập, BẮT BUỘC phải có một tác phẩm tranh vẽ độc bản hoàn toàn mới.

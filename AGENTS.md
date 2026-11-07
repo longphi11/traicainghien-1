@@ -109,9 +109,14 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
 > [!CAUTION]
 > **Đây là quy chuẩn tối thượng không được phép vi phạm dù chỉ một lần. Mọi bài viết trước khi xuất bản đều phải đi qua script kiểm toán `scripts/audit_all_articles.js` và tuân thủ trọn vẹn bộ nguyên tắc này:**
 
-1. **Quy chuẩn Ảnh Bìa (Article Thumbnail):**
-   * **Trường phái duy nhất:** 100% Tranh vẽ tay Màu nước Thủy mặc & Nét viền mực than (**Zen Watercolor & Vintage Ink Wash on Textured Paper**).
-   * **CẤM TUYỆT ĐỐI:** Cấm ảnh chụp đời thực (photo stills), cấm 3D CGI bóng bẩy, cấm vector hoạt hình 2D phẳng lỳ, cấm phong cách cổ trang / già nua / trà thất phong kiến. Bối cảnh bắt buộc là đời sống người trẻ đương đại 18 – 35 tuổi (bàn làm việc tối giản, phòng chung cư nhìn ra thành phố đêm, quán cà phê phố thị, ban công đón nắng).
+1. **Quy chuẩn Độc Tôn: 100% Ảnh Bìa BẮT BUỘC PHẢI LÀ DẠNG TRANH VẼ TAY (LỆNH ĐẶC BIỆT BẤT DI BẤT DỊCH CỦA BỐ):**
+   * **Trường phái hội họa độc tôn:** **100% Tranh vẽ tay Màu nước Thủy mặc & Nét viền mực than (Zen Watercolor & Vintage Sumi-e Ink Wash on Textured Washi Paper)**. Người nhìn vào phải nhận ra NGAY LẬP TỨC đó là một tác phẩm hội họa vẽ tay đầy chất thơ và nghệ thuật.
+   * **CẤM TUYỆT ĐỐI 100% MỌI DẠNG ẢNH CHỤP & PHOTOREALISTIC:**
+     - ❌ **CẤM ẢNH CHỤP ĐỜI THỰC (Photo stills):** Tuyệt đối không dùng ảnh chụp từ máy ảnh, ảnh stock chụp người thật hay cảnh thật.
+     - ❌ **CẤM ẢNH PHOTOREALISTIC / 3D RENDER TĨNH VẬT THỰC TẾ:** Tuyệt đối không dùng phong cách render 3D chân thực (photorealistic) chụp góc bàn gỗ, tách trà, cuốn sổ, chậu cây hay đồ vật bóng bẩy như ảnh thật. Dù là bất kỳ đồ vật hay cảnh vật nào, TẤT CẢ đều bắt buộc phải được thể hiện bằng **nét cọ vẽ màu nước, vệt loang pigment thấm thấu vào thớ giấy sần và nét mực than Sumi-e xước nhẹ**.
+     - ❌ **CẤM VECTOR PHẲNG & HOẠT HÌNH:** Cấm vector 2D phẳng lỳ, cấm phong cách hoạt hình anime/chibi hay màu neon lòe loẹt.
+     - ❌ **CẤM CỔ TRANG GIÀ NUA:** Cấm trà thất phong kiến, cấm cung đình, cấm người già hay thầy đồ cổ xưa.
+   * **Bối cảnh đương đại:** Đời sống người trẻ 18 – 35 tuổi (chung cư hiện đại nhìn ra thành phố, ban công đón nắng, lối mòn ven rừng thông, quán cà phê phố thị, thiên nhiên khoáng đạt).
    * **Dung lượng & Kích thước:** Tối đa **120 KB**, tỷ lệ vàng 16:9 (`1200x675px`), định dạng `.webp`, có watermark mờ góc phải `🌿 TRẠI CAI NGHIỆN`.
 
 2. **Quy chuẩn Hình Ảnh Diễn Giải / Sơ Đồ (Diagrams / Infographics):**
