@@ -139,6 +139,12 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
    * **Bố cục chuẩn:** Góc phòng tĩnh lặng phong cách Zen, bàn gỗ mộc bên khung cửa sổ mở nhìn ra rặng núi mây mù bồng bềnh thủy mặc Sumi-e, tách trà gốm bốc khói mỏng và cuộn giấy thư pháp mở hờ.
    * **Mockup Sách 3D:** Bắt buộc sử dụng đúng ảnh bìa ấn bản dịch tiếng Việt chính thức (hoặc bản quốc tế gốc chuẩn), dựng đứng nghiêng nhẹ góc 3/4 trên mặt bàn gỗ với phối cảnh 3D chân thực (gáy sách bên trái, mép giấy ngà phía trên, bóng đổ mềm mại dưới đáy sách).
    * **CẤM TUYỆT ĐỐI:** Cấm tranh phong cảnh chung chung, cấm tranh vẽ nhà sư hay người ngồi thiền mà KHÔNG CÓ BÌA SÁCH cho bài review sách. Agent 5 và script kiểm toán sẽ từ chối duyệt ngay nếu vi phạm.
+
+6. **QUY TẮC BẢN TIN TỰ ĐỘNG TELEGRAM & MẠNG XÃ HỘI (LỆNH ĐẶC BIỆT CỦA BỐ):**
+   * **CẤM TUYỆT ĐỐI DÙNG ẢNH TRÙNG LẶP GIỮA CÁC BẢN TIN:** Mỗi bản tin phát sóng (08:30, 15:00, 20:30) BẮT BUỘC phải sở hữu một hình ảnh riêng biệt, độc nhất. Tuyệt đối không bao giờ được phép dùng lại hình ảnh đã phát sóng trong các bản tin trước đó.
+   * **ƯU TIÊN TUYỆT ĐỐI ẢNH GỐC CỦA CHÍNH TÁC GIẢ BÀI VIẾT:** Luôn luôn cào và bóc tách trực tiếp ảnh đại diện gốc (`og:image`) hoặc ảnh tư liệu trong chính bài viết nghiên cứu của tác giả gốc từ các nguồn uy tín (*Psychology Today, Psyche, Greater Good Berkeley, Harvard Health...*).
+   * **CƠ CHẾ KIỂM DUYỆT & LƯU LỊCH SỬ (DEDUPLICATION MEMORY):** Luồng n8n và các agent tự động bắt buộc lưu trữ danh sách URL bài viết và URL ảnh đã gửi vào bộ nhớ lịch sử. Mọi bài viết chuẩn bị gửi đều phải đối chiếu, nếu ảnh hoặc link đã từng xuất hiện thì lập tức bỏ qua và chọn bài viết mới tiếp theo trong feed, bảo đảm kênh luôn tươi mới 100%.
+
 * **Quy chuẩn Video Ngắn Faceless (TikTok / YouTube Shorts / Reels):**
   * **Hình ảnh (B-roll):** Không lộ mặt. Sử dụng thước phim quay chậm, góc tĩnh: Cảnh pha phin cà phê buổi sáng, bàn làm việc gỗ tối giản, mưa rơi ngoài cửa sổ, ngón tay lật chậm từng trang sách, đi bộ một mình dưới hàng cây.
   * **Âm thanh & Giọng đọc:** Nhạc nền Lo-fi ambient nhẹ nhàng, âm thanh ASMR thiên nhiên (tiếng mưa, tiếng gõ phím cơ, tiếng gió), giọng đọc AI trầm ấm, chậm rãi như đang tâm sự đêm khuya.
