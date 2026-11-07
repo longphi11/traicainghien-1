@@ -43,9 +43,9 @@ const rawArticles: Article[] = [
   },
     {
     "slug": "dung-flex-doc-sach-vi-sao-doc-nhieu-doi-van-tri-tre",
-    "title": "Ảo Tưởng Tri Thức: Vì Sao Đọc 50 Cuốn Sách, Cuộc Đời Vẫn Trì Trệ?",
+    "title": "Bẫy 'Nghiện Đọc': Đọc Hết 50 Cuốn Sách, Sao Cuộc Đời Vẫn Đứng Yên?",
     "excerpt": "Mua sách theo trend, check-in khoe số lượng, nhưng tâm trí vẫn bất an và cuộc sống dậm chân tại chỗ? Khám phá cạm bẫy 'thượng đẳng tri thức' và nghệ thuật đọc để chuyển hóa đời thực.",
-    "thumbnail": "/images/articles/dung-flex-doc-sach-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/bay-nghien-doc-50-cuon-sach-zen-watercolor.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "HieuHanhVi",
     "categories": [
