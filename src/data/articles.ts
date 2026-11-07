@@ -21,7 +21,7 @@ const rawArticles: Article[] = [
     "slug": "khi-chi-con-10-phan-tram-nang-luong-giao-an-cho-ngay-kiet-que",
     "title": "Khi Chỉ Còn 10% Năng Lượng: Giáo Án Cho Một Ngày Kiệt Quệ",
     "excerpt": "Mở mắt ra thấy đầu nặng trịch, ngực tức nghẹn và chỉ muốn trốn cả thế giới? Đừng ép chiếc chân đang đau phải chạy nước rút. Khám phá cách làm việc nhân văn khi tinh thần chạm đáy.",
-    "thumbnail": "/images/articles/ngay-nang-luong-10-phan-tram-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/ngay-nang-luong-10-phan-tram-zen-watercolor-v2.webp",
     "pillar": "Trụ cột 2: Phương pháp thay đổi & Thiết kế môi trường",
     "pillarTag": "QuanTriCamXuc",
     "categories": [
