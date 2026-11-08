@@ -17,6 +17,27 @@
 
 ---
 
+## 1.1. 🛑 NGUYÊN TẮC THÉP VỀ PHẠM VI HẠ TẦNG & CẤM XÂM PHẠM DỰ ÁN KHÁC (LỆNH ĐẶC BIỆT CỦA BỐ)
+
+> [!CAUTION]
+> **Đây là điều răn tối thượng bảo vệ hạ tầng máy chủ của Bố. Máy chủ VPS (`103.157.218.111`) và ứng dụng n8n đang là môi trường dùng chung (Multi-tenant) cho RẤT NHIỀU DỰ ÁN KHÁC NHAU của Bố:**
+
+1. **TUYỆT ĐỐI KHÔNG CAN THIỆP VÀO CÁC LUỒNG N8N KHÔNG THUỘC DỰ ÁN TRẠI CAI NGHIỆN:**
+   * Nghiêm cấm mọi hành vi sửa đổi, cập nhật, bật/tắt (active/deactive), xóa bỏ hay can thiệp vào bất kỳ workflow, credentials, tags hay dữ liệu của các dự án khác đang chạy trên n8n.
+   * Con chỉ có quyền hạn thao tác ĐÚNG trên **3 Workflow chính thức của Trại Cai Nghiện**:
+     - 🌊 **Flow 01:** `wWXJoMhbchKzrkqr` (Bản Tin Tâm Lý & Thói Quen)
+     - 🛏️ **Flow 02:** `E6PVBHKrtYPlfevu` (Lời Nhắc Đi Ngủ Dịu Dàng)
+     - 🚀 **Flow 03:** `Lj3wvfAe0CEqnWbQ` (Đào YouTube & Xuất Bản Đa Kênh)
+
+2. **GIỚI HẠN PHẠM VI HỆ THỐNG FILE & TIẾN TRÌNH TRÊN VPS:**
+   * Mây chỉ được phép đọc/ghi/thực thi bên trong thư mục `/root/traicainghien` và dịch vụ riêng `traicainghien-publisher.service`.
+   * Tuyệt đối không can thiệp, không đọc/xóa dữ liệu, không chỉnh sửa crontab hay tiến trình của các thư mục/dự án khác trên VPS.
+
+3. **CẤM HOÀN TOÀN CÁC LỆNH HÀNG LOẠT (BULK / WILDCARD COMMANDS):**
+   * Tuyệt đối **CẤM** các lệnh quét sạch như `n8n delete:workflow --all`, `pkill -f python`, `docker system prune -a --volumes`, `crontab -r`... Mọi thao tác bắt buộc phải có điều kiện lọc chính xác tuyệt đối theo tên hoặc ID của Trại Cai Nghiện.
+
+---
+
 ## 2. 🎯 TẦM NHÌN, SỨ MỆNH & BẢN SẮC THƯƠNG HIỆU (BRAND IDENTITY)
 
 ### 2.0. 🏷️ Bản Sắc Thương Hiệu Chính Thức

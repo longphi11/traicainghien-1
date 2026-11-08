@@ -173,8 +173,18 @@ graph TD
 ---
 
 ## 7. 📜 NGUYÊN TẮC THÉP KHI THAY ĐỔI HOẶC NÂNG CẤP LUỒNG
-1. **Quy tắc Single Source of Truth:** Bất kỳ thay đổi nào về lịch trình, logic hay thông số của luồng tự động đều phải được cập nhật đồng thời tại file tổng `AUTOMATION_FLOWS_N8N.md` và file chi tiết tương ứng (`flow_01_*.md`, `flow_02_*.md`, `flow_03_*.md`).
-2. **Kiểm tra giới hạn ký tự Telegram:** Mọi bản tin phát sóng kèm ảnh lên Telegram bắt buộc giữ độ dài UTF-16 code units **dưới 1024** để tránh lỗi ngắt kết nối `400 Bad Request`.
-3. **Quy chuẩn Hình ảnh độc bản (LỆNH ĐẶC BIỆT CỦA BỐ):** 
+
+1. **🛑 NGUYÊN TẮC CÁCH LY PHẠM VI DỰ ÁN (LỆNH ĐẶC BIỆT CỦA BỐ):**
+   - **Máy chủ VPS (`103.157.218.111`) và Docker n8n là môi trường dùng chung (Multi-tenant) cho NHIỀU DỰ ÁN KHÁC NHAU của Bố.**
+   - **TUYỆT ĐỐI KHÔNG ĐƯỢC CHẠM VÀO, CHỈNH SỬA, BẬT/TẮT, XÓA BỎ HOẶC CAN THIỆP BẤT KỲ ĐIỀU GÌ** liên quan đến các workflow, cơ sở dữ liệu, credentials, file hoặc tiến trình không thuộc về dự án Trại Cai Nghiện.
+   - **Chỉ thao tác đúng 3 Workflow chính thức của Trại Cai Nghiện:**
+     * `Flow 01: Bản Tin Tâm Lý Học` (ID: `wWXJoMhbchKzrkqr`)
+     * `Flow 02: Lời Nhắc Đi Ngủ 22h00` (ID: `E6PVBHKrtYPlfevu`)
+     * `Flow 03: Đào YouTube & Xuất Bản Đa Kênh` (ID: `Lj3wvfAe0CEqnWbQ`)
+   - Nghiêm cấm mọi lệnh xóa hàng loạt (Bulk/Wildcard commands) như `delete --all`, `pkill`, `prune volumes`... làm ảnh hưởng đến các dự án khác của Bố.
+
+2. **Quy tắc Single Source of Truth:** Bất kỳ thay đổi nào về lịch trình, logic hay thông số của luồng tự động đều phải được cập nhật đồng thời tại file tổng `AUTOMATION_FLOWS_N8N.md` và file chi tiết tương ứng (`flow_01_*.md`, `flow_02_*.md`, `flow_03_*.md`).
+3. **Kiểm tra giới hạn ký tự Telegram:** Mọi bản tin phát sóng kèm ảnh lên Telegram bắt buộc giữ độ dài UTF-16 code units **dưới 1024** để tránh lỗi ngắt kết nối `400 Bad Request`.
+4. **Quy chuẩn Hình ảnh độc bản (LỆNH ĐẶC BIỆT CỦA BỐ):** 
    - 100% hình ảnh đưa vào bài viết web hoặc bài phát sóng Telegram Channel (@traicainghiendaily) phải là **tranh vẽ tay Thủy mặc Zen Watercolor độc bản**, không dùng ảnh chụp stock người thật (ảnh đeo khẩu trang, bệnh viện), không dùng vector 2D phẳng hay 3D bóng bẩy.
    - **Tuyệt đối cấm trùng lặp ảnh trên kênh Telegram:** Mỗi bài đăng bắt buộc phải mang một hình ảnh duy nhất, được chọn lọc qua bộ lọc chống trùng lịch sử phát sóng (`sentPhotos`). Không lặp lại ảnh trong vòng ít nhất 60 ngày.
