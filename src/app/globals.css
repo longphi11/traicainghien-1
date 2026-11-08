@@ -67,15 +67,15 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .dark .bg-\[\#FAF7F2\] {
-  background-color: var(--bg-page) !important;
+  background-color: var(--bg-card) !important;
 }
 
 .dark .bg-\[\#FAF7F2\]\/90 {
-  background-color: rgba(21, 24, 22, 0.9) !important;
+  background-color: rgba(29, 34, 31, 0.9) !important;
 }
 
 .dark .bg-\[\#FAF7F2\]\/80 {
-  background-color: rgba(21, 24, 22, 0.8) !important;
+  background-color: rgba(29, 34, 31, 0.8) !important;
 }
 
 .dark .bg-\[\#F7F5F0\] {
@@ -98,14 +98,87 @@ h1, h2, h3, h4, .font-serif {
   background-color: #2D231C !important;
 }
 
-.dark .text-\[\#2D312E\] {
-  color: var(--text-main) !important;
+/* Dark Mode Typography - Đảm bảo độ tương phản cao, sáng rõ, cực kỳ dễ đọc */
+.dark .text-\[\#2D312E\],
+.dark .text-\[\#2D312E\]\/90,
+.dark .text-\[\#2D312E\]\/80,
+.dark .text-\[\#2D312E\]\/70,
+.dark .text-\[\#2D312E\]\/60 {
+  color: #E6E4DF !important; /* Màu giấy ngà sáng dịu mắt, tương phản cao trên nền đen */
 }
 
-.dark .text-\[\#6B726E\] {
-  color: var(--text-muted) !important;
+.dark .text-\[\#1F2421\] {
+  color: #FFFFFF !important; /* Chữ in đậm nổi bật rõ ràng */
 }
 
-.dark .border-\[\#E6E1D8\] {
-  border-color: var(--border-color) !important;
+.dark .text-\[\#4A5568\] {
+  color: #D1CCC2 !important; /* Chữ in nghiêng sáng rõ */
+}
+
+.dark .text-\[\#6B726E\],
+.dark .text-\[\#6B726E\]\/90,
+.dark .text-\[\#6B726E\]\/80 {
+  color: #9DA39F !important; /* Chữ phụ đề / ghi chú */
+}
+
+.dark .text-\[\#3A5A40\] {
+  color: #8FC99D !important; /* Màu xanh lục bảo Zen sáng nổi bật trên nền tối */
+}
+
+.dark .border-\[\#E6E1D8\],
+.dark .border-\[\#E6E1D8\]\/70 {
+  border-color: #2E3531 !important;
+}
+
+/* Tối ưu hóa chuyên sâu cho phần nội dung bài đọc (.article-content) trong Chế độ Tối */
+.dark .article-content {
+  color: #E6E4DF !important;
+}
+
+.dark .article-content p {
+  color: #E6E4DF !important;
+}
+
+.dark .article-content strong,
+.dark .article-content b {
+  color: #FFFFFF !important;
+}
+
+.dark .article-content em,
+.dark .article-content i {
+  color: #D6D1C7 !important;
+}
+
+.dark .article-content h1,
+.dark .article-content h2,
+.dark .article-content h4 {
+  color: #F5F2EB !important;
+}
+
+.dark .article-content h3 {
+  color: #8FC99D !important;
+}
+
+.dark .article-content blockquote {
+  background-color: rgba(45, 35, 28, 0.5) !important;
+  color: #F0ECE6 !important;
+  border-left-color: #D48C62 !important;
+}
+
+.dark .article-content blockquote p,
+.dark .article-content blockquote em {
+  color: #F0ECE6 !important;
+}
+
+.dark .article-content li {
+  color: #E6E4DF !important;
+}
+
+.dark .article-content a {
+  color: #8FC99D !important;
+  text-decoration-color: rgba(143, 201, 157, 0.5) !important;
+}
+
+.dark .article-content a:hover {
+  color: #B2E2BD !important;
 }

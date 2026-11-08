@@ -90,7 +90,7 @@ function renderFormattedText(text: string) {
           <Link
             key={`link-${match.index}`}
             href={matchLink[2]}
-            className="text-[#3A5A40] font-semibold underline decoration-[#3A5A40]/40 underline-offset-4 hover:decoration-[#3A5A40] hover:text-[#283f2c] transition-all"
+            className="text-[#3A5A40] dark:text-[#8FC99D] font-semibold underline decoration-[#3A5A40]/40 dark:decoration-[#8FC99D]/40 underline-offset-4 hover:decoration-[#3A5A40] dark:hover:decoration-[#8FC99D] hover:text-[#283f2c] dark:hover:text-[#B2E2BD] transition-all"
           >
             {matchLink[1]}
           </Link>
@@ -100,7 +100,7 @@ function renderFormattedText(text: string) {
     // Bold text: **text**
     else if (m.startsWith("**") && m.endsWith("**")) {
       tokens.push(
-        <strong key={`bold-${match.index}`} className="font-bold text-[#1F2421]">
+        <strong key={`bold-${match.index}`} className="font-bold text-[#1F2421] dark:text-white">
           {m.slice(2, -2)}
         </strong>
       );
@@ -108,7 +108,7 @@ function renderFormattedText(text: string) {
     // Italic text: *text*
     else if (m.startsWith("*") && m.endsWith("*")) {
       tokens.push(
-        <em key={`italic-${match.index}`} className="italic text-[#4A5568]">
+        <em key={`italic-${match.index}`} className="italic text-[#4A5568] dark:text-[#D6D1C7]">
           {m.slice(1, -1)}
         </em>
       );
@@ -437,23 +437,23 @@ export default async function ArticleDetailPage({
               <Clock className="w-3.5 h-3.5 text-[#3A5A40]" /> {article.readTime}
             </span>
             <span>•</span>
-            <span className="font-medium text-[#2D312E]">Trại Cai Nghiện</span>
+            <span className="font-medium text-[#2D312E] dark:text-[#F0ECE6]">Trại Cai Nghiện</span>
           </div>
         </div>
 
         {/* Tiêu đề chính - Cân chỉnh khoảng cách dòng thoáng đãng, dễ nhìn, không díu chữ */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-bold font-serif text-[#2D312E] leading-[1.45] sm:leading-[1.48] md:leading-[1.5] tracking-normal mb-5">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-bold font-serif text-[#2D312E] dark:text-[#F5F2EB] leading-[1.45] sm:leading-[1.48] md:leading-[1.5] tracking-normal mb-5">
           {article.title}
         </h1>
 
         {/* Châm ngôn trích dẫn cốt lõi */}
         {article.excerpt && (
           <div className="pt-3">
-            <div className="p-6 sm:p-7 rounded-2xl bg-[#FAF7F2] border-l-4 border-[#3A5A40] flex items-start gap-3.5 shadow-xs">
-              <span className="text-3xl sm:text-4xl text-[#3A5A40] font-serif leading-none shrink-0 select-none">
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#FAF7F2] dark:bg-[#1D221F] border-l-4 border-[#3A5A40] dark:border-[#527A59] border-y border-r border-[#E6E1D8] dark:border-[#2E3531] flex items-start gap-3.5 shadow-xs">
+              <span className="text-3xl sm:text-4xl text-[#3A5A40] dark:text-[#8FC99D] font-serif leading-none shrink-0 select-none">
                 ❝
               </span>
-              <p className="text-[16px] sm:text-lg font-serif font-bold text-[#2D312E] leading-relaxed italic">
+              <p className="text-[16px] sm:text-lg font-serif font-bold text-[#2D312E] dark:text-[#F0ECE6] leading-relaxed italic">
                 {article.excerpt}
               </p>
             </div>
@@ -461,15 +461,15 @@ export default async function ArticleDetailPage({
         )}
       </div>
 
-      {/* Article Body - Trình bày thoáng đãng, chuẩn mực xuất bản */}
-      <div className="article-content text-[#2D312E]/90">
+      {/* Article Body - Trình bày thoáng đãng, chuẩn mực xuất bản, màu sáng nổi bật trong chế độ tối */}
+      <div className="article-content text-[#2D312E]/90 dark:text-[#E6E4DF]">
         {mainBlocks.map((block, idx) => {
           switch (block.type) {
             case "h2":
               return (
                 <h2
                   key={idx}
-                  className="text-2xl sm:text-3xl font-bold font-serif text-[#2D312E] mt-12 mb-5 pt-8 border-t border-[#E6E1D8]/70 leading-snug"
+                  className="text-2xl sm:text-3xl font-bold font-serif text-[#2D312E] dark:text-[#F5F2EB] mt-12 mb-5 pt-8 border-t border-[#E6E1D8]/70 dark:border-[#2E3531] leading-snug"
                 >
                   {block.text}
                 </h2>
@@ -479,7 +479,7 @@ export default async function ArticleDetailPage({
               return (
                 <h3
                   key={idx}
-                  className="text-xl sm:text-2xl font-bold font-serif text-[#3A5A40] mt-8 mb-4 leading-snug"
+                  className="text-xl sm:text-2xl font-bold font-serif text-[#3A5A40] dark:text-[#8FC99D] mt-8 mb-4 leading-snug"
                 >
                   {block.text}
                 </h3>
@@ -489,19 +489,19 @@ export default async function ArticleDetailPage({
               return (
                 <h4
                   key={idx}
-                  className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] mt-6 mb-3 leading-snug"
+                  className="text-lg sm:text-xl font-bold font-serif text-[#2D312E] dark:text-[#F5F2EB] mt-6 mb-3 leading-snug"
                 >
                   {renderFormattedText(block.text)}
                 </h4>
               );
 
             case "hr":
-              return <hr key={idx} className="border-[#E6E1D8] my-10" />;
+              return <hr key={idx} className="border-[#E6E1D8] dark:border-[#2E3531] my-10" />;
 
             case "image":
               return (
                 <figure key={idx} className="my-10 space-y-3">
-                  <div className="rounded-2xl overflow-hidden border border-[#E6E1D8] shadow-sm bg-[#FAF7F2]">
+                  <div className="rounded-2xl overflow-hidden border border-[#E6E1D8] dark:border-[#2E3531] shadow-sm bg-[#FAF7F2] dark:bg-[#1D221F]">
                     <img
                       src={block.src}
                       alt={block.alt}
@@ -510,7 +510,7 @@ export default async function ArticleDetailPage({
                     />
                   </div>
                   {block.alt && (
-                    <figcaption className="text-center text-xs sm:text-sm text-[#6B726E] italic font-serif">
+                    <figcaption className="text-center text-xs sm:text-sm text-[#6B726E] dark:text-[#9DA39F] italic font-serif">
                       {block.alt}
                     </figcaption>
                   )}
@@ -521,7 +521,7 @@ export default async function ArticleDetailPage({
               return (
                 <blockquote
                   key={idx}
-                  className="my-8 pl-6 pr-6 py-5 border-l-4 border-[#C27D53] bg-[#F9EFE9]/40 rounded-r-2xl italic font-serif text-lg md:text-xl text-[#2D312E] leading-relaxed"
+                  className="my-8 pl-6 pr-6 py-5 border-l-4 border-[#C27D53] dark:border-[#D48C62] bg-[#F9EFE9]/40 dark:bg-[#2D231C]/60 rounded-r-2xl italic font-serif text-lg md:text-xl text-[#2D312E] dark:text-[#F0ECE6] leading-relaxed"
                 >
                   {renderFormattedText(block.text)}
                 </blockquote>
@@ -533,12 +533,12 @@ export default async function ArticleDetailPage({
                   {block.items.map((item, nIdx) => (
                     <div
                       key={nIdx}
-                      className="flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] shadow-xs hover:border-[#3A5A40]/40 transition-colors"
+                      className="flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-[#FAF7F2] dark:bg-[#1D221F] border border-[#E6E1D8] dark:border-[#2E3531] shadow-xs hover:border-[#3A5A40]/40 dark:hover:border-[#527A59]/60 transition-colors"
                     >
-                      <span className="w-8 h-8 rounded-xl bg-[#3A5A40] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-xs mt-0.5">
+                      <span className="w-8 h-8 rounded-xl bg-[#3A5A40] dark:bg-[#527A59] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-xs mt-0.5">
                         {nIdx + 1}
                       </span>
-                      <div className="flex-1 text-[16px] sm:text-[17px] text-[#2D312E] leading-[1.85]">
+                      <div className="flex-1 text-[16px] sm:text-[17px] text-[#2D312E] dark:text-[#E6E4DF] leading-[1.85]">
                         {renderFormattedText(item)}
                       </div>
                     </div>
@@ -552,9 +552,9 @@ export default async function ArticleDetailPage({
                   {block.items.map((item, bIdx) => (
                     <li
                       key={bIdx}
-                      className="flex items-start gap-3 text-[16px] sm:text-[17px] text-[#2D312E]/90 leading-[1.85]"
+                      className="flex items-start gap-3 text-[16px] sm:text-[17px] text-[#2D312E]/90 dark:text-[#E6E4DF] leading-[1.85]"
                     >
-                      <span className="w-2 h-2 rounded-full bg-[#3A5A40] mt-2.5 shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-[#3A5A40] dark:bg-[#8FC99D] mt-2.5 shrink-0" />
                       <span className="flex-1">{renderFormattedText(item)}</span>
                     </li>
                   ))}
@@ -566,7 +566,7 @@ export default async function ArticleDetailPage({
               return (
                 <p
                   key={idx}
-                  className="mb-6 text-[17px] sm:text-[18px] text-[#2D312E]/90 leading-[1.85] md:leading-[1.9] font-normal tracking-[0.01em]"
+                  className="mb-6 text-[17px] sm:text-[18px] text-[#2D312E]/90 dark:text-[#E6E4DF] leading-[1.85] md:leading-[1.9] font-normal tracking-[0.01em]"
                 >
                   {renderFormattedText(block.text)}
                 </p>
@@ -578,16 +578,16 @@ export default async function ArticleDetailPage({
         {takeawaysBlocks.map((block, idx) => (
           <div
             key={`takeaways-${idx}`}
-            className="mt-14 mb-8 p-6 sm:p-8 rounded-3xl bg-[#FAF7F2] border-2 border-[#3A5A40]/30 shadow-sm space-y-4"
+            className="mt-14 mb-8 p-6 sm:p-8 rounded-3xl bg-[#FAF7F2] dark:bg-[#1D221F] border-2 border-[#3A5A40]/30 dark:border-[#527A59]/40 shadow-sm space-y-4"
           >
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-[#3A5A40]">
-              <CheckCircle2 className="w-5 h-5 text-[#3A5A40]" />
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-[#3A5A40] dark:text-[#8FC99D]">
+              <CheckCircle2 className="w-5 h-5 text-[#3A5A40] dark:text-[#8FC99D]" />
               <span>{block.title || "NHỮNG ĐIỂM CHÍNH (ĐÚC KẾT BÀI HỌC)"}</span>
             </div>
             <ul className="space-y-3.5 pt-1">
               {block.items.map((item, bIdx) => (
-                <li key={bIdx} className="flex items-start gap-3 text-[15px] sm:text-[16px] text-[#2D312E] leading-relaxed">
-                  <span className="w-2 h-2 rounded-full bg-[#3A5A40] mt-2.5 shrink-0" />
+                <li key={bIdx} className="flex items-start gap-3 text-[15px] sm:text-[16px] text-[#2D312E] dark:text-[#E6E4DF] leading-relaxed">
+                  <span className="w-2 h-2 rounded-full bg-[#3A5A40] dark:bg-[#8FC99D] mt-2.5 shrink-0" />
                   <span className="flex-1 font-medium">{renderFormattedText(item)}</span>
                 </li>
               ))}
@@ -600,18 +600,18 @@ export default async function ArticleDetailPage({
       <ShareButtons title={article.title} slug={article.slug} />
 
       {/* Call to action at bottom of article */}
-      <div className="my-10 p-8 md:p-10 rounded-3xl bg-[#EBF0EC] border border-[#E6E1D8] text-center space-y-4 shadow-sm">
-        <Sparkles className="w-7 h-7 text-[#3A5A40] mx-auto" />
-        <h3 className="text-xl md:text-2xl font-bold font-serif text-[#2D312E]">
+      <div className="my-10 p-8 md:p-10 rounded-3xl bg-[#EBF0EC] dark:bg-[#1F2722] border border-[#E6E1D8] dark:border-[#2E3531] text-center space-y-4 shadow-sm">
+        <Sparkles className="w-7 h-7 text-[#3A5A40] dark:text-[#8FC99D] mx-auto" />
+        <h3 className="text-xl md:text-2xl font-bold font-serif text-[#2D312E] dark:text-[#F5F2EB]">
           Bạn muốn biết mức độ kiệt quệ dopamine của mình?
         </h3>
-        <p className="text-xs md:text-sm text-[#6B726E] max-w-lg mx-auto leading-relaxed">
+        <p className="text-xs md:text-sm text-[#6B726E] dark:text-[#9DA39F] max-w-lg mx-auto leading-relaxed">
           Thực hiện bài trắc nghiệm 25 câu hỏi để nhận diện các trigger tiềm ẩn và nhận ngay 1 bài tập Kaizen vi mô phù hợp nhất cho ngày hôm nay.
         </p>
         <div className="pt-2">
           <Link
             href="/trac-nghiem"
-            className="inline-block px-8 py-3.5 rounded-xl text-xs md:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] transition-all shadow-md hover:scale-105"
+            className="inline-block px-8 py-3.5 rounded-xl text-xs md:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#4E7655] dark:hover:bg-[#3D6244] transition-all shadow-md hover:scale-105"
           >
             Làm bài trắc nghiệm 25 câu (3 phút)
           </Link>
