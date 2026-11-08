@@ -19,9 +19,9 @@ export interface Article {
 const rawArticles: Article[] = [
   {
     "slug": "ky-luat-khong-can-gong-thoi-quen-nguyen-tu-20261108",
-    "title": "Kỷ Luật Không Cần Gồng: Bí Mật Đằng Sau Sức Mạnh Của Những Thói Quen Nguyên Tử",
+    "title": "Kỷ Luật Không Cần Gồng: Bí Mật Sức Mạnh Thói Quen Nguyên Tử",
     "excerpt": "Thay đổi lớn không đến từ những cú sốc ý chí ngắn hạn, mà bắt nguồn từ những chuyển động 1% mỗi ngày theo triết lý Kaizen. Đúc kết sâu sắc từ video của Better Version.",
-    "thumbnail": "/images/articles/sach-kaizen-1-phan-tram-zen-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/sach-kaizen-1-phan-tram-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Xây dựng thói quen tốt & kỷ luật không cần gồng",
     "pillarTag": "XayDungThoiQuen",
     "categories": [
