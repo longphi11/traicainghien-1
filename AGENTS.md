@@ -150,6 +150,25 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
 > [!CAUTION]
 > **Đây là quy chuẩn tối thượng không được phép vi phạm dù chỉ một lần. Mọi bài viết trước khi xuất bản đều phải đi qua script kiểm toán `scripts/audit_all_articles.js` và tuân thủ trọn vẹn bộ nguyên tắc này:**
 
+### 2.4.2 🛑 NGUYÊN TẮC THÉP VỀ HÌNH ẢNH TRÊN KÊNH TELEGRAM DAILY (LỆNH ĐẶC BIỆT CỦA BỐ)
+
+> [!CAUTION]
+> **Đây là mệnh lệnh bất di bất dịch áp dụng cho tất cả các luồng tự động (Flow 01 Bản tin, Flow 02 Lời nhắc đi ngủ, Flow 03 Đào YouTube & Xuất bản) khi phát sóng lên kênh Telegram Daily (@traicainghiendaily):**
+
+1. **TUYỆT ĐỐI KHÔNG DÙNG ẢNH TRÙNG NHAU:**
+   - Mỗi bản tin, bài viết hay lời nhắc xuất bản lên kênh Telegram Daily **bắt buộc phải có một hình ảnh độc bản**, tuyệt đối không được lặp lại bất kỳ hình ảnh nào đã từng phát sóng trong vòng ít nhất 60 ngày.
+   - Hệ thống tự động (n8n & Python) bắt buộc phải duy trì bộ nhớ theo dõi lịch sử (`sentPhotos`), tự động kiểm tra và loại trừ mọi hình ảnh đã từng gửi trước khi bấm nút phát sóng.
+
+2. **100% TRANH VẼ TAY THỦY MẶC ZEN WATERCOLOR & SUMI-E (CẤM ẢNH STOCK & VECTOR):**
+   - **Tuyệt đối CẤM lấy ảnh chụp stock người thật từ các báo mạng nước ngoài** (như ảnh chụp đeo khẩu trang y tế, ảnh văn phòng công sở Tây, ảnh bệnh viện, ảnh stock vô hồn).
+   - **Tuyệt đối CẤM ảnh 2D hoạt hình vector phẳng, 3D CGI bóng bẩy, hay icon mô phỏng.**
+   - 100% hình ảnh trên kênh Telegram phải là tranh vẽ tay Màu nước Thủy mặc mộc mạc trên nền giấy sần có hạt grain, viền mực than Sumi-e (`Zen Watercolor on Textured Paper`) được tuyển chọn từ kho tranh độc bản của Trại Cai Nghiện.
+
+3. **CƠ CHẾ XOAY TUA ĐỘC BẢN THÔNG MINH (STRICT DEDUPLICATION POOL):**
+   - Nạp toàn bộ kho tranh Zen độc bản (64+ tác phẩm hội họa chuẩn quy cách của website) vào bộ nhớ workflow.
+   - Mỗi lần phát sóng, hệ thống lọc ra danh sách tranh **CHƯA TỪNG XUẤT HIỆN** để gửi đi.
+   - Chỉ khi nào đã phát sóng trọn vẹn hết toàn bộ kho tranh (tương đương 64 lượt phát sóng ≈ gần 1 tháng), hệ thống mới tự động làm mới bộ nhớ để xoay vòng từ bức tranh cũ nhất trong quá khứ.
+
 1. **Quy chuẩn Độc Tôn: 100% Ảnh Bìa BẮT BUỘC PHẢI LÀ DẠNG TRANH VẼ TAY (LỆNH ĐẶC BIỆT BẤT DI BẤT DỊCH CỦA BỐ):**
    * **Trường phái hội họa độc tôn:** **100% Tranh vẽ tay Màu nước Thủy mặc & Nét viền mực than (Zen Watercolor & Vintage Sumi-e Ink Wash on Textured Washi Paper)**. Người nhìn vào phải nhận ra NGAY LẬP TỨC đó là một tác phẩm hội họa vẽ tay đầy chất thơ và nghệ thuật.
    * **CẤM TUYỆT ĐỐI 100% MỌI DẠNG ẢNH CHỤP & PHOTOREALISTIC:**

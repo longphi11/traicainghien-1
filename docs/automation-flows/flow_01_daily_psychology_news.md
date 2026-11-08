@@ -13,7 +13,10 @@
 * **Phong cách ngôn ngữ (Copywriting):** *"Street-Smart Academic Storytelling"* — Nói chuyện gần gũi, đời thường, thấu cảm không phán xét, kết hợp khoa học thần kinh chuẩn xác (Dopamine Baseline, Thụ thể D2, Prefrontal Cortex).
 * **Quy chuẩn định dạng:**
   * Caption ảnh Telegram **bắt buộc dưới 1024 UTF-16 code units** (giữ an toàn ở mức 850 - 950 code units).
-  * 100% kèm ảnh chuẩn: Ưu tiên ảnh gốc tác giả (`og:image`) hoặc tranh Thủy mặc Zen độc bản (`Zen Watercolor & Sumi-e on Textured Paper`).
+  * **🛑 QUY TẮC THÉP VỀ HÌNH ẢNH (LỆNH ĐẶC BIỆT CỦA BỐ):**
+    * **Tuyệt đối KHÔNG dùng ảnh trùng nhau:** Hệ thống duy trì mảng `sentPhotos` trong `$getWorkflowStaticData('global')`, chỉ phát sóng các tranh độc bản chưa từng xuất hiện trong ít nhất 60 ngày.
+    * **100% Tranh vẽ tay Zen Watercolor & Sumi-e:** Tuyệt đối **CẤM** lấy ảnh stock chụp người thật từ báo nước ngoài (như ảnh đeo khẩu trang y tế, ảnh bệnh viện, ảnh công sở vô hồn), cấm ảnh vector hoạt hình 2D. 100% hình ảnh phải là tranh vẽ tay thủy mặc mộc mạc trên giấy sần có hạt grain từ kho tranh độc bản của Trại Cai Nghiện (`https://traicainghien.com/images/articles/*.webp`).
+    * **Kho tranh độc bản 64+ tác phẩm:** Nạp sẵn 64 bức tranh Zen Watercolor độc bản chuẩn quy cách vào node lắp ghép bài để tự động xoay tua không trùng lặp.
 
 ---
 

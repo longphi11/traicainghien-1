@@ -83,7 +83,8 @@ graph TD
 * **Cơ chế đặc thù:**
   * Thu thập tin tức thời gian thực từ Google News RSS quốc tế.
   * Node Code lưu trữ bộ nhớ tĩnh `$getWorkflowStaticData('global')` để **chống trùng lặp 100% link bài đã gửi**.
-  * Bóc tách ảnh gốc `og:image` hoặc dùng kho tranh Thủy mặc Zen độc bản.
+  * Bóc tách thông tin bài báo, **tuyệt đối không dùng ảnh stock báo nước ngoài** (như ảnh đeo khẩu trang y tế, ảnh công sở Tây).
+  * **100% sử dụng kho 64+ tranh vẽ tay Zen Watercolor độc bản của Trại Cai Nghiện** kèm cơ chế chống trùng lặp bộ nhớ (`sentPhotos`), tự động loại trừ mọi ảnh đã xuất hiện trong 60 ngày gần nhất.
   * Caption HTML giới hạn nghiêm ngặt **dưới 1024 UTF-16 code units** tránh lỗi Telegram Bad Request.
 
 ### 🛏️ [Luồng 02: Lời Nhắc Đi Ngủ Dịu Dàng (22:00 Mỗi Đêm)](file:///c:/Users/MrFine/Documents/Traicainghien/docs/automation-flows/flow_02_bedtime_gentle_reminder.md)
@@ -174,4 +175,6 @@ graph TD
 ## 7. 📜 NGUYÊN TẮC THÉP KHI THAY ĐỔI HOẶC NÂNG CẤP LUỒNG
 1. **Quy tắc Single Source of Truth:** Bất kỳ thay đổi nào về lịch trình, logic hay thông số của luồng tự động đều phải được cập nhật đồng thời tại file tổng `AUTOMATION_FLOWS_N8N.md` và file chi tiết tương ứng (`flow_01_*.md`, `flow_02_*.md`, `flow_03_*.md`).
 2. **Kiểm tra giới hạn ký tự Telegram:** Mọi bản tin phát sóng kèm ảnh lên Telegram bắt buộc giữ độ dài UTF-16 code units **dưới 1024** để tránh lỗi ngắt kết nối `400 Bad Request`.
-3. **Quy chuẩn Hình ảnh độc bản:** 100% hình ảnh đưa vào bài viết web hoặc bài phát sóng phải là tranh vẽ tay Thủy mặc Zen Watercolor, không dùng ảnh stock 3D bóng bẩy và không được trùng mã băm nhị phân MD5.
+3. **Quy chuẩn Hình ảnh độc bản (LỆNH ĐẶC BIỆT CỦA BỐ):** 
+   - 100% hình ảnh đưa vào bài viết web hoặc bài phát sóng Telegram Channel (@traicainghiendaily) phải là **tranh vẽ tay Thủy mặc Zen Watercolor độc bản**, không dùng ảnh chụp stock người thật (ảnh đeo khẩu trang, bệnh viện), không dùng vector 2D phẳng hay 3D bóng bẩy.
+   - **Tuyệt đối cấm trùng lặp ảnh trên kênh Telegram:** Mỗi bài đăng bắt buộc phải mang một hình ảnh duy nhất, được chọn lọc qua bộ lọc chống trùng lịch sử phát sóng (`sentPhotos`). Không lặp lại ảnh trong vòng ít nhất 60 ngày.
