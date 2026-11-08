@@ -36,6 +36,13 @@
 3. **CẤM HOÀN TOÀN CÁC LỆNH HÀNG LOẠT (BULK / WILDCARD COMMANDS):**
    * Tuyệt đối **CẤM** các lệnh quét sạch như `n8n delete:workflow --all`, `pkill -f python`, `docker system prune -a --volumes`, `crontab -r`... Mọi thao tác bắt buộc phải có điều kiện lọc chính xác tuyệt đối theo tên hoặc ID của Trại Cai Nghiện.
 
+4. **QUY TRÌNH NÂNG CẤP & CẬP NHẬT LUỒNG N8N (NGUYÊN TẮC THÉP TRÁNH TRÙNG LẶP):**
+   * **Nguyên tắc định danh duy nhất:** Khi nâng cấp hoặc sửa đổi bất kỳ workflow nào trong 3 luồng chính thức (`wWXJoMhbchKzrkqr`, `E6PVBHKrtYPlfevu`, `Lj3wvfAe0CEqnWbQ`), BẮT BUỘC phải cập nhật trực tiếp ghi đè lên đúng ID chính thức đó.
+   * **Cơ chế dọn dẹp luồng cũ sau khi luồng mới chạy thành công:**
+     1. Trường hợp buộc phải tạo hoặc import một workflow mới để thử nghiệm: Tuyệt đối KHÔNG kích hoạt `active: true` luồng mới cùng lúc với luồng cũ khi chưa tắt luồng cũ.
+     2. Sau khi luồng mới đã chạy thử nghiệm thành công và sẵn sàng tiếp quản nhiệm vụ, **BẮT BUỘC PHẢI XÓA VĨNH VIỄN (DELETE) LUỒNG CŨ KHỎI DATABASE N8N NGAY LẬP TỨC**.
+     3. Khởi động lại dịch vụ n8n để giải phóng bộ nhớ, đảm bảo trong mọi thời điểm trên hệ thống **CHỈ CÓ DUY NHẤT 1 PHIÊN BẢN DUY NHẤT CHO MỖI LUỒNG HOẠT ĐỘNG**, triệt tiêu 100% nguy cơ chạy ngầm song song hay trùng lặp nội dung.
+
 ---
 
 ## 2. 🎯 TẦM NHÌN, SỨ MỆNH & BẢN SẮC THƯƠNG HIỆU (BRAND IDENTITY)
