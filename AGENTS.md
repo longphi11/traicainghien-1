@@ -231,6 +231,11 @@ Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim ch�
    * **ƯU TIÊN TUYỆT ĐỐI ẢNH GỐC CỦA CHÍNH TÁC GIẢ BÀI VIẾT:** Luôn luôn cào và bóc tách trực tiếp ảnh đại diện gốc (`og:image`) hoặc ảnh tư liệu trong chính bài viết nghiên cứu của tác giả gốc từ các nguồn uy tín (*Psychology Today, Psyche, Greater Good Berkeley, Harvard Health...*).
    * **CƠ CHẾ KIỂM DUYỆT & LƯU LỊCH SỬ (DEDUPLICATION MEMORY):** Luồng n8n và các agent tự động bắt buộc lưu trữ danh sách URL bài viết và URL ảnh đã gửi vào bộ nhớ lịch sử. Mọi bài viết chuẩn bị gửi đều phải đối chiếu, nếu ảnh hoặc link đã từng xuất hiện thì lập tức bỏ qua và chọn bài viết mới tiếp theo trong feed, bảo đảm kênh luôn tươi mới 100%.
 
+7. **CƠ CHẾ BẢO VỆ TOÀN VẸN KHO BÀI VIẾT (DATA INTEGRITY & ANTI-OVERWRITE GATEWAY — LỆNH ĐẶC BIỆT CỦA BỐ):**
+   * **Van một chiều bảo vệ dữ liệu (Monotonic Growth):** Danh sách toàn bộ các slug bài viết đã xuất bản được khóa cứng trong `src/data/article_registry.json`. Script kiểm toán `scripts/audit_all_articles.js` trước mỗi lần build sẽ tự động đối chiếu: Kho bài viết chỉ được phép TĂNG LÊN (khi xuất bản bài mới hợp lệ).
+   * **CẤM TUYỆT ĐỐI GHI ĐÈ LÀM THẤT LẠC BÀI VIẾT CŨ:** Bất kỳ thao tác nào vô tình xóa, ghi đè hoặc làm mất dù chỉ 1 bài viết đã từng xuất bản sẽ bị **BẺ GÃY BUILD VÀ TỪ CHỐI DEPLOY NGAY LẬP TỨC!**
+   * **Nguyên tắc Git Sync First:** Bất kỳ Agent hay phiên làm việc nào trước khi chèn bài viết mới vào `src/data/articles.ts` bắt buộc phải đồng bộ mã nguồn mới nhất từ remote (`git pull origin main`) và đọc trực tiếp từ đĩa, tuyệt đối không được dùng file `articles.ts` cũ trong bộ nhớ đệm để ghi đè.
+
 * **Quy chuẩn Video Ngắn Faceless (TikTok / YouTube Shorts / Reels):**
   * **Hình ảnh (B-roll):** Không lộ mặt. Sử dụng thước phim quay chậm, góc tĩnh: Cảnh pha phin cà phê buổi sáng, bàn làm việc gỗ tối giản, mưa rơi ngoài cửa sổ, ngón tay lật chậm từng trang sách, đi bộ một mình dưới hàng cây.
   * **Âm thanh & Giọng đọc:** Nhạc nền Lo-fi ambient nhẹ nhàng, âm thanh ASMR thiên nhiên (tiếng mưa, tiếng gõ phím cơ, tiếng gió), giọng đọc AI trầm ấm, chậm rãi như đang tâm sự đêm khuya.

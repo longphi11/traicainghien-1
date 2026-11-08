@@ -57,6 +57,36 @@ articleBlocks.shift(); // remove header before first article
 
 console.log(`🔍 Tìm thấy ${articleBlocks.length} bài viết trong kho tri thức.`);
 
+// 3.1. [LỆNH THÉP CỦA BỐ] VAN MỘT CHIỀU BẢO VỆ TOÀN VẸN KHO BÀI VIẾT (DATA INTEGRITY GATE)
+// Chống 100% tình trạng ghi đè, làm mất bài hoặc lùi phiên bản do race condition giữa các phiên làm việc
+const registryPath = path.join(__dirname, '..', 'src', 'data', 'article_registry.json');
+if (fs.existsSync(registryPath)) {
+  try {
+    const registeredSlugs = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+    const currentSlugs = articleBlocks.map(block => {
+      const match = block.match(/^\s*"([^"]+)"/);
+      return match ? match[1] : null;
+    }).filter(Boolean);
+
+    const missingSlugs = registeredSlugs.filter(s => !currentSlugs.includes(s));
+    if (missingSlugs.length > 0) {
+      console.error(`\n❌ [LỖI ĐỎ THẤT LẠC BÀI VIẾT - LỆNH ĐẶC BIỆT CỦA BỐ]`);
+      console.error(`   Phát hiện ${missingSlugs.length} bài viết đã từng xuất bản bị biến mất hoặc bị ghi đè!`);
+      missingSlugs.forEach(s => console.error(`   - Thất lạc bài: ${s}`));
+      console.error(`   👉 HỆ THỐNG TỪ CHỐI BUILD VÀ DEPLOY ĐỂ BẢO VỆ DỮ LIỆU. Vui lòng khôi phục bài viết trước khi tiếp tục.\n`);
+      process.exit(1);
+    }
+
+    const newSlugs = currentSlugs.filter(s => !registeredSlugs.includes(s));
+    if (newSlugs.length > 0) {
+      console.log(`✨ [BÀI VIẾT MỚI] Ghi nhận ${newSlugs.length} bài viết mới gia nhập kho tri thức. Đang cập nhật Registry...`);
+      fs.writeFileSync(registryPath, JSON.stringify(currentSlugs, null, 2), 'utf8');
+    }
+  } catch (err) {
+    console.warn("⚠️ Không thể phân tích article_registry.json:", err.message);
+  }
+}
+
 const seenThumbnails = new Map();
 const seenThumbHashes = new Map();
 
