@@ -33,7 +33,11 @@ flowchart TD
 ## 📋 4 BẢNG TIÊU CHUẨN KIỂM DUYỆT THEO TỪNG KÊNH CỤ THỂ
 
 ### CỔNG 1: BÀI VIẾT NỘI DUNG WEBSITE (AGENT 1 → AGENT 5 → AGENT 4)
-*Trước khi Agent 4 đưa vào `src/data/articles.ts`, build tĩnh và push Git, Agent 5 phải rà soát qua 10 chốt chặn thép:*
+*Trước khi Agent 4 đưa vào `src/data/articles.ts`, build tĩnh và push Git, Agent 5 phải rà soát qua các chốt chặn thép:*
+- [ ] **0. BẢO VỆ TOÀN VẸN DỮ LIỆU & CHỐNG ĐÈ PHIÊN BẢN (DATA INTEGRITY GATE — LỆNH ĐẶC BIỆT CỦA BỐ):**
+  - **Quy chuẩn Git Sync First:** Luôn chạy `git pull --rebase` kéo code mới nhất từ GitHub về trước khi chèn bài mới vào `src/data/articles.ts`.
+  - **Sổ Đăng Ký Bài Viết (Monotonic Registry):** Đối chiếu với `src/data/article_registry.json`. Kho bài viết **CHỈ ĐƯỢC PHÉP TĂNG LÊN**, tuyệt đối không được thiếu bất kỳ slug nào đã xuất bản. Nếu phát hiện thiếu bài $\rightarrow$ **REJECT NGAY LẬP TỨC, bẻ gãy build và tự động hoàn tác (rollback) file!**
+  - **Commit & Push đồng bộ:** Khi xuất bản, bắt buộc add đồng thời: `src/data/articles.ts`, `src/data/article_registry.json` và thư mục ảnh `public/images/articles/`, sau đó push cả `origin` và `fork`.
 - [ ] **1. Độ dài chuẩn:** Đạt tối thiểu **2.500 từ** (chuẩn mực 2.800 - 3.800 từ cho các bài chuyên sâu, đếm từ thực tế, không tính code hay cú pháp rác).
 - [ ] **2. Tiêu đề chuẩn 2 dòng (Curiosity Hook):** Độ dài vàng **50 – 62 ký tự**. Vừa khít 2 dòng ở box card ngoài, tuyệt đối không bị cắt cụt ba chấm `...`.
 - [ ] **2.1. Tiêu chuẩn bài viết về sách (Lệnh đặc biệt của Bố):** Tiêu đề BẮT BUỘC tuân thủ format `"Đọc [tên sách] - [tựa đề]"` (dùng dấu gạch nối ` - `, tuyệt đối không dùng dấu hai chấm `:`). Đồng thời bài viết về sách CHỈ ĐƯỢC PHÉP gắn duy nhất danh mục `SachHay` (`categories: ["SachHay"]`), thumbnail là bìa sách 3D trong không gian Zen, watermark `🌿 TRẠI CAI NGHIỆN`.

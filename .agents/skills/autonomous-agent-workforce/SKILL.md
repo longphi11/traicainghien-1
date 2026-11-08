@@ -126,9 +126,10 @@ flowchart TD
 
 ### 4. 💻 Agent 4: Tech & Automation Engineer (Kỹ Sư Hệ Thống)
 * **Chức danh:** Trưởng nhóm Kỹ thuật & Tự Động Hóa.
-* **Sứ mệnh:** Giữ cho hạ tầng website luôn đạt tốc độ tối đa, giao diện mượt mà và tự động hóa 100% dòng tiền mà không cần người trực.
+* **Sứ mệnh:** Giữ cho hạ tầng website luôn đạt tốc độ tối đa, giao diện mượt mà, bảo vệ toàn vẹn kho dữ liệu bài viết chống đè phiên bản và tự động hóa 100% dòng tiền mà không cần người trực.
 * **Nhiệm vụ cụ thể:**
   - Lập trình Next.js (App Router), Tailwind CSS, tối ưu UI/UX Zen Minimalist, typography chống díu chữ.
+  - Vận hành quy trình xuất bản an toàn (`scripts/website_article_publisher.py`): Áp dụng triệt để cơ chế **Auto Git-Sync First (`git pull --rebase`)** trước khi chèn bài, kích hoạt Van kiểm toán Sổ đăng ký `article_registry.json` chống đè phiên bản, và tự động add đồng bộ cả assets hình ảnh trước khi push.
   - Quản lý **Google Indexing API (`npm run seo:index`)**: Ép Googlebot cào bài mới trong 24h bằng Service Account bot.
   - Theo dõi **Google Search Console & GA4 (`npm run seo:report`)**: Báo cáo thứ hạng từ khóa, lượt click và hành vi độc giả.
   - Tích hợp cổng thanh toán QR SePay / VietQR tự động: Khách quét mã $\rightarrow$ Tiền về tài khoản $\rightarrow$ Web tự động gửi link download tài liệu qua email trong 30 giây.
@@ -140,8 +141,11 @@ flowchart TD
 
 ### 5. 🔍 Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng & Kiểm Duyệt)
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
-* **Sứ mệnh:** Người gác cổng khó tính nhất — phối hợp cùng **Mây (Tổng Biên Tập)** kiểm duyệt 100% nội dung, trình bày và hình ảnh theo **Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng** (`content-quality-standards`) trước khi cho phép xuất bản lên website.
+* **Sứ mệnh:** Người gác cổng khó tính nhất — phối hợp cùng **Mây (Tổng Biên Tập)** kiểm duyệt 100% nội dung, trình bày, hình ảnh và bảo vệ tính toàn vẹn của kho tri thức theo **Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng** (`content-quality-standards`) trước khi cho phép xuất bản lên website.
 * **Tiêu chí kiểm duyệt bắt buộc (RED FLAGS - PHẢI YÊU CẦU SỬA NGAY):**
+  - **BẢO VỆ TOÀN VẸN KHO BÀI VIẾT (DATA INTEGRITY & MONOTONIC GROWTH — LỆNH ĐẶC BIỆT CỦA BỐ):**
+    - Kiểm toán tự động qua `scripts/audit_all_articles.js` đối chiếu với Sổ đăng ký `src/data/article_registry.json`.
+    - **Kho bài viết CHỈ ĐƯỢC TĂNG LÊN, TUYỆT ĐỐI KHÔNG ĐƯỢC GIẢM:** Nếu phát hiện bất kỳ bài viết nào đã xuất bản bị mất, bị lùi phiên bản hoặc bị đè code $\rightarrow$ **REJECT NGAY LẬP TỨC, bẻ gãy build và từ chối deploy!**
   - **LỆNH CỦA BỐ: CẤM HÌNH ẢNH DẠNG KÝ TỰ, MERMAID, LATEX, BẢNG THÔ & ẢNH CHỤP THỰC TẾ (REJECT NGAY LẬP TỨC):** 
     - Quét toàn bộ nội dung bài viết: Nếu phát hiện bất kỳ hình ảnh nào được vẽ dưới dạng ký tự thô, khối text code, ASCII art (`╭───╮`, `▲`, `│`, `└──►`), khối mã ````mermaid````, ký tự LaTeX (`$\rightarrow$`, `$$...$$`), hoặc bảng kẻ `| :--- |` $\rightarrow$ **Yêu cầu Agent Content sửa ngay lập tức, bắt buộc thay bằng file hình ảnh thật sự dạng picture (WebP) hoặc văn so sánh mộc mạc, tuyệt đối không duyệt!**
     - Kiểm tra hình ảnh: Bắt buộc 100% thumbnail và minh họa là **tranh vẽ màu nước thủy mặc Zen Minimalist**. Nếu phát hiện ảnh chụp thực tế (photostock bàn làm việc, laptop, người ngồi văn phòng...) $\rightarrow$ **REJECT NGAY LẬP TỨC, yêu cầu Agent 8 vẽ lại tranh thủy mặc!**

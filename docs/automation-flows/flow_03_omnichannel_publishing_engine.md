@@ -75,13 +75,19 @@ flowchart TD
 | :--- | :--- | :--- |
 | `scripts/youtube_content_miner.py` | Quét top video YouTube theo từ khóa, lọc video đã xử lý, bóc tách toàn bộ phụ đề tiếng Việt. | `scripts/processed_youtube_videos.json` |
 | `scripts/generate_omnichannel_article.py` | Biên soạn bài viết Web sâu sắc, tóm tắt Telegram và bài đăng Facebook Curiosity Gap. | `src/data/articles.ts` |
-| `scripts/website_article_publisher.py` | Chèn bài vào mảng `rawArticles`, kiểm toán định dạng và kích hoạt Git commit & push. | `scripts/audit_all_articles.js` |
+| `scripts/website_article_publisher.py` | Tự động Git-Sync kéo code mới nhất, chèn bài vào `rawArticles`, kiểm toán chống đè Registry và kích hoạt Git commit & push an toàn. | `scripts/audit_all_articles.js`, `src/data/article_registry.json` |
 | `scripts/omnichannel_dispatcher.py` | Tổng đạo diễn điều phối: Đào ➔ Viết ➔ Đẩy Git ➔ Đăng Tele ➔ Đăng Facebook ➔ Báo cáo Bố. | `cron_focus.log`, `cron_habit.log` |
 | `scripts/telegram_reporter.py` | Trợ lý riêng của Bố: Gửi báo cáo xuất bản tức thì, bản tin 06:30, bản kiểm toán 22:30 và cảnh báo lỗi. | Telegram Chat ID: `488901419` |
 
 ---
 
 ## 5. 🛡️ QUY CHUẨN KỸ THUẬT & BẢO MẬT BẮT BUỘC
+
+### 5.1. Cơ Chế Chống Đè Phiên Bản & Bảo Vệ Toàn Vẹn Dữ Liệu (Data Integrity Gate - LỆNH ĐẶC BIỆT CỦA BỐ):
+1. **Auto Git-Sync First:** Bắt buộc tự động chạy `git pull --rebase` từ GitHub trước khi chèn bất kỳ bài viết mới nào vào `src/data/articles.ts`, đảm bảo VPS luôn có toàn bộ bài viết mới nhất mà Bố con làm từ máy cá nhân.
+2. **Sổ Đăng Ký Registry & Van Một Chiều:** Script kiểm toán tự động đối chiếu với `src/data/article_registry.json`. Kho bài viết CHỈ ĐƯỢC PHÉP TĂNG LÊN, tuyệt đối không được giảm đi.
+3. **Auto-Rollback on Audit Failure:** Nếu phát hiện bài viết bị thiếu hoặc vi phạm tiêu chuẩn $\rightarrow$ Tự động hoàn tác (revert) file về trạng thái an toàn ban đầu và hủy lệnh push.
+4. **Đồng Bộ Assets:** Khi commit bắt buộc `git add` đồng thời file bài viết, file registry và thư mục ảnh `public/images/articles/`, sau đó push cả 2 remote (`origin` và `fork`).
 
 1. **Deploy Key GitHub (Không bao giờ hết hạn):**
    * VPS sử dụng khóa riêng `/root/.ssh/id_traicainghien_deploy` kết nối với Deploy Key `VPS Trai Cai Nghien` trên GitHub `longphi11/traicainghien-1`.
