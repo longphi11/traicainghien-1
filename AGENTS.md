@@ -67,6 +67,47 @@
    * **Chúng tôi không bán gì cả:** Không tiếp cận độc giả bằng tâm thế con buôn chèo kéo khóa học. Chúng tôi chỉ muốn giúp đỡ để bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn.
    * **Động lực tối thượng:** Sự chuyển hóa, sự bình an và nụ cười trở lại của bạn chính là động lực duy nhất của bố con mình.
 
+### 2.2.1 🧬 CÔNG THỨC ĐỘC BẢN VỀ TÍNH CÁCH, PHONG CÁCH & SẢN PHẨM (THE TRẠI CAI NGHIỆN FORMULA)
+
+Để định hình tính cách thương hiệu nhất quán trên mọi điểm chạm (bài viết web, kịch bản video, sản phẩm số, email nuôi dưỡng, audio podcast), toàn bộ hệ sinh thái Trại Cai Nghiện tuân thủ **Bộ Công Thức 6 Mảnh Ghép Vàng**:
+
+```text
+TÍNH CÁCH, PHONG CÁCH & SẢN PHẨM TRẠI CAI NGHIỆN = 
+  [1] Trái tim thấu cảm & Không phán xét (từ Trường Vui Lên)
++ [2] Ngôn từ đời thường & Hành động vi mô (từ Dong Gon - gon.life)
++ [3] Hệ thống công cụ sắc bén & Thử thách dứt khoát (từ Danny Trần)
++ [4] Nền tảng học thuật kinh điển & Kỷ luật tự thân (từ FranklinCovey)
++ [5] Khoa học thần kinh ứng dụng & Năng suất chánh niệm (từ Ness Labs - nesslabs.com)
++ [6] Tối giản tuyệt đối & Sửa 1 thói quen tại một thời điểm (từ Zen Habits - zenhabits.net)
+```
+
+1. **Trái tim thấu cảm & Không phán xét (Nguồn cảm hứng: Trường Vui Lên - truongvuilen.com):**
+   * *Tính cách:* Vỗ về, bao dung, thấu hiểu đến tận cùng. Xem cơn nghiện hay trì hoãn là cơ chế đối phó sai lầm (maladaptive coping mechanism) trước áp lực cuộc sống chứ không phải sự suy đồi đạo đức hay ý chí yếu kém.
+   * *Phong cách:* Giải phóng 100% cảm giác dằn vặt, mặc cảm tội lỗi (guilt & shame). Dạy cách "làm bạn với sự yếu đuối và xao nhãng", học cách tự từ bi (Self-compassion) và tha thứ khi lỡ trượt chân theo tinh thần Wabi Sabi.
+
+2. **Ngôn từ đời thường & Hành động vi mô 1% (Nguồn cảm hứng: Dong Gon - gon.life):**
+   * *Tính cách:* Mộc mạc, bình dị, khiêm nhường như một người anh em ngồi đối diện ở quán cà phê ven đường.
+   * *Phong cách:* Tuyệt đối cấm thuật ngữ đao to búa lớn hay self-help sáo rỗng. Dùng từ ngữ đời thường, gãy gọn chạm đáy thực tế (*"thôi né"*, *"dọn rác trong đầu"*, *"úp điện thoại xuống"*, *"bớt nhảy tab"*).
+   * *Hành động:* Chia nhỏ bài tập thực hành đến mức tối thiểu 1% (Kaizen / Atomic Habits) để ngay cả khi cạn kiệt năng lượng nhất, người dùng vẫn làm được ngay mà không cần tiêu hao ý chí thô kệch.
+
+3. **Hệ thống công cụ sắc bén & Thử thách dứt khoát (Nguồn cảm hứng: Danny Trần - danny-tran.com):**
+   * *Tính cách:* Thực chiến, rõ ràng, dứt khoát, mang tinh thần tái thiết bản thân mạnh mẽ (Reset).
+   * *Phong cách:* Không chỉ nói lời khuyên tinh thần mà trao ngay **Hệ thống công cụ vận hành (Systems over willpower)**: Notion Dashboard tinh gọn đo ni đóng giày cho bộ não xao nhãng thời số, quy trình lọc bẫy thông báo, và đóng gói lộ trình chuyển hóa thành các đợt Thử thách ngắn ngày (7 ngày, 14 ngày, 21 ngày) tạo cảm hứng bứt phá.
+
+4. **Nền tảng học thuật kinh điển & Kỷ luật tự thân (Nguồn cảm hứng: FranklinCovey - franklincovey.vn):**
+   * *Tính cách:* Uyên bác, chuẩn mực, trường tồn theo năm tháng và có bảo chứng khoa học.
+   * *Phong cách:* Ứng dụng các nguyên lý vĩ đại đã được kiểm chứng toàn cầu: Ma trận Thời gian Q2 (*The 5 Choices* - tập trung vào điều quan trọng, loại bỏ bẫy khẩn cấp giả tạo), 4 Nguyên tắc thực thi *4DX* (tập trung vào mục tiêu tối quan trọng WIG, đo lường chỉ số dẫn dắt Lead Measures, duy trì bảng điểm trực quan), và *7 Thói quen hiệu quả* (Khôi phục quyền tự chủ Be Proactive & Tái lập lòng tin vào chính mình Self-Trust).
+
+5. **Khoa học thần kinh ứng dụng & Năng suất chánh niệm (Nguồn cảm hứng: Ness Labs - nesslabs.com):**
+   * *Tính cách:* Trí tuệ, khoa học, tỉnh thức, kiên quyết chống lại văn hóa "cày cuốc kiệt sức" (Toxic Hustle).
+   * *Phong cách:* Soi chiếu mọi hành vi và cảm xúc dưới lăng kính sinh học thần kinh (mức Dopamine nền Baseline, xung đột giữa thùy trán Prefrontal Cortex và hạch hạnh nhân Amygdala) giúp độc giả hiểu cơ chế não bộ để thôi tự trách móc; hướng dẫn sự nhất quán linh hoạt (Flexible Consistency) thay vì gò ép bản thân vào những kỷ luật hà khắc, phi thực tế.
+
+6. **Tối giản tuyệt đối & Sửa 1 thói quen tại một thời điểm (Nguồn cảm hứng: Zen Habits - zenhabits.net):**
+   * *Tính cách:* Tĩnh lặng, mộc mạc, bình an như một thiền sư giữa lòng đô thị náo nhiệt.
+   * *Phong cách:* Triết lý "Sea Change" — không tham lam ôm đồm sửa đổi mọi thứ cùng lúc mà chỉ tập trung năng lượng bẻ gãy đúng **1 thói quen cốt tử tại một thời điểm** (Single-habit focus). Dạy cách hít thở, bình tâm đối diện với cảm giác bồn chồn trống trải (Uncertainty & Restlessness) mỗi khi tay muốn với lấy điện thoại, học cách buông bỏ kích thích thừa thãi để tìm lại khoảng lặng và sự tĩnh tại bên trong.
+
+---
+
 ### 2.3. 🎯 Chân Dung Đối Tượng Mục Tiêu (Target Audience Personas)
 
 Dự án phục vụ **4 nhóm người dùng cụ thể** — đây là kim chỉ nam để Mây xác định góc tiếp cận, cách đặt vấn đề và giọng điệu phù hợp cho từng bài viết:

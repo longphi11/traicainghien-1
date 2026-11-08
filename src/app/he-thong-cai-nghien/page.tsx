@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2, Clock, Users, Flame, Heart, Compass } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2, Clock, Users, Flame, Heart, Compass, Zap, Tag } from "lucide-react";
 import { addictionSystemProducts } from "@/data/addictionSystem";
 
 export const metadata = {
-  title: "Hệ Thống Cai Nghiện | Trại Cai Nghiện",
-  description: "Các giải pháp và lộ trình thực hành toàn diện giúp bạn cai nghiện dopamine rẻ tiền, trị não phân tâm và lấy lại quyền làm chủ cuộc đời.",
+  title: "Hệ Thống Cai Nghiện & Chuyển Hóa | Trại Cai Nghiện",
+  description: "Các giải pháp và lộ trình thực hành toàn diện giúp bạn cai nghiện dopamine rẻ tiền, trị sương mù não, khôi phục năng lực làm việc sâu và xây dựng kỷ luật tự thân.",
 };
 
 export default function HeThongCaiNghienPage() {
@@ -16,7 +16,7 @@ export default function HeThongCaiNghienPage() {
       <section className="pt-16 md:pt-20 pb-12 px-6 text-center border-b border-[#E6E1D8]">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#EBF0EC] text-[#3A5A40]">
-            <span>Giải Pháp Thực Chiến</span> • <span>Khoa Học Hành Vi</span> • <span>Không Phán Xét</span>
+            <span>Hệ Thống Thực Chiến</span> • <span>Khoa Học Thần Kinh</span> • <span>Không Phán Xét</span>
           </div>
           
           <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E] leading-tight">
@@ -24,12 +24,12 @@ export default function HeThongCaiNghienPage() {
           </h1>
           
           <p className="text-base md:text-lg text-[#6B726E] max-w-2xl mx-auto leading-relaxed">
-            Bạn không thể dùng ý chí trần trụi để chiến thắng một siêu máy tính nghìn tỷ USD của Thung lũng Silicon. Bạn cần một <strong>hệ thống phòng thủ và lộ trình từng bước</strong> để giành lại tâm trí của mình.
+            Bạn không thể dùng ý chí trần trụi để chiến thắng một siêu máy tính nghìn tỷ USD của Thung lũng Silicon. Bạn cần một <strong>hệ thống công cụ sắc bén và lộ trình từng bước</strong> để giành lại tâm trí và sống một cuộc đời có chủ đích.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs text-[#6B726E]">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#3A5A40]" /> Dựa trên khoa học thần kinh & CBT</span>
-            <span className="flex items-center gap-1.5"><Heart className="w-4 h-4 text-[#C27D53]" /> Không phán xét — Bảo mật tuyệt đối</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#3A5A40]" /> Y văn quốc tế & Khoa học thần kinh</span>
+            <span className="flex items-center gap-1.5"><Heart className="w-4 h-4 text-[#C27D53]" /> Trái tim thấu cảm — Không phán xét</span>
             <span className="flex items-center gap-1.5"><Compass className="w-4 h-4 text-[#3A5A40]" /> Triết lý Kaizen 1% & Wabi Sabi</span>
           </div>
         </div>
@@ -44,12 +44,12 @@ export default function HeThongCaiNghienPage() {
               id={prod.id}
               className={`rounded-3xl p-8 border transition-all flex flex-col justify-between ${
                 prod.isPopular
-                  ? "bg-white border-[#3A5A40] shadow-md ring-2 ring-[#3A5A40]/10"
-                  : "bg-white border-[#E6E1D8] shadow-sm hover:border-[#3A5A40]/40"
+                  ? "bg-white border-[#3A5A40] shadow-md ring-2 ring-[#3A5A40]/15"
+                  : "bg-white border-[#E6E1D8] shadow-sm hover:border-[#3A5A40]/40 hover:shadow-md"
               }`}
             >
               <div className="space-y-5">
-                {/* Badge Header */}
+                {/* Badge Header & Popular Tag */}
                 <div className="flex items-center justify-between">
                   <span className={`text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
                     prod.badgeColor === "emerald"
@@ -78,6 +78,20 @@ export default function HeThongCaiNghienPage() {
                     {prod.tagline}
                   </p>
                 </div>
+
+                {/* Price Display */}
+                {prod.price && (
+                  <div className="flex items-baseline gap-2.5 py-2 px-3.5 bg-[#FAF7F2] rounded-xl border border-[#E6E1D8]/60 w-fit">
+                    <span className="text-xl md:text-2xl font-bold font-serif text-[#2D312E]">
+                      {prod.price}
+                    </span>
+                    {prod.originalPrice && (
+                      <span className="text-xs text-[#6B726E] line-through">
+                        {prod.originalPrice}
+                      </span>
+                    )}
+                  </div>
+                )}
 
                 {/* Description */}
                 <p className="text-xs md:text-sm text-[#6B726E] leading-relaxed">
@@ -115,7 +129,7 @@ export default function HeThongCaiNghienPage() {
               {/* CTA Button */}
               <div className="pt-6 mt-6 border-t border-[#E6E1D8] space-y-2">
                 <Link
-                  href="/trac-nghiem"
+                  href={prod.ctaHref}
                   className={`w-full py-3.5 px-6 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
                     prod.isPopular
                       ? "bg-[#3A5A40] hover:bg-[#2F4A34] text-white shadow-md hover:shadow-lg"
@@ -126,7 +140,7 @@ export default function HeThongCaiNghienPage() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <p className="text-[11px] text-center text-[#6B726E]">
-                  Khuyên dùng: Làm bài trắc nghiệm trước để xác định mức độ phù hợp
+                  Gợi ý: Làm trắc nghiệm trước để đo chính xác mức độ phù hợp của não bộ
                 </p>
               </div>
 
@@ -146,10 +160,10 @@ export default function HeThongCaiNghienPage() {
               "Tụi mình không phải giáo sư giảng bài. Tụi mình là những người bạn đã từng ngã và đang cùng bạn đứng dậy."
             </h3>
             <p className="text-sm text-[#6B726E] leading-relaxed">
-              Chúng ta đang sống trong kỷ nguyên mà mọi thuật toán sinh ra đều nhắm vào điểm yếu sinh học của bạn. Nói về kỷ luật thì dễ, nhưng nằm trên giường lúc 1h sáng với cái màn hình sáng rực mới là thực tế cuộc sống.
+              Chúng ta đang sống trong kỷ nguyên mà mọi thuật toán sinh ra đều nhắm vào điểm yếu sinh học của bạn. Nói về kỷ luật thì dễ, nhưng nằm trên giường lúc 1h sáng với chiếc màn hình sáng rực cay xè mắt mới là thực tế cuộc sống.
             </p>
             <p className="text-sm text-[#6B726E] leading-relaxed">
-              Tại <strong>Trại Cai Nghiện</strong>, bạn không bao giờ bị phán xét hay bị gọi là kẻ lười biếng. Chúng tôi trao cho bạn những chiếc phao cứu sinh dựa trên khoa học thần kinh (Anna Lembke), thói quen nguyên tử (James Clear) và sự bao dung Wabi Sabi của người Nhật.
+              Tại <strong>Trại Cai Nghiện</strong>, bạn không bao giờ bị phán xét hay bị gọi là kẻ lười biếng. Chúng tôi trao cho bạn những chiếc phao cứu sinh dựa trên khoa học thần kinh (Ness Labs, Anna Lembke), năng suất tối giản (FranklinCovey, Zen Habits) và sự bao dung Wabi Sabi của người Nhật.
             </p>
           </div>
 
