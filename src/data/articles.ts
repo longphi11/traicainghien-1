@@ -18,6 +18,32 @@ export interface Article {
 
 const rawArticles: Article[] = [
   {
+    "slug": "ky-luat-khong-can-gong-thoi-quen-nguyen-tu-20261108",
+    "title": "Kỷ Luật Không Cần Gồng: Bí Mật Đằng Sau Sức Mạnh Của Những Thói Quen Nguyên Tử",
+    "excerpt": "Thay đổi lớn không đến từ những cú sốc ý chí ngắn hạn, mà bắt nguồn từ những chuyển động 1% mỗi ngày theo triết lý Kaizen. Đúc kết sâu sắc từ video của Better Version.",
+    "thumbnail": "/images/articles/sach-kaizen-1-phan-tram-zen-trai-cai-nghien.webp",
+    "pillar": "Trụ cột 2: Xây dựng thói quen tốt & kỷ luật không cần gồng",
+    "pillarTag": "XayDungThoiQuen",
+    "categories": [
+      "XayDungThoiQuen",
+      "HieuHanhVi"
+    ],
+    "tags": [
+      "#XayDungThoiQuen",
+      "#AtomicHabits",
+      "#Kaizen",
+      "#VuotQuaTriHoan",
+      "#KyLuatKhongCanGong"
+    ],
+    "readTime": "10 phút đọc",
+    "date": "08/11/2026",
+    "author": "Mây — Trại Cai Nghiện",
+    "content": "Đã bao nhiêu lần bạn tự hứa với bản thân: *\"Từ ngày mai mình sẽ thay đổi hoàn toàn!\"*?\n\nBạn đặt mục tiêu dậy lúc 5h sáng, tập thể dục 1 tiếng mỗi ngày, đọc 30 trang sách và cắt bỏ hoàn toàn mạng xã hội. Bạn hừng hực khí thế trong 3 ngày đầu tiên. Nhưng rồi đến ngày thứ 4, một cơn mưa lạnh, một ngày làm việc mệt mỏi hay một sự cố nhỏ xảy ra — bạn buông xuôi tất cả và rơi trở lại vòng xoáy cũ trong cảm giác tự ti, thất vọng về chính mình.\n\nTrong video xuất sắc *\"Vận may của bạn ẩn chứa trong thói quen | Sách Atomic Habits | Better Version\"* từ kênh *Better Version*, tác giả đã chỉ ra một chân lý giải phóng tâm trí: **Bạn không thất bại vì thiếu kỷ luật, mà bạn thất bại vì bạn đang dùng sai công cụ để thay đổi bản thân.**\n\nHôm nay, Trại Cai Nghiện muốn chia sẻ cùng bạn phương pháp thiết lập thói quen theo tinh thần Kaizen và Atomic Habits — giúp bạn duy trì kỷ luật một cách nhẹ nhàng, tự nhiên mà không cần phải gồng mình.\n\n---\n\n### 1. Cái Bẫy Của Những Cú Nhảy Vọt Khổng Lồ\n\nXã hội hiện đại bị ám ảnh bởi những câu chuyện thành công sau một đêm (Overnight Success), khiến chúng ta lầm tưởng rằng muốn có một cuộc đời khác biệt, ta phải tạo ra những cú bứt phá chấn động.\n\nThế nhưng tâm lý học hành vi chỉ ra rằng: **Hệ thần kinh con người bản năng luôn sợ hãi những sự xáo trộn đột ngột.** Khi bạn cố gắng thay đổi 180 độ lối sống trong một ngày, hạch hạnh nhân (Amygdala) sẽ kích hoạt phản ứng báo động, tạo ra cảm giác kháng cự và mệt mỏi dữ dội.\n\n---\n\n### 2. Triết Lý Kaizen: Sức Mạnh Vĩ Đại Của 1% Mỗi Ngày\n\nTriết lý Kaizen của Nhật Bản và cuốn sách *Atomic Habits* của James Clear mang đến một góc nhìn hoàn toàn đảo ngược:\n* **Quy tắc 1% mỗi ngày:** Nếu mỗi ngày bạn chỉ cần tốt hơn ngày hôm qua 1%, sau 365 ngày, bạn sẽ tiến bộ gấp **37 lần** ($1.01^{365} \\approx 37.78$).\n* **Hạ thấp ma sát hành vi đến mức nực cười:** Đừng bắt đầu bằng việc đọc sách 1 tiếng. Hãy bắt đầu bằng việc mở sách ra đọc đúng **2 trang** mỗi tối. Đừng bắt đầu bằng việc chạy 5km. Hãy bắt đầu bằng việc xỏ giày và bước ra ngoài cửa đi bộ 5 phút.\n\n---\n\n### NHỮNG ĐIỂM CỐT LÕI (KEY TAKEAWAYS)\n* **Từ bỏ ảo tưởng đột phá:** Thay đổi bền vững đến từ những hành vi nhỏ 1% mỗi ngày.\n* **Quy tắc 2 phút:** Hạ thấp rào cản hành động đến mức não bộ không thể tìm lý do trì hoãn.\n* **Môi trường định hình thói quen:** Sắp xếp không gian sống để thói quen tốt dễ xảy ra nhất.\n* **Nguồn tham khảo tri thức:** Đúc kết từ video *\"Vận may của bạn ẩn chứa trong thói quen | Sách Atomic Habits | Better Version\"* của kênh *Better Version* (https://www.youtube.com/watch?v=arPfbJSM3_M).",
+    "sources": [
+      "https://www.youtube.com/watch?v=arPfbJSM3_M"
+    ]
+  },
+  {
     "slug": "chua-lanh-nao-bo-khoi-nhun-nao-so-brain-rot-20261108",
     "title": "Chữa Lành Não Bộ Khỏi Nhũn Não Số: Khôi Phục Khả Năng Tập Trung Sâu",
     "excerpt": "Tập trung không phải là gồng mình chiến đấu, mà là nghệ thuật làm dịu tâm trí và loại bỏ bẫy kích thích rẻ tiền. Góc nhìn sâu sắc được đúc kết từ video của Hieu The Consul.",
