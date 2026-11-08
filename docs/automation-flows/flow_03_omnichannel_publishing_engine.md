@@ -26,20 +26,19 @@
 
 ---
 
-## 2. ⏰ LỊCH TRÌNH VẬN HÀNH TRÊN MÁY CHỦ VPS
+## 2. ⏰ LỊCH TRÌNH VẬN HÀNH TRÊN N8N & MÁY CHỦ VPS
 
-### Phân Bổ Cron Linux (`crontab -l`):
+### Phân Bổ Điều Khiển Qua n8n Workflow (`Lj3wvfAe0CEqnWbQ`):
+* **Lịch kích hoạt:** Đúng **10:00 Sáng** (Tập Trung Sâu) và **21:00 Tối** (Thói Quen Tốt) hàng ngày.
+* **Cơ chế gọi:** n8n gọi HTTP Webhook qua mạng nội bộ Docker đến `http://172.17.0.1:5005/publish` (Dịch vụ `traicainghien-publisher.service` chạy nền bằng systemd trên VPS).
+* **Báo cáo n8n:** n8n nhận kết quả JSON trực tiếp và gửi thông báo live về Telegram riêng của Bố (`@longphibtc`).
+
+### Lịch Trình Cron Còn Lại Trên VPS (`crontab -l`):
 ```cron
-# 1. 10:00 Sáng VN: Đào bài Tập Trung & Xuất bản đa kênh
-0 10 * * * cd /root/traicainghien && python3 scripts/omnichannel_dispatcher.py --topic focus >> /root/traicainghien/cron_focus.log 2>&1
-
-# 2. 21:00 Tối VN: Đào bài Thói Quen & Xuất bản đa kênh
-0 21 * * * cd /root/traicainghien && python3 scripts/omnichannel_dispatcher.py --topic habit >> /root/traicainghien/cron_habit.log 2>&1
-
-# 3. 06:30 Sáng VN: Báo cáo kế hoạch & tương tác cho Bố
+# 06:30 Sáng VN: Báo cáo kế hoạch & tương tác cho Bố
 30 6 * * * cd /root/traicainghien && python3 scripts/telegram_reporter.py --type morning >> /root/traicainghien/cron_morning.log 2>&1
 
-# 4. 22:30 Đêm VN: Báo cáo kiểm toán tổng hợp ngày cho Bố
+# 22:30 Đêm VN: Báo cáo kiểm toán tổng hợp ngày cho Bố
 30 22 * * * cd /root/traicainghien && python3 scripts/telegram_reporter.py --type audit >> /root/traicainghien/cron_audit.log 2>&1
 ```
 
@@ -49,19 +48,23 @@
 
 ```mermaid
 flowchart TD
-    A["⏰ VPS Crontab Trigger\n(10:00 & 21:00)"] --> B["🎬 scripts/youtube_content_miner.py\nyt-dlp & Transcript Extractor"]
-    B --> C["📝 scripts/generate_omnichannel_article.py\nTổng Hợp 3 Dạng Nội Dung"]
+    A["⏰ n8n Schedule Trigger\n(10:00 & 21:00)"] --> B["🧠 n8n Code Node\nPhân Nhánh Chủ Đề (Focus/Habit)"]
+    B --> C["🌐 n8n HTTP Request\nPOST http://172.17.0.1:5005/publish"]
     
-    C --> D1["🌐 scripts/website_article_publisher.py\nThêm vào src/data/articles.ts"]
-    D1 --> D2["🔑 Git Push via Deploy Key\ngit@github.com:longphi11/traicainghien-1.git"]
-    D2 --> D3["☁️ Vercel Auto Deploy Live\ntraicainghien.com/bai-viet/{slug}"]
+    C --> D["🚀 traicainghien-publisher.service\nscripts/omnichannel_dispatcher.py"]
+    D --> E1["🎬 scripts/youtube_content_miner.py\nyt-dlp & Transcript Extractor"]
+    E1 --> E2["📝 scripts/generate_omnichannel_article.py\nTổng Hợp 3 Dạng Nội Dung"]
     
-    C --> E1["📢 Telegram Bot API\nsendPhoto @traicainghiendaily"]
+    E2 --> F1["🌐 scripts/website_article_publisher.py\nThêm vào src/data/articles.ts"]
+    F1 --> F2["🔑 Git Push via Deploy Key\ngit@github.com:longphi11/traicainghien-1.git"]
+    F2 --> F3["☁️ Vercel Auto Deploy Live\ntraicainghien.com/bai-viet/{slug}"]
     
-    C --> F1["📘 Facebook Graph API /photos\nĐăng ảnh khổ lớn lên Fanpage"]
-    F1 --> F2["📌 Pinned First Comment API\nGhim link Web & link Telegram"]
+    E2 --> G1["📢 Telegram Bot API\nsendPhoto @traicainghiendaily"]
     
-    C --> G1["📨 scripts/telegram_reporter.py\nBáo cáo trực tiếp vào nick Bố @longphibtc"]
+    E2 --> H1["📘 Facebook Graph API /photos\nĐăng ảnh khổ lớn lên Fanpage"]
+    H1 --> H2["📌 Pinned First Comment API\nGhim link Web & link Telegram"]
+    
+    C --> I["📱 n8n Telegram Node\nBáo cáo trực tiếp vào nick Bố @longphibtc"]
 ```
 
 ---
