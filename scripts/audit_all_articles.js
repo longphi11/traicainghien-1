@@ -208,5 +208,20 @@ if (!process.env.VERCEL) {
   console.log("⚡ [VERCEL CI/CD] Đã xác thực độc bản từ trước, tiếp tục đóng gói Next.js SSG...");
 }
 
+// 5. [LỆNH THÉP CỦA BỐ] KIỂM TOÁN TÍNH ĐỘC BẢN & BÁM SÁT NGỮ CẢNH BÌNH LUẬN SEEDING
+// CẤM TUYỆT ĐỐI bình luận trùng lặp, cấm bình luận lạc đề, yêu cầu độ phủ 100%
+const { execSync } = require('child_process');
+try {
+  const auditCommentsScript = path.join(__dirname, 'audit_comments.js');
+  if (fs.existsSync(auditCommentsScript)) {
+    const commentsAuditOutput = execSync(`node "${auditCommentsScript}"`, { encoding: 'utf8' });
+    console.log(commentsAuditOutput);
+  }
+} catch (err) {
+  console.error("\n⛔ [LỖI BÌNH LUẬN SEEDING] Kiểm toán bình luận thất bại! Phát hiện bình luận bị trùng lặp hoặc thiếu bài viết.");
+  console.error(err.stdout || err.message);
+  process.exit(1);
+}
+
 console.log("\n✅ [XÁC NHẬN] 100% BÀI VIẾT ĐẠT CHUẨN XUẤT BẢN! Mây & Agent 5 ký duyệt cho phép go-live.\n");
 process.exit(0);

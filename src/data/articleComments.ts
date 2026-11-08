@@ -88,10 +88,11 @@ export const articleCommentsMap: Record<string, Comment[]> = {
   "giao-thuc-huberman-biohacking-nao-bo-tap-trung-dinh-cao": [
     {
       "id": "hub-1",
-      "name": "Vũ Tuấn Kiệt (Chuyên viên Tài chính)",
-      "content": "Theo dõi podcast của GS Huberman lâu rồi nhưng đọc bài tóm tắt có hệ thống của Trại mới thấy dễ thực hành. Sáng nay vừa thức dậy là bước thẳng ra ban công đón nắng 15 phút, không chạm vào điện thoại. Thần kỳ là đến trưa không hề bị tụt năng lượng như mọi hôm.",
+      "name": "Vũ Tuấn Kiệt (Chuyên viên Tài chính • 29 tuổi)",
+      "content": "Theo dõi podcast của GS Huberman lâu rồi nhưng đọc bài tóm tắt có hệ thống của Trại mới thấy dễ thực hành đến vậy. Trước đây sáng nào mình cũng vật vã với ly cà phê đen đặc lúc 7h sáng, nhưng đến 10h là tim đập loạn xạ mà đầu óc vẫn mơ màng sương mù não. Áp dụng giao thức Huberman 4 ngày nay: vừa thức dậy là bước thẳng ra ban công đón nắng 15 phút, trì hoãn ly cà phê sau 90 phút thức dậy, và làm việc theo khối 90 phút Ultradian. Thần kỳ là đến chiều không hề bị crash năng lượng, làm việc sắc bén hơn hẳn!",
       "date": "Hôm qua",
-      "likes": 48
+      "likes": 56,
+      "isLongStory": true
     },
     {
       "id": "hub-2",
@@ -461,10 +462,11 @@ export const articleCommentsMap: Record<string, Comment[]> = {
   "thanh-loc-nao-bo-de-lam-viec-sau": [
     {
       "id": "tlnb-1",
-      "name": "Võ Thành Nam (33 tuổi)",
-      "content": "Bài viết giải thích cơ chế vì sao ta chán làm việc và thèm quẹt máy quá sáng tỏ. Khi não bộ đã quen với lượng kích thích cực mạnh từ video 15 giây thì trang sách trắng hay bảng tính excel hiển nhiên trở nên nhạt nhẽo. Cần phải có giai đoạn thanh lọc hạ ngưỡng dopamine thì não mới tìm lại được sự tò mò tự nhiên.",
+      "name": "Võ Thành Nam (33 tuổi • Kiến trúc sư)",
+      "content": "Bài viết giải thích cơ chế vì sao ta chán làm việc và thèm quẹt máy quá sáng tỏ. Khi não bộ đã quen với lượng kích thích cực mạnh từ video 15 giây thì bản vẽ kiến trúc hay trang sách trắng hiển nhiên trở nên vô cùng nhạt nhẽo và khó chịu. Mình từng cố dùng ý chí thép để ép bản thân nhưng càng ép thì tối về càng 'nghiện bù' lướt máy đến 3h sáng. Cần phải có giai đoạn thanh lọc hạ ngưỡng dopamine như bài viết hướng dẫn thì não mới tìm lại được sự tò mò tự nhiên. Sau 5 ngày detox màn hình buổi tối, mình đã tìm lại được cảm hứng vẽ vời như ngày đầu mới vào nghề.",
       "date": "2 ngày trước",
-      "likes": 49
+      "likes": 62,
+      "isLongStory": true
     },
     {
       "id": "tlnb-2",
@@ -604,10 +606,11 @@ export const articleCommentsMap: Record<string, Comment[]> = {
   "2-quy-tac-don-gian-cai-thien-su-tap-trung": [
     {
       "id": "2qt-1",
-      "name": "Nguyễn Tuấn Kiệt (Sinh viên ĐH Bách Khoa)",
-      "content": "Chỉ với 2 quy tắc: dọn dẹp sạch sẽ mặt bàn làm việc và quy tắc 5 phút khởi động, mình đã vượt qua được cơn lười ôn thi kỳ này. Không cần đao to búa lớn, cứ bắt đầu 5 phút đầu tiên là não tự động trôi vào guồng quay.",
+      "name": "Nguyễn Tuấn Kiệt (Sinh viên ĐH Bách Khoa • 22 tuổi)",
+      "content": "Chỉ với 2 quy tắc: dọn dẹp sạch sẽ mặt bàn làm việc và quy tắc 5 phút khởi động, mình đã vượt qua được cơn lười ôn thi kinh niên kỳ này. Trước đây mỗi lần ngồi vào bàn, xung quanh là đống sách vở bừa bộn, vỏ lon nước ngọt, tai nghe... não bộ bị quá tải rác thị giác nên cứ 5 phút lại cầm điện thoại lướt. Giờ dọn sạch trơn chỉ để đúng 1 cuốn tập và chiếc bút, tự nhủ chỉ làm đúng 5 phút thôi. Không ngờ cứ bước qua được 5 phút ma sát ban đầu là não tự động trôi vào guồng quay làm việc suốt 2 tiếng không dứt!",
       "date": "Hôm qua",
-      "likes": 47
+      "likes": 58,
+      "isLongStory": true
     },
     {
       "id": "2qt-2",
@@ -699,10 +702,11 @@ export const articleCommentsMap: Record<string, Comment[]> = {
   "bi-quyet-danh-thuc-trang-thai-dong-chay-flow": [
     {
       "id": "bkf-1",
-      "name": "Trần Bảo Ngọc (Nhạc sĩ / Producer)",
-      "content": "Khi bước vào trạng thái Flow, thời gian như ngưng đọng lại, 3 tiếng trôi qua như 15 phút. Bí quyết đặt ra mục tiêu siêu rõ ràng và loại bỏ toàn bộ thông báo điện thoại như bài viết hướng dẫn chính là chiếc chìa khóa mở cánh cửa sáng tạo này.",
+      "name": "Trần Bảo Ngọc (Nhạc sĩ / Producer • 28 tuổi)",
+      "content": "Khi bước vào trạng thái Flow, thời gian như ngưng đọng lại, 3 tiếng trôi qua như 15 phút. Trước đây mình hay bị bế tắc ý tưởng âm nhạc vì cứ đang làm là liếc nhìn điện thoại hoặc check tin nhắn nhóm. Áp dụng bí quyết đặt ra mục tiêu siêu rõ ràng, tắt toàn bộ wifi và điện thoại như bài viết hướng dẫn chính là chiếc chìa khóa mở cánh cửa sáng tạo. Hôm qua lần đầu tiên sau 4 tháng, mình đã ngồi sáng tác trọn vẹn một bản demo hoàn chỉnh chỉ trong 1 buổi chiều trong sự hưng phấn tột độ!",
       "date": "Hôm qua",
-      "likes": 49
+      "likes": 67,
+      "isLongStory": true
     },
     {
       "id": "bkf-2",
