@@ -136,7 +136,8 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
   10. Mỹ cảm Zen Minimalist.
   11. Ảnh WebP 16:9 dưới 120KB đóng Watermark.
   12. Đa danh mục & 2-3 liên kết nội bộ.
-* **Chỉ khi đạt 12/12 điểm PASS mới được phép xuất bản.** Bất kỳ lỗi nào cũng phải sửa xong trước khi lên web.
+  13. Bộ bình luận seeding độc bản: Biên soạn kèm 3 - 5 bình luận seeding bám sát 100% nội dung, thuật ngữ và bài học bài viết (lưu vào `src/data/articleComments.ts`), có ít nhất 1 câu chuyện tâm sự dài (`isLongStory: true`), kiểm toán `audit_comments.js` pass 100%.
+* **Chỉ khi đạt 13/13 điểm PASS mới được phép xuất bản.** Bất kỳ lỗi nào cũng phải sửa xong trước khi lên web.
 
 ### 1.11. Bộ Quy Tắc Thép Copywriting Chuyển Đổi & Chống Văn Mẫu AI (Học Hỏi Từ Corey Haines)
 Kế thừa tinh hoa từ bộ kỹ năng Copywriting số 1 thế giới `coreyhaines31/marketingskills` (xem chi tiết tại [copywriting](../copywriting/SKILL.md)), Agent 1 và Mây bắt buộc tuân thủ 5 nguyên lý chuyển đổi đỉnh cao:

@@ -22,6 +22,11 @@ Agent 5 chịu trách nhiệm thẩm định chất lượng toàn diện trư�
 - [ ] **Văn phong:** Chuẩn "Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu", neo đậu bằng hình ảnh đời thực, không dùng từ trừu tượng.
 - [ ] **Móc câu (Retention):** Có các câu hỏi lửng (Open Loops) giữa các phần để giữ chân độc giả.
 - [ ] **SEO On-page & Link nội bộ:** Tối thiểu 2 - 3 link nội bộ và nút CTA trắc nghiệm.
+- [ ] **Kiểm toán Bình Luận Seeding Độc Bản (LỆNH ĐẶC BIỆT CỦA BỐ):** Bắt buộc chạy script gác cổng `node scripts/audit_comments.js` đạt **PASS 100%**:
+  - *Độ phủ 100%:* Bài viết mới bắt buộc phải có mục riêng trong `src/data/articleComments.ts` với tối thiểu 3 bình luận.
+  - *Trùng lặp 0%:* CẤM TUYỆT ĐỐI bình luận trùng lặp nội dung hoặc sao chép từ bài viết khác.
+  - *Bám sát 100% ngữ cảnh:* Bình luận phải nhắc đúng tên sách, tên tác giả, thuật ngữ hành vi hoặc kỹ thuật thực hành của bài viết đó.
+  - *Chiều sâu thấu cảm:* Bắt buộc có ít nhất 1 câu chuyện tâm sự dài (`isLongStory: true`).
 
 ### Cổng 2: Kiểm Duyệt Thị Giác & Hình Ảnh (Agent 8)
 - [ ] **Mỹ cảm Zen Minimalist:** Chuẩn bảng màu Xanh rêu, Be ấm, Đất nung; mộc mạc, tĩnh lặng.

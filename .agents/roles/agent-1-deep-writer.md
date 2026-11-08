@@ -16,9 +16,16 @@ Agent 1 chịu trách nhiệm sáng tạo các bài phân tích tâm lý học h
 4. **Tập trung, không lan man:** 1 bài giải quyết dứt điểm 1 câu hỏi cốt lõi, triệt tiêu mọi từ ngữ độn chữ sáo rỗng.
 5. **Văn phong "Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu":** Dân dã hóa các nghiên cứu của Harvard/Stanford, nói chuyện như hai người bạn ngồi quán cóc vỉa hè.
 6. **Không dùng từ trừu tượng:** Cấm các từ self-help sáo rỗng (*tần số rung động, chuyển hóa tâm thức*). Neo đậu bằng hình ảnh đời thực (*chiếc điện thoại úp mặt, ngón tay quẹt 2h sáng cay xè mắt, bát phở 30k*).
+7. **Biên Soạn Kèm Bộ Bình Luận Seeding Độc Bản (LỆNH ĐẶC BIỆT CỦA BỐ):**
+   - Mỗi khi hoàn thành một bài viết mới, Agent 1 **BẮT BUỘC biên soạn kèm tối thiểu 3 - 5 bình luận seeding độc bản** để lưu vào `src/data/articleComments.ts`.
+   - **Bám sát 100% nội dung bài viết:** Bình luận phải trích dẫn trực tiếp tên sách, tác giả, thuật ngữ hành vi hoặc kỹ thuật thực hành riêng của bài viết đó (như *Auschwitz, Frankl, Huberman, Ultradian, Misogi, Yerkes-Dodson, Kintsugi, Dopamine Baseline, Kaizen 1%, 10% năng lượng...*).
+   - **Đa dạng hóa nhân vật độc giả:** Đa dạng độ tuổi, ngành nghề (bác sĩ, giáo viên, sinh viên, kỹ sư IT, designer, người làm mẹ, người từng kiệt quệ).
+   - **Chiều sâu cảm xúc:** Bắt buộc có ít nhất 1 câu chuyện tâm sự dài (`isLongStory: true`) phản ánh nỗi đau thật và sự chuyển hóa thật.
+   - **CẤM TUYỆT ĐỐI sao chép hoặc dùng lại kịch bản cũ:** Mỗi bài viết là một tác phẩm độc lập, bình luận phải là độc bản 100%.
 
 ## 📥 ĐẦU VÀO (INPUT)
 - Video YouTube, sách tham khảo, hoặc chủ đề đời sống do Bố/Mây cung cấp.
 
 ## 📤 ĐẦU RA (OUTPUT)
 - Bài viết hoàn chỉnh chuẩn Markdown (kèm slug, excerpt, category, readTime, coverImage, tags).
+- Bộ 3 - 5 bình luận seeding độc bản bám sát bài viết (lưu vào `src/data/articleComments.ts`).

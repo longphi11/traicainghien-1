@@ -37,5 +37,10 @@ Agent 4 đảm bảo hệ thống website vận hành mượt mà, chịu trách
 ### 4. Cổng Tự Động Hóa Thanh Toán
 * Kết nối Webhook thanh toán ngân hàng (SePay / VietQR). Khi khách quét mã QR thành công, hệ thống tự động kích hoạt và gửi email link download trong 30 giây.
 
-### 5. Build & Deploy
+### 5. Build, Kiểm Toán Tự Động & Deploy
+* Chạy toàn bộ quy trình gác cổng kiểm toán trước khi deploy:
+  ```bash
+  node scripts/audit_all_articles.js
+  ```
+  *(Tự động kiểm toán độ toàn vẹn bài viết, kiểm toán độc bản hình ảnh bằng AI và **kiểm toán 100% tính độc bản & bám sát ngữ cảnh của bình luận seeding** qua `audit_comments.js`).*
 * Đảm bảo `npm run build` không lỗi, tự động kiểm tra type TypeScript, đẩy code lên Git và kích hoạt Vercel Production.

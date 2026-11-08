@@ -70,7 +70,7 @@ flowchart TD
   - Cấm tiệt từ ngữ trừu tượng self-help sáo rỗng (*tần số rung động, chuyển hóa đỉnh cao*). Neo đậu bằng chi tiết đời thực (*màn hình lướt 2h sáng cay xè mắt, bát phở 30k*).
   - Nghệ thuật tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến chữ cuối cùng.
 * **Đầu vào (Input):** Chủ đề hành vi, video YouTube, sách tâm lý học do Bố hoặc Mây chỉ định.
-* **Đầu ra (Output):** Bài viết chuẩn Markdown đầy đủ Frontmatter, metadata SEO, 2.500+ từ, phân bổ đúng 4 Trụ cột cốt lõi.
+* **Đầu ra (Output):** Bài viết chuẩn Markdown đầy đủ Frontmatter, metadata SEO, 2.500+ từ, phân bổ đúng 4 Trụ cột cốt lõi; kèm theo **bộ 3 - 5 bình luận seeding độc bản** bám sát 100% nội dung bài viết để lưu vào `src/data/articleComments.ts`.
 
 ---
 
@@ -311,9 +311,9 @@ flowchart TD
 | Quy Trình | Agent Chủ Trì | Agent Phối Hợp | Sản Phẩm Bàn Giao |
 | :--- | :--- | :--- | :--- |
 | **1. Săn ý tưởng & định hướng** | Agent 6 (Monetization Scout) | Mây, Agent 7 | Bản đề xuất chủ đề / sản phẩm có tiềm năng doanh thu |
-| **2. Viết bài trụ cột 2.500 từ** | Agent 1 (Deep Writer) | Mây, Agent 6 | Bài viết web chuẩn mực 2.500 từ |
+| **2. Viết bài trụ cột 2.500 từ & Bình luận Seeding** | Agent 1 (Deep Writer) | Mây, Agent 6 | Bài viết web chuẩn 2.500 từ + 3-5 bình luận seeding bám sát ngữ cảnh |
 | **3. Thiết kế hình ảnh & Thumbnail SEO** | Agent 8 (Visual Stylist) | Agent 1 | Ảnh WebP 1200x675 chuẩn Zen Minimalist + Alt Text |
-| **4. Kiểm duyệt chất lượng** | Agent 5 & Mây (Auditor & Editor-in-Chief) | Agent 1, Agent 8 | Biên bản thẩm định PASS 12/12 tiêu chí (nội dung, trình bày, ảnh) |
+| **4. Kiểm duyệt chất lượng & Chống trùng lặp** | Agent 5 & Mây (Auditor & Editor-in-Chief) | Agent 1, Agent 8 | Biên bản thẩm định PASS 100% (nội dung, ảnh độc bản, bình luận độc bản bám sát ngữ cảnh) |
 | **5. Sản xuất kịch bản video viral 60s** | Agent 2 (Short-Form Writer) | Agent 1, Agent 8 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
 | **6. Vận hành kênh YouTube Dài** | Agent 10 (YouTube Strategist)| Agent 1, Agent 8 | Kịch bản video dài 10-15m, package Title & Thumbnail SEO |
 | **7. Quản trị Profile X, Threads, Substack**| Agent 11 (Social Profile)| Agent 1, Agent 8 | Gói Threads, bài đăng X, Carousel Insta, bản tin Substack |
