@@ -622,7 +622,7 @@ export default async function ArticleDetailPage({
       <RelatedArticles currentSlug={article.slug} currentTag={article.pillarTag} />
 
       {/* Comments Section */}
-      <CommentSection slug={article.slug} />
+      <CommentSection slug={article.slug} pillarTag={article.pillarTag} />
 
     </article>
   );

@@ -2,101 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import { MessageSquare, Send, Heart, ShieldCheck, Check, ArrowLeft, ArrowRight, User } from "lucide-react";
-
-interface Comment {
-  id: string;
-  name: string;
-  content: string;
-  date: string;
-  likes: number;
-  isLongStory?: boolean;
-}
+import { getCommentsForArticle, Comment } from "@/data/articleComments";
 
 interface CommentSectionProps {
   slug: string;
+  pillarTag?: string;
 }
 
 const COMMENTS_PER_PAGE = 5;
 
-// 10 Bình Luận Seeding chuẩn mực (khoảng 25-30% tâm sự dài sâu sắc)
-const initialSeedComments: Comment[] = [
-  {
-    id: "seed-1",
-    name: "Minh Khang (Kỹ sư IT • 32 tuổi)",
-    content: "Mình năm nay 32 tuổi, làm việc trong ngành IT. Thú thật với mọi người, suốt gần 3 năm qua cuộc sống của mình là một chuỗi ngày vật vờ. Ban ngày làm việc không tập trung, tối về thì ôm khư khư điện thoại đến 2-3h sáng lướt short video và reels. Đau đớn nhất là nhiều lần con gái 4 tuổi chạy lại kéo tay bố 'bố ơi chơi với con', mình chỉ ậm ừ một tay bấm điện thoại một tay xoa đầu con cho qua chuyện. Cho đến một hôm vợ mình bật khóc bảo 'Anh ở trong ngôi nhà này nhưng tâm trí anh ở một thế giới khác'. Đọc bài viết của Trại, mình như bị tát một gáo nước lạnh vào mặt. Hóa ra mình không phải lười, mà là con người nghiện dopamine rẻ tiền trong mình đang làm tổn thương những người mình yêu thương nhất. Mình đã khóc một trận thật đã đời, rồi quyết định để điện thoại ngoài phòng khách từ tối qua. Cảm ơn Trại Cai Nghiện vì một bài viết đánh thức lương tri.",
-    date: "3 ngày trước",
-    likes: 42,
-    isLongStory: true,
-  },
-  {
-    id: "seed-2",
-    name: "Hải Yến (Gen Z)",
-    content: "Tối qua áp dụng thử quy tắc sạc điện thoại ở bàn làm việc xa giường 2m. Lần đầu tiên sau nhiều tháng mình ngủ được trước 12h đêm mà không thấy bồn chồn bứt rứt. Cảm giác sáng nay thức dậy đầu óc nhẹ bẫng thật sự rất lạ lẫm!",
-    date: "2 ngày trước",
-    likes: 28,
-  },
-  {
-    id: "seed-3",
-    name: "Nguyễn Trọng Đức (Cựu Marketer)",
-    content: "Đã từng có thời gian mình đốt từ 8-10 tiếng mỗi ngày vào màn hình, từ check mạng xã hội đến quẹt Shopee và TikTok trong vô thức. Mình từng nghĩ mình có 'ý chí thép' nên cố gắng áp dụng Dopamine Detox cực đoan: nhịn dùng điện thoại 24h, ngồi im một chỗ... nhưng kết quả là ngay hôm sau bị 'nghiện bù' dữ dội hơn, ăn uống vô độ và lướt web đến sáng. Bây giờ đọc bài viết ở Trại mới vỡ lẽ: não bộ không thể bị ép bằng bạo lực ý chí, mà cần giảm tải nhận thức và đón nhận sự khó chịu 2 phút. Lối tư duy khoa học và thực tế như thế này thật sự hiếm có ở Việt Nam.",
-    date: "4 ngày trước",
-    likes: 35,
-    isLongStory: true,
-  },
-  {
-    id: "seed-4",
-    name: "Thùy Dung",
-    content: "Đúng là Atomic Habits bản đời thực. Mình thích nhất thông điệp 'Bạn không yếu đuối, chỉ là não bộ đang đòi nợ'. Câu nói này gỡ bỏ được tảng đá mặc cảm tội lỗi đè nặng trong lòng mình bấy lâu.",
-    date: "1 ngày trước",
-    likes: 19,
-  },
-  {
-    id: "seed-5",
-    name: "Lê Hoàng An (Sinh viên năm cuối)",
-    content: "Đọc bài viết này lúc 1h30 sáng khi hai mắt đang cay xè và trán nóng bừng vì lướt TikTok suốt 4 tiếng đồng hồ. Cảm giác tội lỗi sau mỗi lần buông máy thật sự rất kinh khủng, tự trách mình vô dụng, hèn nhát, sắp ra trường mà không làm nên trò trống gì. Nhưng đoạn phân tích về 'Cơ chế bập bênh Dopamine và lòng trắc ẩn tự thân' đã cứu rỗi mình. Mình nhận ra nếu cứ tiếp tục tự sỉ vả thì ngày mai mình lại tiếp tục trượt chân. Đêm nay mình xin phép tha thứ cho bản thân theo tinh thần Wabi Sabi, uống một cốc nước ấm và đi ngủ. Ngày mai sẽ là một ngày mới với quy tắc 1% Kaizen. Biết ơn tác giả vô cùng!",
-    date: "5 ngày trước",
-    likes: 53,
-    isLongStory: true,
-  },
-  {
-    id: "seed-6",
-    name: "Bác sĩ Tâm lý Trần Vũ",
-    content: "Là người làm trong ngành tham vấn tâm lý, tôi đánh giá rất cao cách Trại Cai Nghiện 'dân dã hóa' các học thuyết của Anna Lembke và Gabor Maté. Ngắn gọn, chuẩn xác và không hề có định kiến đạo đức.",
-    date: "3 ngày trước",
-    likes: 37,
-  },
-  {
-    id: "seed-7",
-    name: "Phương Thảo",
-    content: "Mình vừa bấm share bài viết này cho nhóm bạn thân. Dạo này đi cafe với nhau mà 4 đứa ngồi bấm điện thoại hết 3 đứa, chẳng ai buồn nhìn vào mắt nhau nữa. Mong bài viết này giúp tụi mình thức tỉnh.",
-    date: "Hôm qua",
-    likes: 24,
-  },
-  {
-    id: "seed-8",
-    name: "Quang Huy",
-    content: "Phương pháp thở Box Breathing 4x4 dập tắt cơn thèm lướt web cực kỳ hiệu nghiệm! Mỗi lần ngón tay chuẩn bị bấm vào icon app là mình dừng lại thở sâu 4 nhịp, cơn thôi thúc tự nhiên dịu hẳn đi.",
-    date: "2 ngày trước",
-    likes: 16,
-  },
-  {
-    id: "seed-9",
-    name: "Mai Lan (Mẹ bỉm sữa)",
-    content: "Cảm ơn Trại Cai Nghiện rất nhiều. Mình áp dụng thói quen dọn dẹp nhà cửa chánh niệm thay vì nằm bấm điện thoại khi con ngủ, không ngờ nhà cửa vừa ngăn nắp mà tâm trí lại bình an hơn hẳn.",
-    date: "4 ngày trước",
-    likes: 22,
-  },
-  {
-    id: "seed-10",
-    name: "Tâm An",
-    content: "Mỗi ngày vào đọc một bài ở đây như được ngồi tĩnh lặng giữa một rừng thông vậy. Rất mong Trại tiếp tục ra thêm nhiều bài viết chất lượng để đồng hành cùng cộng đồng!",
-    date: "Vừa xong",
-    likes: 31,
-  },
-];
-
-export default function CommentSection({ slug }: CommentSectionProps) {
-  const [comments, setComments] = useState<Comment[]>(initialSeedComments);
+export default function CommentSection({ slug, pillarTag }: CommentSectionProps) {
+  const [comments, setComments] = useState<Comment[]>([]);
   const [authorName, setAuthorName] = useState("");
   const [content, setContent] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -107,18 +23,19 @@ export default function CommentSection({ slug }: CommentSectionProps) {
   useEffect(() => {
     // Load persisted user comments from localStorage
     const storageKey = `tcn_comments_${slug}`;
+    const baseSeed = getCommentsForArticle(slug, pillarTag);
     try {
       const saved = localStorage.getItem(storageKey);
       if (saved) {
         const parsed = JSON.parse(saved);
-        setComments([...parsed, ...initialSeedComments]);
+        setComments([...parsed, ...baseSeed]);
       } else {
-        setComments(initialSeedComments);
+        setComments(baseSeed);
       }
     } catch {
-      setComments(initialSeedComments);
+      setComments(baseSeed);
     }
-  }, [slug]);
+  }, [slug, pillarTag]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
