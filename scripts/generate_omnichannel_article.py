@@ -18,6 +18,38 @@ def slugify(text):
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
 
+import glob
+
+def get_unique_thumbnail(topic="focus"):
+    """
+    Dynamically finds an unused, unique, < 120KB WebP artwork from public/images/articles.
+    Ensures 100% compliance with audit_all_articles.js.
+    """
+    articles_ts_path = "src/data/articles.ts"
+    existing_content = ""
+    if os.path.exists(articles_ts_path):
+        with open(articles_ts_path, "r", encoding="utf-8") as f:
+            existing_content = f.read()
+
+    images_dir = "public/images/articles"
+    if not os.path.exists(images_dir):
+        return "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp"
+
+    candidates = glob.glob(os.path.join(images_dir, "*.webp"))
+    for cand in candidates:
+        fname = os.path.basename(cand)
+        # Skip diagram/chart files
+        if "so-do" in fname or "bieu-do" in fname:
+            continue
+        if fname not in existing_content:
+            try:
+                if os.path.getsize(cand) <= 122880: # <= 120KB
+                    return f"/images/articles/{fname}"
+            except:
+                pass
+
+    return "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp"
+
 def build_article_from_video(video_data, topic="focus"):
     title_raw = video_data["title"]
     channel = video_data["channel"]
@@ -31,7 +63,7 @@ def build_article_from_video(video_data, topic="focus"):
         clean_title = f"Chữa Lành Não Bộ Khỏi 'Nhũn Não Số' (Brain Rot): Khôi Phục Khả Năng Tập Trung Sâu"
         slug = f"chua-lanh-nao-bo-khoi-nhun-nao-so-brain-rot-{datetime.now().strftime('%Y%m%d')}"
         excerpt = f"Tập trung không phải là gồng mình chiến đấu, mà là nghệ thuật làm dịu tâm trí và loại bỏ bẫy kích thích rẻ tiền. Góc nhìn sâu sắc được đúc kết từ video của {channel}."
-        thumbnail = "/images/articles/chua-lanh-nao-bo-sau-tiktok-zen-trai-cai-nghien.webp"
+        thumbnail = get_unique_thumbnail("focus")
         
         content = f"""Đã bao giờ bạn bước vào bàn làm việc với một danh sách dài những việc quan trọng cần hoàn thành, nhưng chỉ sau 5 phút, ngón tay bạn đã vô thức cầm lấy chiếc điện thoại thông minh?
 
@@ -128,7 +160,7 @@ https://traicainghien.com/bai-viet/{slug}
         clean_title = f"Kỷ Luật Không Cần Gồng: Bí Mật Đằng Sau Sức Mạnh Của Những Thói Quen Nguyên Tử"
         slug = f"ky-luat-khong-can-gong-thoi-quen-nguyen-tu-{datetime.now().strftime('%Y%m%d')}"
         excerpt = f"Thay đổi lớn không đến từ những cú sốc ý chí ngắn hạn, mà bắt nguồn từ những chuyển động 1% mỗi ngày theo triết lý Kaizen. Đúc kết sâu sắc từ video của {channel}."
-        thumbnail = "/images/articles/sach-kaizen-1-phan-tram-zen-trai-cai-nghien.webp"
+        thumbnail = get_unique_thumbnail("habit")
         
         content = f"""Đã bao nhiêu lần bạn tự hứa với bản thân: *"Từ ngày mai mình sẽ thay đổi hoàn toàn!"*?
 

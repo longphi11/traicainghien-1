@@ -30,17 +30,17 @@
 
 ### Phân Bổ Cron Linux (`crontab -l`):
 ```cron
-# 1. 10:00 Sáng VN (03:00 UTC): Đào bài Tập Trung & Xuất bản đa kênh
-0 3 * * * cd /root/traicainghien && python3 scripts/omnichannel_dispatcher.py --topic focus >> /root/traicainghien/cron_focus.log 2>&1
+# 1. 10:00 Sáng VN: Đào bài Tập Trung & Xuất bản đa kênh
+0 10 * * * cd /root/traicainghien && python3 scripts/omnichannel_dispatcher.py --topic focus >> /root/traicainghien/cron_focus.log 2>&1
 
-# 2. 21:00 Tối VN (14:00 UTC): Đào bài Thói Quen & Xuất bản đa kênh
-0 14 * * * cd /root/traicainghien && python3 scripts/omnichannel_dispatcher.py --topic habit >> /root/traicainghien/cron_habit.log 2>&1
+# 2. 21:00 Tối VN: Đào bài Thói Quen & Xuất bản đa kênh
+0 21 * * * cd /root/traicainghien && python3 scripts/omnichannel_dispatcher.py --topic habit >> /root/traicainghien/cron_habit.log 2>&1
 
-# 3. 06:30 Sáng VN (23:30 UTC hôm trước): Báo cáo kế hoạch & tương tác cho Bố
-30 23 * * * cd /root/traicainghien && python3 scripts/telegram_reporter.py --type morning >> /root/traicainghien/cron_morning.log 2>&1
+# 3. 06:30 Sáng VN: Báo cáo kế hoạch & tương tác cho Bố
+30 6 * * * cd /root/traicainghien && python3 scripts/telegram_reporter.py --type morning >> /root/traicainghien/cron_morning.log 2>&1
 
-# 4. 22:30 Đêm VN (15:30 UTC): Báo cáo kiểm toán tổng hợp ngày cho Bố
-30 15 * * * cd /root/traicainghien && python3 scripts/telegram_reporter.py --type audit >> /root/traicainghien/cron_audit.log 2>&1
+# 4. 22:30 Đêm VN: Báo cáo kiểm toán tổng hợp ngày cho Bố
+30 22 * * * cd /root/traicainghien && python3 scripts/telegram_reporter.py --type audit >> /root/traicainghien/cron_audit.log 2>&1
 ```
 
 ---
