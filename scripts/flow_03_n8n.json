@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Flow 03: Đào YouTube & Xuất Bản Đa Kênh",
+    "nodes": [
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "cronExpression",
+                "expression": "0 10,21 * * *"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          -200,
+          300
+        ],
+        "id": "trigger-flow-03",
+        "name": "Lịch 10h00 Sáng & 21h00 Tối"
+      },
+      {
+        "parameters": {
+          "jsCode": "const now = new Date();\n// Chuyển sang giờ Việt Nam (UTC+7)\nconst hour = (now.getUTCHours() + 7) % 24;\n\nlet topic = 'focus';\nlet topicName = 'Tập Trung Sâu & Trị Sương Mù Não';\n\nif (hour >= 18 || hour < 5) {\n  topic = 'habit';\n  topicName = 'Xây Dựng Thói Quen & Kỷ Luật Không Gồng';\n}\n\nreturn [{\n  json: {\n    topic: topic,\n    topicName: topicName,\n    hour: hour,\n    executedAt: now.toISOString()\n  }\n}];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          40,
+          300
+        ],
+        "id": "switch-topic-03",
+        "name": "Xác Định Chủ Đề (Focus/Habit)"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "http://172.17.0.1:5005/publish",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={\n  \"topic\": \"{{ $json.topic }}\"\n}",
+          "options": {
+            "timeout": 180000
+          }
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          280,
+          300
+        ],
+        "id": "exec-publisher-03",
+        "name": "Bộ Máy Đào YouTube & Xuất Bản Đa Kênh"
+      },
+      {
+        "parameters": {
+          "jsCode": "const res = $input.first().json;\nconst topicData = $('Xác Định Chủ Đề (Focus/Habit)').first().json;\n\nconst isSuccess = res.status === 'success';\nconst statusIcon = isSuccess ? '✅ THÀNH CÔNG' : '⚠️ CẦN KIỂM TRA';\nconst webUrl = res.website_url || 'https://traicainghien.com/bai-viet';\n\nlet msg = `🚀 <b>MÂY N8N — FLOW 03 ĐÃ XUẤT BẢN THÀNH CÔNG!</b>\\n\\n`;\nmsg += `📌 <b>Trạng thái:</b> ${statusIcon}\\n`;\nmsg += `🏷 <b>Chủ đề:</b> [${topicData.topicName}]\\n`;\nmsg += `🌐 <b>Website:</b> <a href=\"${webUrl}\">${webUrl}</a>\\n`;\nmsg += `📘 <b>Fanpage:</b> <a href=\"https://facebook.com/traicainghien\">Trại Cai Nghiện Fanpage</a>\\n`;\nmsg += `📢 <b>Telegram Channel:</b> @traicainghiendaily\\n\\n`;\nmsg += `🌱 <i>Bộ máy tự động n8n đã hoàn tất toàn bộ chu trình cào video, viết bài, deploy web và phát sóng đa kênh!</i>`;\n\nreturn [{\n  json: {\n    chat_id: '488901419',\n    text: msg,\n    parse_mode: 'HTML'\n  }\n}];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          520,
+          300
+        ],
+        "id": "format-report-03",
+        "name": "Soạn Báo Cáo Cho Bố"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.telegram.org/bot9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs/sendMessage",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={\n  \"chat_id\": \"{{ $json.chat_id }}\",\n  \"text\": \"{{ $json.text }}\",\n  \"parse_mode\": \"HTML\"\n}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          760,
+          300
+        ],
+        "id": "telegram-report-03",
+        "name": "Gửi Báo Cáo Về Telegram Bố"
+      }
+    ],
+    "connections": {
+      "Lịch 10h00 Sáng & 21h00 Tối": {
+        "main": [
+          [
+            {
+              "node": "Xác Định Chủ Đề (Focus/Habit)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Xác Định Chủ Đề (Focus/Habit)": {
+        "main": [
+          [
+            {
+              "node": "Bộ Máy Đào YouTube & Xuất Bản Đa Kênh",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Bộ Máy Đào YouTube & Xuất Bản Đa Kênh": {
+        "main": [
+          [
+            {
+              "node": "Soạn Báo Cáo Cho Bố",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Soạn Báo Cáo Cho Bố": {
+        "main": [
+          [
+            {
+              "node": "Gửi Báo Cáo Về Telegram Bố",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "active": true,
+    "settings": {
+      "executionOrder": "v1",
+      "timezone": "Asia/Ho_Chi_Minh"
+    }
+  }
+]

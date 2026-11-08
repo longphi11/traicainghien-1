@@ -56,7 +56,7 @@ graph TD
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **FLOW_01** | **Bản Tin Tâm Lý & Thói Quen** | 08:30<br>15:00<br>20:30 | Docker n8n (`wWXJoMhbchKzrkqr`) | Telegram Channel | [📄 Chi tiết Luồng 01](file:///c:/Users/MrFine/Documents/Traicainghien/docs/automation-flows/flow_01_daily_psychology_news.md) |
 | **FLOW_02** | **Lời Nhắc Đi Ngủ Dịu Dàng** | 22:00 | Docker n8n (`E6PVBHKrtYPlfevu`) | Telegram Channel | [📄 Chi tiết Luồng 02](file:///c:/Users/MrFine/Documents/Traicainghien/docs/automation-flows/flow_02_bedtime_gentle_reminder.md) |
-| **FLOW_03** | **Đào YouTube & Xuất Bản Đa Kênh** | 10:00<br>21:00 | Linux Cron + Python 3 Scripts | Web + Fanpage + Telegram | [📄 Chi tiết Luồng 03](file:///c:/Users/MrFine/Documents/Traicainghien/docs/automation-flows/flow_03_omnichannel_publishing_engine.md) |
+| **FLOW_03** | **Đào YouTube & Xuất Bản Đa Kênh** | 10:00<br>21:00 | Docker n8n (`Lj3wvfAe0CEqnWbQ`)<br>+ Bridge Engine (`:5005`) | Web + Fanpage + Telegram | [📄 Chi tiết Luồng 03](file:///c:/Users/MrFine/Documents/Traicainghien/docs/automation-flows/flow_03_omnichannel_publishing_engine.md) |
 | **REPORTER** | **Trợ Lý Riêng Báo Cáo Cho Bố** | 06:30<br>22:30<br>Real-time | Python (`telegram_reporter.py`) | Telegram Bố (`@longphibtc`) | Tích hợp trong Luồng 03 |
 
 ---

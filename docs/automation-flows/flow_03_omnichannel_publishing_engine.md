@@ -1,12 +1,12 @@
 # 🚀 LUỒNG 03: ĐÀO YOUTUBE & XUẤT BẢN NỘI DUNG ĐA KÊNH (OMNICHANNEL ENGINE)
 > **Mã định danh hệ thống:** `FLOW_03_OMNICHANNEL_ENGINE`  
-> **Nền tảng thực thi:** Python 3 Engine & Linux Crontab trên VPS (`/root/traicainghien`)  
+> **Nền tảng thực thi:** Docker n8n Workflow (`Lj3wvfAe0CEqnWbQ`) kết nối Bridge Service (`:5005`) trên VPS  
 > **Kênh phân phối đồng bộ:**
 > 1. Website: `traicainghien.com/bai-viet/{slug}` (Next.js + Vercel)
 > 2. Facebook Fanpage: *Trại Cai Nghiện* (`1232949796570940`)
 > 3. Telegram Channel: `@traicainghiendaily` (`-1004488309634`)
 > 4. Báo cáo riêng Bố: Telegram `@longphibtc` (`488901419`)  
-> **Tần suất hoạt động:** 2 lần/ngày lúc **10:00** (Tập Trung) và **21:00** (Thói Quen)  
+> **Tần suất hoạt động:** 2 lần/ngày lúc **10:00** (Tập Trung) và **21:00** (Thói Quen) (Giờ Việt Nam - UTC+7)  
 > **Ngày thiết lập chuẩn hóa:** 08/11/2026 | **Người phụ trách:** Mây & Bố Long
 
 ---
