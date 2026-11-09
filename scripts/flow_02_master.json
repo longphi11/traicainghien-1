@@ -1,0 +1,153 @@
+[
+  {
+    "updatedAt": "2026-11-07T14:53:29.000Z",
+    "createdAt": "2026-11-07T12:32:37.021Z",
+    "id": "E6PVBHKrtYPlfevu",
+    "name": "Trại Cai Nghiện - Lời Nhắc Đi Ngủ 22h00",
+    "description": null,
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "cronExpression",
+                "expression": "0 22 * * *"
+              }
+            ]
+          }
+        },
+        "name": "Lời Nhắc Đi Ngủ 22h00",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          250,
+          300
+        ],
+        "id": "node-sched-bedtime"
+      },
+      {
+        "parameters": {
+          "jsCode": "const bedtimeQuotes = [\n  \"Cả ngày bạn đã cố gắng nhiều rồi. Đêm nay, hãy trả lại sự bình yên trọn vẹn cho chiếc giường của bạn.\",\n  \"Ngủ sớm không phải là bỏ lỡ niềm vui, mà là đối xử dịu dàng với cơ thể và tâm trí của chính mình.\",\n  \"Chiếc giường là nơi để phục hồi tâm trí và đón nhận sự bình an, không phải nơi để các thuật toán mạng xã hội rút cạn năng lượng.\",\n  \"Mọi âu lo chưa giải quyết hôm nay sẽ sáng suốt hơn sau một giấc ngủ sâu.\",\n  \"Hãy cho não bộ của bạn được tắt nguồn và nạp lại đầy đủ năng lượng cho ngày mai.\"\n];\n\nconst randomQuote = bedtimeQuotes[Math.floor(Math.random() * bedtimeQuotes.length)];\n\nlet caption = `🌙 <b>ĐẾN GIỜ ĐI NGỦ RỒI BẠN ƠI, TẮT ĐIỆN THOẠI VÀ ĐI NGỦ THÔI!</b>\\n\\n`;\ncaption += `Đây nên là bài viết cuối cùng bạn đọc trên màn hình điện thoại đêm nay.\\n\\n`;\ncaption += `Cả ngày hôm nay bạn đã cố gắng nhiều rồi. Hãy úp máy xuống, cắm sạc cách xa giường 2m và thả mình vào chiếc giường êm ái nhé.\\n\\n`;\ncaption += `Ngủ sớm là món quà dịu dàng nhất bạn dành cho tâm trí và cơ thể sau một ngày dài.\\n\\n`;\ncaption += `🌱 <i>\"${randomQuote}\"</i>\\n\\n`;\ncaption += `Chúc bạn ngủ một giấc thật sâu và thức dậy với tâm trí tươi mới! 🌿\\n\\n`;\ncaption += `======\\n`;\ncaption += `🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\\n`;\ncaption += `<a href=\"https://traicainghien.com\">Website</a> | <a href=\"https://traicainghien.com/trac-nghiem\">Trắc nghiệm Dopamine</a> | <a href=\"https://traicainghien.com/bai-viet\">Kho bài viết</a>`;\n\nreturn [{\n  json: {\n    photo: \"AgACAgUAAyEGAAMBC4YrggADCmrvGi2ckcDSZVGzS-9f5mNYsAv3AAJlFGsbCv95V59Xahf162_GAQADAgADeQADPQQ\",\n    caption: caption,\n    parse_mode: 'HTML'\n  }\n}];\n"
+        },
+        "name": "Tạo Thông Điệp Đi Ngủ",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          500,
+          300
+        ],
+        "id": "node-code-bedtime"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.telegram.org/bot9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs/sendPhoto",
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "chat_id",
+                "value": "-1004488309634"
+              },
+              {
+                "name": "photo",
+                "value": "={{ $json.photo }}"
+              },
+              {
+                "name": "caption",
+                "value": "={{ $json.caption }}"
+              },
+              {
+                "name": "parse_mode",
+                "value": "HTML"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "name": "Telegram sendPhoto Đi Ngủ",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          750,
+          300
+        ],
+        "id": "node-tg-bedtime"
+      }
+    ],
+    "connections": {
+      "Lời Nhắc Đi Ngủ 22h00": {
+        "main": [
+          [
+            {
+              "node": "Tạo Thông Điệp Đi Ngủ",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Tạo Thông Điệp Đi Ngủ": {
+        "main": [
+          [
+            {
+              "node": "Telegram sendPhoto Đi Ngủ",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "staticData": {
+      "node:Lời Nhắc Đi Ngủ 22h00": {
+        "recurrenceRules": [
+          null
+        ],
+        "recurrenceRuleSignatures": [
+          null
+        ]
+      }
+    },
+    "meta": null,
+    "nodeGroups": [],
+    "pinData": null,
+    "versionId": "50e1a3ca-a7c2-40ee-9efd-bffde2c26c3e",
+    "activeVersionId": "50e1a3ca-a7c2-40ee-9efd-bffde2c26c3e",
+    "versionCounter": 1,
+    "triggerCount": 1,
+    "sourceWorkflowId": null,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-11-07T12:32:37.031Z",
+        "createdAt": "2026-11-07T12:32:37.031Z",
+        "role": "workflow:owner",
+        "workflowId": "E6PVBHKrtYPlfevu",
+        "projectId": "BVTiIC7zoDOvxLGt",
+        "project": {
+          "updatedAt": "2026-11-03T15:59:27.030Z",
+          "createdAt": "2026-11-02T15:35:40.209Z",
+          "id": "BVTiIC7zoDOvxLGt",
+          "name": "Mây Co-founder <may@traicainghien.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "customTelemetryTags": [],
+          "creatorId": "00a1d2cc-afd7-4863-995a-5a6abe4b0058"
+        }
+      }
+    ],
+    "versionMetadata": {
+      "name": null,
+      "description": null
+    }
+  }
+]
