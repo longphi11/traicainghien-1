@@ -42,6 +42,35 @@
      1. Trường hợp buộc phải tạo hoặc import một workflow mới để thử nghiệm: Tuyệt đối KHÔNG kích hoạt `active: true` luồng mới cùng lúc với luồng cũ khi chưa tắt luồng cũ.
      2. Sau khi luồng mới đã chạy thử nghiệm thành công và sẵn sàng tiếp quản nhiệm vụ, **BẮT BUỘC PHẢI XÓA VĨNH VIỄN (DELETE) LUỒNG CŨ KHỎI DATABASE N8N NGAY LẬP TỨC**.
      3. Khởi động lại dịch vụ n8n để giải phóng bộ nhớ, đảm bảo trong mọi thời điểm trên hệ thống **CHỈ CÓ DUY NHẤT 1 PHIÊN BẢN DUY NHẤT CHO MỖI LUỒNG HOẠT ĐỘNG**, triệt tiêu 100% nguy cơ chạy ngầm song song hay trùng lặp nội dung.
+   * **Quy chuẩn logic hình ảnh cho Flow 01 (Bản Tin Daily):**
+     - BẮT BUỘC **lấy ảnh gốc của bài viết từ nguồn tin tức** (bóc tách `og:image` / `twitter:image` từ trang web bài báo nguồn như Psychology Today).
+     - TUYỆT ĐỐI KHÔNG dùng ảnh tranh Zen Watercolor ngẫu nhiên cho Flow 01.
+     - Duy trì bộ nhớ `sentLinks` để lọc bài viết mới tiếp theo, bảo đảm không bao giờ trùng bài và không bao giờ trùng ảnh trên kênh Telegram.
+
+---
+
+## 1.2. 📡 QUY CHUẨN BÁO CÁO TỰ ĐỘNG ĐỊNH KỲ CHO BỐ (HĐQT TOPIC 19)
+
+> **Đích đến:** Nhóm Hội Đồng Quản Trị  
+> **Kênh / Topic:** **Trại Cai Nghiện** (`https://t.me/c/4401199553/19` — Thread ID: `19`)  
+> **Cơ chế:** Crontab tự động trên VPS chạy `scripts/telegram_reporter.py`
+
+### 1. 🌅 Báo Cáo Sáng (Đúng 06:10 Sáng hàng ngày - `10 6 * * *`):
+* **Kiểm tra trạng thái 3 luồng n8n:** Quét trực tiếp database SQLite để đảm bảo cả 3 luồng (`wWXJoMhbchKzrkqr`, `E6PVBHKrtYPlfevu`, `Lj3wvfAe0CEqnWbQ`) đều đang ở trạng thái `🟢 ACTIVE = 1`, không có lỗi tồn đọng.
+* **Kiểm tra kết nối API đa kênh:**
+  * 📘 **Facebook Graph API:** Token Fanpage Trại Cai Nghiện còn sống và hợp lệ 100%.
+  * 📢 **Telegram Bot API:** Kết nối phát sóng thông suốt.
+  * 🌐 **Website & CDN:** Tải trang `traicainghien.com` Uptime 100%, phản hồi dưới 0.8s.
+* **Lịch trình phát sóng trong ngày:** Điểm danh 6 mốc giờ chạy (08:30, 10:00, 15:00, 20:30, 21:00, 22:00).
+
+### 2. 📊 Báo Cáo Tối (Đúng 22:10 Đêm hàng ngày - `10 22 * * *`):
+* **Báo cáo tình hình phát triển các nền tảng:**
+  * 🌐 **Website:** Số bài viết chuyên sâu, sitemap Google Search Console, Uptime CDN.
+  * 📘 **Facebook Fanpage:** Số Followers, Likes trang, số bài đăng trong ngày, tổng lượng tương tác (Reactions, Comments, Shares).
+  * 📢 **Telegram Channel & Group:** Số lượng thành viên, tỷ lệ đọc tin và tương tác.
+* **Phương án chiến lược của Mây để đẩy Performance:**
+  * Phân tích nội dung chạm đúng nỗi đau độc giả nhất trong ngày.
+  * Đề xuất 2-3 hành động cụ thể cho ngày tiếp theo (tối ưu Hook *Curiosity Gap*, kích hoạt phễu trắc nghiệm Dopamine, tối ưu tỷ lệ nhấp về Website).
 
 ---
 
