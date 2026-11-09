@@ -9,6 +9,8 @@ from datetime import datetime
 BOT_TOKEN = "9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs"
 ADMIN_CHAT_ID = "488901419" # Bố @longphibtc
 CHANNEL_ID = "-1004488309634" # @traicainghiendaily
+HDQT_GROUP_CHAT_ID = "-1004401199553" # Nhóm Hội Đồng Quản Trị
+HDQT_TOPIC_THREAD_ID = 19 # Topic "Trại Cai Nghiện"
 
 def get_env_variable(var_name):
     if os.environ.get(var_name):
@@ -28,23 +30,49 @@ def get_env_variable(var_name):
 
 def send_private_report(message):
     """
-    Sends private operational report to Bố on Telegram.
+    Sends operational report to Bố on Telegram and directly into HĐQT group topic.
     """
+    results = []
+    # 1. Gửi trực tiếp vào Topic "Trại Cai Nghiện" của Nhóm Hội Đồng Quản Trị
     try:
-        post_data = urllib.parse.urlencode({
+        data_hdqt = {
+            'chat_id': HDQT_GROUP_CHAT_ID,
+            'message_thread_id': HDQT_TOPIC_THREAD_ID,
+            'text': message,
+            'parse_mode': 'HTML',
+            'disable_web_page_preview': True
+        }
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+        req_hdqt = urllib.request.Request(
+            url,
+            data=json.dumps(data_hdqt).encode('utf-8'),
+            headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+        )
+        with urllib.request.urlopen(req_hdqt, timeout=10) as resp:
+            results.append(json.loads(resp.read().decode()))
+    except Exception as e:
+        print("Telegram HĐQT note:", e)
+
+    # 2. Gửi tin nhắn riêng cho Bố @longphibtc
+    try:
+        data_admin = {
             'chat_id': ADMIN_CHAT_ID,
             'text': message,
             'parse_mode': 'HTML',
             'disable_web_page_preview': True
-        }).encode('utf-8')
-
+        }
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-        req = urllib.request.Request(url, data=post_data, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return json.loads(resp.read().decode())
+        req_admin = urllib.request.Request(
+            url,
+            data=json.dumps(data_admin).encode('utf-8'),
+            headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+        )
+        with urllib.request.urlopen(req_admin, timeout=10) as resp:
+            results.append(json.loads(resp.read().decode()))
     except Exception as e:
-        print("Telegram reporter note:", e)
-        return False
+        print("Telegram admin note:", e)
+
+    return results[0] if results else False
 
 def get_telegram_metrics():
     try:
