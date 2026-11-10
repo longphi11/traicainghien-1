@@ -89,6 +89,9 @@ def git_commit_and_push(commit_message):
         subprocess.run(["git", "commit", "-m", commit_message], check=True)
         print("Git commit thành công. Đang đẩy lên remote GitHub...")
         
+        # Pull --rebase để tích hợp các commit mới nhất trước khi push
+        subprocess.run(["git", "pull", "--rebase"], capture_output=True)
+
         # Push lên remote mặc định
         res = subprocess.run(["git", "push"], capture_output=True, text=True)
         print("Git push result:", res.stdout.strip() if res.stdout else "OK")

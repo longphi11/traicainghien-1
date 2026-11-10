@@ -43,3 +43,11 @@ traicainghien-bot-*.json
 # editor
 .vscode/
 .idea/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+scratch/

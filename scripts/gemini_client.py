@@ -75,68 +75,79 @@ def get_keys_pool() -> List[str]:
 def generate_content(
     prompt: str,
     system_instruction: Optional[str] = None,
-    model: str = "gemini-flash-latest",
+    model: str = "gemini-3.5-flash",
     temperature: float = 0.7,
     max_tokens: int = 4096
 ) -> Optional[str]:
     """
     Generate content with automatic key rotation and failover.
-    Cycles through all available keys if a rate limit (429) or error occurs.
+    Cycles through all available keys and fallback models if a rate limit (429) or error occurs.
     """
     keys = list(get_keys_pool())
     if not keys:
         raise ValueError("No Gemini API keys found in environment or .env files!")
         
-    # Shuffle to distribute load evenly
-    random.shuffle(keys)
+    # Put the first configured key (primary) at index 0 without hardcoding
+    primary_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not primary_key and keys:
+        primary_key = keys[0]
+        
+    ordered_keys = []
+    if primary_key and primary_key in keys:
+        ordered_keys.append(primary_key)
+    for k in keys:
+        if k not in ordered_keys:
+            ordered_keys.append(k)
+            
+    models_to_try = [model, "gemini-3.6-flash"]
     
     last_error = None
-    for attempt_idx, key in enumerate(keys, 1):
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
-        
-        contents = []
-        if system_instruction:
-            contents.append({
-                "role": "user",
-                "parts": [{"text": f"Instruction: {system_instruction}\n\nTask: {prompt}"}]
-            })
-        else:
-            contents.append({
-                "role": "user",
-                "parts": [{"text": prompt}]
-            })
+    for target_model in models_to_try:
+        for attempt_idx, key in enumerate(ordered_keys, 1):
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{target_model}:generateContent?key={key}"
             
-        payload = {
-            "contents": contents,
-            "generationConfig": {
-                "temperature": temperature,
-                "maxOutputTokens": max_tokens
+            contents = []
+            if system_instruction:
+                contents.append({
+                    "role": "user",
+                    "parts": [{"text": f"Instruction: {system_instruction}\n\nTask: {prompt}"}]
+                })
+            else:
+                contents.append({
+                    "role": "user",
+                    "parts": [{"text": prompt}]
+                })
+                
+            payload = {
+                "contents": contents,
+                "generationConfig": {
+                    "temperature": temperature,
+                    "maxOutputTokens": max_tokens
+                }
             }
-        }
-        
-        try:
-            req = urllib.request.Request(
-                url,
-                data=json.dumps(payload).encode("utf-8"),
-                headers={"Content-Type": "application/json"}
-            )
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-                candidates = data.get("candidates", [])
-                if candidates:
-                    parts = candidates[0].get("content", {}).get("parts", [])
-                    if parts:
-                        return parts[0].get("text", "")
-        except urllib.error.HTTPError as e:
-            err_body = e.read().decode("utf-8", errors="ignore")
-            last_error = f"HTTP {e.code}: {err_body[:200]}"
-            # If 429 (rate limit) or 503 (temporary overload), continue to next key immediately
-            continue
-        except Exception as e:
-            last_error = str(e)
-            continue
             
-    print(f"❌ All {len(keys)} Gemini API keys failed. Last error: {last_error}")
+            try:
+                req = urllib.request.Request(
+                    url,
+                    data=json.dumps(payload).encode("utf-8"),
+                    headers={"Content-Type": "application/json"}
+                )
+                with urllib.request.urlopen(req, timeout=45) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    candidates = data.get("candidates", [])
+                    if candidates:
+                        parts = candidates[0].get("content", {}).get("parts", [])
+                        if parts:
+                            return parts[0].get("text", "")
+            except urllib.error.HTTPError as e:
+                err_body = e.read().decode("utf-8", errors="ignore")
+                last_error = f"HTTP {e.code} ({target_model}): {err_body[:150]}"
+                continue
+            except Exception as e:
+                last_error = f"{e} ({target_model})"
+                continue
+            
+    print(f"❌ All Gemini API keys and models failed. Last error: {last_error}")
     return None
 
 if __name__ == "__main__":

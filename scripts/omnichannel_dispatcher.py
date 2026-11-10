@@ -80,7 +80,8 @@ def publish_facebook_fanpage(photo_url, fb_post, slug):
         post_data = urllib.parse.urlencode({
             'url': photo_url,
             'caption': fb_post,
-            'access_token': page_token
+            'access_token': page_token,
+            'published': 'true'
         }).encode('utf-8')
 
         url = f"https://graph.facebook.com/v20.0/{PAGE_ID}/photos"
@@ -161,8 +162,17 @@ def run_omnichannel_pipeline(topic="focus"):
     
     # Step 3: Insert into website
     insert_ok = insert_article_to_website(article_obj)
-    if insert_ok:
-        git_commit_and_push(f"feat: add new {topic} article '{article_obj['title']}' from YouTube research")
+    if not insert_ok:
+        print("❌ [CRITICAL] Bài viết không vượt qua kiểm toán hoặc không chèn được vào website!")
+        print("⛔ NGẮT MẠCH PIPELINE ĐỂ BẢO VỆ HỆ THỐNG — KHÔNG PHÁT SÓNG LINK CHẾT LÊN TELEGRAM & FACEBOOK!")
+        try:
+            from scripts.telegram_reporter import send_to_hdqt_topic
+            send_to_hdqt_topic(f"⚠️ <b>[CẢNH BÁO FLOW 03]</b> Bài viết '{article_obj['title']}' không vượt qua kiểm toán website! Mây đã tự động ngắt mạch pipeline để bảo vệ kênh.")
+        except:
+            pass
+        return False
+        
+    git_commit_and_push(f"feat: add new {topic} article '{article_obj['title']}' from YouTube research")
         
     # Step 4: Share to Telegram
     print("📢 Sharing to Telegram channel @traicainghiendaily...")
