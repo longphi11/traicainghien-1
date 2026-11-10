@@ -10,52 +10,52 @@ export interface Comment {
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
   "ky-luat-khong-can-gong-thoi-quen-nho-ben-vung-20261111": [
-      {
-          "id": "kylua-1",
-          "name": "Vũ Thu Trang (Dược sĩ lâm sàng • 29 tuổi)",
-          "content": "Bài viết 'Kỷ Luật Không Cần Gồng: Bí Mật Xây Dựng Thói Quen Nhỏ Bền Vững' chạm đúng vào nỗi đau lớn nhất của mình. Bao nhiêu lần tự hứa 'từ ngày mai sẽ dậy 5h sáng, tập thể dục, đọc sách' rồi chỉ được 3 ngày là bỏ cuộc trong cảm giác tội lỗi bóp nghẹt. Giờ mình mới hiểu hạch hạnh nhân sợ sự xáo trộn đột ngột thế nào. Quy tắc 2 phút và Kaizen 1% mỗi ngày giúp mình bắt đầu lại một cách nhẹ nhàng, bình an vô cùng.",
-          "date": "Vừa xong",
-          "likes": 92,
-          "isLongStory": true
-      },
-      {
-          "id": "kylua-2",
-          "name": "Đặng Minh Quân (Project Manager)",
-          "content": "Thay đổi lớn đến từ những dịch chuyển vi mô 1%. Triết lý Atomic Habits và phương pháp Kaizen của Nhật Bản được Trại Cai Nghiện đóng gói cực kỳ thực chiến và gần gũi.",
-          "date": "1 ngày trước",
-          "likes": 53
-      },
-      {
-          "id": "kylua-3",
-          "name": "Phạm Hải Đăng (24 tuổi)",
-          "content": "Đọc xong là mình bắt đầu ngay với việc xỏ giày đi bộ 5 phút thay vì đặt mục tiêu chạy 5km quá sức. Cảm ơn Mây vì những lời vỗ về ấm áp và khoa học!",
-          "date": "2 ngày trước",
-          "likes": 38
-      }
+    {
+      "id": "c_ky_luat_01",
+      "name": "Hoàng Minh Trí",
+      "date": "11/11/2026",
+      "content": "Đọc bài viết mà rơi nước mắt vì thấy đúng hình ảnh của mình những năm qua. Cứ mỗi đợt năm mới hay đầu tháng là lên kế hoạch hoành tráng dậy 5h sáng, chạy bộ, đọc sách... nhưng chưa bao giờ trụ nổi qua ngày thứ 5. Cảm giác bất lực và tự sỉ vả mình vô kỷ luật nó kinh khủng lắm. Nhờ Mây giải thích cơ chế của Amygdala và cạn kiệt ý chí mình mới vỡ lẽ. Đúng là phải đi vòng bằng quy tắc 2 phút và Kaizen 1% chứ không thể gồng cơ bắp ý chí được.",
+      "likes": 28,
+      "isLongStory": true
+    },
+    {
+      "id": "c_ky_luat_02",
+      "name": "Thanh Hằng (Freelancer)",
+      "date": "11/11/2026",
+      "content": "Kỹ thuật Xếp gạch Lego thói quen (Habit Stacking) áp dụng cực kỳ hiệu quả luôn ạ! Em vừa thử gắn việc 'uống nước lọc buổi sáng xong sẽ mở sổ ghi 3 điều biết ơn', không ngờ làm mượt mà không hề thấy ngại. Cảm ơn Trại Cai Nghiện rất nhiều!",
+      "likes": 16
+    },
+    {
+      "id": "c_ky_luat_03",
+      "name": "Trần Tuấn Anh",
+      "date": "11/11/2026",
+      "content": "Công thức 1.01^365 = 37.78 nhìn đơn giản mà thấm thía vô cùng. Hãy bớt ảo tưởng đột phá qua đêm, tập trung làm tốt 1% mỗi ngày là đủ bình an rồi.",
+      "likes": 22
+    }
   ],
   "lam-chu-su-tap-trung-sau-giai-phong-xao-nhang-20261111": [
-      {
-          "id": "lamch-1",
-          "name": "Nguyễn Hoàng Nam (Lập trình viên Backend • 28 tuổi)",
-          "content": "Đọc bài viết 'Làm Chủ Sự Tập Trung Sâu: Nghệ Thuật Giải Phóng Não Bộ Khỏi Xao Nhãng' mà mình thấy như được cứu rỗi tâm trí. Suốt nửa năm nay mình luôn vật lộn với những cơn nhảy tab liên tục, đang code dở là lại ngứa tay bật mạng xã hội lướt vô thức. Đọc xong phân tích của Mây mình mới hiểu não bộ không hề lười mà đang bị ngộ độc siêu kích thích. Mình vừa dọn sạch bàn làm việc và cất điện thoại cách xa 2 mét theo hướng dẫn, cảm giác làm việc sâu trở lại thật nhẹ nhõm!",
-          "date": "Vừa xong",
-          "likes": 86,
-          "isLongStory": true
-      },
-      {
-          "id": "lamch-2",
-          "name": "Trần Thị Mai Phương (Content Strategist)",
-          "content": "Phân tích khoa học thần kinh rất sắc bén và dễ hiểu! Hóa ra cơ chế chai lì thụ thể dopamine chính là thủ phạm khiến người trẻ dễ bị sương mù não. Cảm ơn Trại Cai Nghiện vì góc nhìn nhân văn không hề phán xét.",
-          "date": "1 ngày trước",
-          "likes": 49
-      },
-      {
-          "id": "lamch-3",
-          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
-          "content": "Quy tắc đơn nhiệm 45/10 đã giúp mình hoàn thành xong đồ án tốt nghiệp sau 2 tuần trì hoãn. Bí quyết đúng là giảm ma sát môi trường chứ không gồng mình bằng ý chí thô kệch.",
-          "date": "2 ngày trước",
-          "likes": 34
-      }
+    {
+      "id": "c_tap_trung_01",
+      "name": "Đặng Quốc Bảo (Lập trình viên)",
+      "date": "11/11/2026",
+      "content": "Là một coder mà độ tập trung của mình dạo gần đây tụt dốc thê thảm, cứ gõ được vài dòng code là tay ngứa ngáy bấm Alt+Tab sang mở YouTube Shorts hoặc lướt tin tức. Đầu óc lúc nào cũng lơ mơ, sương mù não đặc quánh. Áp dụng ngay quy tắc 2 mét của bài viết: cất điện thoại ở góc kệ sách cách xa bàn, chỉ sau một buổi sáng mà mình đã giải quyết xong task tồn đọng cả tuần. 20 giây ma sát đứng dậy đi lấy máy thực sự là cứu cánh!",
+      "likes": 34,
+      "isLongStory": true
+    },
+    {
+      "id": "c_tap_trung_02",
+      "name": "Nguyễn Mai Phương",
+      "date": "11/11/2026",
+      "content": "Con số 47 giây chú ý trung bình khiến mình giật mình thức tỉnh! Chúng ta đang để những thuật toán vô thức đánh cắp đi năng lực tư duy sâu mà không hề hay biết. Bài viết phân tích chiếc bập bênh Dopamine của TS Anna Lembke quá xuất sắc và dễ hiểu.",
+      "likes": 19
+    },
+    {
+      "id": "c_tap_trung_03",
+      "name": "Vũ Đình Phong",
+      "date": "11/11/2026",
+      "content": "Kỹ thuật Urge Surfing (lướt sóng cơn thèm) 2 phút thực sự vi diệu. Lúc nãy cơn nghiện bấm máy trỗi dậy, mình ngồi thở sâu 3 nhịp và quan sát, đúng là chỉ 1 phút sau cơn sóng tự động lắng xuống. Cảm ơn bài viết tâm huyết của Mây!",
+      "likes": 25
+    }
   ],
 
   "triet-ly-wabi-sabi-thoat-khoi-bay-hoan-hao-de-song-tron-ven": [

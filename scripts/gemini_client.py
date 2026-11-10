@@ -99,7 +99,7 @@ def generate_content(
         if k not in ordered_keys:
             ordered_keys.append(k)
             
-    models_to_try = [model, "gemini-3.6-flash"]
+    models_to_try = ["gemini-3-flash-preview", "gemini-flash-lite-latest", "gemini-3.5-flash-lite", "gemma-4-26b-a4b-it"]
     
     last_error = None
     for target_model in models_to_try:

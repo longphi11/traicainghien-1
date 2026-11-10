@@ -32,40 +32,58 @@ def slugify(text: str) -> str:
 def get_unique_thumbnail(topic: str = "focus") -> str:
     """
     Dynamically finds an unused, unique, < 120KB WebP artwork from public/images/articles.
-    Ensures 100% compliance with audit_all_articles.js:
+    Ensures 100% compliance with audit_all_articles.js and audit_image_similarity.py:
     - File exists
     - Size <= 122880 bytes (120KB)
-    - File name is not used in src/data/articles.ts
+    - File name does not appear anywhere in src/data/articles.ts
     - Binary MD5 hash does not match ANY thumbnail in src/data/articles.ts
+    - Visual perceptual difference >= 15.0 against all existing non-sach thumbnails
     """
     articles_ts_path = "src/data/articles.ts"
-    used_files = set()
+    existing_content = ""
     used_hashes = set()
-    
+    existing_arrays = []
+
+    try:
+        from PIL import Image
+        import numpy as np
+        has_pil = True
+    except ImportError:
+        has_pil = False
+
     if os.path.exists(articles_ts_path):
         with open(articles_ts_path, "r", encoding="utf-8") as f:
-            for line in f:
-                if '"thumbnail":' in line:
-                    try:
-                        thumb = line.split('"thumbnail":')[1].split('"')[1].strip()
-                        p = os.path.join("public", thumb.lstrip("/"))
-                        used_files.add(os.path.basename(p))
-                        if os.path.exists(p):
-                            with open(p, "rb") as bf:
-                                h = hashlib.md5(bf.read()).hexdigest()
-                                used_hashes.add(h)
-                    except:
-                        pass
+            existing_content = f.read()
+
+        matches = re.findall(r'\{\s*["\']slug["\']:\s*["\']([^"\']+)["\'][\s\S]*?["\']thumbnail["\']:\s*["\']([^"\']+)["\']', existing_content)
+        for slug, thumb in matches:
+            p = os.path.join("public", thumb.lstrip("/"))
+            if os.path.exists(p):
+                try:
+                    with open(p, "rb") as bf:
+                        h = hashlib.md5(bf.read()).hexdigest()
+                        used_hashes.add(h)
+                    if has_pil and not slug.startswith(('review-sach', 'doc-sach', 'doc-cau-chuyen')):
+                        img = Image.open(p).convert('RGB').resize((64, 64))
+                        existing_arrays.append(np.array(img, dtype=float))
+                except:
+                    pass
 
     images_dir = "public/images/articles"
     if not os.path.exists(images_dir):
         return "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp"
 
     candidates = glob.glob(os.path.join(images_dir, "*.webp"))
+    # Sort for deterministic selection
+    candidates.sort()
+
     for cand in candidates:
         fname = os.path.basename(cand)
-        # Skip diagrams/charts
-        if "so-do" in fname or "bieu-do" in fname:
+        # Skip diagrams, infographics, cycles and book mockups
+        if any(skip in fname for skip in ["so-do", "bieu-do", "chu-ky", "infographic", "sach-"]):
+            continue
+        # Skip if filename is already in articles.ts
+        if fname in existing_content:
             continue
         try:
             size = os.path.getsize(cand)
@@ -73,14 +91,24 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
                 continue
             with open(cand, "rb") as bf:
                 h = hashlib.md5(bf.read()).hexdigest()
-            if fname not in used_files and h not in used_hashes:
-                print(f"✅ [THUMBNAIL GATE] Chọn thành công ảnh độc bản: {fname} ({size/1024:.1f}KB, md5: {h[:8]})")
-                return f"/images/articles/{fname}"
-        except:
+            if h in used_hashes:
+                continue
+
+            # Check perceptual visual distance >= 15.0
+            if has_pil and existing_arrays:
+                cand_img = Image.open(cand).convert('RGB').resize((64, 64))
+                cand_arr = np.array(cand_img, dtype=float)
+                min_diff = min(np.mean(np.abs(cand_arr - ex_arr)) for ex_arr in existing_arrays)
+                if min_diff < 15.0:
+                    continue
+
+            print(f"✅ [THUMBNAIL GATE] Chọn thành công ảnh độc bản chuẩn Zen: {fname} ({size/1024:.1f}KB)")
+            return f"/images/articles/{fname}"
+        except Exception:
             pass
 
-    print("⚠️ [THUMBNAIL WARNING] Không tìm thấy ảnh mới chưa dùng trong kho, dùng ảnh mặc định an toàn.")
-    return "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp"
+    print("⚠️ [THUMBNAIL WARNING] Dùng ảnh dự phòng an toàn.")
+    return "/images/articles/dung-flex-doc-sach-trai-cai-nghien.webp"
 
 def generate_article_with_gemini(video_data: Dict[str, Any], topic: str) -> Dict[str, Any]:
     """
@@ -93,8 +121,8 @@ def generate_article_with_gemini(video_data: Dict[str, Any], topic: str) -> Dict
     channel = video_data.get("channel", "YouTube")
     url = video_data.get("url", "")
     transcript = video_data.get("transcript", "")
-    if len(transcript) > 3500:
-        transcript = transcript[:3500] + "..."
+    if len(transcript) > 4000:
+        transcript = transcript[:4000] + "..."
 
     topic_name = "Lấy Lại Sự Tập Trung & Giải Phóng Khỏi Xao Nhãng Số" if topic == "focus" else "Xây Dựng Thói Quen & Kỷ Luật Không Cần Gồng"
     pillar_tag = "LayLaiSuTapTrung" if topic == "focus" else "XayDungThoiQuen"
@@ -102,22 +130,22 @@ def generate_article_with_gemini(video_data: Dict[str, Any], topic: str) -> Dict
     tags = ["#LayLaiSuTapTrung", "#DeepWork", "#SuongMuNao", "#RenLuyenBoNao"] if topic == "focus" else ["#XayDungThoiQuen", "#AtomicHabits", "#Kaizen", "#KyLuatTuThan"]
 
     system_prompt = """Bạn là Mây — AI Co-founder & Tổng biên tập của Trại Cai Nghiện (traicainghien.com).
-Bạn viết bằng phong cách 'Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu' (Street-Smart Academic Storytelling):
-- Thấu cảm, vỗ về, tuyệt đối không phán xét, không đổ lỗi người đọc lười biếng.
-- Giải thích hành vi qua lăng kính khoa học thần kinh (Dopamine Baseline, Amygdala, Prefrontal Cortex, Thói quen nguyên tử).
-- Giọng văn đời thường, gãy gọn, truyền cảm hứng hành động vi mô 1% (Kaizen).
+Bạn viết bằng phong cách độc bản 'Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu' (Street-Smart Academic Storytelling):
+- Trái tim thấu cảm & Không phán xét: Giải phóng 100% cảm giác dằn vặt, mặc cảm tội lỗi (guilt & shame). Xem xao nhãng hay bỏ cuộc là cơ chế đối phó sai lầm trước áp lực, không phải suy đồi đạo đức.
+- Khoa học thần kinh ứng dụng: Giải thích cơ chế não bộ (Dopamine Baseline, thụ thể D2, Amygdala, Prefrontal Cortex, Ultradian Rhythm, Atomic Habits) để độc giả hiểu và thôi tự trách.
+- Ngôn từ đời thường, hình ảnh trần trụi: ngón tay quẹt máy 2h sáng, 20 tab trình duyệt đơ máy, bát phở 30k, chiếc điện thoại úp mặt cách xa 2 mét.
+- Động lực thay đổi vì những người thân yêu: Chỉ ra nỗi đau khi người nghiện xao nhãng làm tổn thương gia đình, và thắp sáng khát vọng trở về phiên bản tươi mới (fresh) đã từng có.
 
 QUY TẮC THÉP VỀ BÀI VIẾT (BẮT BUỘC TUÂN THỦ 100%):
-1. Tiêu đề (clean_title): Độ dài từ 50 đến 65 ký tự tiếng Việt. Hấp dẫn, sâu sắc, không clickbait rẻ tiền.
-2. Nội dung (content): Độ dài từ 1.800 đến 2.400 từ, chia thành 3-4 mục lớn bằng tiêu đề ###.
-3. TUYỆT ĐỐI CẤM: Không dùng khối code (```), không dùng Mermaid diagram, không dùng công thức toán LaTeX ($ hay $$), không dùng ký tự mũi tên LaTeX (\\rightarrow), không dùng ASCII art hay text diagram, không dùng bảng Markdown thô (| :--- |).
-4. KHỐI BẮT BUỘC Ở CUỐI BÀI: Cuối bài (trong 20% cuối) BẮT BUỘC có mục:
-### NHỮNG ĐIỂM CỐT LÕI (KEY TAKEAWAYS)
-- Gồm 3-4 gạch đầu dòng đúc kết cốt lõi.
-- Gạch đầu dòng cuối cùng ghi rõ: * Nguồn tham khảo tri thức: Đúc kết từ video "[Tên video gốc]" của kênh [Tên kênh] ([URL]).
-5. Thời gian đọc (readTime): Đặt là "10 phút đọc" hoặc "11 phút đọc" (tuyệt đối không vượt quá 12 phút)."""
+1. Tiêu đề (clean_title): Độ dài VÀNG từ 50 đến 62 ký tự tiếng Việt (vừa khít 2 dòng trên mobile, không bị ba chấm ...).
+2. Độ dài nội dung (content): BẮT BUỘC ĐẠT TỪ 2.500 ĐẾN 3.200 TỪ (tính theo từ thực tế). Chia thành 4-5 mục lớn bằng tiêu đề ###.
+3. TUYỆT ĐỐI CẤM: Không dùng khối code (```), không dùng Mermaid diagram, không dùng công thức toán LaTeX ($ hay $$), không dùng ký tự mũi tên LaTeX (\\rightarrow), không dùng ASCII art hay text diagram, không dùng bảng Markdown thô (| :--- |). Mọi mũi tên phải dùng unicode sạch '→', công thức viết dạng tự nhiên (1,01³⁶⁵ = 37,78).
+4. KHỐI BẮT BUỘC Ở CUỐI BÀI: 
+- Mục: ### Lời Nhắn Gửi Từ Trại Cai Nghiện (lời tâm tình ấm áp, thấu cảm, không phán xét, hướng tới tình yêu thương gia đình).
+- Mục: ### NHỮNG ĐIỂM CỐT LÕI (KEY TAKEAWAYS) (gồm 4 gạch đầu dòng đúc kết cốt lõi và 1 gạch đầu dòng cuối cùng trích dẫn nguồn video gốc: * Nguồn tham khảo tri thức: Đúc kết từ video "[Tên video gốc]" của kênh [Tên kênh] ([URL])).
+5. Thời gian đọc (readTime): Đặt là "11 phút đọc" hoặc "12 phút đọc" (tuyệt đối không vượt quá 12 phút)."""
 
-    user_prompt = f"""Hãy phân tích video YouTube sau và sản xuất trọn bộ gói nội dung đa kênh:
+    user_prompt = f"""Hãy phân tích video YouTube sau và sản xuất trọn bộ bài viết chuyên sâu đẳng cấp 2.500 từ cho website:
 - Video Title: {title_raw}
 - Kênh: {channel}
 - Link: {url}
@@ -126,10 +154,10 @@ QUY TẮC THÉP VỀ BÀI VIẾT (BẮT BUỘC TUÂN THỦ 100%):
 
 Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm bất kỳ lời dẫn giải nào bên ngoài) với đúng cấu trúc sau:
 {{
-  "clean_title": "Tiêu đề tiếng Việt 50-65 ký tự",
+  "clean_title": "Tiêu đề tiếng Việt 50-62 ký tự",
   "slug_base": "chuoi-slug-khong-dau-kebab-case",
-  "excerpt": "Đoạn mô tả ngắn 1-2 câu sâu sắc chạm nỗi đau độc giả (dưới 200 ký tự)",
-  "content": "Toàn bộ nội dung bài viết Markdown chuẩn...",
+  "excerpt": "Đoạn mô tả ngắn 1-2 câu sâu sắc chạm nỗi đau độc giả (140-160 ký tự)",
+  "content": "Toàn bộ nội dung bài viết Markdown chuẩn 2.500 - 3.200 từ...",
   "telegram_bullets": [
     "Bài học cốt lõi 1 ngắn gọn",
     "Bài học cốt lõi 2 ngắn gọn",
@@ -139,19 +167,18 @@ Hãy trả về DUY NHẤT một chuỗi JSON hợp lệ (không kèm bất kỳ
   "facebook_body": "3-4 đoạn văn kể chuyện dẫn dắt tâm lý, giải thích khoa học và kêu gọi đọc tiếp bài trên web..."
 }}"""
 
-    print(f"🧠 [MÂY AI] Đang gửi yêu cầu tới Gemini AI Pool để viết bài về '{title_raw}'...")
+    print(f"🧠 [MÂY AI] Đang gửi yêu cầu tới Gemini AI Pool để viết bài chuyên sâu 2.500 từ về '{title_raw}'...")
     response_text = generate_content(
         prompt=user_prompt,
         system_instruction=system_prompt,
-        model="gemini-3.5-flash",
+        model="gemini-3-flash-preview",
         temperature=0.7,
-        max_tokens=4096
+        max_tokens=8192
     )
 
     if not response_text:
         raise ValueError("Gemini AI API returned empty response!")
 
-    # Clean JSON markdown fences
     cleaned = response_text.strip()
     if cleaned.startswith("```json"):
         cleaned = cleaned[7:]
@@ -175,105 +202,47 @@ def build_article_from_video(video_data: Dict[str, Any], topic: str = "focus") -
     today_str = datetime.now().strftime("%d/%m/%Y")
     date_slug = datetime.now().strftime("%Y%m%d")
 
-    # Step 1: Generate via Gemini AI with fallback
+    # Step 1: Generate via Gemini AI with strict quality validation
     ai_data = None
     try:
         ai_data = generate_article_with_gemini(video_data, topic)
     except Exception as e:
-        print(f"⚠️ [GEMINI GENERATION NOTE] {e}. Chuyển sang bộ sinh nội dung dự phòng chất lượng cao...")
+        print(f"❌ [GEMINI GENERATION ERROR] {e}")
+        raise RuntimeError(f"Hệ thống AI không thể tạo bài viết đạt chuẩn cho '{title_raw}': {e}. Dừng luồng để bảo vệ chất lượng nội dung!")
 
     # Select unique thumbnail
     thumbnail = get_unique_thumbnail(topic)
 
-    if ai_data:
-        clean_title = ai_data.get("clean_title", "").strip().strip('"')
-        if len(clean_title) < 40 or len(clean_title) > 68:
-            # Normalize title length if needed
-            clean_title = f"{clean_title[:62]}..." if len(clean_title) > 65 else clean_title
+    clean_title = ai_data.get("clean_title", "").strip().strip('"')
+    if len(clean_title) < 40 or len(clean_title) > 65:
+        clean_title = f"{clean_title[:59]}..." if len(clean_title) > 62 else clean_title
 
-        slug_base = ai_data.get("slug_base") or slugify(clean_title)
-        slug = f"{slug_base[:50].strip('-')}-{date_slug}"
-        excerpt = ai_data.get("excerpt", f"Bài học sâu sắc đúc kết từ video của {channel}.")
-        content = ai_data.get("content", "")
-        
-        # Ensure clean content (no LaTeX, no prohibited blocks)
-        content = re.sub(r'```mermaid[\s\S]*?```', '', content)
-        content = re.sub(r'```[\s\S]*?```', '', content)
-        content = content.replace('$\\rightarrow$', '—').replace('\\rightarrow', '—')
-        content = re.sub(r'\$\$[\s\S]*?\$\$', '', content)
-        content = re.sub(r'\$[a-zA-Z0-9\^_\\\{\}\+\-\*\/=]{2,}\$', '', content)
-        content = re.sub(r'\|.*?\|.*?\|\s*\\n\s*\|.*?:---.*?\|', '', content)
+    slug_base = ai_data.get("slug_base") or slugify(clean_title)
+    slug = f"{slug_base[:50].strip('-')}-{date_slug}"
+    excerpt = ai_data.get("excerpt", f"Bài học sâu sắc đúc kết từ video của {channel}.")
+    content = ai_data.get("content", "")
+    
+    # Ensure clean content (no LaTeX, no prohibited blocks)
+    content = re.sub(r'```mermaid[\s\S]*?```', '', content)
+    content = re.sub(r'```[\s\S]*?```', '', content)
+    content = content.replace('$\\rightarrow$', '—').replace('\\rightarrow', '—')
+    content = re.sub(r'\$\$[\s\S]*?\$\$', '', content)
+    content = re.sub(r'\$[a-zA-Z0-9\^_\\\{\}\+\-\*\/=]{2,}\$', '', content)
+    content = re.sub(r'\|.*?\|.*?\|\s*\\n\s*\|.*?:---.*?\|', '', content)
 
-        bullets = ai_data.get("telegram_bullets", [
-            "Não bộ không lười, mà đang bị kiệt quệ bởi kích thích ngắn hạn quá liều.",
-            "Bí quyết kỷ luật đỉnh cao là thiết kế môi trường ít ma sát.",
-            "Kaizen 1% mỗi ngày mang lại sự chuyển hóa bền vững gấp 37 lần sau một năm."
-        ])
-        
-        fb_hook = ai_data.get("facebook_hook", f"BẠN CÓ ĐANG THỰC SỰ LÀM CHỦ TÂM TRÍ MÌNH?")
-        fb_body = ai_data.get("facebook_body", "")
+    # Word count quality check (Must be >= 2000 words)
+    words = len(content.split())
+    if words < 2000:
+        raise ValueError(f"Bài viết chỉ đạt {words} từ (dưới mức tối thiểu 2.000 từ của Trại Cai Nghiện). Hủy xuất bản để bảo vệ chất lượng!")
 
-    else:
-        # High quality dynamic fallback derived from the actual video title
-        clean_title_base = slugify(title_raw).replace('-', ' ').title()
-        if topic == "focus":
-            clean_title = f"Làm Chủ Sự Tập Trung Sâu: Nghệ Thuật Giải Phóng Não Bộ Khỏi Xao Nhãng"
-            slug = f"lam-chu-su-tap-trung-sau-giai-phong-xao-nhang-{date_slug}"
-            excerpt = f"Tập trung không phải là gồng ép ý chí, mà là nghệ thuật làm dịu tâm trí và thiết kế môi trường ít ma sát. Đúc kết từ video của {channel}."
-            bullets = [
-                "Ý chí là tài nguyên hữu hạn, đừng dùng nó để đấu tay đôi với thuật toán.",
-                "Quy tắc 2 mét: Để điện thoại cách xa bàn làm việc giảm 70% cơn thèm lướt máy.",
-                "Nhịp đơn nhiệm 45/10 giúp phục hồi sóng não Alpha và ngăn sương mù não."
-            ]
-            fb_hook = "VÌ SAO CỨ NGỒI VÀO BÀN LÀM VIỆC ĐƯỢC 5 PHÚT LÀ BẠN LẠI VÔ THỨC CẦM ĐIỆN THOẠI?"
-            fb_body = f"""Đã bao giờ bạn bước vào bàn làm việc với một danh sách dài việc quan trọng, nhưng chỉ sau vài phút, ngón tay bạn đã tự động lướt trên màn hình chiếc smartphone?
-
-Bạn không hề lười biếng hay thiếu ý chí. Khi bị ném vào thế giới video ngắn giật dây thần kinh mỗi 3 giây, các thụ thể dopamine trong não buộc phải chai lì để tự vệ, khiến những công việc đòi hỏi sự tĩnh lặng bỗng chốc trở thành cực hình.
-
-Trong video sâu sắc "{title_raw}" từ kênh {channel}, tác giả đã chỉ ra cách tái lập lại sự tập trung đỉnh cao bằng việc thiết kế lại môi trường sống và áp dụng nguyên lý làm việc sâu."""
-        else:
-            clean_title = f"Kỷ Luật Không Cần Gồng: Bí Mật Xây Dựng Thói Quen Nhỏ Bền Vững"
-            slug = f"ky-luat-khong-can-gong-thoi-quen-nho-ben-vung-{date_slug}"
-            excerpt = f"Thay đổi lớn bắt đầu từ những chuyển động 1% mỗi ngày theo triết lý Kaizen. Đúc kết sâu sắc từ nghiên cứu của {channel}."
-            bullets = [
-                "Từ bỏ ảo tưởng đột phá qua đêm, tập trung vào 1% mỗi ngày.",
-                "Quy tắc 2 phút: Hạ thấp rào cản hành động để não bộ không kịp kháng cự.",
-                "Môi trường định hình hành vi: Sắp xếp không gian để thói quen tốt dễ xảy ra nhất."
-            ]
-            fb_hook = "ĐÃ BAO NHIÊU LẦN BẠN TỰ NÓI VỚI MÌNH: 'TỪ NGÀY MAI MÌNH SẼ THAY ĐỔI HOÀN TOÀN!'?"
-            fb_body = f"""Bạn đặt mục tiêu dậy 5h sáng, tập gym 1 tiếng, đọc 30 trang sách. Bạn hừng hực khí thế trong 3 ngày đầu, nhưng đến ngày thứ 4 mệt mỏi, bạn buông xuôi và rơi lại vòng xoáy cũ trong cảm giác tự trách móc.
-
-Bạn thất bại không phải vì yếu đuối, mà vì bạn đang ép não bộ thay đổi quá đột ngột. Hạch hạnh nhân sợ hãi sự xáo trộn lớn và sẽ kích hoạt phản kháng dữ dội.
-
-Đúc kết từ góc nhìn giá trị của video "{title_raw}" ({channel}), bài phân tích hôm nay mang đến cho bạn chìa khóa Kaizen và Thói quen nguyên tử để duy trì kỷ luật nhẹ nhàng, bền bỉ."""
-
-        content = f"""Đã bao giờ bạn tự hỏi vì sao chúng ta luôn biết rất rõ những điều mình nên làm — tập trung làm việc, đọc sách, rèn luyện thân thể — nhưng mỗi khi bắt tay vào thực hiện, tâm trí lại bị kéo giăng bởi vô vàn cơn cám dỗ số?
-
-Trong video sâu sắc mang tên *"{title_raw}"* từ kênh *{channel}*, một góc nhìn giải phóng tâm trí đã được mở ra: **Bạn không hề yếu kém về nghị lực, mà bạn đang đặt bộ não sinh học vào một môi trường được thiết kế tinh vi để khiến con người phải mất tập trung.**
-
----
-
-### 1. Bản Chất Khoa Học Của Sự Xao Nhãng
-
-Não bộ con người tiến hóa để phản ứng nhanh với những kích thích mới lạ trong môi trường sinh tồn. Thế nhưng trong kỷ nguyên công nghiệp màn hình, mỗi thông báo đỏ, mỗi video ngắn 15 giây đều là một chiếc máy đánh bạc dopamine vô thức.
-
-Khi tiếp nhận kích thích liều cao liên tục, não bộ buộc phải kích hoạt cơ chế tự bảo vệ: giảm bớt mật độ các thụ thể dopamine. Hậu quả là ngưỡng kích thích bị đẩy lên rất cao, khiến những việc đòi hỏi sự kiên nhẫn bỗng biến thành một cực hình đầy bứt rứt.
-
----
-
-### 2. Triết Lý Kaizen & Thiết Kế Môi Trường Ít Ma Sát
-
-Thay vì dùng ý chí thô kệch để gồng mình chiến đấu, những người làm chủ thói quen áp dụng hai nguyên lý phương Đông bền vững:
-* **Hạ thấp ma sát hành vi:** Muốn đọc sách, hãy đặt cuốn sách ngay trên gối. Muốn ngưng lướt máy, hãy cất điện thoại cách xa bàn làm việc ít nhất 2 mét.
-* **Chuyển động 1% mỗi ngày:** Không cần bứt phá chấn động trong 24 giờ. Chỉ cần mỗi ngày tốt hơn hôm qua 1%, sau một năm bạn đã tiến bộ gấp 37 lần.
-
----
-
-### NHỮNG ĐIỂM CỐT LÕI (KEY TAKEAWAYS)
-* **Thấu cảm bản thân:** Nhận diện xao nhãng là cơ chế sinh học, không phải sự suy đồi đạo đức hay lười biếng.
-* **Môi trường quyết định hành vi:** Giảm ma sát cho thói quen tốt và tăng ma sát tối đa cho bẫy kích thích rẻ tiền.
-* **Nhất quán hơn cường độ:** Bắt đầu từ những hành động vi mô 2 phút mỗi ngày để vượt qua phản kháng tự nhiên của não bộ.
-* **Nguồn tham khảo tri thức:** Đúc kết từ video *"{title_raw}"* của kênh *{channel}* ({url})."""
+    bullets = ai_data.get("telegram_bullets", [
+        "Không dùng ý chí thô kệch đấu với thuật toán, hãy thiết kế môi trường ít ma sát.",
+        "Quy tắc 2 phút và Kaizen 1% mỗi ngày giúp vượt qua phản kháng tự nhiên của não bộ.",
+        "Sự chuyển hóa bền vững bắt đầu từ lòng tự trắc ẩn và tình yêu thương gia đình."
+    ])
+    
+    fb_hook = ai_data.get("facebook_hook", f"BẠN CÓ ĐANG THỰC SỰ LÀM CHỦ TÂM TRÍ MÌNH?")
+    fb_body = ai_data.get("facebook_body", "")
 
     pillar_tag = "LayLaiSuTapTrung" if topic == "focus" else "XayDungThoiQuen"
     categories = ["LayLaiSuTapTrung", "RenLuyenBoNao"] if topic == "focus" else ["XayDungThoiQuen", "HieuHanhVi"]
