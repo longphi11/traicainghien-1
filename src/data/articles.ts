@@ -21,7 +21,7 @@ const rawArticles: Article[] = [
     "slug": "ky-luat-khong-can-gong-thoi-quen-nho-ben-vung-20261111",
     "title": "Kỷ Luật Không Cần Gồng: Bí Mật Xây Dựng Thói Quen Nhỏ Bền Vững",
     "excerpt": "Thay đổi lớn bắt đầu từ những chuyển động 1% mỗi ngày theo triết lý Kaizen. Đúc kết sâu sắc từ nghiên cứu của Better Version.",
-    "thumbnail": "/images/articles/chung-ta-dang-song-vi-dieu-gi-de-men-du-ky.webp",
+    "thumbnail": "/images/articles/sach-ikigai-di-tim-le-song-trai-cai-nghien.webp",
     "pillar": "Trụ cột 2: Xây dựng thói quen tốt & kỷ luật không cần gồng",
     "pillarTag": "XayDungThoiQuen",
     "categories": [
