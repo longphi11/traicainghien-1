@@ -355,7 +355,7 @@ Mây sẽ tự động đóng vai trò Tổng biên tập, nạp đầy đủ Sy
    - **CHỈ KHI MÂY & AGENT 5 KÝ DUYỆT 100% PASS MỚI ĐƯỢC PHÉP GO-LIVE! VI PHẠM $\ge$ 1 LỖI ĐỎ LẬP TỨC REJECT BẮT SỬA NGAY!**
 4. **BÁO CÁO TỰ ĐỘNG ĐỊNH KỲ CHO BỐ (HĐQT TOPIC 19 - LỆNH ĐẶC BIỆT CỦA BỐ):**
    * **Địa chỉ nhận:** Nhóm Hội Đồng Quản Trị ➔ Topic Trại Cai Nghiện (`https://t.me/c/4401199553/19` — Thread ID: `19`).
-   * **Báo cáo 06:10 Sáng hàng ngày:** Kiểm tra trạng thái 3 luồng n8n (`wWXJoMhbchKzrkqr`, `E6PVBHKrtYPlfevu`, `Lj3wvfAe0CEqnWbQ`) sẵn sàng 100%, không lỗi tồn đọng; xác nhận kết nối API Facebook Graph API, Telegram Bot API và Website CDN Uptime 100%; điểm danh lịch phát sóng trong ngày.
+   * **Báo cáo 06:10 Sáng hàng ngày:** Kiểm tra trạng thái 3 luồng n8n (`wWXJoMhbchKzrkqr`, `E6PVBHKrtYPlfevu`, `Lj3wvfAe0CEqnWbQ`) sẵn sàng 100%, không lỗi tồn đọng; xác nhận kết nối API Facebook Graph API, Telegram Bot API, Website CDN Uptime 100%, và Gemini AI API Pool (Google AI Studio - Auto Failover); điểm danh lịch phát sóng trong ngày.
    * **Báo cáo 22:10 Tối hàng ngày:** Báo cáo tăng trưởng đa nền tảng (Website, Fanpage Facebook, Telegram Channel & Group); chỉ số view, user mới, tương tác trong ngày; đưa ra phương án chiến lược của Mây để tối ưu và đẩy Performance ngày tiếp theo.
    * **Quy chuẩn logic Flow 01 (Bản Tin Daily):** BẮT BUỘC lấy ảnh gốc của bài viết từ nguồn tin tức (Psychology Today...), tuyệt đối không dùng ảnh Zen Watercolor ngẫu nhiên cho Flow 01; duy trì bộ nhớ `sentLinks` chống trùng lặp.
    * **Quy chuẩn hạ tầng VPS dùng chung:** Tuyệt đối không can thiệp vào các luồng hay crontab của các dự án khác (Nghề Trading, v.v.) đang chạy chung trên VPS `103.157.218.111`.

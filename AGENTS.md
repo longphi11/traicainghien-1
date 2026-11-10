@@ -57,10 +57,11 @@
 
 ### 1. 🌅 Báo Cáo Sáng (Đúng 06:10 Sáng hàng ngày - `10 6 * * *`):
 * **Kiểm tra trạng thái 3 luồng n8n:** Quét trực tiếp database SQLite để đảm bảo cả 3 luồng (`wWXJoMhbchKzrkqr`, `E6PVBHKrtYPlfevu`, `Lj3wvfAe0CEqnWbQ`) đều đang ở trạng thái `🟢 ACTIVE = 1`, không có lỗi tồn đọng.
-* **Kiểm tra kết nối API đa kênh:**
+* **Kiểm tra kết nối API đa kênh & AI Pool:**
   * 📘 **Facebook Graph API:** Token Fanpage Trại Cai Nghiện còn sống và hợp lệ 100%.
   * 📢 **Telegram Bot API:** Kết nối phát sóng thông suốt.
   * 🌐 **Website & CDN:** Tải trang `traicainghien.com` Uptime 100%, phản hồi dưới 0.8s.
+  * 🧠 **Gemini AI API Pool:** Quét toàn bộ danh sách key trong pool (Google AI Studio) đảm bảo trạng thái 200 OK và cơ chế xoay vòng Auto Failover luôn sẵn sàng.
 * **Lịch trình phát sóng trong ngày:** Điểm danh 6 mốc giờ chạy (08:30, 10:00, 15:00, 20:30, 21:00, 22:00).
 
 ### 2. 📊 Báo Cáo Tối (Đúng 22:10 Đêm hàng ngày - `10 22 * * *`):

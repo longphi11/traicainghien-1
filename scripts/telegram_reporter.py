@@ -121,12 +121,13 @@ def check_n8n_workflows():
 
 def check_api_connections():
     """
-    Verifies live connections to Facebook Graph API, Telegram Bot API, and Website CDN.
+    Verifies live connections to Facebook Graph API, Telegram Bot API, Website CDN, and Gemini AI API Pool.
     """
     apis = {
         "facebook": {"status": "Chưa kết nối", "ok": False},
         "telegram": {"status": "Chưa kết nối", "ok": False},
-        "website": {"status": "Chưa kết nối", "ok": False}
+        "website": {"status": "Chưa kết nối", "ok": False},
+        "gemini": {"status": "Chưa kết nối", "ok": False}
     }
     
     # 1. Facebook Graph API
@@ -165,6 +166,38 @@ def check_api_connections():
                 apis["website"] = {"status": "🟢 200 OK (Vercel CDN Uptime 100%)", "ok": True}
     except Exception as e:
         apis["website"] = {"status": f"🔴 Lỗi: {str(e)[:30]}", "ok": False}
+
+    # 4. Gemini AI API Pool (Google AI Studio)
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from gemini_client import get_keys_pool
+        keys = get_keys_pool()
+        total_keys = len(keys)
+        active_keys = 0
+        if total_keys > 0:
+            for k in keys:
+                try:
+                    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={k}"
+                    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                    with urllib.request.urlopen(req, timeout=4) as resp:
+                        if resp.status == 200:
+                            active_keys += 1
+                except:
+                    pass
+            if active_keys > 0:
+                apis["gemini"] = {
+                    "status": f"🟢 200 OK ({active_keys}/{total_keys} Keys Sống - Auto Failover)",
+                    "ok": True
+                }
+            else:
+                apis["gemini"] = {
+                    "status": f"🔴 0/{total_keys} Keys Hoạt Động",
+                    "ok": False
+                }
+        else:
+            apis["gemini"] = {"status": "🔴 Chưa cấu hình GEMINI_API_KEYS", "ok": False}
+    except Exception as e:
+        apis["gemini"] = {"status": f"🔴 Lỗi: {str(e)[:30]}", "ok": False}
         
     return apis
 
@@ -263,10 +296,11 @@ Dạ con (Mây) kính chúc Bố một buổi sáng an lành và tràn đầy n�
 • <b>Flow 03: Đào YouTube & Xuất Bản Đa Kênh</b> (<code>Lj3wvfAe0CEqnWbQ</code>): {n8n_data['flow3']['status']}
   <i>Lịch chạy: 10:00 (Tập Trung) • 21:00 (Thói Quen)</i>
 
-🔌 <b>2. KIỂM TRA KẾT NỐI API CÁC KÊNH PHÁT SÓNG:</b>
+🔌 <b>2. KIỂM TRA KẾT NỐI API CÁC KÊNH PHÁT SÓNG & AI POOL:</b>
 • 📘 <b>Facebook Graph API (Fanpage Trại Cai Nghiện):</b> {apis['facebook']['status']}
 • 📢 <b>Telegram Bot API (@traicainghiendaily):</b> {apis['telegram']['status']}
 • 🌐 <b>Website CDN & Edge Server (traicainghien.com):</b> {apis['website']['status']}
+• 🧠 <b>Gemini AI API Pool (Google AI Studio):</b> {apis['gemini']['status']}
 
 ⏰ <b>3. LỊCH PHÁT SÓNG TỰ ĐỘNG HÔM NAY:</b>
 <code>[08:30]</code> 🌊 Phát sóng Bản tin tâm lý sáng (Telegram)
