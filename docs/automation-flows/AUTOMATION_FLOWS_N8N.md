@@ -129,7 +129,7 @@ graph TD
 * **Page Access Token:** Vĩnh viễn không bao giờ hết hạn (`Expires: Never`). Lưu trong `.env.local` biến `FB_PAGE_ACCESS_TOKEN`.
 
 ### Telegram Bot & Channel:
-* **Bot Quản Trị:** `@May_TraiCaiNghien_bot` (`9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs`)
+* **Bot Quản Trị:** `@May_TraiCaiNghien_bot` (Configured via `TELEGRAM_BOT_TOKEN`)
 * **Kênh Phát Sóng:** `@traicainghiendaily` (ID: `-1004488309634`)
 * **Telegram Cá Nhân Của Bố:** `@longphibtc` (ID: `488901419`)
 

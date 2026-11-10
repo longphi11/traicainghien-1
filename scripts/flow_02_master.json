@@ -44,7 +44,7 @@
       {
         "parameters": {
           "method": "POST",
-          "url": "https://api.telegram.org/bot9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs/sendPhoto",
+          "url": "https://api.telegram.org/bot{{TELEGRAM_BOT_TOKEN}}/sendPhoto",
           "sendBody": true,
           "bodyParameters": {
             "parameters": [

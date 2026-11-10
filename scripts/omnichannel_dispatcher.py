@@ -8,9 +8,25 @@ from youtube_content_miner import get_best_video_content, save_processed_id
 from generate_omnichannel_article import build_article_from_video
 from website_article_publisher import insert_article_to_website, git_commit_and_push
 
-BOT_TOKEN = "9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs"
-CHANNEL_ID = "-1004488309634"
-PAGE_ID = "1232949796570940"
+def get_env_variable(var_name):
+    if os.environ.get(var_name):
+        return os.environ.get(var_name)
+    env_paths = [".env.local", "/root/traicainghien/.env.local"]
+    for ep in env_paths:
+        if os.path.exists(ep):
+            try:
+                with open(ep, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.startswith(f"{var_name}="):
+                            return line.split("=", 1)[1].strip('"\'')
+            except:
+                pass
+    return ""
+
+BOT_TOKEN = get_env_variable("TELEGRAM_BOT_TOKEN")
+CHANNEL_ID = get_env_variable("TELEGRAM_CHANNEL_ID") or "-1004488309634"
+PAGE_ID = get_env_variable("FB_PAGE_ID") or "1232949796570940"
 
 def get_page_token():
     env_file = ".env.local"

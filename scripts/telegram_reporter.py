@@ -7,12 +7,6 @@ import urllib.parse
 from datetime import datetime
 import sqlite3
 
-BOT_TOKEN = "9249970693:AAEm8Fm77TROqU81PRhfWThlSqguMMZcfYs"
-ADMIN_CHAT_ID = "488901419" # Bố @longphibtc
-CHANNEL_ID = "-1004488309634" # @traicainghiendaily
-HDQT_GROUP_CHAT_ID = "-1004401199553" # Nhóm Hội Đồng Quản Trị
-HDQT_TOPIC_THREAD_ID = 19 # Topic "Trại Cai Nghiện" (https://t.me/c/4401199553/19)
-
 def get_env_variable(var_name):
     if os.environ.get(var_name):
         return os.environ.get(var_name)
@@ -28,6 +22,12 @@ def get_env_variable(var_name):
             except:
                 pass
     return ""
+
+BOT_TOKEN = get_env_variable("TELEGRAM_BOT_TOKEN")
+ADMIN_CHAT_ID = get_env_variable("TELEGRAM_ADMIN_CHAT_ID") or "488901419" # Bố @longphibtc
+CHANNEL_ID = get_env_variable("TELEGRAM_CHANNEL_ID") or "-1004488309634" # @traicainghiendaily
+HDQT_GROUP_CHAT_ID = get_env_variable("TELEGRAM_HDQT_GROUP_ID") or "-1004401199553" # Nhóm Hội Đồng Quản Trị
+HDQT_TOPIC_THREAD_ID = int(get_env_variable("TELEGRAM_HDQT_TOPIC_ID") or 19) # Topic "Trại Cai Nghiện"
 
 def send_to_hdqt_topic(message):
     """
