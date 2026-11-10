@@ -17,6 +17,30 @@ export interface Article {
 }
 
 const rawArticles: Article[] = [
+  {
+    "slug": "lam-chu-su-tap-trung-sau-giai-phong-xao-nhang-20261111",
+    "title": "Làm Chủ Sự Tập Trung Sâu: Nghệ Thuật Giải Phóng Não Bộ Khỏi Xao Nhãng",
+    "excerpt": "Tập trung không phải là gồng ép ý chí, mà là nghệ thuật làm dịu tâm trí và thiết kế môi trường ít ma sát. Đúc kết từ video của Hieu The Consul.",
+    "thumbnail": "/images/articles/chu-ky-4-giai-doan-flow-trai-cai-nghien.webp",
+    "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
+    "pillarTag": "LayLaiSuTapTrung",
+    "categories": [
+      "LayLaiSuTapTrung",
+      "RenLuyenBoNao"
+    ],
+    "tags": [
+      "#LayLaiSuTapTrung",
+      "#DeepWork",
+      "#RenLuyenBoNao"
+    ],
+    "readTime": "10 phút đọc",
+    "date": "11/11/2026",
+    "author": "Mây — Trại Cai Nghiện",
+    "content": "Đã bao giờ bạn tự hỏi vì sao chúng ta luôn biết rất rõ những điều mình nên làm — tập trung làm việc, đọc sách, rèn luyện thân thể — nhưng mỗi khi bắt tay vào thực hiện, tâm trí lại bị kéo giăng bởi vô vàn cơn cám dỗ số?\n\nTrong video sâu sắc mang tên *\"Brain Rot: How to \"Heal\" Your Brain to Regain Focus & Deep Thinking | Hieu The Consul\"* từ kênh *Hieu The Consul*, một góc nhìn giải phóng tâm trí đã được mở ra: **Bạn không hề yếu kém về nghị lực, mà bạn đang đặt bộ não sinh học vào một môi trường được thiết kế tinh vi để khiến con người phải mất tập trung.**\n\n---\n\n### 1. Bản Chất Khoa Học Của Sự Xao Nhãng\n\nNão bộ con người tiến hóa để phản ứng nhanh với những kích thích mới lạ trong môi trường sinh tồn. Thế nhưng trong kỷ nguyên công nghiệp màn hình, mỗi thông báo đỏ, mỗi video ngắn 15 giây đều là một chiếc máy đánh bạc dopamine vô thức.\n\nKhi tiếp nhận kích thích liều cao liên tục, não bộ buộc phải kích hoạt cơ chế tự bảo vệ: giảm bớt mật độ các thụ thể dopamine. Hậu quả là ngưỡng kích thích bị đẩy lên rất cao, khiến những việc đòi hỏi sự kiên nhẫn bỗng biến thành một cực hình đầy bứt rứt.\n\n---\n\n### 2. Triết Lý Kaizen & Thiết Kế Môi Trường Ít Ma Sát\n\nThay vì dùng ý chí thô kệch để gồng mình chiến đấu, những người làm chủ thói quen áp dụng hai nguyên lý phương Đông bền vững:\n* **Hạ thấp ma sát hành vi:** Muốn đọc sách, hãy đặt cuốn sách ngay trên gối. Muốn ngưng lướt máy, hãy cất điện thoại cách xa bàn làm việc ít nhất 2 mét.\n* **Chuyển động 1% mỗi ngày:** Không cần bứt phá chấn động trong 24 giờ. Chỉ cần mỗi ngày tốt hơn hôm qua 1%, sau một năm bạn đã tiến bộ gấp 37 lần.\n\n---\n\n### NHỮNG ĐIỂM CỐT LÕI (KEY TAKEAWAYS)\n* **Thấu cảm bản thân:** Nhận diện xao nhãng là cơ chế sinh học, không phải sự suy đồi đạo đức hay lười biếng.\n* **Môi trường quyết định hành vi:** Giảm ma sát cho thói quen tốt và tăng ma sát tối đa cho bẫy kích thích rẻ tiền.\n* **Nhất quán hơn cường độ:** Bắt đầu từ những hành động vi mô 2 phút mỗi ngày để vượt qua phản kháng tự nhiên của não bộ.\n* **Nguồn tham khảo tri thức:** Đúc kết từ video *\"Brain Rot: How to \"Heal\" Your Brain to Regain Focus & Deep Thinking | Hieu The Consul\"* của kênh *Hieu The Consul* (https://www.youtube.com/watch?v=EbFTvMD7Lek).",
+    "sources": [
+      "https://www.youtube.com/watch?v=EbFTvMD7Lek"
+    ]
+  },
 
   {
   "slug": "triet-ly-wabi-sabi-thoat-khoi-bay-hoan-hao-de-song-tron-ven",
