@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "ky-luat-khong-can-gong-thoi-quen-nho-ben-vung-20261111": [
+      {
+          "id": "kylua-1",
+          "name": "Vũ Thu Trang (Dược sĩ lâm sàng • 29 tuổi)",
+          "content": "Bài viết 'Kỷ Luật Không Cần Gồng: Bí Mật Xây Dựng Thói Quen Nhỏ Bền Vững' chạm đúng vào nỗi đau lớn nhất của mình. Bao nhiêu lần tự hứa 'từ ngày mai sẽ dậy 5h sáng, tập thể dục, đọc sách' rồi chỉ được 3 ngày là bỏ cuộc trong cảm giác tội lỗi bóp nghẹt. Giờ mình mới hiểu hạch hạnh nhân sợ sự xáo trộn đột ngột thế nào. Quy tắc 2 phút và Kaizen 1% mỗi ngày giúp mình bắt đầu lại một cách nhẹ nhàng, bình an vô cùng.",
+          "date": "Vừa xong",
+          "likes": 92,
+          "isLongStory": true
+      },
+      {
+          "id": "kylua-2",
+          "name": "Đặng Minh Quân (Project Manager)",
+          "content": "Thay đổi lớn đến từ những dịch chuyển vi mô 1%. Triết lý Atomic Habits và phương pháp Kaizen của Nhật Bản được Trại Cai Nghiện đóng gói cực kỳ thực chiến và gần gũi.",
+          "date": "1 ngày trước",
+          "likes": 53
+      },
+      {
+          "id": "kylua-3",
+          "name": "Phạm Hải Đăng (24 tuổi)",
+          "content": "Đọc xong là mình bắt đầu ngay với việc xỏ giày đi bộ 5 phút thay vì đặt mục tiêu chạy 5km quá sức. Cảm ơn Mây vì những lời vỗ về ấm áp và khoa học!",
+          "date": "2 ngày trước",
+          "likes": 38
+      }
+  ],
   "lam-chu-su-tap-trung-sau-giai-phong-xao-nhang-20261111": [
       {
           "id": "lamch-1",
