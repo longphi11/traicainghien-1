@@ -65,7 +65,7 @@ class PublisherHandler(BaseHTTPRequestHandler):
                 cwd="/root/traicainghien",
                 capture_output=True,
                 text=True,
-                timeout=180
+                timeout=300
             )
             
             output = proc.stdout
@@ -105,7 +105,7 @@ class PublisherHandler(BaseHTTPRequestHandler):
             self.send_response(504)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"status": "error", "message": "Execution timed out (180s)"}).encode())
+            self.wfile.write(json.dumps({"status": "error", "message": "Execution timed out (300s)"}).encode())
         except Exception as e:
             self.send_response(500)
             self.send_header("Content-Type", "application/json")

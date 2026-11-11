@@ -88,7 +88,11 @@ nodes = [
                 "interval": [
                     {
                         "field": "cronExpression",
-                        "expression": "30 8,15,20 * * *"
+                        "expression": "30 8,20 * * *"
+                    },
+                    {
+                        "field": "cronExpression",
+                        "expression": "0 15 * * *"
                     }
                 ]
             }

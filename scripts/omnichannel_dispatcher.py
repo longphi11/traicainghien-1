@@ -2,7 +2,9 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 import os
 import json
+import time
 import urllib.request
+import urllib.error
 import urllib.parse
 from youtube_content_miner import get_best_video_content, save_processed_id
 from generate_omnichannel_article import build_article_from_video
@@ -37,32 +39,39 @@ def get_page_token():
                     return line.split("=")[1].strip()
     return os.environ.get("FB_PAGE_ACCESS_TOKEN", "")
 
-def send_telegram_announcement(photo_url, caption):
+def send_telegram_announcement(photo_url, caption, attempts=2):
     """
-    Sends photo with caption to Telegram channel.
+    Sends photo with caption to Telegram channel (thu lai 1 lan neu loi mang).
     """
-    try:
-        if photo_url.startswith("/"):
-            photo_url = "https://traicainghien.com" + photo_url
-            
-        post_data = urllib.parse.urlencode({
-            'chat_id': CHANNEL_ID,
-            'photo': photo_url,
-            'caption': caption,
-            'parse_mode': 'HTML'
-        }).encode('utf-8')
+    if photo_url.startswith("/"):
+        photo_url = "https://traicainghien.com" + photo_url
 
-        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
-        req = urllib.request.Request(url, data=post_data, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            res = json.loads(resp.read().decode())
-            print("Telegram post published successfully:", res.get("ok"))
-            return True
-    except Exception as e:
-        print("Telegram broadcast error:", e)
-        return False
+    last_err = None
+    for attempt in range(1, attempts + 1):
+        try:
+            post_data = urllib.parse.urlencode({
+                'chat_id': CHANNEL_ID,
+                'photo': photo_url,
+                'caption': caption,
+                'parse_mode': 'HTML'
+            }).encode('utf-8')
 
-def publish_facebook_fanpage(photo_url, fb_post, slug):
+            url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
+            req = urllib.request.Request(url, data=post_data, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=25) as resp:
+                res = json.loads(resp.read().decode())
+                print("Telegram post published successfully:", res.get("ok"))
+                return True
+        except Exception as e:
+            last_err = e
+            print(f"Telegram broadcast error (lan {attempt}/{attempts}):", e)
+            if attempt < attempts:
+                time.sleep(5)
+
+    print("Telegram broadcast FAILED:", last_err)
+    return False
+
+def publish_facebook_fanpage(photo_url, fb_post, slug, attempts=3):
     """
     Publishes photo post directly to Facebook Fanpage with narrative caption & first comment.
     """
@@ -75,40 +84,54 @@ def publish_facebook_fanpage(photo_url, fb_post, slug):
         photo_url = "https://traicainghien.com" + photo_url
         
     article_url = f"https://traicainghien.com/bai-viet/{slug}"
-    
-    try:
-        post_data = urllib.parse.urlencode({
-            'url': photo_url,
-            'caption': fb_post,
-            'access_token': page_token,
-            'published': 'true'
-        }).encode('utf-8')
 
-        url = f"https://graph.facebook.com/v20.0/{PAGE_ID}/photos"
-        req = urllib.request.Request(url, data=post_data, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            res = json.loads(resp.read().decode())
-            post_id = res.get("post_id") or res.get("id")
-            print(f"✅ Facebook Photo Post SUCCESS! Post ID: {post_id}")
-            
-            # Pinned First Comment
-            comment_data = urllib.parse.urlencode({
-                'message': f"📖 Bạn có thể đọc bài viết đầy đủ và xem các bước thực hành chi tiết tại: {article_url}\nTham gia kênh Telegram của chúng mình để nhận lời nhắc mỗi ngày nhé: https://t.me/traicainghiendaily",
-                'access_token': page_token
+    last_err = None
+    for attempt in range(1, attempts + 1):
+        try:
+            post_data = urllib.parse.urlencode({
+                'url': photo_url,
+                'caption': fb_post,
+                'access_token': page_token,
+                'published': 'true'
             }).encode('utf-8')
-            comment_url = f"https://graph.facebook.com/v20.0/{post_id}/comments"
-            req_c = urllib.request.Request(comment_url, data=comment_data, headers={'User-Agent': 'Mozilla/5.0'})
+
+            url = f"https://graph.facebook.com/v20.0/{PAGE_ID}/photos"
+            req = urllib.request.Request(url, data=post_data, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                res = json.loads(resp.read().decode())
+                post_id = res.get("post_id") or res.get("id")
+                print(f"✅ Facebook Photo Post SUCCESS! Post ID: {post_id} (lan {attempt}/{attempts})")
+
+                # Pinned First Comment
+                comment_data = urllib.parse.urlencode({
+                    'message': f"📖 Bạn có thể đọc bài viết đầy đủ và xem các bước thực hành chi tiết tại: {article_url}\nTham gia kênh Telegram của chúng mình để nhận lời nhắc mỗi ngày nhé: https://t.me/traicainghiendaily",
+                    'access_token': page_token
+                }).encode('utf-8')
+                comment_url = f"https://graph.facebook.com/v20.0/{post_id}/comments"
+                req_c = urllib.request.Request(comment_url, data=comment_data, headers={'User-Agent': 'Mozilla/5.0'})
+                try:
+                    with urllib.request.urlopen(req_c, timeout=15) as resp_c:
+                        res_c = json.loads(resp_c.read().decode())
+                        print("✅ Pinned First Comment SUCCESS! Comment ID:", res_c.get("id"))
+                except Exception as ce:
+                    print("Comment note:", ce)
+
+                return post_id
+        except urllib.error.HTTPError as e:
             try:
-                with urllib.request.urlopen(req_c, timeout=10) as resp_c:
-                    res_c = json.loads(resp_c.read().decode())
-                    print("✅ Pinned First Comment SUCCESS! Comment ID:", res_c.get("id"))
-            except Exception as ce:
-                print("Comment note:", ce)
-                
-            return post_id
-    except Exception as e:
-        print("❌ Facebook publish error:", e)
-        return None
+                body = e.read().decode()[:300]
+            except Exception:
+                body = ''
+            last_err = f"HTTP {e.code} {body}"
+            print(f"❌ Facebook publish error (lan {attempt}/{attempts}): {last_err}")
+        except Exception as e:
+            last_err = e
+            print(f"❌ Facebook publish error (lan {attempt}/{attempts}):", e)
+        if attempt < attempts:
+            time.sleep(5 * attempt)
+
+    print("❌ Facebook publish FAILED sau", attempts, "lan thu:", last_err)
+    return None
 
 def save_facebook_post_queue(fb_post, slug):
     queue_file = "scripts/facebook_pending_posts.json"
