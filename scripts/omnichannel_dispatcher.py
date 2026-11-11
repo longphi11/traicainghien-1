@@ -215,13 +215,13 @@ def run_omnichannel_pipeline(topic="focus"):
     # Step 6: Mark video as processed
     save_processed_id(video_data["id"])
     
-    # Step 7: Send private Telegram report to Bố
-    try:
-        from scripts.telegram_reporter import report_omnichannel_success, report_system_error
-        report_omnichannel_success(topic, video_data["title"], slug, fb_post_id or "Chờ đồng bộ")
-        print("📨 Sent success report to Bố on Telegram!")
-    except Exception as re:
-        print("Report note:", re)
+    # Step 7: Tổng kết ra log.
+    # KHÔNG gửi Telegram riêng ở đây: node "Soạn Báo Cáo" của Flow 03 đã gửi
+    # báo cáo cho Bố (kèm trạng thái Facebook), gửi thêm sẽ bị trùng 2 tin.
+    print(
+        f"📋 TỔNG KẾT | topic={topic} | slug={slug} | video={video_data['id']} | "
+        f"facebook={'✅ ' + str(fb_post_id) if fb_post_id else '⚠️ vào hàng đợi'}"
+    )
 
     print(f"🎉 PIPELINE COMPLETED SUCCESSFULLY FOR TOPIC: {topic.upper()}!")
     return True

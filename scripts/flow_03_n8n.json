@@ -1,6 +1,8 @@
 [
   {
+    "id": "Lj3wvfAe0CEqnWbQ",
     "name": "Flow 03: Đào YouTube & Xuất Bản Đa Kênh",
+    "active": true,
     "nodes": [
       {
         "parameters": {
@@ -43,7 +45,7 @@
           "specifyBody": "json",
           "jsonBody": "={\n  \"topic\": \"{{ $json.topic }}\"\n}",
           "options": {
-            "timeout": 180000
+            "timeout": 300000
           }
         },
         "type": "n8n-nodes-base.httpRequest",
@@ -57,7 +59,7 @@
       },
       {
         "parameters": {
-          "jsCode": "const res = $input.first().json;\nconst topicData = $('Xác Định Chủ Đề (Focus/Habit)').first().json;\n\nconst isSuccess = res.status === 'success';\nconst statusIcon = isSuccess ? '✅ THÀNH CÔNG' : '⚠️ CẦN KIỂM TRA';\nconst webUrl = res.website_url || 'https://traicainghien.com/bai-viet';\n\nlet msg = `🚀 <b>MÂY N8N — FLOW 03 ĐÃ XUẤT BẢN THÀNH CÔNG!</b>\\n\\n`;\nmsg += `📌 <b>Trạng thái:</b> ${statusIcon}\\n`;\nmsg += `🏷 <b>Chủ đề:</b> [${topicData.topicName}]\\n`;\nmsg += `🌐 <b>Website:</b> <a href=\"${webUrl}\">${webUrl}</a>\\n`;\nmsg += `📘 <b>Fanpage:</b> <a href=\"https://facebook.com/traicainghien\">Trại Cai Nghiện Fanpage</a>\\n`;\nmsg += `📢 <b>Telegram Channel:</b> @traicainghiendaily\\n\\n`;\nmsg += `🌱 <i>Bộ máy tự động n8n đã hoàn tất toàn bộ chu trình cào video, viết bài, deploy web và phát sóng đa kênh!</i>`;\n\nreturn [{\n  json: {\n    chat_id: '488901419',\n    text: msg,\n    parse_mode: 'HTML'\n  }\n}];"
+          "jsCode": "const res = $input.first().json;\nconst topicData = $('Xác Định Chủ Đề (Focus/Habit)').first().json;\n\nconst rawOut = String(res.stdout_snippet || '') + '\\n' + String(res.stderr_snippet || '');\nconst auditFailed = /LỖI KIỂM TOÁN|THẤT LẠC BÀI VIẾT|Đã hoàn tác|TỪ CHỐI BUILD|TỪ CHỐI DEPLOY/i.test(rawOut);\nconst isSuccess = res.status === 'success' && Number(res.returncode) === 0 && !auditFailed;\n\nconst esc = (s) => String(s)\n  .replace(/[\\u0000-\\u0008\\u000B\\u000C\\u000E-\\u001F]/g, ' ')\n  .replace(/&/g, '&amp;')\n  .replace(/</g, '&lt;')\n  .replace(/>/g, '&gt;');\n\nconst webUrl = res.website_url || 'https://traicainghien.com/bai-viet';\n\nlet msg = isSuccess\n  ? `🚀 <b>MÂY N8N — FLOW 03 ĐÃ XUẤT BẢN THÀNH CÔNG!</b>\\n\\n`\n  : `⚠️ <b>MÂY N8N — FLOW 03 CHƯA XUẤT BẢN ĐƯỢC BÀI NÀO</b>\\n\\n`;\n\nmsg += `📌 <b>Trạng thái:</b> ${isSuccess ? '✅ THÀNH CÔNG' : '⚠️ CẦN BỐ KIỂM TRA'}\\n`;\nmsg += `🏷 <b>Chủ đề:</b> [${esc(topicData.topicName)}]\\n`;\nmsg += `🌐 <b>Website:</b> ${esc(webUrl)}\\n`;\nconst fbId = String(res.facebook_post_id || '');\nconst fbLine = (fbId && fbId !== 'FAILED')\n  ? `📘 <b>Fanpage:</b> ✅ Đã đăng — <a href=\"https://www.facebook.com/traicainghienvn2026\">facebook.com/traicainghienvn2026</a>\\n`\n  : (fbId === 'FAILED'\n     ? `📘 <b>Fanpage:</b> ⚠️ Đăng lỗi — bài đã vào hàng đợi, Mây sẽ đăng lại\\n`\n     : `📘 <b>Fanpage:</b> <a href=\"https://www.facebook.com/traicainghienvn2026\">facebook.com/traicainghienvn2026</a>\\n`);\nmsg += fbLine;\nmsg += `📢 <b>Telegram Channel:</b> @traicainghiendaily\\n`;\n\nif (!isSuccess) {\n  const tail = rawOut.split('\\n').map(l => l.trim()).filter(Boolean).slice(-8).join('\\n').slice(0, 600);\n  msg += `\\n🧾 <b>Nhật ký lỗi (rút gọn):</b>\\n<pre>${esc(tail)}</pre>\\n`;\n  msg += `\\n👉 <i>Mây đã giữ nguyên bản cũ trên website, chưa deploy bản lỗi.</i>`;\n} else {\n  msg += `\\n🌱 <i>Bộ máy tự động n8n đã hoàn tất toàn bộ chu trình cào video, viết bài, deploy web và phát sóng đa kênh!</i>`;\n}\n\nreturn [{\n  json: {\n    chat_id: '488901419',\n    text: msg,\n    parse_mode: 'HTML'\n  }\n}];\n"
         },
         "type": "n8n-nodes-base.code",
         "typeVersion": 2,
@@ -71,10 +73,10 @@
       {
         "parameters": {
           "method": "POST",
-          "url": "https://api.telegram.org/bot{{TELEGRAM_BOT_TOKEN}}/sendMessage",
+          "url": "https://api.telegram.org/bot9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q/sendMessage",
           "sendBody": true,
           "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $json.chat_id }}\",\n  \"text\": \"{{ $json.text }}\",\n  \"parse_mode\": \"HTML\"\n}",
+          "jsonBody": "={{ JSON.stringify({ chat_id: $json.chat_id, text: $json.text, parse_mode: 'HTML' }) }}",
           "options": {}
         },
         "type": "n8n-nodes-base.httpRequest",
@@ -133,7 +135,6 @@
         ]
       }
     },
-    "active": true,
     "settings": {
       "executionOrder": "v1",
       "timezone": "Asia/Ho_Chi_Minh"
