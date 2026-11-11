@@ -140,6 +140,25 @@ SEEDING_ACTIONS = [
 # Nhãn thời gian đa dạng
 SEEDING_DATES = ["Vừa xong", "2 giờ trước", "Hôm qua", "1 ngày trước", "2 ngày trước", "3 ngày trước"]
 
+# Câu dẫn cho comment 2 và 3 - nhân với 12 nhận định / 12 hành động
+# để mỗi bài có hàng trăm biến thể, không bao giờ cạn tổ hợp
+SEEDING_LEADS = [
+    "Mình đọc chậm nhất ở phần",
+    "Chỗ mình gạch chân là đoạn",
+    "Mình dừng lại lâu nhất ở phần",
+    "Đoạn mình thấy đắt giá nhất là phần",
+    "Mình đã đọc lại hai lần phần",
+    "Mình gửi cho đứa bạn đúng đoạn",
+    "Cái mình thích là cách bài nói về",
+    "Mình thấy nhẹ người nhất khi đọc phần",
+    "Có một chỗ mình thấy như được gọi tên, đó là phần",
+    "Mình vừa đọc to đoạn này cho vợ nghe, phần",
+    "Thứ mình cần nhất hôm nay là đoạn",
+    "Mình đã chụp màn hình lại phần",
+    "Cái này mình sẽ kể lại với học trò, nhất là phần",
+    "Mình đọc lúc nửa đêm nên nhớ nhất phần",
+]
+
 
 def _seeding_pick(items, slug, salt, slot):
     """Chọn mục theo hash(slug + salt + slot) để ổn định nhưng khác nhau giữa các bài."""
@@ -182,6 +201,8 @@ def _build_comment_set(article_obj, salt):
     opener = _seeding_pick(SEEDING_OPENERS, slug, salt, "open")
     insight = _seeding_pick(SEEDING_INSIGHTS, slug, salt, "insight")
     action = _seeding_pick(SEEDING_ACTIONS, slug, salt, "action")
+    lead2 = _seeding_pick(SEEDING_LEADS, slug, salt, "lead2")
+    lead3 = _seeding_pick(SEEDING_LEADS, slug, salt, "lead3")
 
     base = int(hashlib.sha256(f"{slug}|{salt}".encode("utf-8")).hexdigest(), 16)
     n = len(SEEDING_PERSONAS)
@@ -211,14 +232,14 @@ def _build_comment_set(article_obj, salt):
     c2 = {
         "id": f"{prefix}-2",
         "name": p2,
-        "content": f"Mình thích nhất đoạn nói về '{topic}'. {insight}",
+        "content": f"{lead2} '{topic}'. {insight}",
         "date": d2,
         "likes": 18 + (base // 7) % 60,
     }
     c3 = {
         "id": f"{prefix}-3",
         "name": p3,
-        "content": f"Đọc xong phần '{topic}' là mình làm luôn, không chờ có động lực: {action}.",
+        "content": f"{lead3} '{topic}'. Mình làm luôn, không chờ có động lực: {action}.",
         "date": d3,
         "likes": 12 + (base // 11) % 50,
     }
@@ -232,7 +253,7 @@ def generate_seeding_comments(article_obj, existing_normalized=None):
     dùng để đảm bảo không bao giờ trùng y nguyên với bài cũ.
     """
     existing = existing_normalized or set()
-    for salt in range(0, 200):
+    for salt in range(0, 400):
         group = _build_comment_set(article_obj, salt)
         norms = [_normalize_comment(c["content"]) for c in group]
         if len(set(norms)) != 3:
@@ -241,7 +262,7 @@ def generate_seeding_comments(article_obj, existing_normalized=None):
             continue
         return group
     raise RuntimeError(
-        f"Không sinh được bộ bình luận độc bản cho '{article_obj['slug']}' sau 200 lần thử"
+        f"Không sinh được bộ bình luận độc bản cho '{article_obj['slug']}' sau 400 lần thử"
     )
 
 def _extract_existing_comment_texts(content):
