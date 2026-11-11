@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "cai-nghien-brain-rot-chua-lanh-bo-nao-20261111": [
+      {
+          "id": "caing-1",
+          "name": "Nguyễn Hoàng Nam (Lập trình viên Backend • 28 tuổi)",
+          "content": "Đọc bài viết 'Cai nghiện 'Brain Rot': Chữa lành bộ não để lấy lại tư duy ...' mà mình thấy như được cứu rỗi tâm trí. Suốt nửa năm nay mình luôn vật lộn với những cơn nhảy tab liên tục, đang code dở là lại ngứa tay bật mạng xã hội lướt vô thức. Đọc xong phân tích của Mây mình mới hiểu não bộ không hề lười mà đang bị ngộ độc siêu kích thích. Mình vừa dọn sạch bàn làm việc và cất điện thoại cách xa 2 mét theo hướng dẫn, cảm giác làm việc sâu trở lại thật nhẹ nhõm!",
+          "date": "Vừa xong",
+          "likes": 86,
+          "isLongStory": true
+      },
+      {
+          "id": "caing-2",
+          "name": "Trần Thị Mai Phương (Content Strategist)",
+          "content": "Phân tích khoa học thần kinh rất sắc bén và dễ hiểu! Hóa ra cơ chế chai lì thụ thể dopamine chính là thủ phạm khiến người trẻ dễ bị sương mù não. Cảm ơn Trại Cai Nghiện vì góc nhìn nhân văn không hề phán xét.",
+          "date": "1 ngày trước",
+          "likes": 49
+      },
+      {
+          "id": "caing-3",
+          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
+          "content": "Quy tắc đơn nhiệm 45/10 đã giúp mình hoàn thành xong đồ án tốt nghiệp sau 2 tuần trì hoãn. Bí quyết đúng là giảm ma sát môi trường chứ không gồng mình bằng ý chí thô kệch.",
+          "date": "2 ngày trước",
+          "likes": 34
+      }
+  ],
   "ky-luat-khong-can-gong-thoi-quen-nho-ben-vung-20261111": [
     {
       "id": "c_ky_luat_01",
