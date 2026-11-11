@@ -68,7 +68,7 @@ Bạn đã nỗ lực hết mình cho cả một ngày dài rồi. Mọi áp l�
 
 ======
 🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>
-<a href="https://traicainghien.com">Website</a> | <a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm</a> | <a href="https://facebook.com/traicainghien">Fanpage</a>
+<a href="https://traicainghien.com">Website</a> | <a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm</a> | <a href="https://www.facebook.com/traicainghienvn2026">Fanpage</a>
 ```
 
 #### Node 3: `Phát Sóng Telegram Channel`

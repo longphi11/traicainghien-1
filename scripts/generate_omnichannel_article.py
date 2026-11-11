@@ -280,7 +280,7 @@ def build_article_from_video(video_data: Dict[str, Any], topic: str = "focus") -
 
 ======
 🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>
-<a href="https://traicainghien.com">Website</a> | <a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm</a> | <a href="https://facebook.com/traicainghien">Fanpage</a>"""
+<a href="https://traicainghien.com">Website</a> | <a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm</a> | <a href="https://www.facebook.com/traicainghienvn2026">Fanpage</a>"""
 
     # Facebook Post
     fb_post = f"""{fb_hook}

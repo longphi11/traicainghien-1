@@ -181,7 +181,13 @@ def run_omnichannel_pipeline(topic="focus"):
     # Step 5: Publish Photo Post to Facebook Fanpage
     print("📱 Publishing Photo Post to Facebook Fanpage...")
     fb_post_id = publish_facebook_fanpage(article_obj["thumbnail"], fb_post, slug)
-    save_facebook_post_queue(fb_post, slug)
+    if fb_post_id:
+        # Tin hieu cho bridge/n8n biet Facebook da dang thanh cong
+        print(f"FB_POST_ID:{fb_post_id}")
+    else:
+        print("FB_POST_ID:FAILED")
+        # Chi xep vao hang doi khi dang that bai, de con dang lai sau
+        save_facebook_post_queue(fb_post, slug)
     
     # Step 6: Mark video as processed
     save_processed_id(video_data["id"])
@@ -203,4 +209,6 @@ if __name__ == "__main__":
     parser.add_argument("--topic", default="focus", choices=["focus", "habit"])
     args = parser.parse_args()
     
-    run_omnichannel_pipeline(args.topic)
+    ok = run_omnichannel_pipeline(args.topic)
+    # Bao dung ma loi cho bridge/n8n: 0 = thanh cong, 1 = that bai
+    sys.exit(0 if ok else 1)

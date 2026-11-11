@@ -79,11 +79,19 @@ class PublisherHandler(BaseHTTPRequestHandler):
                     website_url = line.strip().split()[-1]
                     break
 
+            # Trang thai dang bai Facebook (FB_POST_ID:<id> hoac FAILED)
+            facebook_post_id = ""
+            for line in output.splitlines():
+                if line.startswith("FB_POST_ID:"):
+                    facebook_post_id = line.split(":", 1)[1].strip()
+                    break
+
             response_data = {
                 "status": "success" if returncode == 0 else "error",
                 "returncode": returncode,
                 "topic": topic,
                 "website_url": website_url,
+                "facebook_post_id": facebook_post_id,
                 "stdout_snippet": output[-800:] if output else "",
                 "stderr_snippet": err_output[-400:] if err_output else ""
             }
