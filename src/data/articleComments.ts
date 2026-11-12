@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "thoat-khoi-brain-rot-lay-lai-su-tap-trung-dinh-cao-20261112": [
+      {
+          "id": "thoat-1",
+          "name": "Phan Anh Tú (Chủ tiệm cà phê nhỏ)",
+          "content": "Đọc bài 'Thoát khỏi Brain Rot: Cách lấy lại sự tập trung đỉnh cao' xong, mình hơi xấu hổ vì đã tự trách mình quá nhiều. Mình nhận ra mình không nghiện điện thoại, mình sợ khoảng lặng. Cứ rảnh hai giây là phải có cái gì đó chạy trong tai. Bài viết gọi đúng tên nỗi sợ đó mà không mắng mình một câu.",
+          "date": "2 giờ trước",
+          "likes": 71,
+          "isLongStory": true
+      },
+      {
+          "id": "thoat-2",
+          "name": "Bùi Thanh Hà (Mẹ hai con • 33 tuổi)",
+          "content": "Mình thấy nhẹ người nhất khi đọc phần 'Cách lấy lại sự tập trung đỉnh cao'. Cái hay là bài không bảo mình phải mạnh mẽ hơn, chỉ bảo mình đổi cách sắp xếp.",
+          "date": "Vừa xong",
+          "likes": 69
+      },
+      {
+          "id": "thoat-3",
+          "name": "Nguyễn Diệu Linh (Sinh viên năm hai)",
+          "content": "Mình dừng lại lâu nhất ở phần 'Cách lấy lại sự tập trung đỉnh cao'. Mình làm luôn, không chờ có động lực: đóng hết tab không dùng, chỉ để lại ba tab đang làm.",
+          "date": "Vừa xong",
+          "likes": 24
+      }
+  ],
   "ky-luat-khong-can-gong-atomic-habits-20261111": [
       {
           "id": "kylua-1",
