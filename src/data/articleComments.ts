@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "van-may-an-trong-thoi-quen-atomic-habits-20261112": [
+      {
+          "id": "vanma-1",
+          "name": "Phạm Hải Đăng (Nhân viên kinh doanh • 24 tuổi)",
+          "content": "Đọc bài 'Vận may ẩn trong thói quen: Kỷ luật không gồng từ Atomic Habits' xong, mình thấy được thở ra. Mình là nhân viên kinh doanh, tối nào cũng về muộn. Mình bỏ luôn mục tiêu tập gym ba buổi một tuần và thay bằng xỏ giày ra khỏi cửa một lần. Hai tuần nay làm được, và tự nhiên đi bộ luôn.",
+          "date": "2 giờ trước",
+          "likes": 78,
+          "isLongStory": true
+      },
+      {
+          "id": "vanma-2",
+          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
+          "content": "Cái mình thích là cách bài nói về 'Kỷ luật không gồng từ Atomic Habits'. Mình thích chỗ tác giả tự nhận mình cũng từng vấp, không đứng trên cao giảng.",
+          "date": "Hôm qua",
+          "likes": 67
+      },
+      {
+          "id": "vanma-3",
+          "name": "Nguyễn Hoàng Nam (Lập trình viên Backend • 28 tuổi)",
+          "content": "Mình đã chụp màn hình lại phần 'Kỷ luật không gồng từ Atomic Habits'. Mình làm luôn, không chờ có động lực: đi bộ mười phút sau bữa tối, không mang tai nghe.",
+          "date": "Hôm qua",
+          "likes": 60
+      }
+  ],
   "thoat-khoi-brain-rot-lay-lai-su-tap-trung-dinh-cao-20261112": [
       {
           "id": "thoat-1",
