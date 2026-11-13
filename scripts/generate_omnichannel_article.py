@@ -29,15 +29,22 @@ def slugify(text: str) -> str:
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
 
+class NoUniqueThumbnailError(RuntimeError):
+    """Khong con tac pham doc ban nao dat chuan -> phai dung pipeline, khong duoc tai su dung anh cu."""
+
+
 def get_unique_thumbnail(topic: str = "focus") -> str:
     """
-    Dynamically finds an unused, unique, < 120KB WebP artwork from public/images/articles.
-    Ensures 100% compliance with audit_all_articles.js and audit_image_similarity.py:
-    - File exists
-    - Size <= 122880 bytes (120KB)
-    - File name does not appear anywhere in src/data/articles.ts
-    - Binary MD5 hash does not match ANY thumbnail in src/data/articles.ts
-    - Visual perceptual difference >= 15.0 against all existing non-sach thumbnails
+    Chon 1 tac pham doc ban < 120KB tu public/images/articles.
+
+    FAIL-CLOSED (Lenh cua Bo, sua ngay 13/11/2026):
+    - NEU THIEU Pillow/numpy -> NEM LOI NGAY, khong duoc bo qua kiem toan thị giác.
+      (Day chinh la lo hong tung de 3 cap thumbnail gan trung nhau lot len website.)
+    - So sanh ung vien voi TOAN BO thumbnail dang dung theo 3 lop:
+        1. Ten file da xuat hien trong src/data/articles.ts
+        2. MD5 trung nhau (ban sao byte-identical)
+        3. Sai lech pixel trung binh < 15.0 (ban sao nen lai / chinh sua nhe)
+    - KHONG con anh du phong dung chung: het anh dat chuan thi nem NoUniqueThumbnailError.
     """
     articles_ts_path = "src/data/articles.ts"
     existing_content = ""
@@ -47,9 +54,11 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
     try:
         from PIL import Image
         import numpy as np
-        has_pil = True
-    except ImportError:
-        has_pil = False
+    except ImportError as e:
+        raise NoUniqueThumbnailError(
+            "Thieu Pillow/numpy nen KHONG THE kiem toan tinh doc ban cua anh. "
+            "Cai dat: python3 -m pip install --break-system-packages pillow numpy"
+        ) from e
 
     if os.path.exists(articles_ts_path):
         with open(articles_ts_path, "r", encoding="utf-8") as f:
@@ -63,52 +72,68 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
                     with open(p, "rb") as bf:
                         h = hashlib.md5(bf.read()).hexdigest()
                         used_hashes.add(h)
-                    if has_pil and not slug.startswith(('review-sach', 'doc-sach', 'doc-cau-chuyen')):
+                    if not slug.startswith(('review-sach', 'doc-sach', 'doc-cau-chuyen')):
                         img = Image.open(p).convert('RGB').resize((64, 64))
                         existing_arrays.append(np.array(img, dtype=float))
-                except:
+                except Exception:
                     pass
 
     images_dir = "public/images/articles"
     if not os.path.exists(images_dir):
-        return "/images/articles/cai-bay-tich-luy-kien-thuc-trai-cai-nghien.webp"
+        raise NoUniqueThumbnailError(f"Khong thay thu muc {images_dir}")
 
     candidates = glob.glob(os.path.join(images_dir, "*.webp"))
     # Sort for deterministic selection
     candidates.sort()
 
+    rejected = {"used_name": 0, "too_big": 0, "same_hash": 0, "too_similar": 0, "not_art": 0}
+    best_fallback = None  # (diff, fname, size) - ghi lai de bao cao cho Bo
+
     for cand in candidates:
         fname = os.path.basename(cand)
         # Skip diagrams, infographics, cycles and book mockups
         if any(skip in fname for skip in ["so-do", "bieu-do", "chu-ky", "infographic", "sach-"]):
+            rejected["not_art"] += 1
             continue
         # Skip if filename is already in articles.ts
         if fname in existing_content:
+            rejected["used_name"] += 1
             continue
         try:
             size = os.path.getsize(cand)
             if size > 122880:  # Must be <= 120KB
+                rejected["too_big"] += 1
                 continue
             with open(cand, "rb") as bf:
                 h = hashlib.md5(bf.read()).hexdigest()
             if h in used_hashes:
+                rejected["same_hash"] += 1
                 continue
 
             # Check perceptual visual distance >= 15.0
-            if has_pil and existing_arrays:
-                cand_img = Image.open(cand).convert('RGB').resize((64, 64))
-                cand_arr = np.array(cand_img, dtype=float)
-                min_diff = min(np.mean(np.abs(cand_arr - ex_arr)) for ex_arr in existing_arrays)
-                if min_diff < 15.0:
-                    continue
+            cand_img = Image.open(cand).convert('RGB').resize((64, 64))
+            cand_arr = np.array(cand_img, dtype=float)
+            min_diff = min(np.mean(np.abs(cand_arr - ex_arr)) for ex_arr in existing_arrays) if existing_arrays else 999.0
+            if min_diff < 15.0:
+                rejected["too_similar"] += 1
+                if best_fallback is None or min_diff > best_fallback[0]:
+                    best_fallback = (min_diff, fname, size)
+                continue
 
-            print(f"✅ [THUMBNAIL GATE] Chọn thành công ảnh độc bản chuẩn Zen: {fname} ({size/1024:.1f}KB)")
+            print(f"✅ [THUMBNAIL GATE] Chọn thành công ảnh độc bản chuẩn Zen: {fname} ({size/1024:.1f}KB | lệch gần nhất {min_diff:.1f})")
             return f"/images/articles/{fname}"
         except Exception:
             pass
 
-    print("⚠️ [THUMBNAIL WARNING] Dùng ảnh dự phòng an toàn.")
-    return "/images/articles/dung-flex-doc-sach-trai-cai-nghien.webp"
+    detail = ", ".join(f"{k}={v}" for k, v in rejected.items() if v)
+    msg = (
+        "KHONG con tac pham nao dat chuan doc ban. "
+        f"Da loai: {detail}. "
+    )
+    if best_fallback:
+        msg += f"Anh gan nhat van lech {best_fallback[0]:.2f} (<15.0): {best_fallback[1]}. "
+    msg += "Can Agent 8 ve tac pham moi. TUYET DOI khong tai su dung anh da dung."
+    raise NoUniqueThumbnailError(msg)
 
 def generate_article_with_gemini(video_data: Dict[str, Any], topic: str) -> Dict[str, Any]:
     """

@@ -6,7 +6,15 @@ try:
     from PIL import Image
     import numpy as np
 except ImportError:
-    print("⚠️ [NOTE] PIL hoặc numpy chưa được cài đặt trên môi trường này, bỏ qua kiểm toán pixel tương đồng.")
+    msg = (
+        "⚠️ [CANH BAO DO] PIL hoac numpy chua duoc cai dat -> BO QUA toan bo kiem toan pixel tuong dong.\n"
+        "   Day chinh la lo hong tung de 3 cap thumbnail gan trung nhau lot len website (13/11/2026).\n"
+        "   Cai ngay: python3 -m pip install --break-system-packages pillow numpy"
+    )
+    print(msg)
+    if os.environ.get("STRICT_VISUAL_AUDIT", "").strip() in ("1", "true", "yes"):
+        print("⛔ STRICT_VISUAL_AUDIT=1 -> TU CHOI BUILD vi khong the kiem toan thi giac.")
+        sys.exit(1)
     sys.exit(0)
 
 print("🎨 [AGENT 8 & AGENT 5] ĐANG KIỂM TOÁN TÍNH ĐỘC BẢN THỊ GIÁC (VISUAL PERCEPTUAL AUDIT)...")
