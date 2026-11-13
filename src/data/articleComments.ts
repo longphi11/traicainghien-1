@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "deep-work-nghe-thuat-tap-trung-sau-trai-cai-nghien-20261113": [
+      {
+          "id": "deepw-1",
+          "name": "Hoàng Thùy Linh (Giáo viên Ngữ văn • 31 tuổi)",
+          "content": "Đọc bài 'Lấy Lại Sự Tập Trung: Nghệ Thuật Deep Work Trong Kỷ Nguyên Số' xong, mình đọc lại hai lần mới hết. Mình là giáo viên, tối nào cũng mang bài về nhà chấm. Trước đây vừa chấm vừa bật video cho đỡ buồn, xong chẳng nhớ gì. Bây giờ mình chấm 25 phút rồi nghỉ 5 phút, thấy nhẹ người hơn nhiều.",
+          "date": "1 ngày trước",
+          "likes": 55,
+          "isLongStory": true
+      },
+      {
+          "id": "deepw-2",
+          "name": "Phạm Hải Đăng (24 tuổi)",
+          "content": "Mình đọc lúc nửa đêm nên nhớ nhất phần 'Nghệ Thuật Deep Work Trong Kỷ Nguyên Số'. Mình vừa áp dụng thử một việc nhỏ và thấy khác thật.",
+          "date": "3 ngày trước",
+          "likes": 50
+      },
+      {
+          "id": "deepw-3",
+          "name": "Vũ Thu Trang (Dược sĩ lâm sàng • 29 tuổi)",
+          "content": "Chỗ mình gạch chân là đoạn 'Nghệ Thuật Deep Work Trong Kỷ Nguyên Số'. Mình làm luôn, không chờ có động lực: nói với một người bạn để có người nhắc mình.",
+          "date": "1 ngày trước",
+          "likes": 53
+      }
+  ],
   "van-may-an-trong-thoi-quen-atomic-habits-20261112": [
       {
           "id": "vanma-1",
