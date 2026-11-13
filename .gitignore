@@ -55,3 +55,9 @@ __pycache__/
 *.pyd
 *.log
 scratch/
+
+# thu muc cho bo tha tranh tu ve (Agent 8 se nap va xu ly)
+tranh-moi/*.jpg
+tranh-moi/*.jpeg
+tranh-moi/*.png
+tranh-moi/*.webp
