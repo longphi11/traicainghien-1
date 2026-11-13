@@ -44,6 +44,10 @@ traicainghien-bot-*.json
 .vscode/
 .idea/
 
+# aider (AI CLI agent) - khong commit file phien lam viec
+.aider*
+!.aider.conf.yml.example
+
 # python
 __pycache__/
 *.pyc
