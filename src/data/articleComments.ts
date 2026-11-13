@@ -9,6 +9,78 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "deep-work-nghe-thuat-tap-trung-sau-trai-cai-nghien-20261113": [
+      {
+          "id": "deepw-1",
+          "name": "Hoàng Thùy Linh (Giáo viên Ngữ văn • 31 tuổi)",
+          "content": "Đọc bài 'Lấy Lại Sự Tập Trung: Nghệ Thuật Deep Work Trong Kỷ Nguyên Số' xong, mình đọc lại hai lần mới hết. Mình là giáo viên, tối nào cũng mang bài về nhà chấm. Trước đây vừa chấm vừa bật video cho đỡ buồn, xong chẳng nhớ gì. Bây giờ mình chấm 25 phút rồi nghỉ 5 phút, thấy nhẹ người hơn nhiều.",
+          "date": "1 ngày trước",
+          "likes": 55,
+          "isLongStory": true
+      },
+      {
+          "id": "deepw-2",
+          "name": "Phạm Hải Đăng (24 tuổi)",
+          "content": "Mình đọc lúc nửa đêm nên nhớ nhất phần 'Nghệ Thuật Deep Work Trong Kỷ Nguyên Số'. Mình vừa áp dụng thử một việc nhỏ và thấy khác thật.",
+          "date": "3 ngày trước",
+          "likes": 50
+      },
+      {
+          "id": "deepw-3",
+          "name": "Vũ Thu Trang (Dược sĩ lâm sàng • 29 tuổi)",
+          "content": "Chỗ mình gạch chân là đoạn 'Nghệ Thuật Deep Work Trong Kỷ Nguyên Số'. Mình làm luôn, không chờ có động lực: nói với một người bạn để có người nhắc mình.",
+          "date": "1 ngày trước",
+          "likes": 53
+      }
+  ],
+  "van-may-an-trong-thoi-quen-atomic-habits-20261112": [
+      {
+          "id": "vanma-1",
+          "name": "Phạm Hải Đăng (Nhân viên kinh doanh • 24 tuổi)",
+          "content": "Đọc bài 'Vận may ẩn trong thói quen: Kỷ luật không gồng từ Atomic Habits' xong, mình thấy được thở ra. Mình là nhân viên kinh doanh, tối nào cũng về muộn. Mình bỏ luôn mục tiêu tập gym ba buổi một tuần và thay bằng xỏ giày ra khỏi cửa một lần. Hai tuần nay làm được, và tự nhiên đi bộ luôn.",
+          "date": "2 giờ trước",
+          "likes": 78,
+          "isLongStory": true
+      },
+      {
+          "id": "vanma-2",
+          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
+          "content": "Cái mình thích là cách bài nói về 'Kỷ luật không gồng từ Atomic Habits'. Mình thích chỗ tác giả tự nhận mình cũng từng vấp, không đứng trên cao giảng.",
+          "date": "Hôm qua",
+          "likes": 67
+      },
+      {
+          "id": "vanma-3",
+          "name": "Nguyễn Hoàng Nam (Lập trình viên Backend • 28 tuổi)",
+          "content": "Mình đã chụp màn hình lại phần 'Kỷ luật không gồng từ Atomic Habits'. Mình làm luôn, không chờ có động lực: đi bộ mười phút sau bữa tối, không mang tai nghe.",
+          "date": "Hôm qua",
+          "likes": 60
+      }
+  ],
+  "thoat-khoi-brain-rot-lay-lai-su-tap-trung-dinh-cao-20261112": [
+      {
+          "id": "thoat-1",
+          "name": "Phan Anh Tú (Chủ tiệm cà phê nhỏ)",
+          "content": "Đọc bài 'Thoát khỏi Brain Rot: Cách lấy lại sự tập trung đỉnh cao' xong, mình hơi xấu hổ vì đã tự trách mình quá nhiều. Mình nhận ra mình không nghiện điện thoại, mình sợ khoảng lặng. Cứ rảnh hai giây là phải có cái gì đó chạy trong tai. Bài viết gọi đúng tên nỗi sợ đó mà không mắng mình một câu.",
+          "date": "2 giờ trước",
+          "likes": 71,
+          "isLongStory": true
+      },
+      {
+          "id": "thoat-2",
+          "name": "Bùi Thanh Hà (Mẹ hai con • 33 tuổi)",
+          "content": "Mình thấy nhẹ người nhất khi đọc phần 'Cách lấy lại sự tập trung đỉnh cao'. Cái hay là bài không bảo mình phải mạnh mẽ hơn, chỉ bảo mình đổi cách sắp xếp.",
+          "date": "Vừa xong",
+          "likes": 69
+      },
+      {
+          "id": "thoat-3",
+          "name": "Nguyễn Diệu Linh (Sinh viên năm hai)",
+          "content": "Mình dừng lại lâu nhất ở phần 'Cách lấy lại sự tập trung đỉnh cao'. Mình làm luôn, không chờ có động lực: đóng hết tab không dùng, chỉ để lại ba tab đang làm.",
+          "date": "Vừa xong",
+          "likes": 24
+      }
+  ],
   "ky-luat-khong-can-gong-atomic-habits-20261111": [
       {
           "id": "kylua-1",
