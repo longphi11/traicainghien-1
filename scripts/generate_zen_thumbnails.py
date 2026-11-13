@@ -365,6 +365,7 @@ def main():
     ap = argparse.ArgumentParser(description="Agent 8 - ve thumbnail Zen doc ban")
     ap.add_argument("--slug", help="slug bai viet can ve thumbnail")
     ap.add_argument("--scene", help="mo ta canh (tieng Anh se cho ket qua tot hon)")
+    ap.add_argument("--from-file", help="nap 1 file anh co san (tu ve o Gemini app / Midjourney / Antigravity)")
     ap.add_argument("--seed", type=int, default=int(time.time()) % 100000)
     ap.add_argument("--update", action="store_true", help="ghi thumbnail moi vao articles.ts")
     ap.add_argument("--no-brand", action="store_true", help="khong dong watermark")
@@ -417,6 +418,29 @@ def main():
 
     info = next((a for a in articles if a["slug"] == args.slug), None)
     scene = args.scene or scene_for(info["title"] if info else args.slug)
+
+    if args.from_file:
+        # Bo tu ve tranh o Gemini app / Midjourney / Antigravity roi nap vao day
+        src = args.from_file
+        if not os.path.exists(src):
+            raise SystemExit(f"Khong thay file: {src}")
+        raw = open(src, "rb").read()
+        print(f"\n🖼️  Nap tu file: {src}")
+        fname = f"{args.slug}-zen-art-{args.seed}.webp"
+        out_path = os.path.join(IMAGES_DIR, fname)
+        size = postprocess(raw, out_path, draw_brand=not args.no_brand)
+        diff, nearest = diff_against_used(out_path, arrays)
+        if diff < DIFF_THRESHOLD:
+            os.remove(out_path)
+            raise SystemExit(
+                f"❌ Anh qua giong bai '{nearest}' (lech {diff:.2f} < {DIFF_THRESHOLD}). "
+                "Can mot tac pham khac."
+            )
+        print(f"   ✅ DAT CHUAN: /images/articles/{fname} ({size/1024:.1f}KB | lech {diff:.2f})")
+        if args.update:
+            update_articles_thumbnail(args.slug, f"/images/articles/{fname}")
+        return
+
     new_thumb = generate_for(args.slug, info["title"] if info else args.slug, scene, keys, args, arrays)
     if new_thumb and args.update:
         update_articles_thumbnail(args.slug, new_thumb)
