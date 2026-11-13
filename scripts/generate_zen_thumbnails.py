@@ -361,11 +361,70 @@ def generate_for(slug, title, scene, keys, args, arrays):
     return f"/images/articles/{fname}"
 
 
+def import_one(slug, src_path, arrays, args):
+    """
+    Nap 1 file anh co san -> chuan hoa 1200x675 <120KB -> kiem tra doc ban -> ghi articles.ts.
+    Tra ve (ok: bool, thumb_url|None, ly_do).
+    """
+    from PIL import Image
+    import numpy as np
+
+    print(f"\n🖼️  Nap cho: {slug}")
+    print(f"   file: {os.path.basename(src_path)}")
+    raw = open(src_path, "rb").read()
+    fname = f"{slug}-zen-art-{args.seed}.webp"
+    out_path = os.path.join(IMAGES_DIR, fname)
+    try:
+        size = postprocess(raw, out_path, draw_brand=not args.no_brand)
+    except Exception as e:
+        return False, None, f"khong xu ly duoc anh ({type(e).__name__}: {e})"
+
+    diff, nearest = diff_against_used(out_path, arrays)
+    if diff < DIFF_THRESHOLD:
+        os.remove(out_path)
+        return False, None, f"qua giong bai '{nearest}' (lech {diff:.2f} < {DIFF_THRESHOLD})"
+
+    url = f"/images/articles/{fname}"
+    print(f"   ✅ DAT CHUAN: {url} ({size/1024:.1f}KB | lech gan nhat {diff:.2f})")
+    if args.update:
+        update_articles_thumbnail(slug, url)
+    # cap nhat bo nho de file tiep theo duoc so sanh ca voi anh vua nap
+    arrays[slug] = np.array(Image.open(out_path).convert("RGB").resize((64, 64)), dtype=float)
+    return True, url, ""
+
+
+def resolve_slug_for_file(fname, articles, auto_targets, order_index):
+    """Tim slug tuong ung voi ten file (theo 3 cach), tra ve slug hoac None."""
+    stem = os.path.splitext(os.path.basename(fname))[0].strip()
+    known = {a["slug"] for a in articles}
+
+    # 1. ten file = dung slug
+    if stem in known:
+        return stem
+    # 2. ten file bat dau bang slug
+    for s in sorted(known, key=len, reverse=True):
+        if stem.startswith(s):
+            return s
+    # 3. ten file la so thu tu (1.jpg, 02.png...) -> lay theo danh sach bai dang trung
+    m = re.fullmatch(r"(\d{1,2})", stem)
+    if m:
+        idx = int(m.group(1)) - 1
+        if 0 <= idx < len(auto_targets):
+            return auto_targets[idx]
+    # 4. ten file chi co tu khoa roi rac -> doan theo tu khoa trong tieu de
+    low = stem.replace("-", " ").replace("_", " ").lower()
+    for a in articles:
+        if a["slug"] in auto_targets and any(w in a["slug"].replace("-", " ") for w in low.split() if len(w) > 4):
+            return a["slug"]
+    return None
+
+
 def main():
     ap = argparse.ArgumentParser(description="Agent 8 - ve thumbnail Zen doc ban")
     ap.add_argument("--slug", help="slug bai viet can ve thumbnail")
     ap.add_argument("--scene", help="mo ta canh (tieng Anh se cho ket qua tot hon)")
     ap.add_argument("--from-file", help="nap 1 file anh co san (tu ve o Gemini app / Midjourney / Antigravity)")
+    ap.add_argument("--from-inbox", help="nap CA THU MUC anh tu ve; ten file nen la <slug>.jpg hoac 1.jpg 2.jpg 3.jpg")
     ap.add_argument("--seed", type=int, default=int(time.time()) % 100000)
     ap.add_argument("--update", action="store_true", help="ghi thumbnail moi vao articles.ts")
     ap.add_argument("--no-brand", action="store_true", help="khong dong watermark")
@@ -413,33 +472,64 @@ def main():
             arrays[target] = np.array(Image.open(p).convert("RGB").resize((64, 64)), dtype=float)
         return
 
-    if not args.slug:
-        raise SystemExit("Can --slug hoac --fix-collisions. Xem --help.")
+    if args.from_inbox:
+        inbox = args.from_inbox
+        if not os.path.isdir(inbox):
+            raise SystemExit(f"Khong thay thu muc: {inbox}")
+        exts = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".gif"}
+        files = sorted(
+            os.path.join(inbox, f) for f in os.listdir(inbox)
+            if os.path.splitext(f)[1].lower() in exts
+        )
+        if not files:
+            raise SystemExit(f"Thu muc {inbox} khong co file anh nao (.jpg/.png/.webp)")
 
-    info = next((a for a in articles if a["slug"] == args.slug), None)
-    scene = args.scene or scene_for(info["title"] if info else args.slug)
+        pairs = find_collisions(articles, arrays)
+        by_slug = {a["slug"]: a for a in articles}
+        auto_targets = []
+        for _, a, b in pairs:
+            t = max((a, b), key=lambda s: by_slug[s]["date"] or "")
+            if t not in auto_targets:
+                auto_targets.append(t)
 
-    if args.from_file:
+        print(f"\n📥 NAP TU THU MUC: {inbox}")
+        print(f"   {len(files)} file | bai dang bi trung: {len(auto_targets)}")
+
+        ok_count = 0
+        for i, path in enumerate(files):
+            slug = resolve_slug_for_file(path, articles, auto_targets, i)
+            if not slug:
+                print(f"\n⚠️  Bo qua {os.path.basename(path)}: khong khop duoc slug nao.")
+                print(f"    -> Doi ten file thanh <slug>.jpg, hoac 1.jpg / 2.jpg / 3.jpg theo dung thu tu.")
+                continue
+            ok, url, reason = import_one(slug, path, arrays, args)
+            if ok:
+                ok_count += 1
+            else:
+                print(f"   ❌ Khong nhan: {reason}")
+
+        print(f"\n=== KET QUA: {ok_count}/{len(files)} anh nap thanh cong ===")
+        if args.update and ok_count:
+            print("   articles.ts da duoc cap nhat. Chay tiep: node scripts/audit_all_articles.js")
+        elif not args.update and ok_count:
+            print("   (chua ghi articles.ts vi thieu --update)")
+        return
+
+    if args.slug and args.from_file:
         # Bo tu ve tranh o Gemini app / Midjourney / Antigravity roi nap vao day
         src = args.from_file
         if not os.path.exists(src):
             raise SystemExit(f"Khong thay file: {src}")
-        raw = open(src, "rb").read()
-        print(f"\n🖼️  Nap tu file: {src}")
-        fname = f"{args.slug}-zen-art-{args.seed}.webp"
-        out_path = os.path.join(IMAGES_DIR, fname)
-        size = postprocess(raw, out_path, draw_brand=not args.no_brand)
-        diff, nearest = diff_against_used(out_path, arrays)
-        if diff < DIFF_THRESHOLD:
-            os.remove(out_path)
-            raise SystemExit(
-                f"❌ Anh qua giong bai '{nearest}' (lech {diff:.2f} < {DIFF_THRESHOLD}). "
-                "Can mot tac pham khac."
-            )
-        print(f"   ✅ DAT CHUAN: /images/articles/{fname} ({size/1024:.1f}KB | lech {diff:.2f})")
-        if args.update:
-            update_articles_thumbnail(args.slug, f"/images/articles/{fname}")
+        ok, url, reason = import_one(args.slug, src, arrays, args)
+        if not ok:
+            raise SystemExit(f"❌ Khong nhan anh: {reason}")
         return
+
+    if not args.slug:
+        raise SystemExit("Can --slug, --from-inbox hoac --fix-collisions. Xem --help.")
+
+    info = next((a for a in articles if a["slug"] == args.slug), None)
+    scene = args.scene or scene_for(info["title"] if info else args.slug)
 
     new_thumb = generate_for(args.slug, info["title"] if info else args.slug, scene, keys, args, arrays)
     if new_thumb and args.update:
