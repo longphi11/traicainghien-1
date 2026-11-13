@@ -7,7 +7,7 @@ import urllib.request
 import urllib.error
 import urllib.parse
 from youtube_content_miner import get_best_video_content, save_processed_id
-from generate_omnichannel_article import build_article_from_video
+from generate_omnichannel_article import build_article_from_video, NoUniqueThumbnailError
 from website_article_publisher import insert_article_to_website, git_commit_and_push
 
 def get_env_variable(var_name):
@@ -175,7 +175,28 @@ def run_omnichannel_pipeline(topic="focus"):
     print(f"✅ Found Video: '{video_data['title']}' ({video_data['views']} views)")
     
     # Step 2: Build Articles
-    artifacts = build_article_from_video(video_data, topic=topic)
+    try:
+        artifacts = build_article_from_video(video_data, topic=topic)
+    except NoUniqueThumbnailError as e:
+        # Khong con tac pham Zen doc ban nao dat chuan -> dung pipeline, bao Bo ro ly do.
+        print("\n⛔ [DUNG PIPELINE] Kho tranh Zen da can, khong the tao bai moi.")
+        print(f"   Ly do: {e}")
+        print("   Khong dang gi len website/Telegram/Facebook de tranh anh trung lap.")
+        print("   Cach xu ly: bo ve them tranh Zen roi chay:")
+        print("     python3 scripts/generate_zen_thumbnails.py --from-inbox tranh-moi --update")
+        try:
+            from scripts.telegram_reporter import send_to_hdqt_topic
+            send_to_hdqt_topic(
+                "⚠️ <b>[FLOW 03 TẠM DỪNG]</b> Kho tranh Zen độc bản đã cạn nên Mây "
+                "<b>không xuất bản bài mới</b> (tránh lặp thumbnail).\n"
+                f"Video đang chờ: <i>{video_data['title']}</i>\n"
+                "Cần bố vẽ thêm tranh rồi nạp lại. Chi tiết trong "
+                "<code>tranh-moi/PHIEU-VE-TRANH.md</code>."
+            )
+        except Exception:
+            pass
+        return False
+
     article_obj = artifacts["article"]
     tg_caption = artifacts["telegram_caption"]
     fb_post = artifacts["facebook_post"]
