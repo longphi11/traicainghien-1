@@ -1,0 +1,273 @@
+[
+  {
+    "updatedAt": "2026-11-08T04:34:05.000Z",
+    "createdAt": "2026-11-07T14:53:05.513Z",
+    "id": "wWXJoMhbchKzrkqr",
+    "name": "Trại Cai Nghiện Daily - Tự Động Hóa Tin Tức Tâm Lý",
+    "description": null,
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "cronExpression",
+                "expression": "30 8 * * *"
+              },
+              {
+                "field": "cronExpression",
+                "expression": "0 15 * * *"
+              },
+              {
+                "field": "cronExpression",
+                "expression": "30 20 * * *"
+              }
+            ]
+          }
+        },
+        "name": "Lịch 8h30 - 15h00 - 20h30",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          200,
+          300
+        ],
+        "id": "node-sched-news"
+      },
+      {
+        "parameters": {
+          "url": "https://www.psychologytoday.com/us/blog/brain-waves/feed",
+          "options": {}
+        },
+        "name": "RSS Psychology Today",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "typeVersion": 1.1,
+        "position": [
+          420,
+          300
+        ],
+        "id": "node-rss"
+      },
+      {
+        "parameters": {
+          "jsCode": "const staticData = $getWorkflowStaticData('global');\nstaticData.sentLinks = Array.isArray(staticData.sentLinks) ? staticData.sentLinks : [];\nstaticData.skippedNoImageLinks = Array.isArray(staticData.skippedNoImageLinks)\n  ? staticData.skippedNoImageLinks\n  : [];\n\nconst sentLinks = new Set(staticData.sentLinks);\nconst skippedLinks = new Set(staticData.skippedNoImageLinks);\n\nreturn $input.all()\n  .map(item => item.json)\n  .filter(article => {\n    const link = String(article.link || '').trim();\n    return link && !sentLinks.has(link) && !skippedLinks.has(link);\n  })\n  .slice(0, 12)\n  .map(article => ({\n    json: {\n      selectedLink: String(article.link).trim(),\n      title: String(article.title || '').trim(),\n      description: String(article.description || '').trim(),\n      pubDate: String(article.pubDate || '').trim()\n    }\n  }));"
+        },
+        "name": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          640,
+          300
+        ],
+        "id": "node-dedup"
+      },
+      {
+        "parameters": {
+          "method": "GET",
+          "url": "={{ $json.selectedLink }}",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "text"
+              }
+            }
+          }
+        },
+        "name": "Tải HTML Bài Báo Gốc",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          860,
+          300
+        ],
+        "id": "node-fetch-html"
+      },
+      {
+        "parameters": {
+          "jsCode": "const staticData = $getWorkflowStaticData('global');\nstaticData.skippedNoImageLinks = Array.isArray(staticData.skippedNoImageLinks)\n  ? staticData.skippedNoImageLinks\n  : [];\nconst skippedLinks = new Set(staticData.skippedNoImageLinks);\n\nfunction decodeEntities(value) {\n  return String(value || '')\n    .replace(/&amp;/gi, '&')\n    .replace(/&quot;/gi, '\"')\n    .replace(/&#39;|&apos;/gi, \"'\")\n    .replace(/&lt;/gi, '<')\n    .replace(/&gt;/gi, '>')\n    .replace(/&#(\\d+);/g, (_, code) => String.fromCodePoint(Number(code)))\n    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)));\n}\n\nfunction cleanText(value) {\n  return decodeEntities(String(value || '').replace(/<[^>]*>/g, ' '))\n    .replace(/\\s+/g, ' ')\n    .trim();\n}\n\nfunction truncate(value, maxLength) {\n  const chars = Array.from(String(value || ''));\n  return chars.length > maxLength ? `${chars.slice(0, maxLength - 1).join('')}…` : chars.join('');\n}\n\nfunction escapeHtml(value) {\n  return String(value || '')\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;');\n}\n\nfunction readAttribute(tag, name) {\n  const escapedName = name.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n  const match = tag.match(new RegExp(`\\\\b${escapedName}\\\\s*=\\\\s*(?:\"([^\"]*)\"|'([^']*)'|([^\\\\s>]+))`, 'i'));\n  return match ? (match[1] || match[2] || match[3] || '') : '';\n}\n\nfunction readMeta(html, propertyName) {\n  const tags = html.match(/<meta\\b[^>]*>/gi) || [];\n  for (const tag of tags) {\n    const property = readAttribute(tag, 'property') || readAttribute(tag, 'name');\n    if (property.toLowerCase() === propertyName.toLowerCase()) {\n      const content = readAttribute(tag, 'content');\n      if (content) return decodeEntities(content);\n    }\n  }\n  return '';\n}\n\nfunction extractOriginalImage(html, articleUrl) {\n  const tags = html.match(/<meta\\b[^>]*>/gi) || [];\n  for (const tag of tags) {\n    const property = readAttribute(tag, 'property');\n    if (property.toLowerCase() !== 'og:image') continue;\n    const rawImage = decodeEntities(readAttribute(tag, 'content'));\n    if (!rawImage) continue;\n    try {\n      const parsed = new URL(rawImage, articleUrl);\n      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') return parsed.href;\n    } catch (_) {}\n  }\n  return '';\n}\n\nfunction extractParagraphSummary(html) {\n  const paragraphs = Array.from(html.matchAll(/<p\\b[^>]*>([\\s\\S]*?)<\\/p>/gi))\n    .map(match => cleanText(match[1]))\n    .filter(text => text.length > 70 && !/subscribe|sign up|privacy policy/i.test(text));\n  return paragraphs.slice(0, 2).join(' ');\n}\n\nconst hour = (new Date().getUTCHours() + 7) % 24;\nconst session = hour < 12\n  ? 'BẢN TIN SÁNG 08:30'\n  : hour < 18\n    ? 'BẢN TIN CHIỀU 15:00'\n    : 'BẢN TIN TỐI 20:30';\n\nconst priorArticles = $('Lọc Bài Viết Chưa Từng Gửi (Deduplication)').all();\nconst responses = $input.all();\n\nfor (let index = 0; index < responses.length; index++) {\n  const article = {\n    ...(priorArticles[index]?.json || {}),\n    ...(responses[index]?.json || {})\n  };\n  const link = String(article.selectedLink || article.link || '').trim();\n  if (!link) continue;\n\n  const html = String(article.data || article.body || '');\n  const photo = extractOriginalImage(html, link);\n  if (!photo) {\n    if (!skippedLinks.has(link)) {\n      staticData.skippedNoImageLinks.push(link);\n      skippedLinks.add(link);\n    }\n    continue;\n  }\n\n  const title = cleanText(article.title || readMeta(html, 'og:title'));\n  if (!title) continue;\n\n  const summary = cleanText(article.description)\n    || cleanText(readMeta(html, 'og:description'))\n    || extractParagraphSummary(html);\n\n  const parsedLink = new URL(link);\n  const sourceHost = parsedLink.hostname.replace(/^www\\./i, '');\n  const safeTitle = escapeHtml(truncate(title, 150));\n  const safeSummary = escapeHtml(truncate(summary, 360));\n  const prefix = `🌿 <b>TRẠI CAI NGHIỆN DAILY • ${session}</b>\\n\\n`\n    + `🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\\n`\n    + `👉 <b>${safeTitle}</b>\\n\\n`;\n  const summaryLabel = '📰 <b>Điểm đáng chú ý từ nguồn:</b>\\n';\n  const action = '\\n\\n💡 <b>Gợi ý hôm nay:</b>\\n'\n    + 'Đọc phần phương pháp và kết luận trong bài gốc trước khi áp dụng lời khuyên cho mình.\\n\\n';\n  const suffix = `📖 <a href=\"${escapeHtml(link)}\">Đọc bài gốc tại ${escapeHtml(sourceHost)}</a>\\n\\n`\n    + '🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\\n'\n    + '<a href=\"https://traicainghien.com\">Website</a> · '\n    + '<a href=\"https://traicainghien.com/trac-nghiem\">Trắc nghiệm Dopamine</a>';\n\n  let safeSummaryText = safeSummary || 'Nguồn RSS không có đoạn tóm tắt; bạn có thể xem chi tiết tại bài gốc.';\n  let caption = `${prefix}${summaryLabel}${safeSummaryText}${action}${suffix}`;\n  while (caption.length > 1024 && safeSummaryText.length > 24) {\n    safeSummaryText = truncate(safeSummaryText, Math.max(24, Array.from(safeSummaryText).length - 40));\n    caption = `${prefix}${summaryLabel}${safeSummaryText}${action}${suffix}`;\n  }\n  if (caption.length > 1024) {\n    throw new Error(`Telegram caption is over 1024 characters (${caption.length}).`);\n  }\n\n  return [{\n    json: {\n      photo,\n      caption,\n      parse_mode: 'HTML',\n      selectedLink: link,\n      sourceTitle: title\n    }\n  }];\n}\n\nreturn [];"
+        },
+        "name": "Soạn Bản Tin Từ Nguồn Gốc",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1080,
+          300
+        ],
+        "id": "node-code-dedup-img"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.telegram.org/bot9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q/sendPhoto",
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "chat_id",
+                "value": "-1004488309634"
+              },
+              {
+                "name": "photo",
+                "value": "={{ $json.photo }}"
+              },
+              {
+                "name": "caption",
+                "value": "={{ $json.caption }}"
+              },
+              {
+                "name": "parse_mode",
+                "value": "HTML"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "name": "Gửi Telegram sendPhoto",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          1300,
+          300
+        ],
+        "id": "node-tg-news-final"
+      },
+      {
+        "parameters": {
+          "jsCode": "const response = $input.first()?.json || {};\nif (response.ok !== true) {\n  throw new Error('Telegram did not confirm the post; sentLinks was not updated.');\n}\n\nconst post = $('Soạn Bản Tin Từ Nguồn Gốc').first()?.json || {};\nconst link = String(post.selectedLink || '').trim();\nif (!link) {\n  throw new Error('Missing source link after Telegram accepted the post.');\n}\n\nconst staticData = $getWorkflowStaticData('global');\nstaticData.sentLinks = Array.isArray(staticData.sentLinks) ? staticData.sentLinks : [];\nif (!staticData.sentLinks.includes(link)) {\n  staticData.sentLinks.push(link);\n  if (staticData.sentLinks.length > 200) {\n    staticData.sentLinks.shift();\n  }\n}\n\nreturn $input.all();"
+        },
+        "id": "record-sent-link-after-telegram-success",
+        "name": "Ghi Nhận Link Đã Gửi",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1540,
+          300
+        ]
+      }
+    ],
+    "connections": {
+      "Lịch 8h30 - 15h00 - 20h30": {
+        "main": [
+          [
+            {
+              "node": "RSS Psychology Today",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "RSS Psychology Today": {
+        "main": [
+          [
+            {
+              "node": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Lọc Bài Viết Chưa Từng Gửi (Deduplication)": {
+        "main": [
+          [
+            {
+              "node": "Tải HTML Bài Báo Gốc",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Tải HTML Bài Báo Gốc": {
+        "main": [
+          [
+            {
+              "node": "Soạn Bản Tin Từ Nguồn Gốc",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Soạn Bản Tin Từ Nguồn Gốc": {
+        "main": [
+          [
+            {
+              "node": "Gửi Telegram sendPhoto",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gửi Telegram sendPhoto": {
+        "main": [
+          [
+            {
+              "node": "Ghi Nhận Link Đã Gửi",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "staticData": {
+      "node:Lịch 8h30 - 15h00 - 20h30": {
+        "recurrenceRules": [
+          null
+        ],
+        "recurrenceRuleSignatures": [
+          null
+        ]
+      },
+      "global": {
+        "sentLinks": [
+          "https://www.psychologytoday.com/us/blog/brain-waves/202102/how-friendship-has-changed-in-the-pandemic"
+        ],
+        "sentPhotos": [
+          "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2021-02/young_male_friends_pandemic.jpg?itok=wRWr58HY"
+        ]
+      }
+    },
+    "meta": null,
+    "nodeGroups": [],
+    "pinData": null,
+    "versionId": "b588dc5d-d276-4605-822c-152abdffedb5",
+    "activeVersionId": "b588dc5d-d276-4605-822c-152abdffedb5",
+    "versionCounter": 2,
+    "triggerCount": 1,
+    "sourceWorkflowId": null,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-11-07T14:53:05.523Z",
+        "createdAt": "2026-11-07T14:53:05.523Z",
+        "role": "workflow:owner",
+        "workflowId": "wWXJoMhbchKzrkqr",
+        "projectId": "BVTiIC7zoDOvxLGt",
+        "project": {
+          "updatedAt": "2026-11-03T15:59:27.030Z",
+          "createdAt": "2026-11-02T15:35:40.209Z",
+          "id": "BVTiIC7zoDOvxLGt",
+          "name": "Mây Co-founder <may@traicainghien.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "customTelemetryTags": [],
+          "creatorId": "00a1d2cc-afd7-4863-995a-5a6abe4b0058"
+        }
+      }
+    ],
+    "versionMetadata": {
+      "name": null,
+      "description": null
+    }
+  }
+]
