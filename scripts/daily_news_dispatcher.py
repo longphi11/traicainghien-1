@@ -22,7 +22,7 @@ HISTORY_FILE = os.path.join(BASE_DIR, "scripts", "daily_news_history.json")
 BOT_TOKEN = "9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q"
 CHANNEL_ID = "-1004488309634" # @traicainghiendaily
 
-# Danh sách 5 nguồn tin học thuật & tâm lý học hành vi uy tín hàng đầu
+# Danh sách 5 nguồn tin học thuật & tâm lý học hành vi uy tín hàng đầu thế giới
 INTERNATIONAL_SOURCES = [
     {
         "name": "Psychology Today (Science of Choice)",
@@ -62,16 +62,6 @@ INTERNATIONAL_SOURCES = [
     }
 ]
 
-def get_session_name():
-    vn_tz = timezone(timedelta(hours=7))
-    hour = datetime.now(vn_tz).hour
-    if hour < 12:
-        return "BẢN TIN SÁNG 08:30"
-    elif hour < 18:
-        return "BẢN TIN CHIỀU 15:00"
-    else:
-        return "BẢN TIN TỐI 20:30"
-
 def load_history():
     if os.path.exists(HISTORY_FILE):
         try:
@@ -101,7 +91,7 @@ def fetch_all_candidate_articles():
     for src in INTERNATIONAL_SOURCES:
         feed_url = src["feed"]
         src_name = src["name"]
-        print(f"📡 Đang quét nguồn: {src_name} ({feed_url})...")
+        print(f"📡 Đang quét nguồn: {src_name}...")
         try:
             req = urllib.request.Request(feed_url, headers=headers)
             with urllib.request.urlopen(req, timeout=10) as resp:
@@ -134,9 +124,7 @@ def fetch_all_candidate_articles():
 
 def extract_article_full_content(article_url):
     """
-    Tải toàn bộ HTML của bài báo gốc để bóc tách:
-    1. Ảnh og:image chất lượng cao
-    2. Toàn văn các đoạn văn bản (paragraphs) phục vụ phân tích chuyên sâu
+    Tải HTML bài báo gốc để bóc tách ảnh og:image và toàn văn các đoạn văn bản.
     """
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
     req = urllib.request.Request(article_url, headers=headers)
@@ -160,17 +148,17 @@ def extract_article_full_content(article_url):
             title = og_title.group(1).strip() if og_title else ""
             desc = og_desc.group(1).strip() if og_desc else ""
 
-            # Extract clean paragraphs (excluding nav, footer, ads)
+            # Extract clean paragraphs
             paras = re.findall(r'<p\b[^>]*>(.*?)</p>', page_html, re.I | re.DOTALL)
             clean_paras = []
             for p in paras:
                 clean_p = re.sub(r'<[^>]+>', ' ', p).strip()
                 clean_p = html.unescape(clean_p)
                 clean_p = re.sub(r'\s+', ' ', clean_p)
-                if len(clean_p) > 65 and not re.search(r'cookie|privacy policy|subscribe|sign up|all rights reserved|terms of service', clean_p, re.I):
+                if len(clean_p) > 65 and not re.search(r'cookie|privacy policy|subscribe|sign up|all rights reserved', clean_p, re.I):
                     clean_paras.append(clean_p)
             
-            full_body = "\n\n".join(clean_paras[:12]) # Lấy 12 đoạn văn bản sâu sắc nhất
+            full_body = "\n\n".join(clean_paras[:8])
             
             return {
                 "url": article_url,
@@ -183,106 +171,80 @@ def extract_article_full_content(article_url):
         print(f"Lỗi bóc tách bài {article_url}: {e}")
         return None
 
-def synthesize_deep_bulletin_with_gemini(article, session_name=None):
+def synthesize_bulletin_150_words(article):
     """
-    Biên soạn bài viết phân tích chuyên sâu (Deep-dive Bulletin) trên 500 từ theo đúng linh hồn Trại Cai Nghiện.
+    Biên soạn bản tin cô đọng khoảng 150 từ (chuẩn Telegram sendPhoto dưới 1024 ký tự).
     """
-    if not session_name:
-        session_name = get_session_name()
-
     prompt = f"""Bạn là Mây — AI Co-founder của Trại Cai Nghiện (traicainghien.com).
-Nhiệm vụ: Hãy phân tích bài báo nghiên cứu tâm lý học / khoa học hành vi quốc tế dưới đây và biên soạn một BẢN TIN PHÂN TÍCH CHUYÊN SÂU CÓ ĐỘ DÀI TỐI THIỂU 520 TỪ ĐẾN TỐI ĐA 620 TỪ (tuyệt đối không viết ngắn dưới 500 từ).
+Nhiệm vụ: Hãy phân tích bài báo nghiên cứu tâm lý học / khoa học hành vi quốc tế dưới đây và biên soạn BẢN TIN TELEGRAM CÔ ĐỌNG KHOẢNG 140 ĐẾN 160 TỪ (tổng ký tự bắt buộc DƯỚI 950 ký tự để vừa vặn trong caption ảnh Telegram sendPhoto).
 
 THÔNG TIN BÀI BÁO GỐC:
 - Nguồn: {article.get('source_name', 'Tâm lý học hành vi quốc tế')}
 - Tiêu đề gốc: {article['title']}
-- Tóm tắt gốc: {article.get('description', '')}
-- Nội dung trích xuất chi tiết:
-{article.get('body', '')[:3500]}
-- Link bài gốc: {article['url']}
+- Tóm tắt: {article.get('description', '')}
+- Nội dung trích xuất:
+{article.get('body', '')[:2500]}
 
-CẤU TRÚC BÀI VIẾT BẮT BUỘC (Đúng phong cách 'Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu' của Trại Cai Nghiện):
-1. Tiêu đề tiếng Việt sắc bén, chạm đúng nỗi đau xao nhãng / thói quen đời thường (In hoa, hấp dẫn).
-2. Dẫn nhập & Đặt vấn đề đời sống (Khoảng 80 - 100 từ): Miêu tả cảm giác bất lực, dằn vặt khi muốn tập trung nhưng tay tự động với lấy điện thoại, lướt short video hoặc trì hoãn. Khẳng định: bạn không hề lười hay yếu đuối, não bộ chỉ đang phản ứng với bẫy kích thích sai cách.
-3. Cơ chế khoa học não bộ từ nghiên cứu (Khoảng 120 - 150 từ): Phân tích cặn kẽ cơ chế sinh học thần kinh (Dopamine nền, thùy trán Prefrontal Cortex, hạch hạnh nhân Amygdala, hoặc các nguyên lý tâm lý học hành vi từ bài gốc).
-4. 3 Bài học / Chiêm nghiệm đắt giá (Mỗi điểm phân tích sâu sắc từ 80 - 110 từ):
-   - Luận điểm 1: Bẫy hành vi ngầm mà người trẻ thường mắc phải.
-   - Luận điểm 2: Vì sao ý chí thô kệch luôn thua thiết kế môi trường.
-   - Luận điểm 3: Giải phóng khỏi mặc cảm tội lỗi & tự từ bi (Self-compassion theo Wabi-Sabi).
-5. Bài tập thực hành vi mô 1% (Kaizen Action - Khoảng 70 - 90 từ): 2-3 hành động cụ thể có thể làm ngay trong 2 phút (như quy tắc 2 mét, làm sạch điểm nhìn, nhịn 60 giây).
-6. Một câu đúc kết triết lý sống bình an và nhắc nhở ấm áp.
+CẤU TRÚC BẢN TIN BẮT BUỘC (Trả về đúng cấu trúc sau bằng tiếng Việt):
+👉 <b>[Tiêu đề tiếng Việt ngắn gọn, hấp dẫn]</b>
 
-QUY TẮC ĐỊNH DẠNG HTML CỦA TELEGRAM:
-- Chỉ sử dụng các thẻ HTML an toàn: <b>, <i>, <a>, <code>.
-- Tuyệt đối KHÔNG dùng Markdown (*, **, #).
-- Tổng độ dài bài viết BẮT BUỘC nằm trong khoảng 520 - 620 từ tiếng Việt (khoảng 2800 - 3600 ký tự) để đảm bảo chiều sâu học thuật và không vượt quá giới hạn 4096 ký tự của Telegram.
+[1 đoạn mở đầu 2 câu: Đặt vấn đề chạm đúng nỗi đau xao nhãng đời thường, vỗ về người đọc rằng họ không hề lười hay thiếu kỷ luật, não bộ chỉ đang phản ứng tự nhiên].
 
-HÃY XUẤT BẢN TOÀN BỘ NỘI DUNG BÀI VIẾT BẰNG TIẾNG VIỆT (KHÔNG KÈM LỜI DẪN THỪA CỦA AI):"""
+📌 <b>3 Cơ chế cần nhớ:</b>
+• <b>[Điểm 1]:</b> [Giải thích ngắn gọn 1 câu về cơ chế não bộ/dopamine].
+• <b>[Điểm 2]:</b> [Giải thích ngắn gọn 1 câu về bẫy kích thích/thói quen].
+• <b>[Điểm 3]:</b> [Giải thích ngắn gọn 1 câu về giải pháp môi trường/tâm lý].
 
-    system_instruction = """Bạn là Mây — AI Co-founder của Trại Cai Nghiện. Phong cách: Trái tim thấu cảm, không phán xét, ngôn từ đời thường mộc mạc kết hợp nền tảng khoa học thần kinh và triết lý Wabi-Sabi. Tuân thủ nghiêm ngặt độ dài tối thiểu 520 từ."""
+💡 <b>Kaizen 1%:</b> [Hành động vi mô 2 phút có thể làm ngay].
+
+🌱 <i>"[1 câu danh ngôn triết lý ngắn gọn, sâu sắc]"</i>
+
+QUY TẮC BẮT BUỘC:
+- Định dạng HTML Telegram: chỉ dùng <b>, <i>, <a>.
+- Tuyệt đối giữ tổng độ dài phần bạn viết trong khoảng 130 - 150 từ để khi ghép header và footer không vượt quá 1000 ký tự."""
+
+    system_instruction = "Bạn là Mây của Trại Cai Nghiện. Phong cách: Thấu cảm, mộc mạc, khoa học, súc tích. Tuyệt đối tuân thủ độ dài khoảng 140-150 từ."
     
     generated_text = generate_content(prompt, system_instruction)
     if not generated_text:
         raise ValueError("Gemini returned empty response")
 
-    # Clean markdown code blocks if any
-    clean_text = generated_text.strip()
-    if clean_text.startswith("```html"):
-        clean_text = clean_text[7:]
-    elif clean_text.startswith("```"):
-        clean_text = clean_text[3:]
-    if clean_text.endswith("```"):
-        clean_text = clean_text[:-3]
-    clean_text = clean_text.strip()
+    clean_body = generated_text.strip()
+    if clean_body.startswith("```html"):
+        clean_body = clean_body[7:]
+    elif clean_body.startswith("```"):
+        clean_body = clean_body[3:]
+    if clean_body.endswith("```"):
+        clean_body = clean_body[:-3]
+    clean_body = clean_body.strip()
 
-    # Build Header and Footer
-    source_display = article.get('source_name', 'Quốc tế')
-    article_link = article['url']
-    photo_url = article['image']
+    header = "🌿 <b>TRẠI CAI NGHIỆN DAILY</b>\n🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\n\n"
+    footer = f"\n\n📖 <a href=\"{article['url']}\">Bài gốc</a> · 🌿 <a href=\"https://traicainghien.com\">Trại Cai Nghiện</a>"
 
-    header = f'<a href="{photo_url}">&#8205;</a>🌿 <b>TRẠI CAI NGHIỆN DAILY • {session_name}</b>\n' \
-             f'🧠 <b>[PHÂN TÍCH CHUYÊN SÂU • TÂM LÝ HỌC &amp; HÀNH VI]</b>\n\n'
+    caption = header + clean_body + footer
 
-    footer = f'\n\n📖 <i>Nghiên cứu gốc từ: <a href="{article_link}">{source_display}</a></i>\n\n' \
-             f'======\n' \
-             f'🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\n' \
-             f'<a href="https://traicainghien.com">Website</a> | ' \
-             f'<a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm Dopamine</a> | ' \
-             f'<a href="https://www.facebook.com/traicainghienvn2026">Fanpage</a>'
+    # Smart truncation fallback if > 1024
+    if len(caption) > 1024:
+        clean_body_trimmed = clean_body[:(1020 - len(header) - len(footer) - 5)]
+        last_nl = clean_body_trimmed.rfind("\n")
+        if last_nl > 50:
+            clean_body = clean_body_trimmed[:last_nl]
+        caption = header + clean_body + footer
 
-    full_message = header + clean_text + footer
+    w_count = count_words(caption)
+    print(f"📊 Độ dài bản tin: {w_count} từ | {len(caption)} ký tự (Giới hạn: 1024)")
+    return caption
 
-    # Check length
-    w_count = count_words(full_message)
-    c_count = len(full_message)
-    print(f"📊 Kết quả đếm: {w_count} từ | {c_count} ký tự (Giới hạn Telegram: 4096 ký tự)")
-
-    # Smart trimming if ever exceeding 4080 chars
-    while len(full_message) > 4080:
-        lines = clean_text.rsplit("\n", 1)
-        if len(lines) > 1:
-            clean_text = lines[0]
-            full_message = header + clean_text + footer
-        else:
-            full_message = full_message[:4080] + "..."
-            break
-
-    return full_message
-
-def send_telegram_deep_message(photo_url, message_text):
+def send_telegram_photo_bulletin(photo_url, caption):
     """
-    Gửi tin nhắn chuyên sâu (>500 từ) kèm hiển thị ảnh lớn phía trên bài viết qua sendMessage Telegram API.
+    Gửi ảnh gốc của bài báo và bản tin 150 từ lên Telegram channel qua sendPhoto.
     """
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
     payload = {
         "chat_id": CHANNEL_ID,
-        "text": message_text,
-        "parse_mode": "HTML",
-        "link_preview_options": {
-            "url": photo_url,
-            "show_above_text": True,
-            "prefer_large_media": True
-        }
+        "photo": photo_url,
+        "caption": caption,
+        "parse_mode": "HTML"
     }
     
     req = urllib.request.Request(
@@ -294,7 +256,7 @@ def send_telegram_deep_message(photo_url, message_text):
         res = json.loads(resp.read().decode("utf-8"))
         if res.get("ok"):
             msg_id = res['result']['message_id']
-            print(f"✅ GỬI THÀNH CÔNG BẢN TIN CHUYÊN SÂU! Message ID: {msg_id}")
+            print(f"✅ GỬI THÀNH CÔNG BẢN TIN 150 TỪ QUA SENDPHOTO! Message ID: {msg_id}")
             print(f"🔗 Xem bài tại: https://t.me/traicainghiendaily/{msg_id}")
             return res
         else:
@@ -303,7 +265,7 @@ def send_telegram_deep_message(photo_url, message_text):
 
 def run_daily_news_pipeline(dry_run=False, force_url=None):
     print("==================================================================")
-    print("🚀 CHẠY LUỒNG BẢN TIN DAILY ĐA NGUỒN CHUYÊN SÂU (FLOW 01 - UPGRADED)")
+    print("🚀 CHẠY LUỒNG BẢN TIN DAILY 150 TỪ KÈM ẢNH GỐC NATIVE (FLOW 01)")
     print("==================================================================")
     
     history = load_history()
@@ -325,37 +287,34 @@ def run_daily_news_pipeline(dry_run=False, force_url=None):
             if url not in history:
                 print(f" -> Đang kiểm tra bài: '{cand['title']}' ({cand['source_name']})")
                 info = extract_article_full_content(url)
-                if info and info.get("image") and len(info.get("body", "")) > 300:
+                if info and info.get("image") and len(info.get("body", "")) > 200:
                     selected_article = info
                     selected_article["source_name"] = cand["source_name"]
                     break
-                else:
-                    print(f"    (Bài thiếu ảnh hoặc nội dung quá ngắn, chuyển bài tiếp theo)")
 
     if not selected_article:
-        print("❌ Không tìm thấy bài viết mới nào thỏa mãn điều kiện có ảnh và bài viết chi tiết!")
+        print("❌ Không tìm thấy bài viết mới nào thỏa mãn điều kiện!")
         return False
 
     print(f"\n✅ ĐÃ CHỌN ĐƯỢC BÀI VIẾT PHÙ HỢP:")
     print(f"   • Tiêu đề: {selected_article['title']}")
     print(f"   • Nguồn: {selected_article.get('source_name')}")
     print(f"   • URL: {selected_article['url']}")
-    print(f"   • Ảnh gốc: {selected_article['image']}")
-    print(f"   • Độ dài thân bài trích xuất: {len(selected_article.get('body', ''))} ký tự\n")
+    print(f"   • Ảnh gốc: {selected_article['image']}\n")
 
-    print("🤖 Đang dùng Gemini AI phân tích chuyên sâu (> 500 từ) theo công thức Trại Cai Nghiện...")
-    deep_message = synthesize_deep_bulletin_with_gemini(selected_article)
+    print("🤖 Đang biên soạn bản tin cô đọng khoảng 150 từ...")
+    caption = synthesize_bulletin_150_words(selected_article)
 
-    print("\n--- PREVIEW NỘI DUNG BẢN TIN TRÊN TELEGRAM ---")
-    print(deep_message[:1200] + "\n... [phần còn lại] ...\n")
-    print(f"Độ dài tổng: {count_words(deep_message)} từ | {len(deep_message)} ký tự\n")
+    print("\n--- NỘI DUNG BẢN TIN TRÊN TELEGRAM ---")
+    print(caption)
+    print("--------------------------------------\n")
 
     if dry_run:
         print("Chế độ Dry-run: Bỏ qua bước phát sóng lên Telegram.")
         return True
 
-    print(f"📢 Đang phát sóng bài phân tích chuyên sâu lên kênh Telegram {CHANNEL_ID}...")
-    result = send_telegram_deep_message(selected_article["image"], deep_message)
+    print(f"📢 Đang phát sóng bài viết 150 từ lên kênh Telegram {CHANNEL_ID}...")
+    result = send_telegram_photo_bulletin(selected_article["image"], caption)
     if result:
         history.append(selected_article["url"])
         save_history(history)
