@@ -7,21 +7,22 @@ import os
 sys.stdout.reconfigure(encoding='utf-8')
 
 def attempt_deploy():
-    print("1. Gửi gói tin bảo vệ Port Knocking tới port 60000...")
-    knock_success = False
-    for host in ['103.157.218.111', 'vn1.1921992.xyz']:
-        try:
-            req = urllib.request.Request(f'http://{host}:60000/C1sco1234', headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req, timeout=5) as r:
-                print(f"   -> Knock {host} thành công (HTTP {r.status})!")
-                knock_success = True
-                break
-        except Exception as e:
-            print(f"   -> Knock {host} note: {e}")
-
-    if not knock_success:
-        print("Knock không phản hồi (có thể do firewall đang tạm rate-limit IP hiện tại).")
-        return False
+    print("1. Gửi gói tin bảo vệ Port Knocking tới port 60000 bằng curl...")
+    import subprocess
+    cmd_knock = 'curl.exe -s -m 5 -A "Mozilla/5.0" http://103.157.218.111:60000/C1sco1234'
+    res = subprocess.run(cmd_knock, shell=True, capture_output=True, text=True)
+    if "OK" in res.stdout:
+        print("   -> Knock thành công: <html><body>OK</body></html>!")
+    else:
+        print(f"   -> Knock note: {res.stdout.strip()} {res.stderr.strip()}")
+        # Thử tiếp vn1.1921992.xyz
+        cmd_knock2 = 'curl.exe -s -m 5 -A "Mozilla/5.0" http://vn1.1921992.xyz:60000/C1sco1234'
+        res2 = subprocess.run(cmd_knock2, shell=True, capture_output=True, text=True)
+        if "OK" in res2.stdout:
+            print("   -> Knock vn1 thành công!")
+        else:
+            print("Knock không phản hồi.")
+            return False
 
     print("2. Đợi 2 giây và kết nối SSH tới port 11985...")
     time.sleep(2)
