@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "bay-truong-thanh-gia-tao-cang-noi-hay-cang-kho-thay-doi": [
+    {
+      "id": "ttgt-1",
+      "name": "Minh Quân (Hà Nội)",
+      "content": "Đọc xong bài viết này của Mây mà mình thấy rát mặt thật sự... Mình từng là đứa nghiện mua sách self-help, nghe podcast chữa lành suốt ngày. Mình thuộc làu các thuật ngữ tâm lý học, gặp ai cũng thao thao bất tuyệt khuyên bảo như một chuyên gia. Nhưng thực tế 12h đêm mình vẫn thức dán mắt vào điện thoại, phòng ngủ thì bừa bộn và công việc ngập đầu không buồn làm. Đọc bài này mình mới vỡ òa nhận ra bấy lâu nay mình đang rơi vào bẫy 'Trưởng thành giả tạo', dùng tri thức để trốn tránh nỗi đau thực thi. Gốc rễ từ cuốn sách 'Con đường chẳng mấy ai đi' của M. Scott Peck phân tích quá đúng: Mình từ chối chấp nhận cuộc đời vốn dĩ khó khăn nên mới tìm vỏ bọc chữ nghĩa để ve vuốt cái tôi. Cảm ơn Mây vì một bài viết thức tỉnh sâu sắc!",
+      "date": "Vừa xong",
+      "likes": 88,
+      "isLongStory": true
+    },
+    {
+      "id": "ttgt-2",
+      "name": "Thanh Hằng (Content Marketer)",
+      "content": "Chi tiết về việc ăn bánh ngọt của bác sĩ M. Scott Peck và bài học 'Đình hoãn khoái cảm' quá đắt giá! Mình nhận ra mình cũng toàn chọn việc dễ chịu, lướt mạng để hưởng thụ trước, để rồi cuối ngày bị đè bẹp bởi áp lực công việc. Từ hôm nay mình sẽ tập trở thành 'người lớn đáng tin cậy' của chính mình, bắt đầu từ việc giữ trọn vẹn từng lời hứa nhỏ.",
+      "date": "2 giờ trước",
+      "likes": 47
+    },
+    {
+      "id": "ttgt-3",
+      "name": "Quốc Bảo (28 tuổi)",
+      "content": "Câu kết của bài chạm đáy lòng mình: Bớt nói về trưởng thành, hãy bắt đầu bằng việc đi rửa cái bát. Càng lý thuyết đao to búa lớn thì càng dễ thất bại. Cứ dũng cảm đối diện với thực tế, làm tốt từng việc vi mô mỗi ngày là tâm trí tự khắc bình yên và vững chãi.",
+      "date": "Hôm qua",
+      "likes": 61
+    }
+  ],
 
   "bay-nghien-lock-in-vi-sao-cang-quyet-tam-cang-nhanh-bo-cuoc": [
     {
