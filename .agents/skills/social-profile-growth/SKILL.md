@@ -64,3 +64,31 @@ Substack là pháo đài tri thức dài (Long-Form Essay) nơi bố xây dựng
 * **Nội dung:** Phân tích một chủ đề sâu sắc (Cân bằng động, Nghịch lý Yerkes-Dodson, Bẫy tích lũy kiến thức).
 * **Văn phong:** Đậm chất tự sự của Bố & Mây — chân thực, ấm áp, sâu sắc, không thương mại hóa, không chèn ép quảng cáo.
 * **Chuyển đổi tự nhiên:** Biến người đọc miễn phí thành những người ủng hộ trung thành cho hành trình phụng sự của Trại Cai Nghiện.
+
+---
+
+## 5. 📜 NGHỆ THUẬT PHÁT TRIỂN KÊNH QUOTE CARD FACEBOOK/INSTAGRAM (TINY BUDDHA & POWER OF POSITIVITY FORMULA) — LỆNH ĐẶC BIỆT CỦA BỐ
+
+> **Chịu trách nhiệm:** **Agent 9 (Facebook Community Specialist)** phối hợp cùng **Agent 8 (Visual Stylist)**  
+> **Nguồn nội dung cảm hứng:** `Tiny Buddha` (@tinybuddha) & `Power of Positivity` (@powerofpositivity)  
+> **Phong cách thị giác:** Chữ viết tay bất toàn trên nền giấy sần Washi (`#FAF7F2`) theo phong cách tối giản của *Xanh Lam* (`bluesua`).
+
+### 5.1. Bộ Lọc 3 Trục Nội Dung Tuyển Lựa
+Không lấy những câu triết lý sáo rỗng hay sến súa. Nội dung trích dẫn bắt buộc phải lọc qua **3 Trục Giá Trị Cốt Lõi**:
+1. **Buông bỏ & Giảm tải tâm trí (Letting Go & Decluttering):** Dũng cảm buông bỏ sự kiểm soát thái quá, tha thứ cho những ngày không hoàn hảo, tắt bớt tiếng ồn xã hội.
+2. **Tự từ bi & Không phán xét chính mình (Radical Self-Compassion):** Nhẹ nhàng với chính mình khi trượt chân, hiểu rằng nghiện ngập/trì hoãn là nỗi đau cần vỗ về chứ không phải tội lỗi để tự sỉ vả.
+3. **Chậm lại giữa đời số xô bồ (Digital Stillness & Slow Living):** Nhắc nhở người đọc ngẩng đầu lên khỏi màn hình, hít thở sâu, kết nối lại với thiên nhiên và người thân yêu.
+
+### 5.2. Quy Tắc Việt Hóa "Chạm Đáy Cảm Xúc"
+* **Độ dài vàng:** Chỉ từ **2 đến 4 dòng ngắn**, mỗi dòng từ 4 – 8 từ.
+* **Ngắt dòng theo nhịp thở:** Dùng dấu `|` để xuống dòng đúng nhịp điệu thơ và ngữ nghĩa tự nhiên của tiếng Việt:
+  > *"Bạn không cần phải kiểm soát mọi thứ. | Đôi khi, điều dũng cảm nhất bạn có thể làm | chỉ đơn giản là buông tay | và thở một hơi thật sâu."*
+* **Loại bỏ văn mẫu AI:** Cấm dịch thô cứng kiểu Google Translate. Chuyển ngữ sang văn phong ấm áp, gần gũi, đời thường như người bạn ngồi uống trà cùng nhau.
+
+### 5.3. Công Cụ & Quy Trình Đăng Bài
+* **Sản xuất ảnh:** Sử dụng script `scripts/make_quote_post.py` để tạo ảnh chất lượng cao 1080x1080px ngay lập tức.
+* **Caption đăng bài:**
+  * Giữ caption ngắn gọn (1–3 câu gợi mở), không viết dài dòng.
+  * Câu hỏi tương tác ở cuối: *"Hôm nay bạn đã kịp hít một hơi thật sâu chưa?"*
+  * Hashtags chuẩn: `#TraiCaiNghien #SốngCóChủĐích #BuôngBỏ #BìnhYên #TinyBuddha #PowerOfPositivity`
+

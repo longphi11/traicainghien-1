@@ -168,3 +168,38 @@ A poetic and serene zen watercolor painting with delicate sumi-e ink wash and dr
 * **Watermark & End-Card Video:** Biểu tượng con quay kết hợp tên thương hiệu đặt góc trang trọng hoặc xuất hiện ở phân cảnh kết thúc (Outro) như lời nhắc nhở thức tỉnh người xem.
 * **CẤM TUYỆT ĐỐI:** Không bao giờ sử dụng hình ảnh vector 2D phẳng lỳ, SVG code giả lập đồ họa hoặc 3D CGI neon bóng bẩy để tái hiện logo. Logo bắt buộc phải mang phong thái tranh vẽ tay màu nước & mực than hữu cơ, mộc mạc và sâu lắng.
 * **Tài sản thương hiệu tham chiếu:** `public/images/trai_cai_nghien_totem_brand_board.jpg` (Vị trí Concept 05).
+
+---
+
+## 9. 📜 QUY CHUẨN THIẾT KẾ QUOTE CARD FACEBOOK/INSTAGRAM (THE MINIMALIST MONOCOLOR WABI-SABI QUOTE ENGINE) — LỆNH ĐẶC BIỆT CỦA BỐ
+
+> **Quyết định chính thức của Bố:** Thiết kế trang Facebook chuyên đăng trích dẫn (Quotes) mang tinh thần của *Tiny Buddha* & *Power of Positivity*, áp dụng phong cách tối giản "chữ trên một nền màu" lấy cảm hứng từ *Xanh Lam* (`bluesua`), chuyển thể sang bộ nhận diện thương hiệu Trại Cai Nghiện.
+
+### 9.1. Quy Chuẩn Thị Giác Bắt Buộc (Visual Standards)
+1. **Kích thước khung hình:** Chuẩn vuông `1080 x 1080 px` (Tỷ lệ 1:1) tối ưu tuyệt đối cho Facebook Feed, Instagram và thiết bị di động.
+2. **Chất liệu & Màu nền (Background):**
+   - **Màu nền cốt lõi:** Vàng nhẹ Warm Linen Beige (`#FAF7F2`) — đồng bộ 100% với nền Website Trại Cai Nghiện.
+   - **Chất cảm hữu cơ (Tactile Washi Paper Texture):** Tuyệt đối **CẤM** dùng màu bệt phẳng vô hồn. Nền bắt buộc phải có hiệu ứng viền màu nước mờ (`#F0EAE1`) kết hợp hạt sần tự nhiên (*grain noise*) của giấy thủ công Washi, tạo cảm giác xúc giác ấm áp như trang giấy mộc đời thực.
+3. **Màu chữ chính (Text Color):**
+   - **Xanh Rêu Rừng Cổ Thụ (`#3A5A40` / RGB `58, 90, 64`):** Màu sắc chữ duy nhất của toàn bộ câu quote, làm dịu hệ thần kinh mắt, mang năng lượng hồi sinh và tiếp đất (*Grounding*).
+4. **Font chữ viết tay bất toàn (Wabi-Sabi Typography):**
+   - Bắt buộc dùng kiểu chữ viết tay hoặc nét phấn/cọ mực tự nhiên để biểu đạt **tinh thần bất toàn (Wabi-sabi)** — dung dị, chân thành, chữa lành, loại bỏ hoàn toàn sự khô cứng của font máy móc công nghiệp.
+   - Các font chữ chuẩn đã được tích hợp tại `assets/fonts/`:
+     * `PatrickHand-Regular.ttf` (Mộc mạc, gần gũi như trang nhật ký).
+     * `Mali-Medium.ttf` (Nét tròn trịa, ấm áp, vỗ về tâm hồn — rất hợp quotes chữa lành).
+     * `Caveat-Variable.ttf` (Nét bút nghiêng bay bổng, sâu lắng).
+     * `Sriracha-Regular.ttf` (Nét cọ mực nghệ nhân thong dong).
+     * `Itim-Regular.ttf` (Nét phấn bảng mềm mại, tĩnh tại).
+5. **Huy hiệu chân trang (Footer Branding Badge):**
+   - Nằm chính giữa đáy ảnh (`footer_y ≈ 955px`).
+   - Huy hiệu tròn đường kính 54px bọc biểu tượng **Con quay Totem Inception (The Awakening Tilt)** với viền đất nung `#C27D53`.
+   - Cạnh huy hiệu là tên thương hiệu **Trại Cai Nghiện** (xanh rêu đậm `#2D4A32`) và handle `@traicainghien` (xám rêu mềm `#788B7B`) bằng font `BeVietnamPro-Medium.ttf`.
+
+### 9.2. Công Cụ & Pipeline Tự Động Hóa (0 Token Cost)
+Agent 8 và Agent 9 sử dụng script Python nội bộ tại `scripts/make_quote_post.py` để kết xuất ảnh tự động trong 0.2 giây mà **không tiêu tốn token AI hay quota hình ảnh**:
+
+```bash
+# Lệnh tạo nhanh 1 ảnh quote (dùng dấu | để ngắt dòng):
+python scripts/make_quote_post.py --text "Không sao cả nếu hôm nay|bạn chỉ làm được một việc duy nhất:|là dịu dàng với chính mình." --font mali --out public/images/quotes/post_today.jpg
+```
+

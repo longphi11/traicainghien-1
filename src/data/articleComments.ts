@@ -9,6 +9,38 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+
+  "bay-nghien-lock-in-vi-sao-cang-quyet-tam-cang-nhanh-bo-cuoc": [
+    {
+      "id": "li-1",
+      "name": "Trần Quốc Bảo (Full-stack Developer • 26 tuổi)",
+      "content": "Trời ơi, đọc xong mà mình sởn hết cả gai ốc vì thấy chính xác bản thân mình trong đó! Tháng 10 vừa rồi mình bị cuốn vào trào lưu 'The Winter Arc' trên TikTok, đêm nào cũng xem mấy clip anime đấm bao cát với nhạc Phonk rồi hừng hực khí thế. Có đêm 1h sáng mình bật dậy gỡ hết Facebook, Instagram, lôi cuốn sổ ra ghi lịch trình như lính thủy đánh bộ: 4h30 dậy chạy 5km, tắm nước lạnh, học 12 tiếng không nghỉ, không bạn bè. Đúng như bài viết phân tích: Não bộ mình lúc đó nhận một lượng 'Dopamine ảo' cực lớn từ việc tưởng tượng mình lột xác. Nhưng đến sáng hôm sau, tiếng chuông báo thức vừa reo là cả người mình rã rời, đầu óc tê liệt và cảm giác tội lỗi ập đến đè bẹp dí. Ròng rã 3 tuần liền mình rơi vào vòng lặp: Thề thốt Lock In -> Gãy gập sau 2 ngày -> Tự sỉ vả bản thân -> Lại tìm clip động lực mới. Đọc bài này mình mới vỡ òa nhận ra 'Hiệu ứng tua nhanh Montage' và chân lý: 30% nỗ lực duy trì đều đặn suốt 1 năm giá trị hơn gấp ngàn lần 110% thiêu rụi trong 2 tuần. Cảm ơn Trại Cai Nghiện đã cứu rỗi tâm trí mình!",
+      "date": "Vừa xong",
+      "likes": 92,
+      "isLongStory": true
+    },
+    {
+      "id": "li-2",
+      "name": "Nguyễn Hoàng Nam (Du học sinh)",
+      "content": "Phân tích về 'Dopamine sớm' (Premature Dopamine) và 'Dopamine Crash' sáng hôm sau chuẩn xác 100% về mặt sinh học thần kinh! Hồi trước cứ mỗi lần lập kế hoạch hoành tráng xong là cảm thấy như mình đã thành công rồi, nên sáng hôm sau chẳng còn chút động lực nào để làm thật. Từ nay mình sẽ áp dụng 'Phiên Lock In Mini 90 phút' và quy tắc điểm kết thúc rõ ràng.",
+      "date": "1 ngày trước",
+      "likes": 56
+    },
+    {
+      "id": "li-3",
+      "name": "Phạm Thảo My (Content Lead)",
+      "content": "Thấm thía nhất câu: 'Đừng đem mục tiêu ra biểu diễn trước đám đông'. Đăng story tuyên bố Lock In thực chất chỉ là một hình thức tìm kiếm sự công nhận rẻ tiền. Kỷ luật thật sự luôn diễn ra trong sự tĩnh lặng, khi không có ai nhìn và không có tiếng vỗ tay.",
+      "date": "2 ngày trước",
+      "likes": 44
+    },
+    {
+      "id": "li-4",
+      "name": "Vũ Đình Phong (23 tuổi)",
+      "content": "Kỹ thuật 'Lý do lập phương' 5 Whys giúp mình tìm ra The Loving Why sâu sắc bên trong thay vì sự cay cú hay muốn chứng tỏ với người khác. Một bài viết chữa lành nhưng vô cùng thực chiến!",
+      "date": "2 ngày trước",
+      "likes": 31
+    }
+  ],
   "deep-work-nghe-thuat-tap-trung-sau-trai-cai-nghien-20261113": [
       {
           "id": "deepw-1",

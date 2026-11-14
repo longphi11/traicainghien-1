@@ -61,3 +61,10 @@ tranh-moi/*.jpg
 tranh-moi/*.jpeg
 tranh-moi/*.png
 tranh-moi/*.webp
+
+# Sensitive VPS dumps and credentials
+scripts/vps_all_workflows_raw.json
+scripts/*_raw.json
+*.key
+*.pem
+
