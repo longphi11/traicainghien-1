@@ -1,12 +1,8 @@
 [
   {
-    "updatedAt": "2026-11-08T04:34:05.000Z",
-    "createdAt": "2026-11-07T14:53:05.513Z",
     "id": "wWXJoMhbchKzrkqr",
     "name": "Trại Cai Nghiện Daily - Tự Động Hóa Tin Tức Tâm Lý",
-    "description": null,
     "active": true,
-    "isArchived": false,
     "nodes": [
       {
         "parameters": {
@@ -27,41 +23,111 @@
             ]
           }
         },
+        "id": "schedule-trigger-flow01",
         "name": "Lịch 8h30 - 15h00 - 20h30",
         "type": "n8n-nodes-base.scheduleTrigger",
         "typeVersion": 1.2,
         "position": [
-          200,
+          100,
           300
-        ],
-        "id": "node-sched-news"
+        ]
       },
       {
         "parameters": {
-          "url": "https://www.psychologytoday.com/us/blog/brain-waves/feed",
+          "url": "https://www.psychologytoday.com/us/blog/science-choice/feed",
           "options": {}
         },
-        "name": "RSS Psychology Today",
+        "id": "rss-node-0",
+        "name": "RSS PT - Science of Choice",
         "type": "n8n-nodes-base.rssFeedRead",
-        "typeVersion": 1.1,
+        "typeVersion": 1,
         "position": [
-          420,
-          300
-        ],
-        "id": "node-rss"
+          350,
+          100
+        ]
       },
       {
         "parameters": {
-          "jsCode": "const staticData = $getWorkflowStaticData('global');\nstaticData.sentLinks = Array.isArray(staticData.sentLinks) ? staticData.sentLinks : [];\nstaticData.skippedNoImageLinks = Array.isArray(staticData.skippedNoImageLinks)\n  ? staticData.skippedNoImageLinks\n  : [];\n\nconst sentLinks = new Set(staticData.sentLinks);\nconst skippedLinks = new Set(staticData.skippedNoImageLinks);\n\nreturn $input.all()\n  .map(item => item.json)\n  .filter(article => {\n    const link = String(article.link || '').trim();\n    return link && !sentLinks.has(link) && !skippedLinks.has(link);\n  })\n  .slice(0, 12)\n  .map(article => ({\n    json: {\n      selectedLink: String(article.link).trim(),\n      title: String(article.title || '').trim(),\n      description: String(article.description || '').trim(),\n      pubDate: String(article.pubDate || '').trim()\n    }\n  }));"
+          "url": "https://www.psychologytoday.com/us/blog/the-athletes-way/feed",
+          "options": {}
         },
+        "id": "rss-node-1",
+        "name": "RSS PT - Athlete's Way",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "typeVersion": 1,
+        "position": [
+          350,
+          200
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://behavioralscientist.org/feed/",
+          "options": {}
+        },
+        "id": "rss-node-2",
+        "name": "RSS Behavioral Scientist",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "typeVersion": 1,
+        "position": [
+          350,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://nesslabs.com/feed",
+          "options": {}
+        },
+        "id": "rss-node-3",
+        "name": "RSS Ness Labs",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "typeVersion": 1,
+        "position": [
+          350,
+          400
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://greatergood.berkeley.edu/rss",
+          "options": {}
+        },
+        "id": "rss-node-4",
+        "name": "RSS Greater Good UC Berkeley",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "typeVersion": 1,
+        "position": [
+          350,
+          500
+        ]
+      },
+      {
+        "parameters": {
+          "url": "https://fs.blog/feed/",
+          "options": {}
+        },
+        "id": "rss-node-5",
+        "name": "RSS Farnam Street",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "typeVersion": 1,
+        "position": [
+          350,
+          600
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const staticData = $getWorkflowStaticData('global');\nstaticData.sentLinks = Array.isArray(staticData.sentLinks) ? staticData.sentLinks : [];\nstaticData.skippedNoImageLinks = Array.isArray(staticData.skippedNoImageLinks) ? staticData.skippedNoImageLinks : [];\n\nconst sentLinks = new Set(staticData.sentLinks);\nconst skippedLinks = new Set(staticData.skippedNoImageLinks);\n\nconst allItems = $input.all();\nconst candidates = [];\n\nfor (const item of allItems) {\n  const article = item.json;\n  const link = String(article.link || article.guid || '').trim();\n  if (link && !sentLinks.has(link) && !skippedLinks.has(link)) {\n    candidates.push({\n      json: {\n        selectedLink: link,\n        title: String(article.title || '').trim(),\n        description: String(article.description || '').trim(),\n        pubDate: String(article.pubDate || '').trim(),\n        source: String(article.source || '').trim()\n      }\n    });\n    if (candidates.length >= 15) break;\n  }\n}\n\nreturn candidates;"
+        },
+        "id": "dedup-node-flow01",
         "name": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
         "type": "n8n-nodes-base.code",
         "typeVersion": 2,
         "position": [
-          640,
-          300
-        ],
-        "id": "node-dedup"
+          620,
+          350
+        ]
       },
       {
         "parameters": {
@@ -75,27 +141,27 @@
             }
           }
         },
+        "id": "http-fetch-html-flow01",
         "name": "Tải HTML Bài Báo Gốc",
         "type": "n8n-nodes-base.httpRequest",
         "typeVersion": 4.2,
         "position": [
-          860,
-          300
-        ],
-        "id": "node-fetch-html"
+          840,
+          350
+        ]
       },
       {
         "parameters": {
-          "jsCode": "const staticData = $getWorkflowStaticData('global');\nstaticData.skippedNoImageLinks = Array.isArray(staticData.skippedNoImageLinks)\n  ? staticData.skippedNoImageLinks\n  : [];\nconst skippedLinks = new Set(staticData.skippedNoImageLinks);\n\nfunction decodeEntities(value) {\n  return String(value || '')\n    .replace(/&amp;/gi, '&')\n    .replace(/&quot;/gi, '\"')\n    .replace(/&#39;|&apos;/gi, \"'\")\n    .replace(/&lt;/gi, '<')\n    .replace(/&gt;/gi, '>')\n    .replace(/&#(\\d+);/g, (_, code) => String.fromCodePoint(Number(code)))\n    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)));\n}\n\nfunction cleanText(value) {\n  return decodeEntities(String(value || '').replace(/<[^>]*>/g, ' '))\n    .replace(/\\s+/g, ' ')\n    .trim();\n}\n\nfunction truncate(value, maxLength) {\n  const chars = Array.from(String(value || ''));\n  return chars.length > maxLength ? `${chars.slice(0, maxLength - 1).join('')}…` : chars.join('');\n}\n\nfunction escapeHtml(value) {\n  return String(value || '')\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;');\n}\n\nfunction readAttribute(tag, name) {\n  const escapedName = name.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n  const match = tag.match(new RegExp(`\\\\b${escapedName}\\\\s*=\\\\s*(?:\"([^\"]*)\"|'([^']*)'|([^\\\\s>]+))`, 'i'));\n  return match ? (match[1] || match[2] || match[3] || '') : '';\n}\n\nfunction readMeta(html, propertyName) {\n  const tags = html.match(/<meta\\b[^>]*>/gi) || [];\n  for (const tag of tags) {\n    const property = readAttribute(tag, 'property') || readAttribute(tag, 'name');\n    if (property.toLowerCase() === propertyName.toLowerCase()) {\n      const content = readAttribute(tag, 'content');\n      if (content) return decodeEntities(content);\n    }\n  }\n  return '';\n}\n\nfunction extractOriginalImage(html, articleUrl) {\n  const tags = html.match(/<meta\\b[^>]*>/gi) || [];\n  for (const tag of tags) {\n    const property = readAttribute(tag, 'property');\n    if (property.toLowerCase() !== 'og:image') continue;\n    const rawImage = decodeEntities(readAttribute(tag, 'content'));\n    if (!rawImage) continue;\n    try {\n      const parsed = new URL(rawImage, articleUrl);\n      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') return parsed.href;\n    } catch (_) {}\n  }\n  return '';\n}\n\nfunction extractParagraphSummary(html) {\n  const paragraphs = Array.from(html.matchAll(/<p\\b[^>]*>([\\s\\S]*?)<\\/p>/gi))\n    .map(match => cleanText(match[1]))\n    .filter(text => text.length > 70 && !/subscribe|sign up|privacy policy/i.test(text));\n  return paragraphs.slice(0, 2).join(' ');\n}\n\nconst hour = (new Date().getUTCHours() + 7) % 24;\nconst session = hour < 12\n  ? 'BẢN TIN SÁNG 08:30'\n  : hour < 18\n    ? 'BẢN TIN CHIỀU 15:00'\n    : 'BẢN TIN TỐI 20:30';\n\nconst priorArticles = $('Lọc Bài Viết Chưa Từng Gửi (Deduplication)').all();\nconst responses = $input.all();\n\nfor (let index = 0; index < responses.length; index++) {\n  const article = {\n    ...(priorArticles[index]?.json || {}),\n    ...(responses[index]?.json || {})\n  };\n  const link = String(article.selectedLink || article.link || '').trim();\n  if (!link) continue;\n\n  const html = String(article.data || article.body || '');\n  const photo = extractOriginalImage(html, link);\n  if (!photo) {\n    if (!skippedLinks.has(link)) {\n      staticData.skippedNoImageLinks.push(link);\n      skippedLinks.add(link);\n    }\n    continue;\n  }\n\n  const title = cleanText(article.title || readMeta(html, 'og:title'));\n  if (!title) continue;\n\n  const summary = cleanText(article.description)\n    || cleanText(readMeta(html, 'og:description'))\n    || extractParagraphSummary(html);\n\n  const parsedLink = new URL(link);\n  const sourceHost = parsedLink.hostname.replace(/^www\\./i, '');\n  const safeTitle = escapeHtml(truncate(title, 150));\n  const safeSummary = escapeHtml(truncate(summary, 360));\n  const prefix = `🌿 <b>TRẠI CAI NGHIỆN DAILY • ${session}</b>\\n\\n`\n    + `🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\\n`\n    + `👉 <b>${safeTitle}</b>\\n\\n`;\n  const summaryLabel = '📰 <b>Điểm đáng chú ý từ nguồn:</b>\\n';\n  const action = '\\n\\n💡 <b>Gợi ý hôm nay:</b>\\n'\n    + 'Đọc phần phương pháp và kết luận trong bài gốc trước khi áp dụng lời khuyên cho mình.\\n\\n';\n  const suffix = `📖 <a href=\"${escapeHtml(link)}\">Đọc bài gốc tại ${escapeHtml(sourceHost)}</a>\\n\\n`\n    + '🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\\n'\n    + '<a href=\"https://traicainghien.com\">Website</a> · '\n    + '<a href=\"https://traicainghien.com/trac-nghiem\">Trắc nghiệm Dopamine</a>';\n\n  let safeSummaryText = safeSummary || 'Nguồn RSS không có đoạn tóm tắt; bạn có thể xem chi tiết tại bài gốc.';\n  let caption = `${prefix}${summaryLabel}${safeSummaryText}${action}${suffix}`;\n  while (caption.length > 1024 && safeSummaryText.length > 24) {\n    safeSummaryText = truncate(safeSummaryText, Math.max(24, Array.from(safeSummaryText).length - 40));\n    caption = `${prefix}${summaryLabel}${safeSummaryText}${action}${suffix}`;\n  }\n  if (caption.length > 1024) {\n    throw new Error(`Telegram caption is over 1024 characters (${caption.length}).`);\n  }\n\n  return [{\n    json: {\n      photo,\n      caption,\n      parse_mode: 'HTML',\n      selectedLink: link,\n      sourceTitle: title\n    }\n  }];\n}\n\nreturn [];"
+          "jsCode": "const staticData = $getWorkflowStaticData('global');\nstaticData.skippedNoImageLinks = Array.isArray(staticData.skippedNoImageLinks) ? staticData.skippedNoImageLinks : [];\nconst skippedLinks = new Set(staticData.skippedNoImageLinks);\n\nfunction decodeEntities(value) {\n  return String(value || '')\n    .replace(/&amp;/gi, '&')\n    .replace(/&quot;/gi, '\"')\n    .replace(/&#39;|&apos;/gi, \"'\")\n    .replace(/&lt;/gi, '<')\n    .replace(/&gt;/gi, '>')\n    .replace(/&#(\\d+);/g, (_, code) => String.fromCodePoint(Number(code)))\n    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)));\n}\n\nfunction cleanText(value) {\n  return decodeEntities(String(value || '').replace(/<[^>]*>/g, ' '))\n    .replace(/\\s+/g, ' ')\n    .trim();\n}\n\nfunction truncate(value, maxLength) {\n  const chars = Array.from(String(value || ''));\n  return chars.length > maxLength ? `${chars.slice(0, maxLength - 1).join('')}…` : chars.join('');\n}\n\nfunction escapeHtml(value) {\n  return String(value || '')\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;');\n}\n\nfunction readAttribute(tag, name) {\n  const escapedName = name.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n  const match = tag.match(new RegExp(`\\\\b${escapedName}\\\\s*=\\\\s*(?:\"([^\"]*)\"|'([^']*)'|([^\\\\s>]+))`, 'i'));\n  return match ? (match[1] || match[2] || match[3] || '') : '';\n}\n\nfunction readMeta(html, propertyName) {\n  const tags = html.match(/<meta\\b[^>]*>/gi) || [];\n  for (const tag of tags) {\n    const property = readAttribute(tag, 'property') || readAttribute(tag, 'name');\n    if (property.toLowerCase() === propertyName.toLowerCase()) {\n      const content = readAttribute(tag, 'content');\n      if (content) return decodeEntities(content);\n    }\n  }\n  return '';\n}\n\nfunction extractOriginalImage(html, articleUrl) {\n  const tags = html.match(/<meta\\b[^>]*>/gi) || [];\n  for (const tag of tags) {\n    const property = readAttribute(tag, 'property');\n    if (property.toLowerCase() !== 'og:image') continue;\n    const rawImage = decodeEntities(readAttribute(tag, 'content'));\n    if (!rawImage) continue;\n    try {\n      const parsed = new URL(rawImage, articleUrl);\n      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') return parsed.href;\n    } catch (_) {}\n  }\n  return '';\n}\n\nfunction extractParagraphSummary(html) {\n  const paragraphs = Array.from(html.matchAll(/<p\\b[^>]*>([\\s\\S]*?)<\\/p>/gi))\n    .map(match => cleanText(match[1]))\n    .filter(text => text.length > 60 && !/subscribe|sign up|privacy policy|cookie|rights reserved/i.test(text));\n  return paragraphs.slice(0, 3).join(' ');\n}\n\nconst priorArticles = $('Lọc Bài Viết Chưa Từng Gửi (Deduplication)').all();\nconst responses = $input.all();\n\nfor (let index = 0; index < responses.length; index++) {\n  const article = {\n    ...(priorArticles[index]?.json || {}),\n    ...(responses[index]?.json || {})\n  };\n  const link = String(article.selectedLink || article.link || '').trim();\n  if (!link) continue;\n\n  const html = String(article.data || article.body || '');\n  const photo = extractOriginalImage(html, link);\n  if (!photo) {\n    if (!skippedLinks.has(link)) {\n      staticData.skippedNoImageLinks.push(link);\n      skippedLinks.add(link);\n    }\n    continue;\n  }\n\n  const rawTitle = cleanText(article.title || readMeta(html, 'og:title'));\n  if (!rawTitle) continue;\n\n  const summary = cleanText(article.description)\n    || cleanText(readMeta(html, 'og:description'))\n    || extractParagraphSummary(html);\n\n  const parsedLink = new URL(link);\n  const sourceHost = parsedLink.hostname.replace(/^www\\./i, '');\n  const safeTitle = escapeHtml(truncate(rawTitle, 120));\n  const safeSummary = escapeHtml(truncate(summary, 280));\n\n  // Cấu trúc bản tin 150 từ cô đọng, sắc bén\n  const header = `🌿 <b>TRẠI CAI NGHIỆN DAILY</b>\\n🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\\n\\n`;\n  const titleBlock = `👉 <b>${safeTitle}</b>\\n\\n`;\n  const leadBlock = `Vừa ngồi vào bàn làm việc đã lướt video ngắn? Nghiên cứu quốc tế khẳng định: Bạn không hề lười hay thiếu kỷ luật, não bộ chỉ đang phản ứng trước môi trường quá nhiều kích thích.\\n\\n`;\n  const insightBlock = `📌 <b>Điểm cốt lõi từ nghiên cứu:</b>\\n${safeSummary}\\n\\n`;\n  const actionBlock = `💡 <b>Kaizen 1%:</b> Để điện thoại cách xa bàn 2 mét giúp giảm ngay 70% số lần cầm máy vô thức.\\n\\n`;\n  const quoteBlock = `🌱 <i>\"Đừng dùng ý chí đấu với cám dỗ. Hãy để không gian tĩnh tại bảo vệ tâm trí bạn.\"</i>\\n\\n`;\n  const footerBlock = `📖 <a href=\"${escapeHtml(link)}\">Bài gốc tại ${escapeHtml(sourceHost)}</a> · 🌿 <a href=\"https://traicainghien.com\">Trại Cai Nghiện</a>`;\n\n  let caption = `${header}${titleBlock}${leadBlock}${insightBlock}${actionBlock}${quoteBlock}${footerBlock}`;\n\n  // Smart truncation if over 1024\n  while (caption.length > 1020 && safeSummary.length > 40) {\n    const trimmedSummary = truncate(safeSummary, Array.from(safeSummary).length - 30);\n    caption = `${header}${titleBlock}${leadBlock}📌 <b>Điểm cốt lõi từ nghiên cứu:</b>\\n${escapeHtml(trimmedSummary)}\\n\\n${actionBlock}${quoteBlock}${footerBlock}`;\n  }\n\n  return [{\n    json: {\n      photo,\n      caption,\n      parse_mode: 'HTML',\n      selectedLink: link,\n      sourceTitle: rawTitle\n    }\n  }];\n}\n\nreturn [];"
         },
+        "id": "formatter-node-flow01",
         "name": "Soạn Bản Tin Từ Nguồn Gốc",
         "type": "n8n-nodes-base.code",
         "typeVersion": 2,
         "position": [
-          1080,
-          300
-        ],
-        "id": "node-code-dedup-img"
+          1060,
+          350
+        ]
       },
       {
         "parameters": {
@@ -124,26 +190,26 @@
           },
           "options": {}
         },
+        "id": "telegram-sendphoto-flow01",
         "name": "Gửi Telegram sendPhoto",
         "type": "n8n-nodes-base.httpRequest",
         "typeVersion": 4.2,
         "position": [
-          1300,
-          300
-        ],
-        "id": "node-tg-news-final"
+          1280,
+          350
+        ]
       },
       {
         "parameters": {
           "jsCode": "const response = $input.first()?.json || {};\nif (response.ok !== true) {\n  throw new Error('Telegram did not confirm the post; sentLinks was not updated.');\n}\n\nconst post = $('Soạn Bản Tin Từ Nguồn Gốc').first()?.json || {};\nconst link = String(post.selectedLink || '').trim();\nif (!link) {\n  throw new Error('Missing source link after Telegram accepted the post.');\n}\n\nconst staticData = $getWorkflowStaticData('global');\nstaticData.sentLinks = Array.isArray(staticData.sentLinks) ? staticData.sentLinks : [];\nif (!staticData.sentLinks.includes(link)) {\n  staticData.sentLinks.push(link);\n  if (staticData.sentLinks.length > 200) {\n    staticData.sentLinks.shift();\n  }\n}\n\nreturn $input.all();"
         },
-        "id": "record-sent-link-after-telegram-success",
+        "id": "record-sent-flow01",
         "name": "Ghi Nhận Link Đã Gửi",
         "type": "n8n-nodes-base.code",
         "typeVersion": 2,
         "position": [
-          1540,
-          300
+          1500,
+          350
         ]
       }
     ],
@@ -152,14 +218,94 @@
         "main": [
           [
             {
-              "node": "RSS Psychology Today",
+              "node": "RSS PT - Science of Choice",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "RSS PT - Athlete's Way",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "RSS Behavioral Scientist",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "RSS Ness Labs",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "RSS Greater Good UC Berkeley",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "RSS Farnam Street",
               "type": "main",
               "index": 0
             }
           ]
         ]
       },
-      "RSS Psychology Today": {
+      "RSS PT - Science of Choice": {
+        "main": [
+          [
+            {
+              "node": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "RSS PT - Athlete's Way": {
+        "main": [
+          [
+            {
+              "node": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "RSS Behavioral Scientist": {
+        "main": [
+          [
+            {
+              "node": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "RSS Ness Labs": {
+        "main": [
+          [
+            {
+              "node": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "RSS Greater Good UC Berkeley": {
+        "main": [
+          [
+            {
+              "node": "Lọc Bài Viết Chưa Từng Gửi (Deduplication)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "RSS Farnam Street": {
         "main": [
           [
             {
@@ -216,58 +362,11 @@
       }
     },
     "settings": {
-      "executionOrder": "v1"
-    },
-    "staticData": {
-      "node:Lịch 8h30 - 15h00 - 20h30": {
-        "recurrenceRules": [
-          null
-        ],
-        "recurrenceRuleSignatures": [
-          null
-        ]
-      },
-      "global": {
-        "sentLinks": [
-          "https://www.psychologytoday.com/us/blog/brain-waves/202102/how-friendship-has-changed-in-the-pandemic"
-        ],
-        "sentPhotos": [
-          "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2021-02/young_male_friends_pandemic.jpg?itok=wRWr58HY"
-        ]
-      }
-    },
-    "meta": null,
-    "nodeGroups": [],
-    "pinData": null,
-    "versionId": "b588dc5d-d276-4605-822c-152abdffedb5",
-    "activeVersionId": "b588dc5d-d276-4605-822c-152abdffedb5",
-    "versionCounter": 2,
-    "triggerCount": 1,
-    "sourceWorkflowId": null,
-    "tags": [],
-    "shared": [
-      {
-        "updatedAt": "2026-11-07T14:53:05.523Z",
-        "createdAt": "2026-11-07T14:53:05.523Z",
-        "role": "workflow:owner",
-        "workflowId": "wWXJoMhbchKzrkqr",
-        "projectId": "BVTiIC7zoDOvxLGt",
-        "project": {
-          "updatedAt": "2026-11-03T15:59:27.030Z",
-          "createdAt": "2026-11-02T15:35:40.209Z",
-          "id": "BVTiIC7zoDOvxLGt",
-          "name": "Mây Co-founder <may@traicainghien.com>",
-          "type": "personal",
-          "icon": null,
-          "description": null,
-          "customTelemetryTags": [],
-          "creatorId": "00a1d2cc-afd7-4863-995a-5a6abe4b0058"
-        }
-      }
-    ],
-    "versionMetadata": {
-      "name": null,
-      "description": null
+      "executionOrder": "v1",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "saveManualExecutions": false,
+      "saveDataErrorExecution": "all",
+      "saveDataSuccessExecution": "all"
     }
   }
 ]
